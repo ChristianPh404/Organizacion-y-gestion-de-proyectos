@@ -1,0 +1,51 @@
+﻿\documentclass{report}
+
+\input{preamble}
+\input{macros}
+\input{letterfonts}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage{chemfig}
+\usepackage{multicol}
+\usepackage{booktabs}
+\usepackage{siunitx}
+\usepackage{cancel}
+\usepackage{adjustbox}
+\usepackage{pdflscape}
+\usepackage[backend=biber, style=apa]{biblatex}
+\usepackage{caption}
+\usepackage[spanish]{babel}
+\usepackage{lmodern}
+\usepackage{multirow}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, positioning, calc, decorations.pathreplacing, babel, shapes.geometric, trees, shadows}
+\usepackage{amsmath}
+\usepackage{csquotes}
+\usepackage{subcaption}
+\usepackage{float}
+
+\addto\captionsspanish{
+  \renewcommand{\contentsname}{Índice}
+  \renewcommand{\chaptername}{Caso Práctico / Tema}
+}
+
+\definecolor{darkgreen}{rgb}{0,0.6,0}
+\title{\Huge{Organización y Gestión de Proyectos}\\Apuntes y Casos Prácticos}
+\author{\huge{Christian Pérez Hita}}
+\date{\today}
+
+\begin{document}
+\spanishdeactivate{.<>}
+\setcounter{tocdepth}{3}
+\maketitle
+\newpage
+\pdfbookmark[section]{\contentsname}{contenidos}
+
+\tableofcontents
+\pagebreak
+\graphicspath{ {./Imagenes/} }
+
+\include{Capitulos/planta_stevia}
+
+\end{document}

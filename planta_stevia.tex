@@ -1,0 +1,50 @@
+﻿\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-tabla]{babel}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage[most,many,breakable]{tcolorbox}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, positioning, calc, shapes.geometric, trees, shadows}
+\usepackage{hyperref}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue!70!black,
+    citecolor=blue,
+    urlcolor=blue
+}
+
+\definecolor{myprimary}{RGB}{30, 58, 138}
+\definecolor{mysecondary}{RGB}{13, 148, 136}
+\definecolor{myaccent}{RGB}{225, 29, 72}
+
+\newtcolorbox{notebox}[1][]{
+    enhanced,
+    colback=blue!5,
+    colframe=myprimary,
+    fonttitle=\bfseries,
+    title=#1,
+    arc=4mm,
+    boxrule=1.2pt
+}
+
+\title{\textbf{\LARGE Organización y Gestión de Proyectos}\\[0.3em]
+\Large Caso Práctico: Estructura Organizativa de una Planta Industrial de Stevia}
+\author{\textbf{Christian Pérez Hita}}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\input{Capitulos/planta_stevia}
+
+\end{document}
