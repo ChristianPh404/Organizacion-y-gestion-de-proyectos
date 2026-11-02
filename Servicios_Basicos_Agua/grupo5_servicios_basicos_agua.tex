@@ -1,0 +1,1083 @@
+\documentclass{report}
+
+
+
+\input{preamble}
+
+\input{macros}
+
+\input{letterfonts}
+
+
+
+\usepackage{booktabs}
+
+\usepackage{siunitx}
+
+\usepackage{adjustbox}
+
+\usepackage{pdflscape}
+\usepackage{pdfpages}
+
+\usepackage[backend=biber, style=apa]{biblatex}
+
+\usepackage{caption}
+
+\usepackage{multirow}
+
+\usepackage{csquotes}
+
+\usepackage{subcaption}
+
+\usepackage{float}
+
+\usepackage{tabularx}
+
+\usepackage{longtable}
+
+\usetikzlibrary{positioning, arrows.meta, shapes.geometric, calc}
+
+
+
+\graphicspath{ {./Doc/Fotos/} {./} }
+
+\addbibresource{Referencias.bib}
+
+
+
+\definecolor{darkgreen}{rgb}{0,0.6,0}
+
+
+
+\title{
+
+    \includegraphics[width=0.35\textwidth]{escudo.png}\\[1.2cm]
+
+    {\Huge\textbf{PROYECTO INDUSTRIAL}}\\[0.6em]
+
+    {\LARGE\textbf{Ingeniería del Proyecto y Servicios Básicos}}\\[1.2em]
+
+    {\LARGE\color{blue!75!black}\textbf{GRUPO 5: GESTIÓN DE SERVICIOS BÁSICOS}}\\[0.5em]
+
+    {\Large\textbf{Estudio Técnico del Abastecimiento de Agua e Integración en Planta}}\\[1.5em]
+
+}
+
+\author{\Large\textbf{Christian Pérez Hita}\\[0.5em] \large Grado en Ingeniería Química \\ \large Universidad de Granada (UGR)}
+
+\date{\today}
+
+
+
+\begin{document}
+
+\spanishdeactivate{.<>}
+
+\setcounter{tocdepth}{3}
+
+\maketitle
+
+
+
+\newpage
+
+\pdfbookmark[section]{\contentsname}{contenidos}
+
+\tableofcontents
+
+\newpage
+
+
+
+
+%
+% ==========================================================================
+% CAPITULOS 1 AL 4 COMENTADOS TEMPORALMENTE (PRESERVADOS PARA CONSULTA)
+% ==========================================================================
+\iffalse
+\chapter{Introducción y Objetivos del Trabajo}
+
+
+
+\section{Objeto del Documento}
+
+El presente trabajo técnico, enmarcado en el bloque de \textbf{Gestión de Servicios Básicos en la Ingeniería del Proyecto (Grupo 5)}, tiene como objetivo central el estudio integral, riguroso y multidisciplinar del abastecimiento de agua para una planta industrial de procesos químicos y biotecnológicos (tomando como caso de referencia la infraestructura de una biorrefinería y planta de bioproductos), contemplando su selección de fuentes, trámites legales de enganche, diseño y dimensionamiento hidráulico de la red interna, y un análisis exhaustivo de la \textbf{normativa sanitaria y medioambiental aplicable}.
+
+
+
+El agua constituye uno de los suministros auxiliares (\textit{utilities}) más determinantes en cualquier complejo industrial moderno, desempeñando una multiplicidad de funciones vitales:
+
+\begin{enumerate}
+
+    \item \textbf{Agua de Proceso y Materia Prima:} Empleada en reactores químicos, fermentadores biotecnológicos, formulación de productos, lavado y extracción de biomasa.
+
+    \item \textbf{Agua de Servicios Auxiliares Térmicos:} Fluido caloportador de refrigeración en condensadores y cambiadores de calor, así como agua de reposición y generación de vapor en calderas de vapor saturado.
+
+    \item \textbf{Agua de Consumo Humano (AFCH y ACS):} Destinada al consumo directo de los operarios, servicios higiénicos, vestuarios, duchas y áreas de oficinas/laboratorios.
+
+    \item \textbf{Agua Contra Incendios (PCI):} Reserva estricta y caudal presurizado para bocas de incendio equipadas (BIEs), rociadores y columnas hidrantes exteriores.
+
+\end{enumerate}
+
+
+
+\section{Estructura de Desarrollo}
+
+El documento se articula en cuatro secciones principales de ingeniería:
+
+\begin{itemize}
+
+    \item \textbf{Capítulo 2: Captación desde Red Municipal de Abastecimiento:} Marco administrativo, requisitos técnicos de acometida, competencias locales y trámites con empresas concesionarias y ayuntamientos.
+
+    \item \textbf{Capítulo 3: Captación Alternativa y Autoabastecimiento:} Análisis hidrogeológico e hidrológico de captaciones en pozos profundos, cursos superficiales (ríos) y embalses. Tramitación ante Confederaciones Hidrográficas.
+
+    \item \textbf{Capítulo 4: Evaluación de Caudales y Dimensionamiento de la Red Interna:} Balances hídricos de proceso y consumos sanitarios, aplicación del CTE DB-HS 4, selección de materiales, cálculo de pérdidas de carga y dimensionamiento del grupo de presión y depósitos de acumulación.
+
+    \item \textbf{Capítulo 5: Normativa Sanitaria y Medioambiental Aplicable:} Estudio profundo del Real Decreto 3/2023, prevención de \textit{Legionella} (RD 487/2022), Texto Refundido de la Ley de Aguas (RDL 1/2001), Reglamento del Dominio Público Hidráulico (RD 849/1986 y RD 665/2023), y Directiva Marco del Agua (Directiva 2000/60/CE).
+
+\end{itemize}
+
+
+
+%=============================================================================
+
+\chapter{Captación desde Red Municipal: Requisitos y Trámites}
+
+
+
+\section{Marco General y Competencias}
+
+De acuerdo con el artículo 25.2 de la \textbf{Ley 7/1985, Reguladora de las Bases del Régimen Local (LRBRL)}, el abastecimiento de agua potable a poblaciones y la evacuación y tratamiento de aguas residuales constituyen una competencia propia e inexcusable de los municipios. Cuando una instalación industrial se ubica en un polígono industrial o suelo urbano consolidado, la conexión a la red general municipal gestionada por el Ayuntamiento o por una entidad concesionaria (p. ej., EMASAGRA, Canal de Isabel II, Aguas de Valencia, etc.) suele ser la alternativa técnica prioritaria por fiabilidad, control sanitario y garantía de servicio.
+
+
+
+\section{Requisitos Técnicos de la Acometida Industrial}
+
+La acometida de agua conecta la red de distribución pública con la instalación general del complejo fabril. Los requisitos técnicos indispensables comprenden:
+
+
+
+\begin{enumerate}
+
+    \item \textbf{Presión y Caudal de Garantía:} La entidad suministradora debe certificar mediante un informe técnico previo las presiones manométricas de servicio en el punto de enganche (presión estática en horas de bajo consumo y presión dinámica en horas punta). Según el CTE DB-HS 4:
+
+    \begin{itemize}
+
+        \item Presión mínima exigida en los puntos terminales de consumo ordinario: $100\text{ kPa}$ ($10\text{ m.c.a.}$).
+
+        \item Presión máxima admisible en cualquier punto de la red interna: $500\text{ kPa}$ ($50\text{ m.c.a.}$), debiendo instalar válvulas reductoras de presión si la red municipal suministra presiones superiores.
+
+    \end{itemize}
+
+    \item \textbf{Arqueta de Acometida y Válvula de Toma:} Alojada en el límite de la propiedad pública y privada, compuesta por una llave de corte general de toma sobre la canalización matriz con su correspondiente arqueta de registro y trampilla de fundición homologada.
+
+    \item \textbf{Tubo de Alimentación y Armario de Contador General:} La conducción que enlaza la llave de toma con la arqueta del contador no podrá contar con derivaciones intermedias. El armario de contadores aloja:
+
+    \begin{itemize}
+
+        \item Válvula de corte de entrada con orificio de purga.
+
+        \item Filtro retenedor de partículas en suspensión (malla de acero inoxidable de $100\text{ }\mu\text{m}$).
+
+        \item Contador divisionario o general homologado (tipo electromagnético o de chorro múltiple con telelectura).
+
+        \item Válvula de retención o válvula antirretorno homologada de doble clapeta o desconector de zona de presión reducida (tipo BA), que impida inexorablemente el reflujo de agua contaminada hacia la red pública.
+
+        \item Válvula de corte de salida y grifo de toma de muestras sanitarias para control analítico.
+
+    \end{itemize}
+
+    \item \textbf{Separación y Protecciones Físicas:} Las zanjas exteriores deben asegurar un enterramiento mínimo de $0.80\text{ m}$ respecto a la cota rasante para evitar congelaciones y cargas de tráfico rodado. Debe existir una separación mínima de $0.30\text{ m}$ por encima de canalizaciones de aguas residuales y $0.50\text{ m}$ respecto a cables eléctricos y conducciones de gas.
+
+\end{enumerate}
+
+
+
+\section{Procedimiento Administrativo y Trámites de Enganche}
+
+Para obtener la autorización y materializar el suministro de agua industrial, el promotor y el equipo de ingeniería deben seguir el siguiente iter administrativo:
+
+
+
+\begin{figure}[H]
+
+    \centering
+
+    \adjustbox{max width=0.95\textwidth}{%
+
+        \begin{tikzpicture}[>=Latex, node distance=1.2cm and 1.8cm, auto]
+
+            \tikzstyle{block} = [rectangle, draw=blue!80!black, fill=blue!8, text width=3.8cm, text centered, rounded corners, minimum height=1.3cm, font=\small\bfseries]
+
+            \tikzstyle{line} = [draw, -Latex, line width=1.2pt, blue!85!black]
+
+
+
+            \node [block] (step1) {1. Solicitud de Viabilidad de Suministro};
+
+            \node [block, right=of step1] (step2) {2. Redacción del Proyecto de Conexión};
+
+            \node [block, below=of step2] (step3) {3. Licencia Urbanística Municipal};
+
+            \node [block, left=of step3] (step4) {4. Ejecución de Obras e Inspección};
+
+            \node [block, below=of step4] (step5) {5. Boletín de Instalador y Alta Definitiva};
+
+
+
+            \path [line] (step1) -- node [above, font=\scriptsize] {Informe concesionaria} (step2);
+
+            \path [line] (step2) -- node [right, font=\scriptsize] {Visado y tasas} (step3);
+
+            \path [line] (step3) -- node [above, font=\scriptsize] {Replanteo calzada} (step4);
+
+            \path [line] (step4) -- node [left, font=\scriptsize] {Pruebas de presión} (step5);
+
+        \end{tikzpicture}
+
+    }
+
+    \caption{Diagrama de flujo del procedimiento de solicitud y autorización de enganche a la red municipal.}
+
+    \label{fig:tramites_red_municipal}
+
+\end{figure}
+
+
+
+\begin{enumerate}
+
+    \item \textbf{Petición de Factibilidad o Viabilidad Técnica:} Solicitud inicial ante la entidad suministradora aportando plano de situación, caudales medios requeridos ($\text{m}^3/\text{día}$), caudal punta instantáneo ($\text{L/s}$) y régimen horario de consumos. La compañía emite un \textit{Informe de Condiciones Técnicas de Suministro} indicando el punto de enlace idóneo, diámetros disponibles y presión de servicio garantizada.
+
+    \item \textbf{Proyecto de Acometida y Conexión Exterior:} Si el entronque exige obras en vía pública o ampliación de ramales de distribución, el proyectista elabora una memoria técnica y planos conforme a las normas técnicas de la entidad concesionaria.
+
+    \item \textbf{Tramitación de Licencia de Obras en Vía Pública y Calicatas:} Pago de las tasas de ocupación de dominio público e impuestos de obras (ICIO) ante la Gerencia Municipal de Urbanismo para la apertura de zanjas y reposición de pavimento.
+
+    \item \textbf{Contrato de Suministro Industrial:} Formalización del contrato mercantil de abastecimiento tras aportar la Licencia Ambiental Integrada (o Calificación Ambiental), acreditación de la red interior ejecutada por instalador autorizado de fontanería, y certificado de no afección con fuentes de agua propias sin homologar.
+
+\end{enumerate}
+
+
+
+%=============================================================================
+
+\chapter{Captación Alternativa: Pozos, Ríos y Embalses}
+
+
+
+\section{Justificación Técnica y Económica del Autoabastecimiento}
+
+En plantas industriales con consumos elevados de agua técnica (como biorrefinerías, plantas químicas o agroalimentarias donde el agua de proceso o refrigeración supera los $100\text{ m}^3/\text{día}$), la tarifa comercial municipal por metro cúbico puede condicionar gravemente la viabilidad económica del proyecto. El recurso a fuentes propias o alternativas representa una solución estratégica, supeditada a un régimen concesional riguroso:
+
+
+
+\begin{table}[H]
+
+    \centering
+
+    \small
+
+    \caption{Matriz comparativa de opciones de abastecimiento para complejos industriales}
+
+    \label{tab:comparativa_fuentes}
+
+    \begin{tabularx}{\textwidth}{@{}lXXXX@{}}
+
+        \toprule
+
+        \textbf{Criterio} & \textbf{Red Municipal} & \textbf{Pozo (Aguas Subterráneas)} & \textbf{Río (Aguas Superficiales)} & \textbf{Embalse / Canal de Riego} \\
+
+        \midrule
+
+        \textbf{Inversión Inicial ($CAPEX$)} & Muy baja (únicamente arqueta de acometida y contador). & Media-alta (sondeo, entubado, aforo y bomba sumergida). & Alta (obra de toma fluvial, desarenador y bombeo). & Media-alta (toma en canal y estación de impulsión). \\
+
+        \addlinespace
+
+        \textbf{Coste Operativo ($OPEX$)} & Muy elevado (tarifa municipal por bloque industrial). & Bajo (energía de bombeo y canon de control de vertidos). & Muy bajo (canon de regulación/utilización). & Reducido (canon hidrográfico y cuota de regantes). \\
+
+        \addlinespace
+
+        \textbf{Calidad Fisicoquímica} & Potable garantizada, desinfectada (RD 3/2023). & Estable térmicamente, pero con posible dureza y sales. & Variable con lluvias y turbidez (precisa clarificación). & Estable estacionalmente, pero con presencia de algas. \\
+
+        \addlinespace
+
+        \textbf{Garantía de Suministro} & Muy alta y continua (salvo averías en red general). & Elevada, supeditada al nivel piezométrico del acuífero. & Crítica en estiaje (condicionada al caudal ecológico). & Alta, planificada según calendarios de cuenca. \\
+
+        \addlinespace
+
+        \textbf{Complejidad Legal} & Baja (gestión municipal ordinaria de acometida). & Muy alta (Concesión C.H. y autorización de sondeos). & Muy alta (Concesión administrativa de dominio público). & Media-alta (concesión o convenio con Comunidad de Regantes). \\
+
+        \bottomrule
+
+    \end{tabularx}
+
+\end{table}
+
+
+
+\section{Captación Subterránea Mediante Pozos de Sondeo}
+
+\begin{enumerate}
+
+    \item \textbf{Estudio Hidrogeológico Previo:} Evaluación de la cuenca subterránea, litología, permeabilidad ($K$), transmisividad ($T$) y coeficiente de almacenamiento ($S$) del acuífero. Se ejecutan ensayos de bombeo escalonados (ensayos de aforo) para determinar la curva característica del pozo, el caudal específico ($Q/s$) y el cono de depresión generado para no agotar pozos colindantes.
+
+    \item \textbf{Diseño Constructivo del Sondeo:}
+
+    \begin{itemize}
+
+        \item Perforación con lodo bentonítico o a rotopercución neumática.
+
+        \item Entubado en acero al carbono o PVC ranurado (filtros de ranura continua Johnson en tramos acuíferos).
+
+        \item Emparrillado de gravilla silícea seleccionada (\textit{gravel pack}) entre la perforación y la tubería para evitar el arrastre de finos y arenas a los rodetes de la bomba.
+
+        \item Sellado cementado perimetral superior (mínimo los primeros $10\text{ m}$) para evitar la entrada de aguas pluviales superficiales contaminadas.
+
+    \end{itemize}
+
+    \item \textbf{Bomba Sumergible de Pozo Profundo:} Bomba centrífuga multietapa construida íntegramente en acero inoxidable AISI 304/316, accionada por motor eléctrico estanco con camisa de refrigeración y variador de frecuencia.
+
+\end{enumerate}
+
+
+
+\section{Captación Superficial en Ríos y Embalses}
+
+\begin{enumerate}
+
+    \item \textbf{Obras de Toma Fluvial:} Se ejecutan tomas laterales o pozos de ribera ranurados integrados en la margen. Deben dotarse de:
+
+    \begin{itemize}
+
+        \item Rejas de desbaste grueso y fino (limpieza manual o automática) con paso de luz inferior a $20\text{ mm}$ para impedir el paso de ramas, hojas y peces.
+
+        \item Desarenadores de flujo laminar para sedimentar partículas abrasivas con velocidad de sedimentación superior a $0.2\text{ m/s}$.
+
+    \end{itemize}
+
+    \item \textbf{Condicionantes Hidrológicos en Estiaje:} Las extracciones fluviales están rígidamente subordinadas al mantenimiento del \textbf{caudal ecológico mínimo} fijado en los Planes Hidrológicos de Cuenca (artículo 42 del Texto Refundido de la Ley de Aguas). En períodos de sequía severa, la Confederación Hidrográfica tiene la potestad legal de clausurar o restringir unilateralmente las tomas industriales para priorizar el abastecimiento a poblaciones.
+
+
+
+    Por ello, si una industria depende de tomas superficiales, es mandatorio proyectar \textbf{balsas de almacenamiento y regulación interna} capaces de dotar a la fábrica de una autonomía técnica de al menos $15\text{ a }30\text{ días}$ sin captación externa.
+
+\end{enumerate}
+
+
+
+\section{Trámites Concesionales ante el Organismo de Cuenca}
+
+Todo aprovechamiento de aguas superficiales o subterráneas del Dominio Público Hidráulico requiere inexcusablemente el otorgamiento de una \textbf{Concesión Administrativa} por parte de la Confederación Hidrográfica competente (Guadalquivir, Segura, Ebro, Cuencas Mediterráneas Andaluzas, etc.) conforme al artículo 52 del TRLA:
+
+\begin{itemize}
+
+    \item \textbf{Petición y Proyecto Técnico de Concesión:} Memoria descriptiva, planos de la obra de toma, justificación estricta de las necesidades hídricas anuales ($\text{m}^3/\text{año}$) y caudal punta instantáneo ($\text{L/s}$).
+
+    \item \textbf{Información Pública y Competencia de Proyectos:} Publicación en el Boletín Oficial del Estado (BOE) y Boletín Oficial de la Provincia (BOP) abriendo un plazo de 1 mes para presentación de alegaciones o proyectos en competencia.
+
+    \item \textbf{Resolución Concesional:} Fija el volumen máximo anual autorizado, el caudal máximo instantáneo, el plazo de la concesión (máximo 75 años, habitualmente 20-25 años para actividades industriales), la obligación de instalar contadores homologados precintados con transmisión periódica de lecturas, y la liquidación periódica del \textbf{Canon de Utilización de las Aguas}.
+
+\end{itemize}
+
+
+
+%=============================================================================
+
+\section{Captacion y Reutilizacion de Aguas Regeneradas (RD 1085/2024)}
+
+\subsection{Paradigma de la Economia Circular del Agua en la Industria}
+
+Frente a la creencia tradicional de que la regeneracion del agua es competencia exclusiva de las depuradoras publicas (EDAR) para vertido al rio o riego agricola, el reciente \textbf{Real Decreto 1085/2024, de 22 de octubre} (que deroga al antiguo RD 1620/2007 y transpone el Reglamento UE 2020/741) situa a las instalaciones industriales en el epicentro de la reutilizacion:
+
+\begin{enumerate}
+
+    \item \textbf{Doble Via de Reutilizacion en Planta:}
+
+    \begin{itemize}
+
+        \item \textbf{Reutilizacion Externa (Concesion de Agua Regenerada):} La industria suscribe un convenio o solicita concesion administrativa ante la Confederacion Hidrografica para captar directamente el efluente tratado en el tratamiento terciario de una EDAR municipal o comarcal vecina.
+
+        \item \textbf{Reciclado Interno en Circuito Cerrado:} La propia planta implanta tratamientos de afino sobre sus efluentes o condensados limpios, recirculandolos a cabecera de procesos no sanitarios.
+
+    \end{itemize}
+
+    \item \textbf{Usos Industriales Autorizados y Prohibiciones Expresas:}
+
+    El RD 1085/2024 establece una lista exhaustiva de 28 usos regulados agrupados por clases de calidad:
+
+    \begin{itemize}
+
+        \item \textbf{Usos Industriales Permitidos:} Aguas de refrigeracion en circuitos semicerrados (torres de refrigeracion y condensadores evaporativos, exigiendo riguroso control de \textit{Legionella}), aguas de alimentacion de calderas (previo desmineralizado), aguas de lavado de patios, viales y maquinaria pesada, y redes de extincion de incendios.
+
+        \item \textbf{Prohibiciones Exclusivas:} Queda terminantemente prohibido el empleo de agua regenerada para el consumo humano directo, para la preparacion y procesado en la industria alimentaria o cosmetica cuando el agua entre en contacto intimo con el producto final (salvo que cumpla integramente los estandares de potabilidad del RD 3/2023), y en instalaciones hospitalarias.
+
+    \end{itemize}
+
+    \item \textbf{Plan de Gestion del Riesgo del Agua Regenerada (PGRAR):}
+
+    Cualquier planta que utilice agua regenerada debe elaborar y someter a aprobacion de la Autoridad Sanitaria un PGRAR, analizando barreras multiples (desinfeccion UV, cloracion residual, filtros de cartucho), controles microbiologicos (ausencia de \textit{E. coli}, control de nematodos intestinales y turbidez inferior a 2 NTU) y protocolos de contingencia ante desviaciones.
+
+\end{enumerate}
+
+
+
+
+
+\chapter{Evaluación del Caudal Necesario y Dimensionamiento de la Red Interna}
+
+
+
+\section{Metodología de Balance Hídrico Industrial}
+
+El dimensionamiento técnico de la red hidráulica interna exige la segregación y consolidación de dos tipos fundamentales de demandas: los consumos higiénico-sanitarios y los consumos industriales de proceso.
+
+
+
+\subsection{Caudales Sanitarios de Edificación (CTE DB-HS 4)}
+
+Siguiendo las directrices del \textit{Documento Básico HS 4 del Código Técnico de la Edificación \cite{CTE_DB_HS4}}, se identifican los puntos terminales de consumo higiénico en oficinas, laboratorios, comedores y vestuarios de planta. A cada aparato le corresponde un caudal instantáneo mínimo:
+
+
+
+\begin{table}[H]
+
+    \centering
+
+    \caption{Caudales instantáneos mínimos de aparatos según CTE DB-HS 4}
+
+    \label{tab:caudales_cte}
+
+    \begin{tabular}{@{}lccc@{}}
+
+        \toprule
+
+        \textbf{Tipo de Aparato Sanitario} & \textbf{Caudal Mínimo AF ($\text{L/s}$)} & \textbf{Caudal Mínimo ACS ($\text{L/s}$)} & \textbf{Presión Mínima ($\text{kPa}$)} \\
+
+        \midrule
+
+        Lavabo & $0.10$ & $0.065$ & $100$ \\
+
+        Inodoro con cisterna & $0.10$ & -- & $100$ \\
+
+        Ducha colectiva & $0.20$ & $0.100$ & $100$ \\
+
+        Fregadero de laboratorio / comedor & $0.20$ & $0.100$ & $100$ \\
+
+        Vertedero de limpieza & $0.20$ & -- & $100$ \\
+
+        Grifo de riego exterior ($\phi 20\text{ mm}$) & $0.40$ & -- & $100$ \\
+
+        \bottomrule
+
+    \end{tabular}
+
+\end{table}
+
+
+
+El caudal total instalado $Q_{\text{inst}} = \sum q_i$ no se demanda simultáneamente. El caudal de cálculo de simultaneidad para uso industrial/colectivo se obtiene mediante el coeficiente de simultaneidad $K_{\text{sim}}$:
+
+\begin{equation}
+
+    K_{\text{sim}} = \frac{1}{\sqrt{n - 1}} \qquad (n > 2)
+
+\end{equation}
+
+donde $n$ representa el número total de aparatos instalados, resultando el caudal punta de diseño sanitario:
+
+\begin{equation}
+
+    Q_{\text{sanitario}} = K_{\text{sim}} \cdot \sum_{i=1}^{n} q_i
+
+\end{equation}
+
+
+
+\subsection{Caudales Técnicos de Proceso y Servicios Auxiliares}
+
+Siguiendo el modelo aplicado en proyectos industriales de referencia (como el Anexo de Abastecimiento de Fátima Cifuentes ), las necesidades de proceso se calculan equipo a equipo a partir de los balances de materia y energía:
+
+
+
+\begin{enumerate}
+
+    \item \textbf{Agua de Refrigeración en Condensadores y Enfriadores:}
+
+          A partir de la carga térmica a retirar $Q_{\text{cond}}$ ($\text{kJ/s}$), fijando una temperatura de entrada del agua de $20^\circ\text{C}$ y una salida de $40^\circ\text{C}$ ($\Delta T = 20^\circ\text{C}$):
+
+          \begin{equation}
+
+              \dot{m}_{\text{agua}} = \frac{Q_{\text{cond}}}{C_p \cdot \Delta T} = \frac{Q_{\text{cond}}}{4.18\text{ kJ/(kg}\cdot^\circ\text{C)} \cdot 20^\circ\text{C}}
+
+          \end{equation}
+
+          Para condensadores industriales de cabezas de destilación o reactores con cargas de $\approx 280\text{ kW}$, el caudal asciende a $\sim 3.30\text{ L/s}$.
+
+    \item \textbf{Generación de Vapor en Caldera y Circuitos Térmicos:}
+
+          La reposición de agua tratada para la caldera de vapor industrial debe cubrir las pérdidas por purgas ($5-10\%$) y las líneas de inyección directa de vapor limpio en esterilización, evaporación al vacío o arrastre de biomasa, típicamente en el rango de $0.15\text{ a }0.50\text{ L/s}$.
+
+    \item \textbf{Equipos de Purificación y Desmineralización (Ósmosis Inversa):}
+
+          El agua desmineralizada de proceso requiere un caudal de entrada un $25-35\%$ superior al permeado obtenido para compensar la corriente de rechazo o salmuera.
+
+    \item \textbf{Limpieza CIP (\textit{Cleaning-In-Place}):}
+
+          Régimen discontinuo pero intensivo en caudal punta para lavado de reactores, filtros prensa y líneas de transferencia ($1.5\text{ a }3.0\text{ L/s}$).
+
+\end{enumerate}
+
+
+
+\section{Dimensionamiento Hidráulico de Conducciones}
+
+
+
+\subsection{Ecuación de Continuidad y Selección de Diámetros}
+
+A partir del caudal punta de cada tramo $Q$ ($\text{m}^3/\text{s}$), el diámetro interior teórico $D_{\text{int}}$ se deduce imponiendo la velocidad de flujo admisible $v$:
+
+\begin{equation}
+
+    Q = v \cdot \Omega = v \cdot \frac{\pi D_{\text{int}}^2}{4} \implies D_{\text{int}} = \sqrt{\frac{4 Q}{\pi \cdot v}}
+
+\end{equation}
+
+
+
+\textbf{Criterios normativos de velocidad de flujo (CTE DB-HS 4):}
+
+\begin{itemize}
+
+    \item Tuberías metálicas (cobre, acero inoxidable): $v \in [0.5, 2.0]\text{ m/s}$.
+
+    \item Tuberías termoplásticas (PVC, PE-100, Polipropileno PPR): $v \in [0.5, 1.5]\text{ m/s}$ en derivaciones terminales y hasta $1.8\text{ m/s}$ en colectores principales para limitar ruidos y golpes de ariete.
+
+\end{itemize}
+
+
+
+\subsection{Cálculo de Pérdidas de Carga Continuas y Accidentales}
+
+Las pérdidas de carga lineales por fricción en las conducciones se evalúan mediante la expresión de Darcy-Weisbach:
+
+\begin{equation}
+
+    h_f = f \cdot \frac{L}{D_{\text{int}}} \cdot \frac{v^2}{2g}
+
+\end{equation}
+
+donde el factor de fricción $f$ se obtiene mediante la ecuación de Colebrook-White o el diagrama de Moody. Para tuberías plásticas lisas, la fórmula práctica de Hazen-Williams o Prandtl-Colebrook arroja gradientes de pérdida unitaria $J = h_f / L$ ($\text{m.c.a./m}$).
+
+
+
+Las pérdidas accidentales producidas por codos, válvulas, tes y reducciones se cuantifican mediante el método de los coeficientes de pérdida local $h_L = \sum K_i \frac{v^2}{2g}$ o mediante la asignación de longitudes equivalentes de tubería ($L_{\text{eq}} \approx 20-30\% \cdot L_{\text{geom}}$).
+
+
+
+\section{Diseño del Grupo de Presión y Depósitos de Acumulación}
+
+Cuando la presión de la red municipal o de la captación propia no garantiza la presión residual mínima en el punto más desfavorable ($100\text{ kPa}$ en grifos y $150\text{ kPa}$ en fluxores y calderas), se proyecta un grupo de presión hidroneumático según el CTE DB-HS 4.
+
+
+
+\subsection{Depósito de Reserva y Alimentación Auxiliar}
+
+Para evitar aspirar directamente de la red pública (práctica estrictamente prohibida para prevenir depresiones en la red municipal), se interpone un depósito de rotura de carga abierto a presión atmosférica. Su volumen útil se dimensiona para garantizar entre $15\text{ y }20\text{ minutos}$ de funcionamiento al caudal punta:
+
+\begin{equation}
+
+    V_{\text{depósito}} = Q_{\text{punta}} \cdot t_{\text{reserva}} \cdot 60 = Q_{\text{punta}}\text{ [L/s]} \cdot (20\text{ min}) \cdot 60\text{ s/min}
+
+\end{equation}
+
+Para una instalación con caudal simultáneo de proceso y servicios de $\sim 5.5\text{ L/s}$, el volumen del depósito auxiliar asciende a:
+
+\begin{equation}
+
+    V = 5.494\text{ L/s} \cdot 20 \cdot 60 = 6592.8\text{ L} \approx \mathbf{6.60\text{ m}^3}
+
+\end{equation}
+
+
+
+\subsection{Cálculo y Selección de las Bombas de Impulsión}
+
+El número de bombas en servicio se establece según el caudal total:
+
+\begin{itemize}
+
+    \item Hasta $10\text{ L/s}$: 2 bombas (1 en servicio + 1 en reserva activa idéntica).
+
+    \item Entre $10\text{ y }30\text{ L/s}$: 3 bombas (2 en servicio al $50\%$ + 1 en reserva).
+
+    \item Más de $30\text{ L/s}$: 4 o más bombas.
+
+\end{itemize}
+
+
+
+La presión mínima de arranque ($P_b$) debe vencer la altura geométrica de aspiración e impulsión ($H_g$), las pérdidas de carga del circuito más desfavorable ($P_c$) y la presión residual requerida en el grifo más elevado ($P_r \ge 10\text{ m.c.a.}$):
+
+\begin{equation}
+
+    P_b = H_a + H_g + P_c + P_r
+
+\end{equation}
+
+
+
+\subsection{Depósito Hidroneumático de Presión}
+
+Para evitar un ciclado excesivo del motor de las bombas que dañaría sus bobinados, se instala un calderín de membrana presurizada con nitrógeno. Fijando una presión máxima de parada $P_{\text{máx}} = P_b + 20\text{ m.c.a.}$ (2 bar sobre el arranque) y un número máximo de arranques $N_c = 25-30\text{ ciclos/h}$, el volumen total del acumulador se calcula como:
+
+\begin{equation}
+
+    V_{\text{acum}} = \frac{27 \cdot Q_{\text{bomba}} \cdot (P_{\text{máx}} + 10) \cdot (P_b + 10)}{(P_{\text{máx}} - P_b) \cdot N_c}
+
+\end{equation}
+
+
+
+%=============================================================================
+
+\section{Trenes de Pretratamiento y Afino de Agua segun Uso en Planta}
+
+El agua bruta procedente de red, pozo o toma fluvial requiere un acondicionamiento fisicoquimico especifico previo a su uso en calderas, reactores o torres de enfriamiento. En el proyecto se proyecta una central de tratamiento modularizada:
+
+
+
+\begin{table}[H]
+
+    \centering
+
+    \small
+
+    \caption{Tecnologias de acondicionamiento y afino hidrico proyectadas en planta}
+
+    \label{tab:trenes_tratamiento}
+
+    \begin{tabularx}{\textwidth}{@{}lXp{4.2cm}l@{}}
+
+        \toprule
+
+        \textbf{Tecnologia de Tratamiento} & \textbf{Mecanismo de Accion y Funcion} & \textbf{Aplicacion en Planta} & \textbf{Parametro de Salida} \\
+
+        \midrule
+
+        \textbf{Filtracion Multicapa y Carbon Activo} & Retencion de particulas en suspension ($> 20\,\mu\text{m}$) y decloracion/adsorcion de materia organica. & Pretratamiento general de entrada a osmosis e intercambiadores. & Turbidez $< 0.5\text{ NTU}$, $\text{SDI} < 3$. \\
+
+        \addlinespace
+
+        \textbf{Descalcificacion por Intercambio Ionico} & Sustitucion de cationes $\text{Ca}^{2+}$ y $\text{Mg}^{2+}$ por $\text{Na}^+$ mediante resinas cationicas fuertes regeneradas con $\text{NaCl}$. & Agua caliente sanitaria (ACS), lavanderia y circuito primario calderas. & Dureza total $< 0.5^\circ\text{fH}$ (evita incrustaciones). \\
+
+        \addlinespace
+
+        \textbf{Osmosis Inversa (OI) Doble Etapa} & Separacion por membranas semipermeables de poliamida enrollada en espiral bajo alta presion ($15\text{ a }25\text{ bar}$). & Agua desmineralizada para formulacion, reactores y calderas de vapor. & Conductividad $< 5\,\mu\text{S/cm}$, rechazo sales $> 99\%$. \\
+
+        \addlinespace
+
+        \textbf{Radiacion Ultravioleta (UV)} & Fotoinactivacion de ADN bacteriano y viral a $\lambda = 254\text{ nm}$ sin subproductos de desinfeccion ni trihalometanos. & Afino microbiologico final en puntos terminales de formulacion y envasado. & Dosis $\ge 400\text{ J/m}^2$, $0\text{ UFC/100 mL}$. \\
+
+        \bottomrule
+
+    \end{tabularx}
+
+\end{table}
+
+
+
+\subsection{Digitalizacion, Telemetria y Contabilidad Hidrica (Orden TED/339/2023)}
+
+En cumplimiento de la legislacion moderna y las directrices del PERTE de Digitalizacion del Ciclo del Agua, la red interna incorpora un sistema de telemetria y contabilidad digital centralizado:
+
+\begin{itemize}
+
+    \item \textbf{Caudalimetros Electromagneticos con Transmision Digital:} Instalacion de caudalimetros electromagneticos (precision clase 1 o 2 conforme a norma UNE-EN ISO 4064) en la acometida principal, cabecera de calderas, torres de refrigeracion, circuito sanitario y vertido a depuradora.
+
+    \item \textbf{Integracion SCADA y Deteccion de Fugas:} Monitorizacion en continuo de caudal ($) y presion ($) mediante transmisores piezoelectricos conectados via bus de campo Modbus-RTU/Industrial Ethernet al sistema de control de planta. Un algoritmo de balance dinamico compara minuto a minuto el caudal introducido frente a la suma de consumos parciales, generando alertas automaticas de rotura o fuga oculta.
+
+\end{itemize}
+
+
+
+
+
+
+\fi
+
+\chapter{Normativa Sanitaria, Medioambiental y Red de Saneamiento Industrial}
+
+El abastecimiento de agua y la evacuación de efluentes en un complejo de ingeniería química o planta de proceso industrial están sujetos a un régimen regulatorio multidisciplinar y jerárquico. La viabilidad técnica y legal del proyecto depende del cumplimiento sincrónico de la legislación higiénico-sanitaria para agua de consumo y procesos limpios, los reglamentos de seguridad industrial contra riesgos biológicos (\textit{Legionella}), la normativa medioambiental sobre vertidos y protección de masas receptoras (aguas subterráneas y superficiales) y los códigos constructivos y de diseño que rigen las redes de evacuación y saneamiento (\cite{TRLA2001, RDPH1986, RD3_2023, RD487_2022, UNE_EN_752, CTE_DB_HS5, UNE_EN_ISO_129_1, ISO_4067_1, ISO_4067_6}).
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[node distance=1.3cm, auto,
+    bloque/.style={rectangle, draw=blue!70!black, fill=blue!5, rounded corners=3pt, thick, text width=4.0cm, align=center, minimum height=1.0cm, font=\small},
+    norma/.style={rectangle, draw=teal!80!black, fill=teal!10, rounded corners=3pt, dashed, thick, text width=4.2cm, align=center, minimum height=1.0cm, font=\footnotesize},
+    linea/.style={draw=gray!80!black, -{Latex[length=2.5mm]}, thick}]
+    
+    \node [bloque] (origen) {\textbf{Captación \& Red Municipal}\\Abastecimiento industrial};
+    \node [norma, right=1.6cm of origen] (n1) {\textbf{RD 3/2023} (Consumo/Proceso)\\Lista positiva de materiales};
+    
+    \node [bloque, below=0.9cm of origen] (uso) {\textbf{Distribución \& Torres}\\Procesos y refrigeración};
+    \node [norma, right=1.6cm of uso] (n2) {\textbf{RD 487/2022} (Legionelosis)\\PPCL / PSL y biocidas};
+    
+    \node [bloque, below=0.9cm of uso] (red) {\textbf{Red de Saneamiento Interna}\\Redes separativas y arquetas};
+    \node [norma, right=1.6cm of red] (n3) {\textbf{CTE DB-HS 5 / UNE-EN 752}\\UNE-EN ISO 129-1 (dibujo)};
+    
+    \node [bloque, below=0.9cm of red] (vertido) {\textbf{EDARI \& Evacuación Final}\\Colector público o DPH};
+    \node [norma, right=1.6cm of vertido] (n4) {\textbf{TRLA / RD 665/2023 / Dir. 2024/3019}\\Canon vertido y VLE};
+    
+    \path [linea] (origen) -- (uso);
+    \path [linea] (uso) -- (red);
+    \path [linea] (red) -- (vertido);
+    
+    \draw [dashed, draw=gray!70, thick] (origen) -- (n1);
+    \draw [dashed, draw=gray!70, thick] (uso) -- (n2);
+    \draw [dashed, draw=gray!70, thick] (red) -- (n3);
+    \draw [dashed, draw=gray!70, thick] (vertido) -- (n4);
+\end{tikzpicture}
+\caption{Estructura regulatoria integral aplicable al ciclo del agua y saneamiento en plantas químicas e industriales.}
+\label{fig:mapa_normativo_integral}
+\end{figure}
+
+\section{Marco Jurídico Integrado del Agua en España}
+
+El marco regulatorio hidráulico e higiénico español se estructura en torno a tres pilares coordinados:
+\begin{enumerate}
+    \item \textbf{Gestión de la Oferta y Calidad de Captación:} Regido por el Texto Refundido de la Ley de Aguas (\cite{TRLA2001}) y su reglamento instrumental, el Reglamento del Dominio Público Hidráulico (\cite{RDPH1986}), recientemente modernizado mediante el \textbf{Real Decreto 665/2023}.
+    \item \textbf{Seguridad Sanitaria en Instalaciones Interiores y Usos Especiales:} Articulado por el \textbf{Real Decreto 3/2023} (\cite{RD3_2023}) sobre aguas de consumo y materiales en contacto, junto con el \textbf{Real Decreto 487/2022} y el \textbf{Real Decreto 614/2024} (\cite{RD487_2022, RD614_2024}) de prevención higiénico-sanitaria de la legionelosis en equipos evaporativos e intercambiadores.
+    \item \textbf{Economía Circular, Evacuación de Efluentes y Redes de Saneamiento:} Regido a nivel europeo por la nueva \textbf{Directiva (UE) 2024/3019} (\cite{DirectivaUE_2024_3019}), y a nivel técnico-constructivo y de delineación de planos por el Código Técnico de la Edificación (\cite{CTE_DB_HS5}), la norma europea de alcantarillado exterior e industrial \textbf{UNE-EN 752} (\cite{UNE_EN_752}, actualmente en revisión bajo el proyecto de enmienda \textbf{PNE-EN 752:2017/prA1} para adaptación a eventos climáticos extremos), las directrices vigentes de acotación \textbf{UNE-EN ISO 129-1:2019} (\cite{UNE_EN_ISO_129_1}) (sin que exista una norma única vigente de símbolos de arquetas y pozos, ver sección~\ref{sec:planos_reales}).
+\end{enumerate}
+
+\section{Normativa Sanitaria de Calidad del Agua}
+
+\subsection{Real Decreto 3/2023: Criterios Técnico-Sanitarios del Agua de Consumo e Industrial}
+El \textbf{Real Decreto 3/2023}, de 10 de enero, transpone la Directiva (UE) 2020/2184, estableciendo un nuevo paradigma de aseguramiento de calidad basado en planes de evaluación del riesgo (\textit{Water Safety Plans}):
+\begin{itemize}
+    \item \textbf{Lista Positiva de Materiales en Contacto:} El RD 3/2023 impide instalar tuberías, racores, juntas, valvulería o recubrimientos epóxicos que liberen sustancias nocivas o alteren las propiedades organolépticas del agua. En proyectos químicos, las líneas que sirvan como base para preparación de reactivos, calderas de vapor limpio, laboratorios o aseos deben justificar certificados de conformidad sanitaria.
+    \item \textbf{Protección contra Retorno y Dispositivos Antirretorno:} El diseño de la red interna de abastecimiento debe impedir físicamente cualquier retorno o sifonamiento de fluidos de proceso hacia la red de distribución general, instalando desconectores hidráulicos de zona de presión reducida no comprobable o comprobable tipo BA (\cite{CTE_DB_HS4}).
+    \item \textbf{Valores paramétricos:} El anexo I del RD 3/2023 fija valores para metales (plomo, níquel, cromo, etc.), subproductos de desinfección (trihalometanos $\le 100\,\mu\text{g/L}$) y desinfectante residual en red (cloro libre entre $0.2$ y $1.0\,\text{mg/L}$); las cifras exactas y sus plazos de aplicación deben tomarse del texto consolidado (\cite{RD3_2023}).
+\end{itemize}
+
+\subsection{Prevención y Control de la Legionelosis: RD 487/2022 y su Modificación por el Real Decreto 614/2024}
+En la industria química y de procesos, los sistemas de refrigeración evaporativa (torres de refrigeración, condensadores evaporativos, aeroenfriadores adiabáticos) y las redes de agua caliente sanitaria (ACS) e industrial constituyen instalaciones de alto riesgo de proliferación y aerosolización de \textit{Legionella pneumophila}. El régimen legal se articula en el marco base del \textbf{Real Decreto 487/2022}, recientemente actualizado y precisado por el \textbf{Real Decreto 614/2024} (\cite{RD487_2022, RD614_2024}):
+
+\begin{itemize}
+    \item \textbf{Delimitación de Responsabilidad (Titular y Persona Explotadora):} El RD 614/2024 clarifica que cuando la explotación de las instalaciones industriales o auxiliares se encomiende a un tercero (gestor o empresa operadora), la responsabilidad legal del cumplimiento sanitario y documental recae directamente sobre la \textbf{persona física o jurídica explotadora}, salvo cláusula contractual fehaciente en contrario.
+    \item \textbf{Planes de Gestión del Riesgo (PPCL vs. PSL):} La instalación debe operar bajo una de las dos figuras reconocidas:
+    \begin{itemize}
+        \item \textbf{Plan de Prevención y Control de Legionella (PPCL):} Basado en programas preestablecidos de mantenimiento, purgas por conductividad, dosificación continua de biocidas autorizados (ROESB) y limpiezas semestrales.
+        \item \textbf{Plan Sanitario de Legionella (PSL):} Basado en la metodología de evaluación cuantitativa del riesgo de la OMS, adaptable a las particularidades de procesos industriales continuos.
+    \end{itemize}
+    \item \textbf{Toma de Muestras y Acreditación UNE-EN ISO/IEC 17025:} El RD 614/2024 exige formalmente que la toma de muestras de agua para análisis de \textit{Legionella} sea ejecutada por entidades acreditadas conforme a la norma UNE-EN ISO/IEC 17025:2017 (con plazo transitorio de acreditación hasta el 1 de enero de 2030).
+    \item \textbf{Eficiencia Hídrica y Flexibilización de Vaciados:} El RD 614/2024 suprime la obligación sistemática de vaciado total en grandes sistemas y circuitos de refrigeración continuos durante las labores de limpieza y desinfección, permitiendo la recirculación controlada del agua para evitar el despilfarro masivo de recurso hídrico, siempre que se garantice la eficacia biocida.
+    \item \textbf{Acciones Correctoras según Resultados Analíticos en Torres de Refrigeración (Anexo VIII, Tabla 8):} Las actuaciones obligatorias ante recuentos de \textit{Legionella spp.} en torres y condensadores evaporativos (actualizadas por el RD 614/2024) son:
+    \begin{itemize}
+        \item \textbf{No detectado o $< 100\,\text{UFC/L}$:} Mantener las condiciones normales de operación y tratamiento.
+        \item \textbf{$\ge 100$ y $< 1\,000\,\text{UFC/L}$:} Revisar de inmediato el programa de tratamiento de agua y dosificación biocida, realizar las correcciones oportunas y \textbf{valorar técnicamente efectuar una limpieza y desinfección} (matiz de ponderación técnica introducido por el RD 614/2024), con remuestreo de comprobación a los 15--30 días.
+        \item \textbf{$\ge 1\,000$ y $< 10\,000\,\text{UFC/L}$:} Es \textbf{obligatorio} realizar una limpieza y choque de desinfección química de todo el circuito, revisar exhaustivamente los parámetros físico-químicos (biocida libre, pH, purga) y tomar muestra de control a los 15--30 días.
+        \item \textbf{$\ge 10\,000\,\text{UFC/L}$:} Supone riesgo higiénico inaceptable: \textbf{parada cautelar e inmediata de la instalación}, ejecución de limpieza de choque y desinfección exhaustiva, y remuestreo reglamentario antes de reanudar el servicio ordinario.
+    \end{itemize}
+\end{itemize}
+
+\section{Redes de Saneamiento Industrial y Evacuación de Efluentes}
+
+El diseño de la red de saneamiento en un proyecto de ingeniería química no se limita a un mero desagüe, sino que constituye una infraestructura crítica de seguridad ambiental, contención de fugas y cumplimiento legal (\cite{UNE_EN_752, CTE_DB_HS5}).
+
+\subsection{Topología Separativa Estricta en Plantas Químicas}
+A diferencia de los edificios residenciales, una instalación industrial de proceso requiere la segregación física e hidráulica en un mínimo de cuatro subredes independientes:
+\begin{enumerate}
+    \item \textbf{Red de Fecales o Aguas Negras (R-FEC):} Procedente de vestuarios, comedores y aseos del personal. Se conduce directamente hacia la arqueta sifónica general de acometida al colector municipal, sin mezclarse previamente con efluentes de fabricación.
+    \item \textbf{Red de Pluviales Limpias (R-PLU):} Recoge escorrentías de cubiertas de naves y viales perimetrales limpios sin riesgo de derrame químico. Puede conducirse a balsas de laminación o vertido directo a cauce/red municipal sin tratamiento previo intensivo.
+    \item \textbf{Red de Pluviales Potencialmente Contaminadas (R-PLC):} Aguas de lluvia caídas sobre zonas de carga/descarga de cisternas, parques de tanques, áreas de proceso exterior y muelles. Obligatoriamente canalizadas hacia un sistema de retención de las primeras lluvias (primeros $15\text{--}20\,\text{mm}$ de precipitación) y enviadas a desarenador y \textbf{separador de hidrocarburos / decantador}.
+    \item \textbf{Red de Vertidos Industriales de Proceso (R-IND):} Aguas procedentes de purgas de calderas, rechazos de ósmosis inversa, limpiezas CIP (\textit{Cleaning-in-Place}), condensados contaminados y condensadores barométricos. Estas aguas se canalizan mediante tuberías químicamente resistentes hacia la estación depuradora de aguas residuales industriales (\textbf{EDARI}) para su neutralización, coagulación-floculación y tratamiento biológico/químico antes de su vertido o reutilización.
+\end{enumerate}
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[node distance=1.1cm, auto,
+    unidad/.style={rectangle, draw=blue!80!black, fill=blue!10, rounded corners=2pt, thick, text width=2.9cm, align=center, minimum height=0.9cm, font=\scriptsize},
+    colector/.style={rectangle, draw=orange!90!black, fill=orange!15, thick, text width=2.8cm, align=center, minimum height=0.8cm, font=\scriptsize},
+    trat/.style={rectangle, draw=purple!80!black, fill=purple!10, rounded corners=3pt, thick, text width=3.0cm, align=center, minimum height=0.9cm, font=\scriptsize},
+    destino/.style={rectangle, draw=teal!90!black, fill=teal!20, rounded corners=4pt, line width=1pt, text width=3.2cm, align=center, minimum height=1.0cm, font=\small\bfseries},
+    flecha/.style={draw=gray!80!black, -{Latex[length=2.3mm]}, thick}]
+    
+    % Unidades de origen
+    \node [unidad] (cubiertas) {Cubiertas Naves\\(Pluviales limpias)};
+    \node [unidad, below=0.6cm of cubiertas] (viales) {Zonas Carga / Viales\\(Pluviales contam.)};
+    \node [unidad, below=0.6cm of viales] (edif) {Edificio Servicios\\(Aguas fecales)};
+    \node [unidad, below=0.6cm of edif] (proceso) {Reactores / CIP / Purga\\(Vertido industrial)};
+    
+    % Elementos intermedios
+    \node [colector, right=1.2cm of cubiertas] (arc_plu) {Arqueta de Paso\\(R-PLU)};
+    \node [trat, right=1.2cm of viales] (sep_hid) {Separador de\\Hidrocarburos (SH)};
+    \node [colector, right=1.2cm of edif] (arc_sif) {Arqueta Sifónica\\(R-FEC)};
+    \node [trat, right=1.2cm of proceso] (edari) {EDARI Planta\\(Neutraliz. + Fis-Quím)};
+    
+    % Colector general y pozo de control
+    \node [colector, right=1.3cm of sep_hid] (pozo_unif) {Pozo de Registro\\General de Planta};
+    \node [trat, right=1.3cm of edari] (pozo_muestras) {Pozo Homologado\\Toma Muestras Oficial};
+    
+    % Destino final
+    \node [destino, right=1.2cm of pozo_unif, yshift=-1.1cm] (emisor) {Colector Municipal o\\Cauce Receptor (DPH)};
+    
+    % Conexiones
+    \path [flecha] (cubiertas) -- (arc_plu);
+    \path [flecha] (viales) -- (sep_hid);
+    \path [flecha] (edif) -- (arc_sif);
+    \path [flecha] (proceso) -- (edari);
+    
+    \path [flecha] (arc_plu) -| (pozo_unif);
+    \path [flecha] (sep_hid) -- (pozo_unif);
+    \path [flecha] (arc_sif) -| (pozo_muestras);
+    \path [flecha] (edari) -- (pozo_muestras);
+    
+    \path [flecha] (pozo_unif) -- (emisor);
+    \path [flecha] (pozo_muestras) -- (emisor);
+\end{tikzpicture}
+\caption{Diagrama de bloques de la red separativa de saneamiento y tratamiento previo en un complejo de ingeniería química.}
+\label{fig:diagrama_saneamiento_quimico}
+\end{figure}
+
+\subsection{Elementos Singulares de la Red de Evacuación}
+Conforme a las prescripciones del CTE DB-HS 5 y la UNE-EN 752, toda red industrial debe estructurarse con los siguientes componentes normalizados:
+\begin{itemize}
+    \item \textbf{Arquetas a Pie de Bajante (APB):} Recogen las aguas verticales de bajantes pluviales o fecales con registro roscado hermético para desobstrucción, evitando uniones directas a $90^\circ$ en cimentación.
+    \item \textbf{Arquetas de Paso (AP):} Dispositivos de entronque y cambio de dirección o sección en colectores enterrados. Su fondo debe estar acanalado con una pendiente mínima del $2.0\text{ \%}$ hacia la salida.
+    \item \textbf{Arquetas Sifónicas (AS):} Dispositivos con cierre hidráulico permanente (altura de sello de agua $\ge 50\text{--}70\,\text{mm}$) instalados antes de acometer a la red general o municipal para evitar la propagación de gases mefíticos, sulfhídrico ($\text{H}_2\text{S}$) o vapores inflamables hacia el interior de las instalaciones.
+    \item \textbf{Separadores de Grasas e Hidrocarburos (SH):} Equipos de retención gravimétrica dotados de filtro coalescente y válvula obturadora automática por flotador calibrado a densidad $0.85\,\text{g/cm}^3$. Según UNE-EN 858, deben retener hidrocarburos residuales por debajo de $5\,\text{mg/L}$ antes de dar salida al efluente.
+    \item \textbf{Pozos de Registro (PR):} Elementos visitables instalados en tramos rectos a distancias del orden de $50\,\text{m}$, en quiebros angulares mayores de $45^\circ$, cambios de rasante o saltos de cota hidráulica ($> 0.80\,\text{m}$ con deflector). Cuentan con un diámetro interior mínimo de $\phi 1\,000\,\text{mm}$ y escalerilla de polipropileno reforzado con alma de acero.
+    \item \textbf{Pozo Oficial de Control y Toma de Muestras:} Instalado en el límite perimetral de la parcela, previo a la válvula de retención de acometida municipal. Es de diseño homologado por la empresa explotadora del saneamiento o confederación hidrográfica, disponiendo de canaleta Venturi o vertedero Thompson con medidor ultrasónico de caudal y tomamuestras automático refrigerado continuo.
+\end{itemize}
+
+\subsection{Criterios Hidráulicos de Dimensionamiento y Materiales}
+El trazado y cálculo de colectores en plantas químicas debe satisfacer:
+\begin{itemize}
+    \item \textbf{Pendiente de Conducciones:} Mínimo del $1.0\text{--}1.5\text{ \%}$ para colectores exteriores enterrados y del $2.0\text{ \%}$ para ramales secundarios interiores.
+    \item \textbf{Velocidad de Autolimpieza y Erosión:} El régimen de flujo debe garantizar una velocidad de autolimpieza $v \ge 0.60\text{--}0.80\,\text{m/s}$ a un tercio del caudal nominal para impedir la sedimentación de arenas, y limitar la velocidad máxima a $v \le 3.0\text{--}4.0\,\text{m/s}$ para evitar el desgaste por abrasión.
+    \item \textbf{Grado de Llenado:} Los colectores por gravedad no deben calcularse a sección llena continuada, adoptando una relación máxima de calado $y/D \le 0.70\text{--}0.75$ para asegurar la ventilación y renovación de la atmósfera interior del colector.
+    \item \textbf{Selección de Materiales de Tubería:}
+    \begin{itemize}
+        \item \textbf{PVC-U Sanitario (color teja RAL 8023):} De rigidez anular SN4 o SN8 bajo norma UNE-EN 1401 para colectores enterrados generales de pluviales y fecales.
+        \item \textbf{Polietileno de Alta Densidad (PEAD) Estructurado / Corrugado:} Excelente resistencia al impacto y asentamientos diferenciales del terreno.
+        \item \textbf{Polipropileno (PP) o Acero Inoxidable AISI 316L / PVDF:} Obligatorio en colectores de efluentes de proceso industrial (R-IND) sometidos a temperaturas elevadas ($> 60\,^\circ\text{C}$) o agresividad química por pH ácido o disolventes orgánicos.
+    \end{itemize}
+\end{itemize}
+
+\subsection{Simbología Normalizada y Representación Gráfica en Planos de Proyecto}
+La elaboración de planos de saneamiento debe ajustarse a las normas de dibujo técnico vigentes y a los requisitos constructivos del CTE DB-HS 5 y de la UNE-EN 752 (\cite{CTE_DB_HS5, UNE_EN_752}):
+\begin{itemize}
+    \item \textbf{Acotación y tolerancias:} La UNE-EN ISO 129-1:2019 regula la indicación de dimensiones y tolerancias y sustituyó a la UNE 1039 (\cite{UNE_EN_ISO_129_1}). No define símbolos de instalaciones.
+    \item \textbf{Símbolos de fontanería y saneamiento:} Las partes ISO 4067-1 e ISO 4067-6, históricas, fueron retiradas sin sustitución directa (\cite{ISO_4067_1, ISO_4067_6}). No hay un único conjunto de símbolos vigente para arquetas y pozos: en la práctica cada proyecto fija su propia leyenda, apoyándose p.\,ej. en la serie ISO 14617 (símbolos para esquemas) y en los detalles constructivos del CTE DB-HS 5.
+\end{itemize}
+
+Los símbolos de la Tabla~\ref{tab:simbologia_saneamiento} recopilan los \textbf{elementos y grafismos habituales} observados en el material técnico y leyendas de planos de proyectos industriales y de edificación consultados (estructurados según los componentes constructivos del CTE DB-HS 5). En dicho material se observa el uso de tonalidades \textcolor{red!80!black}{\textbf{rojas/magenta/marrón}} para aguas residuales, \textcolor{blue!80!black}{\textbf{azules}} para pluviales y \textcolor{green!50!black}{\textbf{verdes}} para vertidos industriales de proceso. Al no existir una norma unificada de símbolos vigente para redes de evacuación, se trata de una convención \textbf{ilustrativa} que en cada proyecto real debe definirse con claridad en la leyenda del plano.
+
+\begin{table}[htbp]
+\centering
+\small
+\renewcommand{\arraystretch}{1.45}
+\tikzset{sy/.style={line width=0.9pt}}
+\begin{tabularx}{\textwidth}{>{\centering\arraybackslash}m{1.7cm} >{\raggedright\arraybackslash}m{3.6cm} >{\centering\arraybackslash}m{1.3cm} X}
+\toprule
+\textbf{Símbolo} & \textbf{Elemento} & \textbf{Código} & \textbf{Función y criterio técnico} \\
+\midrule
+\multicolumn{4}{l}{\textit{Conducciones}} \\
+\tikz{\draw[red!80!black,sy] (0,0)--(1.3,0);} & Colector de aguas residuales (fecales) & R-FEC & Aseos, vestuarios y comedores; pendiente mínima del 2\,\%. \\
+\tikz{\draw[blue!80!black,sy] (0,0)--(1.3,0);} & Colector de pluviales limpias / canalón & R-PLU & Cubiertas y viales sin riesgo de derrame. \\
+\tikz{\draw[blue!80!black,sy,dashed] (0,0)--(1.3,0);} & Colector de pluviales potencialmente contaminadas & R-PLC & Zonas de carga/descarga y cubetos; hacia separador. \\
+\tikz{\draw[green!50!black,sy] (0,0)--(1.3,0);} & Colector de vertidos industriales de proceso & R-IND & Purgas, CIP y rechazos hacia EDARI; tubería químicamente resistente. \\
+\midrule
+\multicolumn{4}{l}{\textit{Elementos de captación}} \\
+\tikz{\draw[blue!80!black,sy] (0,0) circle (0.14);} & Bajante & BJ & Conducción vertical de pluviales o residuales. \\
+\tikz{\draw[green!50!black,sy] (0,0) rectangle (0.8,0.3); \foreach \x in {0.1,0.2,...,0.7} \draw[green!50!black] (\x,0)--(\x,0.3);} & Imbornal / rejilla & IMB & Captación superficial en viales y explanadas. \\
+\tikz{\filldraw[red!80!black,fill=red!35,sy] (0,0) rectangle (0.4,0.4);} & Sumidero sifónico & SS & Recogida en suelos de naves y salas con cierre hidráulico. \\
+\tikz{\draw[red!80!black,sy] (0,0) circle (0.2); \draw[red!80!black,sy] (-0.14,-0.14)--(0.14,0.14);} & Bote sifónico & BS & Distancia a bajante $\le 2$\,m; derivaciones $\le 2{,}5$\,m. \\
+\midrule
+\multicolumn{4}{l}{\textit{Registros y elementos singulares}} \\
+\tikz{\draw[red!80!black,sy] (0,0) rectangle (0.45,0.45); \fill[red!80!black] (0,0)--(0.45,0.45)--(0.45,0)--cycle;} & Arqueta de residuales & AR & Registro y cambio de dirección; máx. 3 colectores entrantes. \\
+\tikz{\draw[blue!80!black,sy] (0,0) rectangle (0.45,0.45); \fill[blue!80!black] (0,0)--(0.45,0.45)--(0.45,0)--cycle;} & Arqueta de pluviales & AP & Ídem en red de pluviales; tramos entre registros $\le 15$\,m. \\
+\tikz{\draw[blue!80!black,sy] (0,0) rectangle (0.6,0.35); \draw[blue!80!black] (0.08,0.07) rectangle (0.52,0.28);} & Arqueta a pie de bajante & APB & Recepción de bajante con registro. \\
+\tikz{\draw[red!80!black,sy] (0,0) rectangle (0.3,0.5); \draw[red!80!black] (0.07,0.08) rectangle (0.23,0.42);} & Arqueta sifónica & AS & Cierre hidráulico frente a gases antes de la acometida. \\
+\tikz{\draw[green!50!black,sy] (0,0) rectangle (1.1,0.48); \draw[green!50!black,sy] (0.33,0)--(0.33,0.48); \draw[green!50!black,sy] (0.77,0)--(0.77,0.48); \node[font=\fontsize{4.5pt}{5pt}\selectfont\bfseries,green!50!black,inner sep=0pt] at (0.55,0.24) {SH};} & Separador de hidrocarburos / decantador & SH & Equipo de retención gravimétrica de aceites/grasas (desarenador + cámara de coalescencia) para R-PLC antes del vertido. \\
+\tikz{\filldraw[magenta!80!black,fill=magenta!30,sy] (0,0) circle (0.22); \fill[magenta!80!black] (0,0) circle (0.05);} & Pozo de registro & PR & Registro visitable en colectores exteriores. \\
+\tikz{\draw[black,sy] (0,0) circle (0.24); \node[font=\scriptsize\bfseries] at (0,0) {M};} & Pozo de toma de muestras y aforo & PTM & Punto de control oficial del vertido (TRLA/RDPH). \\
+\tikz{\draw[black,sy] (0,0) rectangle (0.45,0.45);} & Pozo general del edificio / planta & PG & Último registro antes de la acometida. \\
+\tikz{\draw[black,sy] (0,0)--(0.28,0); \draw[black,sy] (0.28,-0.16)--(0.28,0.16); \draw[black,sy] (0.28,0.16)--(0.52,-0.16); \draw[black,sy] (0.52,-0.16)--(0.52,0.16); \draw[black,sy] (0.52,0)--(0.8,0);} & Válvula antirretorno & VAR & Dispositivo que impide el reflujo hacia la red interior ante sobrecargas del colector exterior. Se adopta la simbología normalizada del CTE DB-HS 4 (Apéndice D, suministro/fontanería), dado que el DB-HS 5 carece de catálogo gráfico propio.\\
+\tikz{\draw[black,sy] (0,0) circle (0.18); \draw[black,sy,-latex] (0.75,0)--(0.18,0);} & Acometida & ACO & Conexión a colector público (residuales y pluviales por separado). \\
+\bottomrule
+\end{tabularx}
+\caption{Simbología y codificación habitual en planos de saneamiento industrial (convención ilustrativa basada en el material consultado en proyectos reales; no normalizada).}
+\label{tab:simbologia_saneamiento}
+\end{table}
+
+\begin{tcolorbox}[colback=teal!5,colframe=teal!60!black,title=\textbf{Ejemplo de Aplicación en Proyecto Real: Planta de Proceso Industrial}]
+En los proyectos de ejecución de plantas industriales y químicas, los planos de la disciplina de obra civil e hidráulica integran de forma rigurosa la red general de saneamiento:
+\begin{itemize}
+    \item \textbf{Plano de Planta General de Saneamiento:} Representa toda la red perimetral de colectores con identificación exhaustiva de cada tramo: diámetro ($\phi$), longitud ($L$), material (PVC-U / PEAD), cota de rasante y cota de solera, pendiente calculada en milésimas ($i$) y número de arqueta o pozo de registro correlativo.
+\end{itemize}
+A continuación, se inserta en orientación apaisada el plano técnico real correspondiente a la planta general de saneamiento de una instalación de proceso químico (\cite{vellido_perez_2014}).
+\end{tcolorbox}
+
+\section{Plano Constructivo de Saneamiento en Proyecto Real}\label{sec:planos_reales}
+
+Se incorpora el plano general de saneamiento de un proyecto real de planta de proceso químico (\cite{vellido_perez_2014}) como ejemplo de organización geométrica y constructiva de una red industrial. Al ser un proyecto redactado en 2014, es anterior a varias de las reformas normativas citadas en este capítulo (RD 3/2023, RD 487/2022 y RD 665/2023), por lo que se presenta exclusivamente con fines didácticos e ilustrativos de trazado y distribución en planta, debiendo actualizarse los criterios normativos y de cálculo a las exigencias legales vigentes.
+
+\begin{landscape}
+\begin{figure}[p]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.85\textheight,keepaspectratio]{Doc/Planos/plano_saneamiento_planta_land.png}
+\caption{Plano de Planta General de la Red de Saneamiento Industrial: Colectores separativos de fecales, pluviales y vertidos de proceso, arquetas de paso, pozos de registro y acometida municipal (\cite{vellido_perez_2014}).}
+\label{fig:plano_general_saneamiento}
+\end{figure}
+\end{landscape}
+
+
+\section{Normativa Medioambiental e Hidráulica de Vertidos}
+
+\subsection{Texto Refundido de la Ley de Aguas (TRLA) y Canon de Control de Vertidos}
+El TRLA consagra en sus artículos 100 a 108 el principio de que todo vertido al dominio público hidráulico requiere previa autorización administrativa otorgada por el organismo de cuenca correspondiente (Confederación Hidrográfica):
+\begin{itemize}
+    \item \textbf{Canon de Control de Vertidos (art.~113 TRLA y arts.~289--295 RDPH):} Todo vertido al dominio público hidráulico devenga anualmente este canon, destinado al estudio, control, protección y mejora del medio receptor. Su importe es el producto del volumen de vertido autorizado por el precio unitario de control de vertido, descontando el volumen de agua efectivamente reutilizado en el período impositivo (art.~291 RDPH):
+    \begin{equation}
+        C_{\text{CV}} = (V_{\text{autorizado}} - V_{\text{reutilizado}}) \cdot P_{\text{u}}, \qquad P_{\text{u}} = P_{\text{b}} \cdot K
+        \label{eq:canon_vertido}
+    \end{equation}
+    donde:
+    \begin{itemize}
+        \item $V_{\text{autorizado}}$ es el volumen anual de vertido fijado en la autorización ($\si{m^3/año}$) y $V_{\text{reutilizado}}$ el volumen efectivamente reutilizado.
+        \item $P_{\text{b}}$ es el precio básico por metro cúbico del art.~113.3 TRLA, actualizable mediante las Leyes de Presupuestos Generales del Estado. Los valores vigentes aplicados por los organismos de cuenca son $0{,}01751$\,€/m$^3$ para agua residual urbana y $0{,}04377$\,€/m$^3$ para \textbf{agua residual industrial}.
+        \item $K$ es el coeficiente de mayoración o minoración del \textbf{anexo IV del RDPH}, obtenido como producto de tres factores: la \textit{naturaleza y características} del vertido (urbano o industrial; en el caso industrial, según la clase de actividad y la presencia de sustancias peligrosas), el \textit{grado de contaminación} (según exista o no un tratamiento adecuado) y la \textit{calidad ambiental del medio receptor} (categoría de la zona de vertido). Tras el Real Decreto-ley 4/2023, el coeficiente de mayoración no puede ser superior a 5 (art.~291.3 RDPH), y los nuevos factores del anexo IV fijados por el RD 665/2023 se aplican a los cánones devengados desde el 31 de diciembre de 2025 (disposición transitoria duodécima).
+    \end{itemize}
+
+    \item \textbf{Valoración de Daños al Dominio Público Hidráulico (Infracciones y Vertidos No Autorizados):} Debe distinguirse el canon tributario ordinario de la fórmula oficial de \textbf{valoración e indemnización por daños al medio hídrico} tipificada en los artículos 325 y siguientes y detallada en el \textbf{Anexo V del RDPH} (modificado por el RD 665/2023), aplicable ante accidentes, derrames o vertidos no autorizados:
+    \begin{equation}
+        V_{\text{Daño}} (\text{€}) = \text{CTEC} \cdot V \cdot K_{\text{pv}} \cdot K_{\text{m}} = 0{,}12\text{ €}/\si{m^3} \cdot (Q \cdot t) \cdot K_{\text{pv}} \cdot K_{\text{m}}
+        \label{eq:valoracion_danos}
+    \end{equation}
+    donde:
+    \begin{itemize}
+        \item $\text{CTEC} = 0{,}12\text{ €}/\si{m^3}$ es el coste teórico unitario del tratamiento de vertido para evitar la contaminación.
+        \item $V = Q \cdot t$ es el volumen vertido en $\si{m^3}$ ($Q$ caudal en $\si{m^3/día}$ y $t$ duración en días).
+        \item $K_{\text{pv}}$ es el coeficiente adimensional de peligrosidad del vertido establecido en el \textbf{Anexo V.A} según la tipología de las sustancias vertidas (DQO, toxicidad, metales pesados, etc.).
+        \item $K_{\text{m}}$ es el coeficiente adimensional relativo a la clasificación y sensibilidad ambiental del medio receptor incluido en el \textbf{Anexo V.B} (zonas de protección, estado de las masas de agua y acuíferos).
+    \end{itemize}
+\end{itemize}
+
+
+\subsection{Reglamento del Dominio Público Hidráulico (RD 849/1986 y RD 665/2023)}
+La reforma del RDPH consolidada por el \textbf{Real Decreto 665/2023} ha elevado sensiblemente las exigencias técnicas aplicables a las plantas químicas e industriales:
+\begin{itemize}
+    \item \textbf{Límites de vertido:} Los valores límite de emisión no son una tabla general del RDPH: se fijan caso por caso en la autorización de vertido del organismo de cuenca, atendiendo a las mejores técnicas disponibles (\cite{CWW_BREF_2016}) y a los objetivos de calidad del medio receptor (\cite{TRLA2001, RDPH1986}).
+    \item \textbf{Protección de aguas subterráneas frente a contaminación puntual:} La reforma incorpora valores de referencia para aguas subterráneas y, si se superan, exige un Análisis Cuantitativo de Riesgos (ACR) que determine las medidas correctoras. Para una planta química esto obliga a justificar la contención de derrames y a prever controles piezométricos; el articulado concreto debe consultarse en el texto consolidado del RDPH (\cite{RDPH1986}).
+    \item \textbf{Perímetros de protección:} El RDPH regula la delimitación de perímetros de protección de captaciones de agua subterránea destinadas a consumo humano. Si la planta se abastece de un pozo propio para uso industrial, esta obligación no se aplica automáticamente, pero la concesión y la ubicación del pozo deben evaluarse frente a los perímetros existentes en la zona (\cite{RDPH1986}).
+\end{itemize}
+
+\subsection{Directiva (UE) 2024/3019: Tratamiento Cuaternario y Responsabilidad Ampliada (RAP)}
+La Directiva (UE) 2024/3019, que refunde el marco europeo de tratamiento de aguas residuales urbanas, introduce dos novedades con efecto indirecto sobre la industria química (por sus vertidos a redes urbanas) (\cite{DirectivaUE_2024_3019}):
+\begin{itemize}
+    \item \textbf{Tratamiento cuaternario:} Las depuradoras urbanas de mayor tamaño (y otras en zonas sensibles) deben eliminar microcontaminantes (fármacos, tensioactivos, disruptores endocrinos, etc.) mediante procesos como oxidación avanzada o adsorción en carbón activo.
+    \item \textbf{Responsabilidad ampliada del productor:} Los productores de sectores identificados como principales fuentes de microcontaminantes (en particular farmacéutico y cosmético) deben sufragar como mínimo el $80\text{ \%}$ del coste adicional del tratamiento cuaternario.
+\end{itemize}
+
+\subsection{Huella Hídrica y Ecoeficiencia según Norma UNE-EN ISO 14046}
+La norma internacional \textbf{UNE-EN ISO 14046} define los principios de evaluación del ciclo de vida (ACV) aplicados al uso del agua en plantas industriales. En la ingeniería de detalle del proyecto se cuantifican:
+\begin{equation}
+    \text{HH}_{\text{total}} = \text{HH}_{\text{azul}} + \text{HH}_{\text{verde}} + \text{HH}_{\text{gris}}
+\end{equation}
+donde la \textbf{Huella Azul} mide el volumen consumido de recursos hídricos de la red o acuífero evaporado o incorporado al producto; la \textbf{Huella Verde} corresponde al agua de lluvia almacenada; y la \textbf{Huella Gris} representa el volumen teórico de agua limpia necesario para asimilar la carga contaminante de los efluentes vertidos hasta alcanzar los estándares de calidad del cauce receptor.
+
+\subsection{Conclusiones Normativas para el Proyecto de Ingeniería}
+El cumplimiento integrado de esta arquitectura jurídica y técnica impone en la memoria, pliego y planos del proyecto:
+\begin{enumerate}
+    \item La justificación técnica formal de la no toxicidad de los materiales en contacto con agua potable (RD 3/2023).
+    \item El dimensionamiento higiénico de las torres y balsas de refrigeración según el PPCL exigido por el RD 487/2022.
+    \item La segregación y modelado hidráulico estricto de las 4 redes de saneamiento (fecales, pluviales limpias, pluviales contaminadas y vertidos de proceso), reflejando con exactitud la simbología normalizada de arquetas, separadores y pozos (CTE DB-HS 5, UNE-EN 752, UNE-EN ISO 129-1:2019).
+    \item La instalación perimetral de un pozo oficial homologado de control y aforo continuo de vertidos para la supervisión ambiental por la administración hidráulica (TRLA / RDPH).
+\end{enumerate}
+
+
+%
+% ==========================================================================
+% CAPITULO 6 COMENTADO TEMPORALMENTE (PRESERVADO PARA CONSULTA)
+% ==========================================================================
+\iffalse
+\chapter{Conclusiones e Integración Técnica en el Proyecto}
+
+
+
+\section{Síntesis de Decisiones de Ingeniería}
+
+El estudio técnico desarrollado para la gestión de servicios básicos de agua permite formular las siguientes recomendaciones de ingeniería para el diseño del complejo industrial:
+
+
+
+\begin{enumerate}
+
+    \item \textbf{Estrategia de Suministro Mixta (Híbrida):}
+
+          \begin{itemize}
+
+              \item \textbf{Red Municipal para Agua Sanitaria y de Consumo:} Garantiza la máxima seguridad bromatológica y microbiológica en cumplimiento del RD 3/2023 para el personal y formulaciones sensibles, sin exigir costosas plantas potabilizadoras en parcela.
+
+              \item \textbf{Captación Propia Concesionada para Refrigeración y Procesos Gruesos:} Siempre que exista disponibilidad hidrogeológica, el empleo de pozo de sondeo o toma de canal para las torres de refrigeración y limpieza primaria optimiza drásticamente los costes de explotación ($OPEX$).
+
+          \end{itemize}
+
+    \item \textbf{Diseño Hidráulico Robusto:}
+
+          La incorporación de un depósito auxiliar de rotura de carga ($6.6\text{ m}^3$) y un grupo de presión doble con calderín de membrana hidroneumática garantiza una presión de servicio constante de $3.5\text{ a }4.0\text{ bar}$ en los puntos críticos de planta, aislando la red municipal de posibles fluctuaciones o sobrepresiones.
+
+    \item \textbf{Blindaje Normativo y Sanitario:}
+
+          El empleo estricto de materiales plásticos y metálicos homologados en listas positivas, la recirculación continua de ACS a $\ge 50^\circ\text{C}$ con acumulación a $60^\circ\text{C}$ frente a \textit{Legionella} (RD 487/2022) y el tratamiento integral de efluentes en EDARI previo al vertido aseguran la total conformidad técnica ante el Ayuntamiento, la Delegación Territorial de Salud y la Confederación Hidrográfica.
+
+\end{enumerate}
+
+
+
+\newpage
+
+
+\fi
+
+
+\chapter*{Declaración sobre el Uso de Inteligencia Artificial Generativa}
+\addcontentsline{toc}{chapter}{Declaración sobre el Uso de Inteligencia Artificial Generativa}
+
+En cumplimiento de las buenas prácticas académicas y las directrices institucionales adaptadas a la norma APA (7.ª edición) para la citación de herramientas de Inteligencia Artificial Generativa (IAG), se declara formalmente la asistencia tecnológica empleada en la elaboración del presente documento.
+
+\section*{Herramientas y Modelos Empleados}
+Para la preparación, estructuración y verificación de este trabajo se ha contado con la asistencia de los siguientes modelos de lenguaje de gran escala (LLM):
+\begin{itemize}
+    \item \textbf{Google Gemini 3.8 Flash (Low) y Google Gemini Argon (Low)} (\cite{google_gemini_2026}): Empleados como sistemas principales para la búsqueda preliminar de normativa técnica estatal y autonómica, redacción inicial de apartados, estructuración conceptual y apoyo en el modelado de diagramas en TikZ.
+    \item \textbf{Anthropic Claude Opus 5.5 (Mid)} (\cite{anthropic_claude_2026}): Utilizado de forma complementaria y en menor medida para la contrastación de fuentes jurídicas complejas, validación cruzada de criterios de diseño del Código Técnico de la Edificación y refinamiento crítico de fórmulas de vertidos.
+\end{itemize}
+
+\section*{Naturaleza y Alcance de la Asistencia}
+El autor declara que la Inteligencia Artificial Generativa ha sido utilizada exclusivamente como herramienta auxiliar de asistencia en la búsqueda bibliográfica, la revisión de estilo y composición documental y comprobación cruzada de requisitos legales. Todo el contenido teórico, fórmulas matemáticas, decisiones de diseño, redacción final y conclusiones han sido íntegramente revisados, contrastados con las fuentes oficiales primarias (BOE, Confederaciones Hidrográficas, Guías Técnicas y Normas UNE) y asumidos bajo la exclusiva responsabilidad del autor.
+
+\vspace{1.5em}
+\noindent\textbf{Declaración Final del Estudiante:}
+\begin{itemize}
+    \item[$\square$] Declaro explícitamente que no se ha utilizado Inteligencia Artificial Generativa en la elaboración de este trabajo.
+    \item[$\boxtimes$] \textbf{Declaro explícitamente que el contenido registrado en la presente declaración es fidedigno y abarca la totalidad del uso de IAG realizado para este trabajo.}
+\end{itemize}
+
+\vspace{2.5em}
+\noindent\begin{tabularx}{\textwidth}{l X l}
+\textbf{Firma del Estudiante:} & \hspace{4cm} & \textbf{Fecha:} 31/10/2026 \\
+\cline{1-1} \cline{3-3}
+Christian Pérez Hita & & \\
+\end{tabularx}
+
+\newpage
+
+\printbibliography[heading=bibintoc, title={Referencias Bibliográficas y Legislativas}]
+
+
+
+\end{document}
+

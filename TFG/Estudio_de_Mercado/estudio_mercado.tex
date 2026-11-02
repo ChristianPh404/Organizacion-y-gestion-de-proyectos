@@ -1,0 +1,462 @@
+\documentclass{report}
+
+\input{preamble} % Configuración y paquetes de diseño
+\input{macros}
+\input{letterfonts}
+
+\usepackage{booktabs}
+\usepackage{siunitx}
+\usepackage{adjustbox}
+\usepackage{pdflscape}
+\usepackage[backend=biber, style=apa]{biblatex}
+\usepackage{caption}
+\usepackage{multirow}
+\usepackage{csquotes}
+\usepackage{subcaption}
+\usepackage{float}
+\usetikzlibrary{positioning}
+
+\addto\captionsspanish{
+  \renewcommand{\contentsname}{Índice General}
+}
+
+\graphicspath{ {./Doc/Fotos/} {./} }
+\addbibresource{Referencias.bib}
+
+\definecolor{darkgreen}{rgb}{0,0.6,0}
+
+\title{
+    \includegraphics[width=0.35\textwidth]{escudo.png}\\[1.5cm]
+    {\Huge\textbf{PROYECTO INDUSTRIAL}}\\[0.8em]
+    {\LARGE Biorrefinería de Hueso de Aceituna y Poda de Olivo}\\[0.8em]
+    {\Large\textbf{Documento nº 1: Estudio de Mercado, Capacidad y Localización}}\\[1.5em]
+}
+\author{\Large\textbf{Christian Pérez Hita}\\[0.5em] \large Grado en Ingeniería Química / Máster en Ingeniería Química \\ \large Universidad de Granada (UGR)}
+\date{\today}
+
+\begin{document}
+\spanishdeactivate{.<>}
+\setcounter{tocdepth}{3}
+\maketitle
+
+\newpage
+\pdfbookmark[section]{\contentsname}{contenidos}
+\tableofcontents
+\pagebreak
+
+%=============================================================================
+\chapter{Introducción y Marco del Proyecto}
+
+El sector oleícola en España genera anualmente entre \num{600000} y \num{1000000} de toneladas de hueso de aceituna según la campaña agronómica, representando aproximadamente un \SI{10}{\percent} en masa del fruto procesado \autocite{MAPA2025, AICA2026}. Actualmente, cerca de un \SI{80}{\percent} de este recurso biomásico se comercializa para aprovechamiento térmico convencional en calderas residenciales e industriales, mientras que el \SI{20}{\percent} restante se autoconsume en las propias almazaras \autocite{AVEBIOM2026}. El precio del hueso a granel se sitúa en el mercado térmico en torno a 246--259~€/t con transporte e IVA incluidos, marcando el coste de oportunidad real de la materia prima.
+
+El presente proyecto plantea la implantación de una \textbf{biorrefinería multiproducto de alta eficiencia} capaz de valorizar integralmente la biomasa residual del olivar: el hueso de aceituna, la hoja de olivo y la madera de poda procedente del corte bianual del olivar \autocite{Jafari-Gohargan2026}. Mediante un esquema de fraccionamiento secuencial (hidrólisis ácida suave y organosolv), se sintetiza bioetanol de segunda generación (2G), lignina técnica pura, dióxido de carbono biogénico de alta pureza, biogás de autoconsumo y biofertilizante \autocite{Padilla-Rascon2022, ElFessikh2025}.
+
+\section{Fuentes de Información y Bases de Datos Sectoriales}
+Para garantizar el rigor metodológico, los parámetros de mercado, costes y balances se han triangulado a través de las siguientes fuentes oficiales:
+\begin{itemize}
+    \item \textbf{SABI (Informa / Bureau van Dijk) \autocite{SABI2026}:} Geolocalización y balance económico de almazaras mediante el código \textbf{CNAE 1043} (Fabricación de aceite de oliva), entamadoras con \textbf{CNAE 1039} y productores químicos con \textbf{CNAE 2014}. Permite cartografiar la generación de hueso y auditar la solvencia financiera de proveedores y competidores.
+    \item \textbf{AICA y MAPA \autocite{AICA2026, MAPA2025}:} Datos oficiales del Anuario de Estadística y la encuesta ESYRCE, aportando aforos mensuales de entradas de aceituna, producción de aceite y aceituna de mesa por provincias y comarcas.
+    \item \textbf{SIAE (Junta de Andalucía) \autocite{SIAE2025}:} Seguimiento del mercado oleícola andaluz, donde se concentran más de \SI{30000}{\tonne/a\text{\~{n}}o} de hueso procedente en exclusiva del aderezo y entamado de aceituna de mesa en el Valle del Guadalquivir y Poniente.
+    \item \textbf{AVEBIOM \autocite{AVEBIOM2026}:} Índices de precios de biocombustibles sólidos y hueso de aceituna para evaluar la presión competitiva del canal térmico.
+    \item \textbf{CNMC y CORES \autocite{CORES2026}:} Informes estadísticos sobre biocarburantes, certificaciones de venta de bioetanol y cuotas de mezcla obligatorias exigidas a los agentes petrolíferos (*off-takers* como Repsol, Moeve/Cepsa y BP).
+    \item \textbf{Eurostat e INE \autocite{Eurostat2025, INE2025}:} Balances comunitarios de bioetanol (códigos \texttt{nrg\_cb\_rw} y \texttt{apro\_cpsh1}) y estadísticas de costes salariales y fletes terrestres industriales.
+\end{itemize}
+
+\section{Composición Fisicoquímica de la Materia Prima}
+El hueso de aceituna se caracteriza por una elevada densidad aparente y un contenido en humedad relativamente reducido (\SI{8}{\percent}), con una granulometría habitual entre \SI{1}{\milli\meter} y \SI{3.35}{\milli\meter}. Su caracterización en base seca (b.s.) se recoge en la Tabla~\ref{tab:composicion_hueso} \autocite{Padilla-Rascon2022, MacArez2025}.
+
+\begin{table}[H]
+    \centering
+    \caption{Composición química del hueso de aceituna en base seca.}
+    \adjustbox{max width=0.85\textwidth}{%
+        \renewcommand{\arraystretch}{1.25}
+        \begin{tabular}{lc p{7.5cm}}
+            \toprule
+            \textbf{Componente} & \textbf{Fracción másica (\% b.s.)} & \textbf{Destino en el Proceso de Biorrefinería}                                                                 \\
+            \midrule
+            Lignina total       & \SI{35.6}{\percent}                & Fraccionamiento Organosolv $\rightarrow$ Lignina técnica de alta pureza y combustible de caldera                \\
+            Hemicelulosa        & \SI{26.0}{\percent}                & Hidrólisis ácida suave $\rightarrow$ Licor rico en pentosas (xilosa $>$ \SI{80}{\percent}) para fermentación 2G \\
+            Celulosa            & \SI{20.9}{\percent}                & Sacarificación enzimática + SSF $\rightarrow$ Hexosas (glucosa) para fermentación a bioetanol                   \\
+            Extractivos         & \SI{6.3}{\percent}                 & Recuperación de compuestos bioactivos / valorización energética                                                 \\
+            Grupos acetilo      & \SI{5.9}{\percent}                 & Hidrólisis a ácido acético (recuperable o biodigerible)                                                         \\
+            Cenizas             & \SI{0.6}{\percent}                 & Purgas de combustión / formulación mineral                                                                      \\
+            \bottomrule
+        \end{tabular}%
+    }
+    \label{tab:composicion_hueso}
+\end{table}
+
+%=============================================================================
+\chapter{Estudio de Escala y Capacidad de la Planta}
+
+\section{Escenarios de Capacidad y Selección de Escala}
+A partir del modelo tecnoeconómico de referencia de \textcite{Jafari-Gohargan2026}, se contrastan los distintos escenarios de capacidad productiva de biomasa de olivar (Tabla~\ref{tab:escenarios_referencia}).
+
+\begin{table}[H]
+    \centering
+    \caption{Escenarios de capacidad de tratamiento en base seca.}
+    \adjustbox{max width=0.95\textwidth}{%
+        \renewcommand{\arraystretch}{1.25}
+        \begin{tabular}{l c c c c c}
+            \toprule
+            \textbf{Escenario}           & \textbf{Biomasa (t/año)} & \textbf{Bioetanol (t/año)} & \textbf{Lignina Pura (t/año)} & \textbf{Biogás (\unit{\cubic\meter}/año)} & \textbf{CO$_2$ (t/año)} \\
+            \midrule
+            B-1 (Solo Hueso)             & \num{15000}              & \num{2028}                 & \num{2093}                    & \num{3912361}                             & \num{5904}              \\
+            B-2 (Hoja de Olivo)          & \num{40000}              & \num{4166}                 & --                            & --                                        & --                      \\
+            B-3 (Orujo Desalperujado)    & \num{40000}              & \num{5696}                 & --                            & --                                        & --                      \\
+            B-4 (Madera de Poda)         & \num{65000}              & \num{9478}                 & --                            & --                                        & --                      \\
+            B-5 (Mezcla Integral Olivar) & \num{160000}             & \num{23444}                & \num{14197}                   & \num{22460957}                            & \num{66134}             \\
+            \bottomrule
+        \end{tabular}%
+    }
+    \label{tab:escenarios_referencia}
+\end{table}
+
+\section{Criterios de Escala: Del Hueso a la Mezcla Integral de Residuos}
+El diseño de la capacidad de la planta debe conciliar dos factores contrapuestos: la curva de economía de escala tecnoeconómica y el radio logístico óptimo de transporte de biomasa \autocite{Jafari-Gohargan2026}:
+\begin{enumerate}
+    \item \textbf{Capacidad Mínima Viable ($C_{\text{min}}$):} Según \textcite{Jafari-Gohargan2026}, el escenario B-1 (solo hueso de aceituna a \SI{15000}{\tonne/a\text{\~{n}}o}) resulta deficitario con un Índice de Rentabilidad ($PI$) de \num{0.80} y una tasa de retorno neta ($NRR$) de \SI{-19.98}{\percent}, situándose su capacidad crítica de viabilidad ($PI \ge 1.0$) en \SI{30000}{\tonne/a\text{\~{n}}o}.
+    \item \textbf{Alimentación Multibiomasa (Hueso, Hoja y Madera de Poda):} Al ampliar el parque de materia prima hacia los subproductos agrícolas de la poda bianual del olivar (hoja y ramas/madera de poda), se incrementa drásticamente la resiliencia productiva y el aprovechamiento estacional:
+          \begin{itemize}
+              \item \textbf{Campaña de Molturación (Noviembre -- Febrero):} Recepción intensiva de hueso fresco desde almazaras (humedad \SI{8}{\percent} -- \SI{12}{\percent}).
+              \item \textbf{Campaña de Poda (Enero -- Abril):} Trituración en campo de madera y follaje de poda, estabilizando el caudal de alimentación a la biorrefinería a lo largo de las \SI{8000}{\hour/a\text{\~{n}}o} de diseño.
+          \end{itemize}
+    \item \textbf{Escala Nominal Seleccionada:} Se establece un régimen nominal de \SI{45000}{\tonne/a\text{\~{n}}o} en base hueso de aceituna (equivalente a una planta modular ampliable hasta \SI{100000}{\tonne/a\text{\~{n}}o} en régimen multibiomasa B-5 con hoja y poda).
+\end{enumerate}
+
+\section{Balance Productivo e Ingresos Brutos Estimados}
+Ejecutando el modelo implementado en \texttt{estudio\_mercado\_localizacion.py}, se obtienen los consumos de materias primas auxiliares, los flujos de producción anual y los ingresos brutos facturables para la escala base de \SI{45000}{\tonne/a\text{\~{n}}o} (Tabla~\ref{tab:balance_45k}).
+
+\begin{table}[H]
+    \centering
+    \caption{Balance de producción y ventas anuales para una planta de \SI{45000}{\tonne/a\text{\~{n}}o}.}
+    \adjustbox{max width=0.95\textwidth}{%
+        \renewcommand{\arraystretch}{1.3}
+        \begin{tabular}{l c c c}
+            \toprule
+            \textbf{Concepto / Corriente}                                & \textbf{Flujo Anual}                       & \textbf{Precio Ref. (\$/unidad)} & \textbf{Ingresos Anuales (\$/año)} \\
+            \midrule
+            \textbf{Bioetanol 2G (Corriente 40)}                         & \SI{6084.0}{\tonne/a\text{\~{n}}o}         & \SI{1200}{\$/\tonne}             & \$\num{7300800.00}                 \\
+            \textbf{Lignina Pura Técnica (Corriente 19)}                 & \SI{6279.0}{\tonne/a\text{\~{n}}o}         & \SI{630}{\$/\tonne}              & \$\num{3955770.00}                 \\
+            \textbf{Fracción Rica en Lignina (coproducto)}               & \SI{28509.0}{\tonne/a\text{\~{n}}o}        & \SI{42}{\$/\tonne}               & \$\num{1197378.00}                 \\
+            \textbf{Dióxido de Carbono Biogénico (Corriente 30)}         & \SI{17712.0}{\tonne/a\text{\~{n}}o}        & \SI{38}{\$/\tonne}               & \$\num{673056.00}                  \\
+            \textbf{Biofertilizante Deshidratado (Corriente 26)}         & \SI{1950.0}{\tonne/a\text{\~{n}}o}         & \SI{4.5}{\$/\tonne}              & \$\num{8775.00}                    \\
+            \midrule
+            \textbf{Biogás Generado (Corriente 27)}                      & \SI{11737083}{\cubic\meter/a\text{\~{n}}o} & Autoconsumo                      & Caldera Cogeneración               \\
+            \midrule
+            \multicolumn{3}{l}{\textbf{TOTAL INGRESOS BRUTOS ESTIMADOS}} & \textbf{\$\num{13135779.00}/año}                                                                                   \\
+            \bottomrule
+        \end{tabular}%
+    }
+    \label{tab:balance_45k}
+\end{table}
+
+\begin{tcolorbox}[colback=blue!5!white,colframe=blue!75!black,title=\textbf{Consumos de Reactivos Clave Calculados}]
+    Para procesar las \SI{45000}{\tonne/a\text{\~{n}}o} de hueso de aceituna, el proceso requiere anualmente:
+    \begin{itemize}
+        \item Complejo Enzimático Cellic CTec2: \SI{210.0}{\kilo\gram/a\text{\~{n}}o}.
+        \item Ácido Sulfúrico ($\text{H}_2\text{SO}_4$ \SI{98}{\percent}): \SI{411.0}{\tonne/a\text{\~{n}}o}.
+        \item Amoniaco anhidro ($\text{NH}_3$): \SI{144.0}{\tonne/a\text{\~{n}}o}.
+        \item Materia prima hueso de aceituna (\SI{17}{\$/\tonne}): \$\num{765000.00}/año.
+    \end{itemize}
+\end{tcolorbox}
+
+%=============================================================================
+\chapter{Estudio de Localización de la Planta Industrial}
+
+\section{Justificación Cuantitativa de Localización con SABI y AICA}
+Para fundamentar objetivamente la macrolocalización, se ha realizado una prospección comarcal en la base de datos empresarial \textbf{SABI (Informa)} cruzada con los aforos de \textbf{AICA} y el censo industrial de \textbf{AVEBIOM}:
+\begin{enumerate}
+    \item Se han extraído las empresas fabricantes de aceite de oliva bajo el código \textbf{CNAE 1043} en las provincias de Granada, Córdoba y Jaén.
+    \item Se ha agregado la cifra de ingresos de explotación comarcal ($\sum \text{Ingresos CNAE 1043}$ en millones de euros), como indicador directo de la masa crítica de aceituna molturada y hueso producido.
+    \item Se ha contabilizado la densidad de plantas de biomasa, orujeras extractoras y secaderos industriales que operan como competidores directos en la compra de hueso para quema térmica.
+    \item Se calcula el ratio de oportunidad:
+          \begin{equation}
+              \text{Ratio SABI} = \frac{\sum \text{Ingresos de Explotación CNAE 1043 (M€)}}{\text{Número de Competidores de Biomasa y Orujeras}}
+          \end{equation}
+\end{enumerate}
+La comarca con el mayor ratio representa la ubicación óptima: máxima abundancia de materia prima con menor canibalización de precios (Tabla~\ref{tab:sabi_ratio}).
+
+\begin{table}[H]
+    \centering
+    \caption{Análisis del ratio de oportunidad en SABI por comarcas oleícolas.}
+    \adjustbox{max width=0.98\textwidth}{%
+        \renewcommand{\arraystretch}{1.3}
+        \begin{tabular}{l l c c c c}
+            \toprule
+            \textbf{Comarca Oleícola}                             & \textbf{Provincia} & \textbf{Ingresos CNAE 1043} & \textbf{Almazaras} & \textbf{Competidores Biomasa} & \textbf{Ratio SABI (M€/comp.)} \\
+            \midrule
+            \textbf{Poniente Granadino (Loja / Montefrío)}        & \textbf{Granada}   & \textbf{385.4 M€}           & \num{42}           & \num{3}                       & \textbf{128.47 (Ganadora)}     \\
+            \textbf{Montes de Granada (Íznalloz)}                 & Granada            & 215.2 M€                    & \num{28}           & \num{2}                       & 107.60                         \\
+            \textbf{Subbética Cordobesa (Lucena / Priego)}        & Córdoba            & 590.8 M€                    & \num{68}           & \num{7}                       & 84.40                          \\
+            \textbf{Campiña Sur Cordobesa (Puente Genil)}         & Córdoba            & 410.5 M€                    & \num{46}           & \num{5}                       & 82.10                          \\
+            \textbf{Sierra Sur de Jaén (Alcalá la Real / Martos)} & Jaén               & 695.0 M€                    & \num{74}           & \num{11}                      & 63.18                          \\
+            \textbf{Campiña de Jaén (Mengíbar / Andújar)}         & Jaén               & 780.2 M€                    & \num{85}           & \num{14}                      & 55.73                          \\
+            \bottomrule
+        \end{tabular}%
+    }
+    \label{tab:sabi_ratio}
+\end{table}
+
+\section{Macrolocalización: Método de Factores Ponderados}
+A partir del análisis comarcal anterior, se formaliza la evaluación provincial multicriterio. Los factores se ponderan y puntúan según las fuentes oficiales citadas:
+\begin{itemize}
+    \item \textbf{Disponibilidad de materia prima ($w_1 = \num{0.25}$):} Jaén (\num{10.0}), Córdoba (\num{9.0}) y Granada (\num{8.0}), de acuerdo con los aforos del MAPA/AICA.
+    \item \textbf{Baja competencia térmica / Ratio SABI ($w_2 = \num{0.20}$):} Granada (\num{9.5}) lidera de forma concluyente gracias a su ratio de \num{128.47} M€/competidor frente a Jaén (\num{4.0}), donde las orujeras saturan la compra del hueso a precios elevados \autocite{AVEBIOM2026}.
+    \item \textbf{Infraestructura energética ($w_3 = \num{0.20}$):} Capacidad de evacuación eléctrica en AT y proximidad al gasoducto de transporte primario (Red Eléctrica / Enagás).
+    \item \textbf{Cercanía a clientes / Off-takers ($w_4 = \num{0.15}$):} Proximidad a centros logísticos de hidrocarburos y refinerías (Moeve San Roque, Huelva y CLH Cartagena) \autocite{CORES2026}.
+    \item \textbf{Comunicaciones viarias ($w_5 = \num{0.10}$):} Enlace directo con los corredores A-92 (Transversal de Andalucía) y A-44 (Autovía de Sierra Nevada).
+    \item \textbf{Recursos hídricos y vertido ($w_6 = \num{0.10}$):} Disponibilidad de dotación industrial en cuenca regulada (Confederación Hidrográfica del Guadalquivir / Cuenca Mediterránea).
+\end{itemize}
+
+\begin{table}[H]
+    \centering
+    \caption{Matriz de Macrolocalización por Factores Ponderados.}
+    \adjustbox{max width=0.98\textwidth}{%
+        \renewcommand{\arraystretch}{1.3}
+        \begin{tabular}{l c c c c}
+            \toprule
+            \textbf{Criterio / Factor de Decisión}                  & \textbf{Peso ($w_i$)} & \textbf{Jaén} & \textbf{Córdoba} & \textbf{Granada} \\
+            \midrule
+            Disponibilidad materia prima (Hueso + Poda - MAPA/AICA) & \num{0.25}            & \num{10.0}    & \num{9.0}        & \num{8.0}        \\
+            Baja competencia térmica / Ratio SABI (AVEBIOM/SABI)    & \num{0.20}            & \num{4.0}     & \num{7.0}        & \num{9.5}        \\
+            Infraestructura energética (Red AT y Gasoducto)         & \num{0.20}            & \num{8.0}     & \num{8.0}        & \num{9.0}        \\
+            Cercanía a clientes (Off-takers etanol CORES/Moeve)     & \num{0.15}            & \num{7.0}     & \num{9.0}        & \num{8.0}        \\
+            Comunicaciones y logística viaria (A-92/A-44/A-45)      & \num{0.10}            & \num{8.0}     & \num{9.0}        & \num{9.0}        \\
+            Disponibilidad de agua y gestión de efluentes (CHG)     & \num{0.10}            & \num{7.0}     & \num{7.0}        & \num{8.0}        \\
+            \midrule
+            \textbf{PUNTUACIÓN TOTAL PONDERADA}                     & \textbf{1.00}         & \textbf{7.45} & \textbf{8.20}    & \textbf{8.60}    \\
+            \bottomrule
+        \end{tabular}%
+    }
+    \label{tab:macrolocalizacion}
+\end{table}
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \adjustbox{max width=\linewidth}{%
+            \begin{tikzpicture}[scale=0.72]
+                % Malla poligonal de fondo regular (escala 0 a 10)
+                \foreach \r in {2, 4, 6, 8, 10} {
+                        \draw[gray!35, thin] (90:0.35*\r) -- (30:0.35*\r) -- (330:0.35*\r) -- (270:0.35*\r) -- (210:0.35*\r) -- (150:0.35*\r) -- cycle;
+                        \node[gray!65, font=\tiny, anchor=south west] at (90:0.35*\r) {\r};
+                    }
+
+                % Ejes radiales
+                \foreach \ang in {90, 30, 330, 270, 210, 150} {
+                        \draw[gray!50, dashed] (0,0) -- (\ang:3.8);
+                    }
+
+                % Etiquetas de criterios
+                \node[above, font=\footnotesize\bfseries, align=center] at (90:3.85) {Disponibilidad MP\\(Peso 25\,\%)};
+                \node[above right, font=\footnotesize\bfseries, align=left] at (30:3.85) {Baja Comp. Térmica\\(Ratio SABI, 20\,\%)};
+                \node[below right, font=\footnotesize\bfseries, align=left] at (330:3.85) {Infraestructura\\Energética (20\,\%)};
+                \node[below, font=\footnotesize\bfseries, align=center] at (270:3.85) {Cercanía Clientes\\(Off-takers, 15\,\%)};
+                \node[below left, font=\footnotesize\bfseries, align=right] at (210:3.85) {Comunicaciones\\Viarias (10\,\%)};
+                \node[above left, font=\footnotesize\bfseries, align=right] at (150:3.85) {Recursos\\Hídricos (10\,\%)};
+
+                % Polígonos de puntuación directa (radio = 0.35 * nota)
+                % Granada: [8, 9.5, 9, 8, 9, 8]
+                \fill[green!70!black, fill opacity=0.20]
+                (90:2.80) -- (30:3.325) -- (330:3.15) -- (270:2.80) -- (210:3.15) -- (150:2.80) -- cycle;
+                \draw[green!60!black, line width=1.4pt, mark=triangle*, mark size=2pt, mark options={fill=green!70!black}]
+                (90:2.80) -- (30:3.325) -- (330:3.15) -- (270:2.80) -- (210:3.15) -- (150:2.80) -- cycle;
+
+                % Córdoba: [9, 7, 8, 9, 9, 7]
+                \fill[orange!85!red, fill opacity=0.15]
+                (90:3.15) -- (30:2.45) -- (330:2.80) -- (270:3.15) -- (210:3.15) -- (150:2.45) -- cycle;
+                \draw[orange!90!black, very thick, dashed, mark=square*, mark size=1.8pt, mark options={fill=orange!80}]
+                (90:3.15) -- (30:2.45) -- (330:2.80) -- (270:3.15) -- (210:3.15) -- (150:2.45) -- cycle;
+
+                % Jaén: [10, 4, 8, 7, 8, 7]
+                \fill[blue!70!cyan, fill opacity=0.15]
+                (90:3.50) -- (30:1.40) -- (330:2.80) -- (270:2.45) -- (210:2.80) -- (150:2.45) -- cycle;
+                \draw[blue!85!black, very thick, mark=*, mark size=1.8pt, mark options={fill=blue!80}]
+                (90:3.50) -- (30:1.40) -- (330:2.80) -- (270:2.45) -- (210:2.80) -- (150:2.45) -- cycle;
+            \end{tikzpicture}%
+        }
+        \caption{Puntuación directa intrínseca (escala 0--10).}
+        \label{fig:radar_directo}
+    \end{subfigure}\hfill
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \adjustbox{max width=\linewidth}{%
+            \begin{tikzpicture}[scale=0.72]
+                % Malla proporcional a los pesos máximos (w_i * 10)
+                % Max radios: 90: 3.5cm (2.5), 30: 2.8cm (2.0), 330: 2.8cm (2.0), 270: 2.1cm (1.5), 210: 1.4cm (1.0), 150: 1.4cm (1.0)
+                % Factor de escala: 1.4 cm por unidad ponderada (2.5 * 1.4 = 3.5cm)
+                \foreach \frac in {0.25, 0.50, 0.75, 1.0} {
+                        \draw[gray!35, thin]
+                        (90:3.5*\frac) -- (30:2.8*\frac) -- (330:2.8*\frac) -- (270:2.1*\frac) -- (210:1.4*\frac) -- (150:1.4*\frac) -- cycle;
+                    }
+                \node[gray!65, font=\tiny, anchor=south west] at (90:3.5) {2.50};
+                \node[gray!65, font=\tiny, anchor=south west] at (30:2.8) {2.00};
+                \node[gray!65, font=\tiny, anchor=north west] at (270:2.1) {1.50};
+                \node[gray!65, font=\tiny, anchor=north east] at (210:1.4) {1.00};
+
+                % Ejes radiales con longitud igual a su contribución máxima
+                \draw[gray!50, dashed] (0,0) -- (90:3.8);
+                \draw[gray!50, dashed] (0,0) -- (30:3.1);
+                \draw[gray!50, dashed] (0,0) -- (330:3.1);
+                \draw[gray!50, dashed] (0,0) -- (270:2.4);
+                \draw[gray!50, dashed] (0,0) -- (210:1.7);
+                \draw[gray!50, dashed] (0,0) -- (150:1.7);
+
+                % Etiquetas de criterios con peso máximo
+                \node[above, font=\footnotesize\bfseries, align=center] at (90:3.85) {Disponibilidad MP\\(Máx. 2.50 pts)};
+                \node[above right, font=\footnotesize\bfseries, align=left] at (30:3.15) {Baja Comp. Térmica\\(Máx. 2.00 pts)};
+                \node[below right, font=\footnotesize\bfseries, align=left] at (330:3.15) {Infraestructura\\(Máx. 2.00 pts)};
+                \node[below, font=\footnotesize\bfseries, align=center] at (270:2.45) {Clientes Off-takers\\(Máx. 1.50 pts)};
+                \node[below left, font=\footnotesize\bfseries, align=right] at (210:1.75) {Comunicaciones\\(Máx. 1.00 pts)};
+                \node[above left, font=\footnotesize\bfseries, align=right] at (150:1.75) {Agua y Vertido\\(Máx. 1.00 pts)};
+
+                % Polígonos de contribución ponderada real: radio = 1.4 * (w_i * P_ij)
+                % Granada: [2.00, 1.90, 1.80, 1.20, 0.90, 0.80] -> radio = 1.4 * contrib
+                % R_G = [2.80, 2.66, 2.52, 1.68, 1.26, 1.12]
+                \fill[green!70!black, fill opacity=0.20]
+                (90:2.80) -- (30:2.66) -- (330:2.52) -- (270:1.68) -- (210:1.26) -- (150:1.12) -- cycle;
+                \draw[green!60!black, line width=1.4pt, mark=triangle*, mark size=2pt, mark options={fill=green!70!black}]
+                (90:2.80) -- (30:2.66) -- (330:2.52) -- (270:1.68) -- (210:1.26) -- (150:1.12) -- cycle;
+
+                % Córdoba: [2.25, 1.40, 1.60, 1.35, 0.90, 0.70] -> radio = 1.4 * contrib
+                % R_C = [3.15, 1.96, 2.24, 1.89, 1.26, 0.98]
+                \fill[orange!85!red, fill opacity=0.15]
+                (90:3.15) -- (30:1.96) -- (330:2.24) -- (270:1.89) -- (210:1.26) -- (150:0.98) -- cycle;
+                \draw[orange!90!black, very thick, dashed, mark=square*, mark size=1.8pt, mark options={fill=orange!80}]
+                (90:3.15) -- (30:1.96) -- (330:2.24) -- (270:1.89) -- (210:1.26) -- (150:0.98) -- cycle;
+
+                % Jaén: [2.50, 0.80, 1.60, 1.05, 0.80, 0.70] -> radio = 1.4 * contrib
+                % R_J = [3.50, 1.12, 2.24, 1.47, 1.12, 0.98]
+                \fill[blue!70!cyan, fill opacity=0.15]
+                (90:3.50) -- (30:1.12) -- (330:2.24) -- (270:1.47) -- (210:1.12) -- (150:0.98) -- cycle;
+                \draw[blue!85!black, very thick, mark=*, mark size=1.8pt, mark options={fill=blue!80}]
+                (90:3.50) -- (30:1.12) -- (330:2.24) -- (270:1.47) -- (210:1.12) -- (150:0.98) -- cycle;
+            \end{tikzpicture}%
+        }
+        \caption{Contribución ponderada real a la nota final.}
+        \label{fig:radar_ponderado}
+    \end{subfigure}
+
+    \vspace{0.8em}
+    % Leyenda unificada inferior
+    \begin{tikzpicture}
+        \draw[gray!35, fill=white, rounded corners=3pt] (-0.2,-0.35) rectangle (10.2,0.45);
+        \draw[green!60!black, line width=1.5pt, mark=triangle*, mark size=2.5pt, mark options={fill=green!70!black}] (0.2,0.05) -- (0.8,0.05);
+        \node[font=\footnotesize\bfseries, anchor=west, text=green!50!black] at (0.9, 0.05) {Granada (\num{8.60}/10)};
+
+        \draw[orange!90!black, very thick, dashed, mark=square*, mark size=2pt, mark options={fill=orange!80}] (3.7,0.05) -- (4.3,0.05);
+        \node[font=\footnotesize, anchor=west] at (4.4, 0.05) {Córdoba (\num{8.20}/10)};
+
+        \draw[blue!85!black, very thick, mark=*, mark size=2pt, mark options={fill=blue!80}] (7.2,0.05) -- (7.8,0.05);
+        \node[font=\footnotesize, anchor=west] at (7.9, 0.05) {Jaén (\num{7.45}/10)};
+    \end{tikzpicture}
+    \caption{Comparativa multicriterio de macrolocalización: (a) Desempeño técnico intrínseco y (b) Impacto ponderado en la función objetivo.}
+    \label{fig:radar_macrolocalizacion}
+\end{figure}
+
+La provincia de **Granada obtiene la mayor calificación (8.60/10)**, impulsada por el Poniente Granadino como la zona con mayor ratio de excedente de biomasa respecto a competidores (Figura~\ref{fig:radar_macrolocalizacion}).
+
+\section{Microlocalización: Método de Brown y Gibson}
+Para la selección del emplazamiento exacto se aplica el algoritmo cuantitativo de **Brown y Gibson**, combinando factores críticos ($FC_i \in \{0, 1\}$), factores objetivos basados en costes anuales ($FO_i$) y factores subjetivos ponderados ($FS_i$):
+\begin{equation}
+    MPL_i = FC_i \cdot \left[ \alpha \cdot FO_i + (1 - \alpha) \cdot FS_i \right]
+\end{equation}
+donde se adopta un peso objetivo $\alpha = \num{0.70}$ y una ponderación subjetiva $1 - \alpha = \num{0.30}$.
+Los factores objetivos computan la suma anualizada de:
+\begin{itemize}
+    \item Coste de adquisición y urbanización de suelo industrial.
+    \item Coste logístico de transporte de materia prima y distribución de productos.
+    \item Coste de acometidas eléctricas, gas natural y canon de vertidos.
+\end{itemize}
+
+\begin{table}[H]
+    \centering
+    \caption{Resultados del Método de Brown y Gibson para microlocalización.}
+    \adjustbox{max width=0.98\textwidth}{%
+        \renewcommand{\arraystretch}{1.35}
+        \begin{tabular}{l c c c c c}
+            \toprule
+            \textbf{Polígono Industrial Candidato}                   & \textbf{$FC_i$} & \textbf{Coste Anual (€)} & \textbf{$FO_i$ (Objetivo)} & \textbf{$FS_i$ (Subjetivo)} & \textbf{$MPL_i$ (Índice Final)} \\
+            \midrule
+            \textbf{Polígono Manzanil II / Loja (Granada)}           & \num{1.0}       & \num{1450000}            & \num{0.3503}               & \num{0.3800}                & \textbf{0.3592 (1º)}            \\
+            \textbf{Polígono Los Santos / Lucena (Córdoba)}          & \num{1.0}       & \num{1520000}            & \num{0.3342}               & \num{0.3500}                & \textbf{0.3389 (2º)}            \\
+            \textbf{Polígono Llano Mazuelos / Alcalá la Real (Jaén)} & \num{1.0}       & \num{1610000}            & \num{0.3155}               & \num{0.2700}                & \textbf{0.3019 (3º)}            \\
+            \bottomrule
+        \end{tabular}%
+    }
+    \label{tab:brown_gibson}
+\end{table}
+
+\begin{tcolorbox}[colback=green!5!white,colframe=green!60!black,title=\textbf{Emplazamiento Industrial Seleccionado}]
+    El emplazamiento ganador indiscutible es el **Polígono Industrial Manzanil II en Loja (Granada)**, con un índice $MPL = \mathbf{0.3592}$. Destaca por su menor coste operativo global (\num{1450000} €/año), conexión directa con la autovía A-92 y disponibilidad inmediata de parcelas industriales aptas para instalaciones químicas catalogadas.
+\end{tcolorbox}
+
+%=============================================================================
+\chapter{Esquema General de Procesos e Integración}
+
+\section{Diagrama de Bloques y Flujo del Proceso}
+La planta integra secuencialmente las operaciones de acondicionamiento físico, doble hidrólisis, fermentaciones diferenciadas y valorización integral de efluentes (Figura~\ref{fig:diagrama_bloques_esquema}).
+
+\begin{figure}[H]
+    \centering
+    \adjustbox{max width=0.98\textwidth}{%
+        \begin{tikzpicture}[>=Latex, node distance=1.6cm and 1.8cm, auto,
+                block/.style={rectangle, draw=blue!80!black, fill=blue!10, rounded corners=4pt, thick, text width=3.3cm, align=center, minimum height=1.35cm, font=\small\bfseries},
+                block_sep/.style={rectangle, draw=orange!80!black, fill=orange!15, rounded corners=4pt, thick, text width=3.3cm, align=center, minimum height=1.35cm, font=\small\bfseries},
+                block_rec/.style={rectangle, draw=green!70!black, fill=green!15, rounded corners=4pt, thick, text width=3.3cm, align=center, minimum height=1.35cm, font=\small\bfseries},
+                line/.style={draw=black!85, line width=1.2pt, ->},
+                line_ret/.style={draw=green!60!black, line width=1.2pt, dashed, ->}]
+
+            % Fila 1: Acondicionamiento y Fraccionamiento Secuencial
+            \node [block] (prep) {Acondicionamiento\\(Secado, Triturado y Tamizado)};
+            \node [block, right=1.8cm of prep] (hidro1) {Etapa 1: Pretratamiento\\Ácido Diluido ($\text{H}_2\text{SO}_4$)};
+            \node [block_sep, right=1.8cm of hidro1] (organo) {Etapa 2: Reactor\\Organosolv (Etanol/Agua)};
+
+            % Fila 2: Fermentación Pentosas y Hexosas
+            \node [block, below=1.6cm of hidro1] (ferm_pent) {Fermentación Pentosas C5\\(Cepa \textit{E. coli})};
+            \node [block, below=1.6cm of organo] (sacar) {Presacarificación y SSF C6\\(Cepa \textit{S. cerevisiae})};
+            \node [block_rec, right=1.8cm of organo] (lignina) {Precipitación y Secado\\de Lignina Pura};
+
+            % Fila 3: Separación/Destilación y Digestión Anaerobia
+            \node [block_sep, below=1.6cm of prep] (destil) {Separación y Destilación\\Etanol 2G / Furfural};
+            \node [block_rec, below=1.6cm of ferm_pent] (anaerobio) {Digestión Anaerobia\\y Cogeneración Biogás};
+
+            % Flechas principales
+            \path [line] (prep) -- node[above, font=\footnotesize] {Hueso seco} (hidro1);
+            \path [line] (hidro1) -- node[above, font=\footnotesize] {Fracción sólida} (organo);
+            \path [line] (organo) -- node[above, font=\footnotesize] {Licor negro} (lignina);
+
+            \path [line] (hidro1) -- node[right, font=\footnotesize] {Licor C5} (ferm_pent);
+            \path [line] (organo) -- node[right, font=\footnotesize] {Fracción C6} (sacar);
+
+            % Corrientes de caldo fermentado hacia Destilación
+            \path [line] (ferm_pent) -- node[above, font=\footnotesize] {Mosto C5} (destil);
+            \path [line] (sacar.south) -- ++(0,-0.45) -| node[pos=0.25, below, font=\footnotesize] {Mosto fermentado C6} (destil.south);
+
+            % Vinazas residuales de fondo de destilación a Digestor Anaerobio
+            \path [line] (destil.east) -- node[above, font=\footnotesize] {Vinazas residuales} (anaerobio.west);
+
+            % Retorno de Biogás perimetral limpio hasta Acondicionamiento (Secado)
+            \path [line_ret] (anaerobio.south) -- ++(0,-0.7) -| ([xshift=-0.9cm]prep.west) -- node[pos=0.8, left, font=\footnotesize, text=green!50!black] {\shortstack{Biometano\\(Secador rotatorio)}} (prep.west);
+
+        \end{tikzpicture}%
+    }
+    \caption{Diagrama de bloques general e integración energética de la biorrefinería.}
+    \label{fig:diagrama_bloques_esquema}
+\end{figure}
+
+\section{Síntesis de Equipos e Identificación en Diagramas}
+Siguiendo los planos de ingeniería generados en el proyecto (\texttt{D-bloques.pdf} y \texttt{D-flujo.pdf}):
+\begin{itemize}
+    \item **Línea de Acondicionamiento:** Cinta transportadora (\texttt{CT-01}), Secador rotatorio (\texttt{S-01}), Cinta (\texttt{CT-02}), Molino triturador de martillos (\texttt{T-01}) y Tamiz clasificador rotativo (\texttt{TR-01}) con reciclo de gruesos (corriente 6).
+    \item **Línea de Pentosas:** Reactor tubular continuo de hidrólisis ácida (\texttt{R-01}), Filtro prensa (\texttt{F-01}), Columna de adsorción con carbón activo (\texttt{A-01}) y Biorreactor continuo de pentosas (\texttt{BF-01}).
+    \item **Línea de Hexosas y Lignina:** Reactor presurizado Organosolv (\texttt{R-02}), Cámara Flash de despresurización (\texttt{V-101}), Filtro de banda (\texttt{F-02}), Reactor de presacarificación enzimática (\texttt{R-03}) y Biorreactores SSF (\texttt{BF-02}).
+    \item **Tren de Destilación y Cogeneración:** Columna fraccionadora principal (\texttt{Z-01}), Divisor de reflujo (\texttt{D-01}), Mezclador de reciclo hidroalcohólico (\texttt{M-01}), Digestor anaerobio de lodos (\texttt{DA-01}) y Caldera de vapor de cogeneración (\texttt{Q-01}).
+\end{itemize}
+
+%=============================================================================
+\printbibliography[heading=bibintoc, title={Referencias Bibliográficas}]
+
+\end{document}
