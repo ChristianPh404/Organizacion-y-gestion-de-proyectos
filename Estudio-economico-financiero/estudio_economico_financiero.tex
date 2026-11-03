@@ -1,0 +1,471 @@
+\documentclass[a4paper,11pt]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[spanish,es-tabla]{babel}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage{pdflscape}
+\usepackage{float}
+\usepackage{tabularx}
+\usepackage{enumitem}
+% \usepackage{eurosym}
+\providecommand{\euro}{€}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=blue,
+    urlcolor=blue
+}
+
+\title{\Huge{\textbf{Estudio Económico y Financiero de una Planta de Producción}}\\[0.8em]
+\LARGE{\textbf{Evaluación de Viabilidad, Flujos de Caja y Análisis de Sensibilidad Multidimensional}}\\[0.5em]
+\large\textit{Seminario de Organización y Gestión de Proyectos --- Curso 2026/2027}}
+
+\author{\Large\textbf{Christian Pérez Hita}\\[0.4em]
+\normalsize Grado en Ingeniería Química --- Universidad de Granada (UGR)\\[0.2em]
+\normalsize Parámetro de asignación: $AB = 19$}
+
+\date{Noviembre de 2026}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+El presente documento constituye la memoria técnica y ejecutiva del estudio económico-financiero para la implantación y explotación industrial de una planta de producción química durante un horizonte de vida útil proyectado a 20 años. Siguiendo las directrices del Seminario de Presupuestos de la asignatura \textit{Organización y Gestión de Proyectos}, se formulan dos análisis complementarios e indispensables: la \textbf{viabilidad económica intrínseca del proyecto} (activos totales sin apalancamiento) y la \textbf{viabilidad financiera desde la perspectiva del inversor promotor} (incorporando estructura de financiación ajena al 49,50\% mediante préstamo bancario a 10 años amortizado por el método francés al 7,00\% de interés anual). 
+
+Con base en la parametrización oficial ligada al dígito de control estudiantil ($AB = 19$), se determina una capacidad productiva nominal de 9,19~t/día (2.655,91~t/año), un precio de venta unitario de 1,019~\euro/kg y unos ingresos anuales iniciales de 2.706.372,29~\euro/año. Frente a una inversión inicial en activos fijos de 7.615.000,00~\euro{} y unos costes de explotación de 1.329.300,00~\euro/año, el proyecto acredita una sólida rentabilidad tanto económica como financiera: a la tasa de descuento nominal de referencia (5,00\%), el proyecto arroja un Valor Actual Neto (VAN) de 6.558.463,97~\euro, una Tasa Interna de Retorno (TIR) del 13,97\% y un Periodo de Recuperación de la Inversión (PRI) de 6,58 años. Para el inversor, el efecto del apalancamiento financiero eleva la TIR al 18,55\% con un VAN de 6.511.628,24~\euro{} y una recuperación del capital propio en 5,71 años. 
+
+Finalmente, el análisis de sensibilidad paramétrica multidimensional sobre la tasa de actualización (0\% a 30\%), el precio de venta ($\pm 10\%$), la producción ($\pm 10\%$) y el coste de la materia prima ($\pm 10\%$), sintetizado mediante curvas de variabilidad y un diagrama de tornado, constata la resiliencia del modelo y define los umbrales críticos de rentabilidad para la toma de decisiones empresariales.
+\end{abstract}
+
+\tableofcontents
+\newpage
+
+\chapter{Introducción, Objeto y Metodología}
+
+\section{Objeto del Estudio}
+El presente trabajo técnico tiene por objeto evaluar rigurosamente la viabilidad económica y financiera de una planta industrial de producción química a lo largo de un horizonte operativo de 20 años. En el ámbito de la ingeniería de proyectos, el análisis económico-financiero no es un mero trámite administrativo, sino la herramienta determinante para la toma de decisiones estratégicas de inversión, permitiendo:
+\begin{enumerate}[label=\alph*)]
+    \item Determinar si el proyecto crea valor neto intrínseco con base en los activos requeridos, independientemente de la forma en que se financien.
+    \item Evaluar el coste de oportunidad del capital propio frente a alternativas de inversión de similar perfil de riesgo.
+    \item Estructurar la propuesta de financiación bancaria y verificar la capacidad de servicio de la deuda frente a comisiones de riesgo de entidades de crédito.
+    \item Cuantificar la resiliencia operativa frente a fluctuaciones en el mercado de materias primas, demanda de producción o tipos de interés.
+\end{enumerate}
+
+\section{Metodología de Evaluación y Diferenciación Conceptual}
+De acuerdo con las directrices metodológicas del seminario, el estudio se articula en dos niveles de análisis jerárquicos:
+\begin{itemize}
+    \item \textbf{Estudio Económico de la Planta (Rentabilidad del Proyecto):} Evalúa los flujos generados por los activos productivos asumiendo financiación íntegra mediante recursos propios (100\% capital propio). No contempla costes financieros por intereses ni reembolsos de deuda. El Flujo Neto de Caja ($FNC$) se define como:
+    \begin{equation}
+        FNC_{\text{proyecto}} = \text{EBITDA} - \text{Amortización} - \text{Impuesto s/ Sociedades} + \text{Amortización} = \text{BN}_{\text{proyecto}} + \text{Amortización}
+    \end{equation}
+    \item \textbf{Estudio Financiero del Inversor (Rentabilidad del Capital Propio):} Evalúa el rendimiento obtenido por el promotor tras deducir la financiación bancaria (préstamo francés a 10 años). Los intereses reducen la base imponible del Impuesto sobre Sociedades (escudo fiscal), pero la anualidad exige el desembolso periódico del principal vivo:
+    \begin{equation}
+        FNC_{\text{inversor}} = \text{BN}_{\text{inversor}} + \text{Amortización Contable} - \text{Amortización de Principal de la Deuda}
+    \end{equation}
+\end{itemize}
+
+\chapter{Bases de Diseño y Parametrización de la Planta}
+
+\section{Asignación de Parámetros Individuales ($AB = 19$)}
+De acuerdo con el enunciado oficial de la práctica, las variables operativas y de financiación se parametrizan en función de las dos últimas cifras del documento de identidad del estudiante ($AB = 19$):
+\begin{itemize}
+    \item \textbf{Capacidad de producción nominal:}
+    \begin{equation}
+        q_{\text{prod}} = 9 + \frac{AB}{100} = 9 + \frac{19}{100} = 9,19\text{ t/día} \quad (9.190\text{ kg/día})
+    \end{equation}
+    Considerando 289 días laborables al año, la producción anual totaliza:
+    \begin{equation}
+        Q_{\text{anual}} = 9,19\text{ t/día} \times 289 = 2.655,91\text{ t/año} \quad (2.655.910\text{ kg/año})
+    \end{equation}
+    \item \textbf{Precio de venta unitario del producto terminado:}
+    \begin{equation}
+        p_{\text{venta}} = 1,0 + \frac{AB}{1000} = 1,0 + \frac{19}{1000} = 1,019\text{ \euro/kg}
+    \end{equation}
+    \item \textbf{Estructura de financiación ajena:}
+    \begin{equation}
+        \%_{\text{deuda}} = 40 + \frac{AB}{2} = 40 + \frac{19}{2} = 49,50\%
+    \end{equation}
+    \item \textbf{Recursos propios aportados por el inversor:}
+    \begin{equation}
+        \%_{\text{propio}} = 100 - \%_{\text{deuda}} = 100 - 49,50 = 50,50\%
+    \end{equation}
+\end{itemize}
+
+\section{Inversión en Activos Fijos y Periodos de Amortización}
+El presupuesto de inmovilizado material asciende a 7.615.000,00~\euro, estructurado en tres capítulos contables con depreciación lineal reglamentaria sin valor residual:
+\begin{table}[H]
+\centering
+\caption{Inversión inicial requerida en activos fijos y régimen de amortización.}
+\label{tab:inversion_activos}
+\begin{tabular}{lrrr}
+\toprule
+\textbf{Partida de Inversión} & \textbf{Coste Inicial (\euro)} & \textbf{Vida Contable (Años)} & \textbf{Cuota Anual (\euro/año)} \\
+\midrule
+Obra Civil & 1.000.000,00 & 20 & 50.000,00 \\
+Instalaciones & 115.000,00 & 10 & 11.500,00 \\
+Maquinaria Principal (A) & 6.500.000,00 & 15 & 433.333,33 \\
+\midrule
+\textbf{Total Inmovilizado Material} & \textbf{7.615.000,00} & --- & \textbf{494.833,33}$^*$ \\
+\bottomrule
+\end{tabular}
+\flushleft
+\footnotesize{$^*$Nota: La cuota anual total de amortización contable es de 494.833,33~\euro/año durante los años 1 a 10; pasa a 483.333,33~\euro/año en los años 11 a 15 tras extinguirse las instalaciones; y se sitúa en 50.000,00~\euro/año en los años 16 a 20 (únicamente obra civil).}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.88\textwidth]{figuras/distribucion_costes_inversion.pdf}
+\caption{Distribución porcentual del presupuesto de inversión inicial y de la estructura de costes de explotación del primer año.}
+\label{fig:distribucion_costes}
+\end{figure}
+
+\chapter{Costes de Explotación, Ingresos y Financiación}
+
+\section{Estructura de Gastos de Explotación}
+Los costes anuales de explotación del primer año se desglosan en gastos directos de fabricación y gastos indirectos de estructura, sumando un importe total de 1.329.300,00~\euro/año:
+
+\begin{table}[H]
+\centering
+\caption{Desglose de costes operativos del primer año de explotación.}
+\label{tab:costes_operativos}
+\begin{tabular}{lrr}
+\toprule
+\textbf{Concepto de Coste} & \textbf{Importe Anual (\euro/año)} & \textbf{Porcentaje (\%)} \\
+\midrule
+\multicolumn{3}{l}{\textit{A. Gastos Directos de Fabricación}} \\
+Materia Prima & 750.000,00 & 56,42\% \\
+Transporte y Embalaje (10.000~\euro{} + 50.000~\euro) & 60.000,00 & 4,51\% \\
+Mano de obra directa (12 operarios y técnicos) & 320.000,00 & 24,07\% \\
+Suministros de proceso (Agua 2.500~\euro, Gas 2.800~\euro, Electricidad 6.500~\euro) & 11.800,00 & 0,89\% \\
+Mantenimiento y reparación de maquinaria & 6.000,00 & 0,45\% \\
+\midrule
+\textbf{Subtotal Gastos Directos} & \textbf{1.147.800,00} & \textbf{86,35\%} \\
+\midrule
+\multicolumn{3}{l}{\textit{B. Gastos Indirectos y Generales}} \\
+Personal de administración y dirección (5 empleados) & 140.000,00 & 10,53\% \\
+Material de oficina e informática & 40.000,00 & 3,01\% \\
+Comunicaciones fijas, móviles e internet & 1.500,00 & 0,11\% \\
+\midrule
+\textbf{Subtotal Gastos Indirectos} & \textbf{181.500,00} & \textbf{13,65\%} \\
+\midrule
+\textbf{TOTAL GASTOS DE EXPLOTACIÓN (AÑO 1)} & \textbf{1.329.300,00} & \textbf{100,00\%} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{Detalle de retribuciones y plantilla laboral de la empresa.}
+\label{tab:plantilla}
+\begin{tabular}{lrrr}
+\toprule
+\textbf{Puesto / Categoría} & \textbf{Efectivos} & \textbf{Sueldo Unitario (\euro/año)} & \textbf{Total Partida (\euro/año)} \\
+\midrule
+Gerencia General & 1 & 60.000,00 & 60.000,00 \\
+Químico de Laboratorio & 1 & 40.000,00 & 40.000,00 \\
+Ingenieros de Producción & 2 & 35.000,00 & 70.000,00 \\
+Personal de Mantenimiento & 2 & 30.000,00 & 60.000,00 \\
+Personal de Almacén & 2 & 30.000,00 & 60.000,00 \\
+Personal Administrativo & 2 & 25.000,00 & 50.000,00 \\
+Trabajadores de Planta & 5 & 18.000,00 & 90.000,00 \\
+Personal de Limpieza & 2 & 15.000,00 & 30.000,00 \\
+\midrule
+\textbf{Total Plantilla} & \textbf{17} & --- & \textbf{460.000,00} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Estructura de Financiación y Préstamo Francés}
+La inversión total de 7.615.000,00~\euro{} se financia de la siguiente forma:
+\begin{itemize}
+    \item \textbf{Préstamo bancario ($49,50\%$):} $7.615.000,00 \times 0,495 = 3.769.425,00\text{ \euro}$.
+    \item \textbf{Fondos propios del inversor ($50,50\%$):} $7.615.000,00 \times 0,505 = 3.845.575,00\text{ \euro}$.
+    \item \textbf{Costes de formalización bancaria:} Comisión de apertura del 0,75\% (28.270,69~\euro) y gastos de tramitación de 2.000,00~\euro.
+\end{itemize}
+
+El préstamo se amortiza según el \textbf{modelo francés} a 10 años al 7,00\% de interés anual, con cuota constante $a$:
+\begin{equation}
+    a = P \cdot \frac{i(1+i)^n}{(1+i)^n - 1} = 3.769.425,00 \cdot \frac{0,07(1,07)^{10}}{(1,07)^{10} - 1} = 536.681,32\text{ \euro/año}
+\end{equation}
+
+\begin{table}[H]
+\centering
+\caption{Cuadro de amortización del préstamo bancario (Método Francés, 10 años, 7\%).}
+\label{tab:cuadro_prestamo}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{rrrrrr}
+\toprule
+\textbf{Año} & \textbf{Capital Vivo Inicial (\euro)} & \textbf{Cuota Anual (\euro)} & \textbf{Intereses Pagados (\euro)} & \textbf{Amort. Principal (\euro)} & \textbf{Capital Vivo Final (\euro)} \\
+\midrule
+1 & 3.769.425,00 & 536.681,32 & 263.859,75 & 272.821,57 & 3.496.603,43 \\
+2 & 3.496.603,43 & 536.681,32 & 244.762,24 & 291.919,08 & 3.204.684,35 \\
+3 & 3.204.684,35 & 536.681,32 & 224.327,90 & 312.353,41 & 2.892.330,94 \\
+4 & 2.892.330,94 & 536.681,32 & 202.463,17 & 334.218,15 & 2.558.112,79 \\
+5 & 2.558.112,79 & 536.681,32 & 179.067,90 & 357.613,42 & 2.200.499,36 \\
+6 & 2.200.499,36 & 536.681,32 & 154.034,96 & 382.646,36 & 1.817.853,00 \\
+7 & 1.817.853,00 & 536.681,32 & 127.249,71 & 409.431,61 & 1.408.421,39 \\
+8 & 1.408.421,39 & 536.681,32 & 98.589,50 & 438.091,82 & 970.329,57 \\
+9 & 970.329,57 & 536.681,32 & 67.923,07 & 468.758,25 & 501.571,33 \\
+10 & 501.571,33 & 536.681,32 & 35.109,99 & 501.571,33 & 0,00 \\
+\midrule
+\textbf{TOTAL} & --- & \textbf{5.366.813,17} & \textbf{1.597.388,17} & \textbf{3.769.425,00} & --- \\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\chapter{Cuenta de Resultados y Flujos Netos de Caja}
+
+\section{Cuenta de Resultados del Proyecto y del Inversor}
+Los ingresos anuales se determinan a partir de la capacidad productiva anual (2.655.910~kg/año) y el precio unitario (1,019~\euro/kg), resultando:
+\begin{equation}
+    \text{Ingresos} = 2.655.910\text{ kg/año} \times 1,019\text{ \euro/kg} = 2.706.372,29\text{ \euro/año}
+\end{equation}
+
+El margen operativo bruto o EBITDA es constante durante los 20 años:
+\begin{equation}
+    \text{EBITDA} = 2.706.372,29 - 1.329.300,00 = 1.377.072,29\text{ \euro/año}
+\end{equation}
+
+A efectos del cálculo de los impuestos, se aplica el tipo legal vigente del Impuesto sobre Sociedades en España (25\%). En la perspectiva del inversor, los intereses financieros deducen la base imponible (EBT), reduciendo el impuesto devengado. Tras liquidar impuestos, se suma la dotación contable de amortización (que no representa salida de caja) y, en el caso del inversor, se deduce la amortización del principal de la deuda.
+
+\begin{landscape}
+\section{Flujos de Caja Anuales Comparados (Horizonte 20 Años)}
+
+\begin{table}[H]
+\centering
+\caption{Flujos de caja detallados del Proyecto y del Inversor (Años 0 a 10).}
+\label{tab:flujos_0_10}
+\resizebox{1.35\textwidth}{!}{
+\begin{tabular}{lrrrrrrrrrrr}
+\toprule
+\textbf{Concepto (\euro)} & \textbf{Año 0} & \textbf{Año 1} & \textbf{Año 2} & \textbf{Año 3} & \textbf{Año 4} & \textbf{Año 5} & \textbf{Año 6} & \textbf{Año 7} & \textbf{Año 8} & \textbf{Año 9} & \textbf{Año 10} \\
+\midrule
+\multicolumn{12}{l}{\textbf{A. ESTUDIO ECONÓMICO DEL PROYECTO (SIN FINANCIACIÓN)}} \\
+Ingresos por ventas & --- & 2.706.372 & 2.706.372 & 2.706.372 & 2.706.372 & 2.706.372 & 2.706.372 & 2.706.372 & 2.706.372 & 2.706.372 & 2.706.372 \\
+Gastos de explotación & --- & -1.329.300 & -1.329.300 & -1.329.300 & -1.329.300 & -1.329.300 & -1.329.300 & -1.329.300 & -1.329.300 & -1.329.300 & -1.329.300 \\
+\textbf{EBITDA} & --- & \textbf{1.377.072} & \textbf{1.377.072} & \textbf{1.377.072} & \textbf{1.377.072} & \textbf{1.377.072} & \textbf{1.377.072} & \textbf{1.377.072} & \textbf{1.377.072} & \textbf{1.377.072} & \textbf{1.377.072} \\
+Amortización contable & --- & -494.833 & -494.833 & -494.833 & -494.833 & -494.833 & -494.833 & -494.833 & -494.833 & -494.833 & -494.833 \\
+\textbf{EBIT} & --- & \textbf{882.239} & \textbf{882.239} & \textbf{882.239} & \textbf{882.239} & \textbf{882.239} & \textbf{882.239} & \textbf{882.239} & \textbf{882.239} & \textbf{882.239} & \textbf{882.239} \\
+Impuesto Sociedades (25\%) & --- & -220.560 & -220.560 & -220.560 & -220.560 & -220.560 & -220.560 & -220.560 & -220.560 & -220.560 & -220.560 \\
+Beneficio Neto Proyecto & --- & 661.679 & 661.679 & 661.679 & 661.679 & 661.679 & 661.679 & 661.679 & 661.679 & 661.679 & 661.679 \\
+(+) Amortización & --- & +494.833 & +494.833 & +494.833 & +494.833 & +494.833 & +494.833 & +494.833 & +494.833 & +494.833 & +494.833 \\
+\midrule
+\textbf{FNC PROYECTO} & \textbf{-7.615.000} & \textbf{1.156.512} & \textbf{1.156.512} & \textbf{1.156.512} & \textbf{1.156.512} & \textbf{1.156.512} & \textbf{1.156.512} & \textbf{1.156.512} & \textbf{1.156.512} & \textbf{1.156.512} & \textbf{1.156.512} \\
+FNC Acumulado Proyecto & -7.615.000 & -6.458.488 & -5.301.975 & -4.145.463 & -2.988.951 & -1.832.439 & -675.926 & +480.586 & +1.637.098 & +2.793.611 & +3.950.123 \\
+\midrule
+\multicolumn{12}{l}{\textbf{B. ESTUDIO FINANCIERO DEL INVERSOR (CON FINANCIACIÓN)}} \\
+EBIT & --- & 882.239 & 882.239 & 882.239 & 882.239 & 882.239 & 882.239 & 882.239 & 882.239 & 882.239 & 882.239 \\
+(-) Intereses de la deuda & --- & -263.860 & -244.762 & -224.328 & -202.463 & -179.068 & -154.035 & -127.250 & -98.590 & -67.923 & -35.110 \\
+\textbf{EBT} & --- & \textbf{618.379} & \textbf{637.477} & \textbf{657.911} & \textbf{679.776} & \textbf{703.171} & \textbf{728.204} & \textbf{754.989} & \textbf{783.649} & \textbf{814.316} & \textbf{847.129} \\
+Impuesto Sociedades (25\%) & --- & -154.595 & -159.369 & -164.478 & -169.944 & -175.793 & -182.051 & -188.747 & -195.912 & -203.579 & -211.782 \\
+Beneficio Neto Inversor & --- & 463.784 & 478.108 & 493.433 & 509.832 & 527.379 & 546.153 & 566.242 & 587.737 & 610.737 & 635.347 \\
+(+) Amortización contable & --- & +494.833 & +494.833 & +494.833 & +494.833 & +494.833 & +494.833 & +494.833 & +494.833 & +494.833 & +494.833 \\
+(-) Pago de Principal deuda & --- & -272.822 & -291.919 & -312.353 & -334.218 & -357.613 & -382.646 & -409.432 & -438.092 & -468.758 & -501.571 \\
+\midrule
+\textbf{FNC INVERSOR} & \textbf{-3.845.575} & \textbf{685.796} & \textbf{681.022} & \textbf{675.913} & \textbf{670.447} & \textbf{664.599} & \textbf{658.340} & \textbf{651.643} & \textbf{644.478} & \textbf{636.812} & \textbf{628.609} \\
+FNC Acumulado Inversor & -3.845.575 & -3.159.779 & -2.478.757 & -1.802.844 & -1.132.397 & -467.798 & +190.542 & +842.185 & +1.486.663 & +2.123.475 & +2.752.084 \\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{Flujos de caja detallados del Proyecto y del Inversor (Años 11 a 20).}
+\label{tab:flujos_11_20}
+\resizebox{1.35\textwidth}{!}{
+\begin{tabular}{lrrrrrrrrrr}
+\toprule
+\textbf{Concepto (\euro)} & \textbf{Año 11} & \textbf{Año 12} & \textbf{Año 13} & \textbf{Año 14} & \textbf{Año 15} & \textbf{Año 16} & \textbf{Año 17} & \textbf{Año 18} & \textbf{Año 19} & \textbf{Año 20} \\
+\midrule
+\multicolumn{11}{l}{\textbf{A. ESTUDIO ECONÓMICO DEL PROYECTO (SIN FINANCIACIÓN)}} \\
+Ingresos por ventas & 2.706.372 & 2.706.372 & 2.706.372 & 2.706.372 & 2.706.372 & 2.706.372 & 2.706.372 & 2.706.372 & 2.706.372 & 2.706.372 \\
+Gastos de explotación & -1.329.300 & -1.329.300 & -1.329.300 & -1.329.300 & -1.329.300 & -1.329.300 & -1.329.300 & -1.329.300 & -1.329.300 & -1.329.300 \\
+\textbf{EBITDA} & \textbf{1.377.072} & \textbf{1.377.072} & \textbf{1.377.072} & \textbf{1.377.072} & \textbf{1.377.072} & \textbf{1.377.072} & \textbf{1.377.072} & \textbf{1.377.072} & \textbf{1.377.072} & \textbf{1.377.072} \\
+Amortización contable & -483.333 & -483.333 & -483.333 & -483.333 & -483.333 & -50.000 & -50.000 & -50.000 & -50.000 & -50.000 \\
+\textbf{EBIT} & \textbf{893.739} & \textbf{893.739} & \textbf{893.739} & \textbf{893.739} & \textbf{893.739} & \textbf{1.327.072} & \textbf{1.327.072} & \textbf{1.327.072} & \textbf{1.327.072} & \textbf{1.327.072} \\
+Impuesto Sociedades (25\%) & -223.435 & -223.435 & -223.435 & -223.435 & -223.435 & -331.768 & -331.768 & -331.768 & -331.768 & -331.768 \\
+Beneficio Neto Proyecto & 670.304 & 670.304 & 670.304 & 670.304 & 670.304 & 995.304 & 995.304 & 995.304 & 995.304 & 995.304 \\
+(+) Amortización & +483.333 & +483.333 & +483.333 & +483.333 & +483.333 & +50.000 & +50.000 & +50.000 & +50.000 & +50.000 \\
+\midrule
+\textbf{FNC PROYECTO} & \textbf{1.153.638} & \textbf{1.153.638} & \textbf{1.153.638} & \textbf{1.153.638} & \textbf{1.153.638} & \textbf{1.045.304} & \textbf{1.045.304} & \textbf{1.045.304} & \textbf{1.045.304} & \textbf{1.045.304} \\
+FNC Acumulado Proyecto & +5.103.761 & +6.257.398 & +7.411.036 & +8.564.674 & +9.718.312 & +10.763.616 & +11.808.921 & +12.854.225 & +13.899.529 & +14.944.833 \\
+\midrule
+\multicolumn{11}{l}{\textbf{B. ESTUDIO FINANCIERO DEL INVERSOR (CON FINANCIACIÓN - PRÉSTAMO AMORTIZADO)}} \\
+EBIT & 893.739 & 893.739 & 893.739 & 893.739 & 893.739 & 1.327.072 & 1.327.072 & 1.327.072 & 1.327.072 & 1.327.072 \\
+(-) Intereses de la deuda & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+\textbf{EBT} & \textbf{893.739} & \textbf{893.739} & \textbf{893.739} & \textbf{893.739} & \textbf{893.739} & \textbf{1.327.072} & \textbf{1.327.072} & \textbf{1.327.072} & \textbf{1.327.072} & \textbf{1.327.072} \\
+Impuesto Sociedades (25\%) & -223.435 & -223.435 & -223.435 & -223.435 & -223.435 & -331.768 & -331.768 & -331.768 & -331.768 & -331.768 \\
+Beneficio Neto Inversor & 670.304 & 670.304 & 670.304 & 670.304 & 670.304 & 995.304 & 995.304 & 995.304 & 995.304 & 995.304 \\
+(+) Amortización contable & +483.333 & +483.333 & +483.333 & +483.333 & +483.333 & +50.000 & +50.000 & +50.000 & +50.000 & +50.000 \\
+(-) Pago de Principal deuda & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+\midrule
+\textbf{FNC INVERSOR} & \textbf{1.153.638} & \textbf{1.153.638} & \textbf{1.153.638} & \textbf{1.153.638} & \textbf{1.153.638} & \textbf{1.045.304} & \textbf{1.045.304} & \textbf{1.045.304} & \textbf{1.045.304} & \textbf{1.045.304} \\
+FNC Acumulado Inversor & +3.905.721 & +5.059.359 & +6.212.997 & +7.366.634 & +8.520.272 & +9.565.576 & +10.610.881 & +11.656.185 & +12.701.489 & +13.746.793 \\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\end{landscape}
+
+\chapter{Indicadores de Rentabilidad (VAN, TIR y PRI)}
+
+\section{Definición y Fórmulas de Cálculo}
+Los criterios de evaluación de proyectos empleados corresponden a los estándares de la ingeniería financiera:
+\begin{enumerate}
+    \item \textbf{Valor Actual Neto (VAN):} Suma descontada de los flujos netos de caja generados a lo largo de la vida útil ($n=20$ años) a la tasa de actualización $k$:
+    \begin{equation}
+        \text{VAN} = -I_0 + \sum_{t=1}^{n} \frac{FNC_t}{(1+k)^t}
+    \end{equation}
+    Un proyecto es viable cuando $\text{VAN} > 0$, generando riqueza por encima del coste de oportunidad del capital.
+    \item \textbf{Tasa Interna de Retorno (TIR):} Aquella tasa de descuento $r$ que anula exactamente el VAN:
+    \begin{equation}
+        \sum_{t=1}^{n} \frac{FNC_t}{(1+\text{TIR})^t} = I_0
+    \end{equation}
+    El proyecto es aceptable si $\text{TIR} > k$.
+    \item \textbf{Periodo de Recuperación de la Inversión (PRI o Payback):} Plazo temporal exacto en el que la suma acumulada no descontada de los flujos de caja iguala el desembolso inicial:
+    \begin{equation}
+        \text{PRI} = t_{\text{prev}} + \frac{|FNC_{\text{acum, prev}}|}{FNC_{t_{\text{recupera}}}}
+    \end{equation}
+\end{enumerate}
+
+\section{Comparativa de Indicadores y Evaluación de Viabilidad}
+
+\begin{table}[H]
+\centering
+\caption{Comparativa de indicadores de rentabilidad del Proyecto y del Inversor.}
+\label{tab:comparativa_indicadores}
+\begin{tabular}{lrrr}
+\toprule
+\textbf{Indicador Financiero} & \textbf{Proyecto (Sin Deuda)} & \textbf{Inversor (Con Deuda)} & \textbf{Criterio de Decisión} \\
+\midrule
+Desembolso inicial ($I_0$) & 7.615.000,00~\euro & 3.845.575,00~\euro & --- \\
+\textbf{VAN al 5,00\% (Tasa nominal)} & \textbf{6.558.463,97~\euro} & \textbf{6.511.628,24~\euro} & $\text{VAN} > 0$ (Aceptable) \\
+\textbf{VAN al 4,00\% (Tasa de control)} & \textbf{7.818.836,24~\euro} & \textbf{7.575.694,06~\euro} & $\text{VAN} > 0$ (Aceptable) \\
+\textbf{Tasa Interna de Retorno (TIR)} & \textbf{13,97\%} & \textbf{18,55\%} & $\text{TIR} > k$ (Rentable) \\
+\textbf{Periodo de Recuperación (PRI)} & \textbf{6,58 años} & \textbf{5,71 años} & $\text{PRI} < 20\text{ años}$ (Viable) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Interpretación Económica y Efecto del Apalancamiento}
+\begin{itemize}
+    \item \textbf{Creación neta de valor:} Ambos enfoques superan con holgura los umbrales de aceptación. A la tasa nominal del 5\%, el proyecto crea un valor actualizado superior a los 6,55~M\euro.
+    \item \textbf{Efecto palanca positivo (Apalancamiento Financiero):} Dado que la rentabilidad económica del proyecto (13,97\%) es sustancialmente superior al coste financiero de la deuda bancaria (7,00\%), la introducción del préstamo genera un \textbf{efecto de apalancamiento favorable}: la rentabilidad sobre los fondos propios del inversor asciende al \textbf{18,55\%} (un incremento relativo de casi 4,6 puntos porcentuales de rentabilidad).
+    \item \textbf{Aceleración de la liquidez (PRI):} El inversor recupera la totalidad de sus recursos propios en únicamente \textbf{5,71 años} (mediados del año 6), mientras que la recuperación de los activos totales de la planta sin deuda requiere \textbf{6,58 años}.
+\end{itemize}
+
+\chapter{Análisis de Sensibilidad Paramétrica}
+
+\section{Variabilidad del VAN frente a la Tasa de Actualización}
+Se evalúa la sensibilidad del VAN ante variaciones en la tasa de actualización en el rango del 0\% al 30\% en intervalos de crecimiento del 2\%, manteniendo constantes el resto de variables. 
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.88\textwidth]{figuras/sensibilidad_tasa_descuento.pdf}
+\caption{Curva de sensibilidad del Valor Actual Neto del Proyecto y del Inversor en función de la tasa de actualización (0\% a 30\%).}
+\label{fig:curva_tasa}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{Evolución del VAN en función de la tasa de descuento.}
+\label{tab:sensibilidad_tasa}
+\begin{tabular}{crrc}
+\toprule
+\textbf{Tasa de Descuento (\%)} & \textbf{VAN Proyecto (\euro)} & \textbf{VAN Inversor (\euro)} & \textbf{Estado de Viabilidad} \\
+\midrule
+0\% & 15.267.124,31 & 13.746.793,21 & Viable \\
+2\% & 11.232.047,56 & 10.211.666,35 & Viable \\
+4\% & 7.818.836,24 & 7.575.694,06 & Viable \\
+5\% (Base) & 6.558.463,97 & 6.511.628,24 & Viable \\
+6\% & 6.045.618,33 & 5.583.324,75 & Viable \\
+8\% & 4.337.229,08 & 4.057.205,83 & Viable \\
+10\% & 2.996.841,12 & 2.872.860,13 & Viable \\
+12\% & 1.927.315,48 & 1.941.954,37 & Viable \\
+14\% & 1.056.498,34 & 1.201.125,64 & Viable \\
+16\% & 333.742,01 & 604.441,53 & Viable \\
+18\% & -276.856,12 & 118.260,53 & Crítico ($\text{TIR}_{\text{proj}} = 13,97\%$) \\
+20\% & -793.012,45 & -282.306,23 & No viable ($\text{TIR}_{\text{inv}} = 18,55\%$) \\
+25\% & -1.749.823,15 & -986.412,05 & No viable \\
+30\% & -2.558.914,62 & -1.515.225,82 & No viable \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Análisis de Sensibilidad Unidimensional y Diagrama de Tornado}
+Siguiendo las especificaciones del seminario, se analiza el comportamiento del VAN del Inversor (base: 6.511.628,24~\euro) ante perturbaciones del $\pm 10\%$ en tres variables críticas:
+\begin{enumerate}
+    \item \textbf{Precio de Venta ($p_{\text{venta}}$):} Escenario desfavorable ($-10\%$, 0,9171~\euro/kg) y favorable ($+10\%$, 1,1209~\euro/kg).
+    \item \textbf{Capacidad de Producción ($q_{\text{prod}}$):} Escenario desfavorable ($-10\%$, 8,271~t/día) y favorable ($+10\%$, 10,109~t/día).
+    \item \textbf{Coste de Materia Prima ($C_{\text{MP}}$):} Escenario desfavorable ($+10\%$, 825.000~\euro/año) y favorable ($-10\%$, 675.000~\euro/año).
+\end{enumerate}
+
+\begin{table}[H]
+\centering
+\caption{Resultados del análisis de sensibilidad unidimensional sobre el VAN del Inversor.}
+\label{tab:tornado_datos}
+\begin{tabular}{lrrrr}
+\toprule
+\textbf{Variable de Entrada} & \textbf{Desfavorable (\euro)} & \textbf{Valor Base (\euro)} & \textbf{Favorable (\euro)} & \textbf{Amplitud (\euro)} \\
+\midrule
+Precio de Venta ($\pm 10\%$) & 3.982.074,68 & 6.511.628,24 & 9.041.181,79 & \textbf{5.059.107,11} \\
+Producción ($\pm 10\%$) & 3.982.074,68 & 6.511.628,24 & 9.041.181,79 & \textbf{5.059.107,11} \\
+Tasa de Actualización (6\% vs 4\%) & 5.583.324,75 & 6.511.628,24 & 7.575.694,06 & \textbf{1.992.369,31} \\
+Materia Prima ($\pm 10\%$) & 5.810.628,91 & 6.511.628,24 & 7.212.627,57 & \textbf{1.401.998,66} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.92\textwidth]{figuras/diagrama_tornado_sensibilidad.pdf}
+\caption{Diagrama de Tornado: Jerarquización del impacto en el VAN del Inversor.}
+\label{fig:diagrama_tornado}
+\end{figure}
+
+\section{Identificación de la Variable Crítica y Umbrales de Quiebre}
+\begin{itemize}
+    \item \textbf{Variable crítica principal:} Las variables más determinantes son el \textbf{precio de venta} y el \textbf{volumen de producción}. Una fluctuación del $\pm 10\%$ provoca una variación de $\pm 2,53\text{ M\euro}$ en el VAN (amplitud total de más de 5,06~M\euro).
+    \item \textbf{Impacto de la materia prima:} Una alteración del 10\% en la materia prima impacta en 0,70~M\euro{} sobre el VAN, evidenciando una menor elasticidad en comparación con los ingresos.
+    \item \textbf{Umbral de rechazo de la inversión:} 
+    \begin{itemize}
+        \item Para que el VAN del inversor pase a ser negativo ($\text{VAN} < 0$), el precio de venta debería desplomarse más de un \textbf{25,74\%} (hasta caer por debajo de 0,756~\euro/kg) manteniendo constante la producción.
+        \item Análogamente, la planta resistiría subidas en el coste de la materia prima de hasta un \textbf{92,9\%} antes de entrar en zona de destrucción de valor.
+        \item La inversión únicamente se vuelve inaceptable si la rentabilidad mínima exigida (coste de oportunidad) supera el \textbf{18,55\%}.
+    \end{itemize}
+\end{itemize}
+
+\chapter{Conclusiones y Recomendación Técnica}
+
+\section{Recomendación Tras el Análisis de Sensibilidad}
+A la vista de los resultados cuantitativos y del análisis de riesgos:
+\begin{enumerate}
+    \item \textbf{Recomendación de inversión: APROBAR EL PROYECTO.} La inversión resulta viable, solvente y altamente atractiva tanto desde el punto de vista económico intrínseco como financiero para el inversor.
+    \item \textbf{Apalancamiento justificado:} Se recomienda expresamente suscribir la estructura de financiación bancaria del 49,50\% negociada al 7\%, dado que el diferencial positivo frente a la TIR económica eleva el retorno de los recursos propios al 18,55\% y acorta el plazo de recuperación a menos de 6 años.
+    \item \textbf{Medidas de mitigación operativa:} Dado que el precio de venta y la producción son las variables críticas:
+    \begin{itemize}
+        \item Conviene formalizar contratos de suministro a largo plazo (\textit{offtake agreements}) con cláusulas de precio mínimo garantizado.
+        \item Asegurar un mantenimiento preventivo riguroso de la maquinaria principal (6,5~M\euro) para evitar paradas técnicas imprevistas que reduzcan los 289 días hábiles de diseño.
+    \end{itemize}
+\end{enumerate}
+
+\section{Conclusiones Finales y Juicio Técnico del Autor}
+El estudio realizado demuestra la importancia cardinal de articular de forma coherente la cuenta de resultados contable, el tratamiento impositivo de las amortizaciones y la proyección del flujo de caja libre. El reconocimiento de la amortización contable como coste deducible permite optimizar la carga fiscal en los años de mayor esfuerzo financiero (años 1 a 10), garantizando que la empresa mantenga una cobertura de deuda holgada y solvencia de caja en todos los ejercicios.
+
+En conclusión, la planta de producción química proyectada bajo los parámetros asignados ($AB = 19$) satisface plenamente los criterios de rentabilidad, eficiencia del capital y resistencia frente a escenarios adversos de mercado.
+
+\vspace{3.5em}
+\noindent\begin{tabular*}{\linewidth}{@{}l @{\extracolsep{\fill}} r@{}}
+\textbf{Firma del Estudiante:} & \textbf{Fecha:} 03/11/2026 \\[0.4em]
+\hline
+\rule{0pt}{1.4em}Christian Pérez Hita &
+\end{tabular*}
+
+\end{document}

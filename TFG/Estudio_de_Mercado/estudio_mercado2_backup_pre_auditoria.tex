@@ -1,0 +1,1227 @@
+\documentclass{report}
+
+\input{preamble} % Configuración y paquetes de diseño
+\input{macros}
+\input{letterfonts}
+
+\usepackage{booktabs}
+\usepackage{siunitx}
+\usepackage{adjustbox}
+\usepackage{pdflscape}
+\usepackage[backend=biber, style=apa]{biblatex}
+\usepackage{caption}
+\usepackage{multirow}
+\usepackage{csquotes}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usetikzlibrary{positioning, arrows.meta, calc}
+
+\addto\captionsspanish{
+  \renewcommand{\contentsname}{Índice General}
+}
+
+\graphicspath{ {./Doc/Fotos/} {./} }
+\addbibresource{Referencias.bib}
+
+\definecolor{darkgreen}{rgb}{0,0.6,0}
+\definecolor{oliveg}{RGB}{72,118,41}
+\definecolor{stoneb}{RGB}{140,86,38}
+\definecolor{woodc}{RGB}{43,92,143}
+
+\title{
+    \includegraphics[width=0.32\textwidth]{escudo.png}\\[1.4cm]
+    {\LARGE\textbf{Biorrefinería Oleícola por Vía Enzimática y Organosolv}}\\[1.1em]
+    {\Large\textbf{Estudio de Mercado, Estacionalidad y Capacidad}}\\[1.5em]
+}
+\author{\Large\textbf{Christian Pérez Hita}\\[0.5em] \large Grado en Ingeniería Química \\ \large Organización y Gestión de Proyectos, Universidad de Granada (UGR)}
+\date{Noviembre 2026}
+
+\begin{document}
+\spanishdeactivate{.<>}
+\setcounter{tocdepth}{3}
+\maketitle
+
+\newpage
+\pdfbookmark[section]{\contentsname}{contenidos}
+\tableofcontents
+\pagebreak
+
+%=============================================================================
+\chapter{Introducción, Marco del Proyecto y Metodología}
+
+\section{Definición y Justificación del Sector Industrial}
+El sector oleícola español constituye el núcleo estructural de la producción mundial de aceite de oliva, concentrando cosechas medias de \num{1.3} a \SI{1.8}{\mega\tonne} sobre una producción global de \num{3.1} a \SI{3.4}{\mega\tonne} (\SI{42}{\percent}--\SI{53}{\percent} del suministro mundial) y generando flujos masivos de subproductos lignocelulósicos en un entorno geográfico altamente concentrado \autocite[Secciones~2--3.1]{MoranAlarcon2026}. De acuerdo con el cierre oficial de la campaña 2025/2026 de la Agencia de Información y Control Alimentarios \autocite{AICA2026}, las almazaras españolas molturaron \num{7004000.5} toneladas de aceituna (\num{1305806.8} toneladas de aceite producido), de las cuales \num{5276173.7} toneladas (\SI{75.33}{\percent} del total nacional) correspondieron a la Comunidad Autónoma de Andalucía.
+
+La actividad agronómica e industrial asociada al olivar origina cuatro grandes flujos de biomasa residual \autocite{RomeroGarcia2014, Manzanares2017, MoranAlarcon2026}, de los cuales el presente proyecto selecciona estratégicamente las \textbf{tres fracciones lignocelulósicas limpias} e integra su aprovechamiento secuencial a lo largo del año:
+\begin{enumerate}
+    \item \textbf{Hueso de aceituna (\textit{Olive stone}, fracción B-1):} El endocarpio leñoso representa entre el \SI{9}{\percent} y el \SI{27}{\percent} del peso del fruto entero según variedad y maduración \autocite[Secciones~1--2]{ElFessikh2025}, adoptándose industrialmente un rendimiento neto recuperable del \SI{9.0}{\percent} al \SI{10.0}{\percent} sobre aceituna molturada \autocite{RomeroGarcia2016, Padilla-Rascon2022}. A nivel nacional se comercializan unas \num{350000} toneladas anuales como biocombustible sólido (\SI{0.35}{Mt/a\text{\~{n}}o} según \textcite[Sección~3.1]{MoranAlarcon2026}), con cotizaciones habituales de mercado entre \num{220} y \num{260}~€/t. Su reducida humedad de recepción (\SI{8}{\percent}--\SI{12}{\percent}) y alta densidad aparente le confieren estabilidad biológica durante todo el año en silos cerrados.
+    \item \textbf{Hoja de olivo (\textit{Olive leaves}, fracción B-2):} Procede de dos vías complementarias: por un lado, la hoja y ramilla separadas neumáticamente en las líneas de limpieza y lavado de las almazaras (\textit{hojín de almazara}), que representan alrededor del \SI{5}{\percent}--\SI{8}{\percent} del peso de la aceituna recibida ($\sim \num{300000}$~t/año en España según \textcite[Sección~3.1]{MoranAlarcon2026} y \textcite{RomeroGarcia2014}); y por otro, la fracción foliar adherida a los restos de poda ($\sim \SI{25}{\percent}$ en base seca de la biomasa de poda según \textcite{RomeroGarcia2014}). Destaca por su elevado contenido en glucano fermentable (\SI{53.0}{\percent} sobre fracción estructural, \textcite[Tabla~2]{Jafari-Gohargan2026}).
+    \item \textbf{Madera y ramas de la poda de poda del olivar (\textit{Olive wood}, fracción B-4):} En España se generan cerca de \num{3.95} millones de toneladas anuales de restos de poda \autocite[Sección~3.1]{MoranAlarcon2026}. Con \num{1675993} hectáreas de olivar en Andalucía en 2025 \autocite[Hoja~\texttt{TABLA PROVINCIAL CULTIVOS}, código \texttt{OL1000}]{MAPA2025}, únicamente en el eje Córdoba--Granada--Jaén se producen \num{1944704}~t/año de restos de poda al \SI{20}{\percent} de humedad (\num{1555763}~t b.s./año) aplicando los índices oficiales de la Junta de Andalucía \autocite[Sección~3.1.2, Tabla~3]{CAP2008}, correspondiendo el \SI{75}{\percent} en peso seco a madera gruesa y ramas de la poda \autocite{RomeroGarcia2014}.
+    \item \textbf{Exclusión deliberada del orujo desalperujado (\textit{Exhausted olive pomace}, fracción B-3):} Si bien el modelo teórico integral B-5 de \textcite[Tabla~6 y Tabla~8]{Jafari-Gohargan2026} contempla adicionalmente \num{40000}~t/año de orujo agotado hasta alcanzar \num{160000}~t/año, en esta planta industrial se descarta expresamente esta cuarta corriente por limitaciones de capacidad volumétrica de los equipos, su elevado contenido en cenizas (\SI{3.4}{\percent}--\SI{9.1}{\percent}, \textcite[Tabla~1]{MoranAlarcon2026}), la penalización desproporcionada de vapor de baja presión que exige en recuperación de disolvente \autocite[Tabla~8]{Jafari-Gohargan2026} y la fuerte competencia directa con las extractoras y plantas de cogeneración de orujillo existentes en Andalucía \autocite[Sección~4.2.3]{APPA2026}.
+\end{enumerate}
+
+En consecuencia, el presente proyecto aborda el diseño de una \textbf{biorrefinería multibiomasa de segunda generación (2G) bajo configuración B-5 adaptada (\SI{120000}{\tonne\text{ b.s.}/a\text{\~{n}}o}: hueso + hoja + madera de poda)}. Mediante pretratamiento organosolv catalizado por ácido sulfúrico diluido, presacarificación e hidrólisis/fermentación simultánea (PSSF) y digestión anaerobia de vinazas con \textit{upgrading} de biogás \autocite[Fig.~1]{Jafari-Gohargan2026, Padilla-Rascon2022}, la instalación produce bioetanol renovable avanzado (2G), lignina técnica pura de alta reactividad, dióxido de carbono biogénico licuado, fracción sólida rica en lignina (\textit{pellets} industriales), biometano/biogás de cogeneración y biofertilizante agrícola.
+
+\section{Estructura Metodológica del Estudio de Mercado}
+Siguiendo la metodología impartida en la asignatura \textit{Organización y Gestión de Proyectos} (UGR) y la estructura canónica de los estudios previos de viabilidad industrial, el documento se articula en seis bloques:
+\begin{enumerate}
+    \item \textbf{Disponibilidad Cuantitativa y Estacionalidad de las Materias Primas:} Determinación provincial exacta de hueso de aceituna, hoja de olivo (almazara y poda) y madera de poda en Córdoba, Granada y Jaén, junto con el calendario agronómico mensual de recolección (AICA 2025/2026 e IFAPA) y la planificación mensual de alimentación e inventarios para dimensionamiento de equipos.
+    \item \textbf{Estudio de Materias Primas, Productos y Marco Regulatorio:} Caracterización fisicoquímica comparada de los tres sustratos, especificaciones técnicas (EN~15376, códigos NC/TARIC) y regulación europea y nacional de biocarburantes avanzados (RED~III, Reglamento UE~2026/2047 y RD~611/2026).
+    \item \textbf{Análisis de la Oferta y la Competencia:} Censo industrial en España y Andalucía (informe MIEA 2026 de la AAE, estadísticas MITECO 2026, informe APPA Biogás 2026 y prospección empresarial SABI).
+    \item \textbf{Análisis de la Demanda y Consumo Nacional Aparente (CNA):} Serie histórica oficial 2017--2025 del mercado español (MITECO y CORES) y balance comunitario europeo (DOUE 2026).
+    \item \textbf{Proyección Econométrica de Demanda, Ventas y Precios:} Aplicación rigurosa y representación gráfica de los modelos acumulativos de \textbf{Jackson-Black} y \textbf{Massey-Black} empleando exclusivamente series oficiales auditables.
+    \item \textbf{Estudio de Capacidad y Bases de Dimensionamiento Industrial:} Selección del escenario multibiomasa B-5 adaptado (\SI{120000}{\tonne\text{ b.s.}/a\text{\~{n}}o}), balance económico de ingresos e insumos, y determinación de los \textbf{caudales horarios envolventes de diseño} por campaña estacional para el dimensionamiento de cada unidad de proceso.
+\end{enumerate}
+
+
+%=============================================================================
+\chapter{Disponibilidad Cuantitativa y Estacionalidad de las Materias Primas}
+
+\section{Superficie Productiva y Molturación en Córdoba, Granada y Jaén}
+El aprovisionamiento multibiomasa de la biorrefinería se sustenta en el eje olivarero formado por las provincias colindantes de Córdoba, Granada y Jaén. La Tabla~\ref{tab:mapa_superficies_2025} recoge el desglose oficial de superficies y rendimientos agronómicos en la campaña 2025 publicado por el \textcite{MAPA2025}, mientras que la Tabla~\ref{tab:aica_molturacion} sintetiza el balance definitivo de molturación industrial de la campaña 2025/2026 certificado por la \textcite{AICA2026}.
+
+\begin{table}[H]
+    \centering
+    \caption{Superficie total, superficie en producción y rendimientos de olivar en la campaña 2025. Fuente: Elaboración propia a partir de datos de MAPA \autocite{MAPA2025}.}
+    \adjustbox{max width=0.98\textwidth}{%
+        \renewcommand{\arraystretch}{1.28}
+        \small
+        \begin{tabular}{l c c c c c c}
+            \toprule
+            \textbf{Ámbito}                & \textbf{\shortstack{Sup. Total\\(ha)}} & \textbf{\shortstack{Secano En\\Prod. (ha)}} & \textbf{\shortstack{Regadío En\\Prod. (ha)}} & \textbf{\shortstack{Total En\\Prod. (ha)}} & \textbf{\shortstack{Rend. Secano\\(kg/ha)}} & \textbf{\shortstack{Rend. Regadío\\(kg/ha)}} \\
+            \midrule
+            \textbf{Córdoba (\texttt{14})} & \num{380528}             & \num{315789}                  & \num{58988}                    & \num{374777}                 & \num{3146}                    & \num{8432}                     \\
+            \textbf{Granada (\texttt{18})} & \num{210478}             & \num{145257}                  & \num{60667}                    & \num{205924}                 & \num{2583}                    & \num{4240}                     \\
+            \textbf{Jaén (\texttt{23})}    & \num{588876}             & \num{353231}                  & \num{235645}                   & \num{588876}                 & \num{3000}                    & \num{4942}                     \\
+            \midrule
+            \textbf{Total Triángulo}       & \textbf{\num{1179882}}   & \textbf{\num{814277}}         & \textbf{\num{355300}}          & \textbf{\num{1169577}}       & --                            & --                             \\
+            \midrule
+            \textbf{Andalucía (8 prov.)}   & \num{1675993}            & \num{1180574}                 & \num{468642}                   & \num{1649216}                & --                            & --                             \\
+            \textbf{España (Total)}        & \num{2674036}            & \num{1964771}                 & \num{598488}                   & \num{2563259}                & \num{1427}                    & \num{4069}                     \\
+            \bottomrule
+        \end{tabular}%
+    }
+    \label{tab:mapa_superficies_2025}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \caption{Almazaras declarantes, aceituna molturada, aceite de oliva y orujo generado por provincias en la campaña 2025/2026. Fuente: Elaboración propia a partir de datos oficiales de AICA \autocite{AICA2026} y MAPA \autocite{MAPA2025}.}
+    \adjustbox{max width=0.98\textwidth}{%
+        \renewcommand{\arraystretch}{1.28}
+        \small
+        \begin{tabular}{l c c c c c}
+            \toprule
+            \textbf{Ámbito Geográfico} & \textbf{Almazaras\textsuperscript{a}} & \textbf{\shortstack{Aceituna Molturada\\(t)}} & \textbf{\shortstack{Aceite Producido\\(t)}} & \textbf{\shortstack{Orujo Húmedo\\\texttt{OL2400} (t)}} & \textbf{\shortstack{\% Aceituna\\s/ España}} \\
+            \midrule
+            \textbf{Córdoba}           & \num{182}          & \num{1437381.6}                 & \num{247482.0}                & \num{1206349}                             & \SI{20.52}{\percent}           \\
+            \textbf{Granada}           & \num{108}          & \num{507811.6}                  & \num{107381.0}                & \num{376985}                              & \SI{7.25}{\percent}            \\
+            \textbf{Jaén}              & \num{330}          & \num{1940412.1}                 & \num{390536.6}                & \num{1666786}                             & \SI{27.70}{\percent}           \\
+            \midrule
+            \textbf{Total Triángulo}   & \textbf{620}       & \textbf{\num{3885605.3}}        & \textbf{\num{745399.6}}       & \textbf{\num{3250120}}                    & \textbf{55.48\,\%}             \\
+            \midrule
+            \textbf{Andalucía (Total)} & \num{862}          & \num{5276173.7}                 & \num{978508.7}                & \num{4353909}                             & \SI{75.33}{\percent}           \\
+            \textbf{España (Total)}    & \num{1861}         & \num{7004000.5}                 & \num{1305806.8}               & \num{5679684}                             & \SI{100.00}{\percent}          \\
+            \bottomrule
+        \end{tabular}%
+    }
+    \vspace{0.2cm}
+    \parbox{0.98\textwidth}{\footnotesize \textsuperscript{a} Datos oficiales del cierre provisional mensual de septiembre de 2026 de la AICA (sistema SIMO), que computa las almazaras con declaraciones activas y validadas (representando más del 95\,\% del volumen molturado global).}
+    \label{tab:aica_molturacion}
+\end{table}
+
+\section{Cuantificación de las Tres Fracciones Biomásicas: Hueso, Hoja y Madera de Poda}
+
+\subsection{Hueso de Aceituna (Fracción B-1)}
+Conforme a \textcite[Secciones~1--2]{ElFessikh2025}, el hueso representa del \SI{9}{\percent} al \SI{27}{\percent} del peso del fruto entero, recuperándose industrialmente mediante deshuesadoras centrífugas tanto en almazara ($\sim \SI{20}{\percent}$--\SI{25}{\percent} del total) como en las extractoras de aceite de orujo ($\sim \SI{75}{\percent}$--\SI{80}{\percent} restante). Adoptando el rendimiento industrial conservador del \SI{9.5}{\percent} en peso comercial (humedad media del \SI{8.0}{\percent}, es decir, \SI{92.0}{\percent} de materia seca según \textcite[Sección~2.1]{RomeroGarcia2022}) sobre la aceituna molturada de la Tabla~\ref{tab:aica_molturacion}, el eje Córdoba--Granada--Jaén genera \textbf{\num{369132}~t/año comerciales} (\textbf{\num{339602}~t b.s./año}), a las que se suman más de \SI{30000}{\tonne/a\text{\~{n}}o} procedentes de entamadoras de aceituna de mesa \autocite{SIAE2025}. La demanda del proyecto para esta fracción (\SI{15000}{\tonne\text{ b.s.}/a\text{\~{n}}o}, equivalentes a \SI{16304}{\tonne/a\text{\~{n}}o} al \SI{8}{\percent} de humedad) capta únicamente el \textbf{\SI{4.42}{\percent}} del hueso generado en el triángulo provincial.
+
+\subsection{Hoja de Olivo de Almazara y Poda (Fracción B-2)}
+La disponibilidad de hoja de olivo se cuantifica a partir de sus dos orígenes industriales documentados en la literatura científica \autocite{RomeroGarcia2014, Manzanares2017, MoranAlarcon2026}:
+\begin{enumerate}
+    \item \textbf{Hoja de limpieza en almazara (\textit{Olive mill leaves}):} Durante la recepción del fruto en almazara, las limpiadoras neumáticas separan hojas y pedúnculos que suponen entre el \SI{5}{\percent} y el \SI{8}{\percent} en masa de la aceituna entrada \autocite{RomeroGarcia2014, Manzanares2017} (coherente con las $\sim \num{300000}$~t/año nacionales reportadas por \textcite[Sección~3.1]{MoranAlarcon2026}). Tomando el límite inferior estricto del \textbf{\SI{5.0}{\percent}} sobre las \num{3885605.3}~t molturadas en el triángulo y una humedad fresca en la recepción de la almazara del \SI{40}{\percent} (\SI{60}{\percent} de materia seca), las \num{620} almazaras del eje generan \textbf{\num{194280}~t/año húmedas}, equivalentes a \textbf{\num{116568}~t b.s./año} ya concentradas en puntos industriales sin coste adicional de recolección en parcela.
+    \item \textbf{Fracción foliar adherida a la poda (\textit{Pruning leaves}):} De acuerdo con la caracterización morfológica de \textcite{RomeroGarcia2014}, la biomasa total de poda del olivar está integrada en base seca por un \textbf{\SI{25}{\percent} de hoja}, un \textbf{\SI{50}{\percent} de ramas fino/vareta} y un \textbf{\SI{25}{\percent} de madera gruesa}. Sobre la fracción mecanizable de poda del triángulo (\SI{50}{\percent} del total), el deshojado mecánico aporta otras \textbf{\num{194470}~t b.s./año}, elevando el potencial conjunto de hoja disponible a \textbf{\num{311038}~t b.s./año}.
+\end{enumerate}
+Por consiguiente, las \textbf{\SI{40000}{\tonne\text{ b.s.}/a\text{\~{n}}o}} de hoja requeridas en el escenario proyectado representan el \textbf{\SI{34.31}{\percent}} de la hoja limpia evacuada exclusivamente en las almazaras del triángulo (o apenas el \textbf{\SI{12.86}{\percent}} del potencial foliar total disponible).
+
+\subsection{Madera y Ramas de la Poda del Olivar (Fracción B-4)}
+La cuantificación rigurosa de la biomasa procedente de los restos de poda del olivar requiere integrar normativas autonómicas de aforo con balances morfológicos experimentales de laboratorio:
+\begin{enumerate}
+    \item \textbf{Índice de generación de biomasa de poda ($\text{IR}$):} Conforme a la metodología oficial de la Consejería de Agricultura y Pesca de la Junta de Andalucía \autocite[Sección~3.1.2, Tabla~3]{CAP2008}, la masa total de restos de poda generada anualmente por hectárea (al \SI{20}{\percent} de humedad comercial de campo) se determina en función del rendimiento agronómico del estrato:
+    \begin{itemize}
+        \item $\text{IR} = \SI{1.70}{\tonne/\hectare}$ para plantaciones con rendimiento medio anual $\ge \SI{3000}{\kilo\gram/\hectare}$ (aplicable a todos los regadíos del triángulo y a los secanos productivos de Córdoba y Jaén).
+        \item $\text{IR} = \SI{1.40}{\tonne/\hectare}$ para plantaciones con rendimiento $< \SI{3000}{\kilo\gram/\hectare}$ (aplicable al secano de Granada, con $\num{2583}\text{ kg/ha}$).
+    \end{itemize}
+    Multiplicando dicho índice por la superficie en producción (Tabla~\ref{tab:mapa_superficies_2025}) y pasando a base seca ($\times 0.80$, dado que el contenido en materia seca es del \SI{80}{\percent}), se obtiene la biomasa total de poda del árbol: $\num{1555763}\text{ t b.s./año}$ en el triángulo provincial.
+    \item \textbf{Desglose morfológico y separación foliar/leñosa:} De acuerdo con la caracterización físico-química y morfológica de \textcite{RomeroGarcia2014}, la poda bruta se descompone en base seca en:
+    \begin{itemize}
+        \item \textbf{\SI{25}{\percent} de hoja de poda} (fracción B-2b, que puede ser deshojada en planta o cribada mecánicamente, sumando $\num{194470}\text{ t b.s./año}$).
+        \item \textbf{\SI{75}{\percent} de fracción leñosa} (\SI{50}{\percent} ramas fino/varetas y \SI{25}{\percent} madera gruesa de poda).
+    \end{itemize}
+    \item \textbf{Factor de mecanización y recogida logística (\SI{50}{\percent}):} En concordancia con los estudios de viabilidad agroforestal en Andalucía \autocite{CAP2008, MoranAlarcon2026}, no toda la biomasa podada es recolectable de forma rentable o admisible por las empacadoras/trituradoras, debido a limitaciones orográficas (parcelas con pendientes superiores al \SI{20}{\percent} donde la maquinaria no puede operar) y a la práctica agronómica del picado \textit{in situ} sobre cubierta vegetal para aportar materia orgánica al suelo. Adoptando un factor conservador de recolección mecanizable del \textbf{\SI{50}{\percent}}, la disponibilidad neta accesible de madera leñosa (B-4) asciende a:
+    \begin{equation}
+    \text{Disponibilidad B-4} = \text{Poda Total (b.s.)} \times 0.75 \times 0.50 = \num{583411}\text{ t b.s./año}
+    \label{eq:disp_madera_poda}
+    \end{equation}
+    La demanda de esta planta (\SI{65000}{\tonne\text{ b.s.}/a\text{\~{n}}o}) absorbe únicamente el \textbf{\SI{11.14}{\percent}} de este residuo leñoso mecanizable en el eje Córdoba--Granada--Jaén.
+\end{enumerate}
+Los resultados numéricos desglosados por provincia se sintetizan en las Tablas~\ref{tab:poda_oficial} y~\ref{tab:resumen_multibiomasa} y en la Figura~\ref{fig:potencial_provincial_3mp}.
+
+\begin{table}[H]
+    \centering
+    \caption{Potencial anual de biomasa de poda de olivo según índices oficiales \autocite[Tabla~3]{CAP2008}, fracción leñosa bruta (\SI{75}{\percent} b.s., \textcite{RomeroGarcia2014}) y madera neta mecanizable (\SI{50}{\percent}). Fuente: Elaboración propia a partir de índices agronómicos oficiales.}
+    \adjustbox{max width=0.98\textwidth}{%
+        \renewcommand{\arraystretch}{1.28}
+        \small
+        \begin{tabular}{l c c c c c c}
+            \toprule
+            \textbf{Provincia}       & \textbf{\shortstack{Secano Prod.\\($\times$ IR)}} & \textbf{\shortstack{Regadío Prod.\\($\times$ IR)}} & \textbf{\shortstack{Poda Total\\(20\,\% hum., t)}} & \textbf{\shortstack{Poda Total\\(t b.s./año)}} & \textbf{\shortstack{Fracc. Leñosa\\(75\,\% b.s., t)}} & \textbf{\shortstack{Madera Mec.\\(50\,\%, t b.s.)}} \\
+            \midrule
+            \textbf{Córdoba}         & $\num{315789}\text{ ha} \times \num{1.7}$ & $\num{58988}\text{ ha} \times \num{1.7}$ & \num{637121}                         & \num{509697}                     & \num{382273}                          & \num{191136}                             \\
+            \textbf{Granada}         & $\num{145257}\text{ ha} \times \num{1.4}$ & $\num{60667}\text{ ha} \times \num{1.7}$ & \num{306494}                         & \num{245195}                     & \num{183896}                          & \num{91948}                              \\
+            \textbf{Jaén}            & $\num{353231}\text{ ha} \times \num{1.7}$ & $\num{235645}\text{ ha} \times \num{1.7}$& \num{1001089}                        & \num{800871}                     & \num{600653}                          & \num{300327}                             \\
+            \midrule
+            \textbf{Total Triángulo} & \textbf{\num{1341442}~t}                  & \textbf{\num{603262}~t}                  & \textbf{\num{1944704}}               & \textbf{\num{1555763}}           & \textbf{\num{1166822}}                & \textbf{\num{583411}}                    \\
+            \bottomrule
+        \end{tabular}%
+    }
+    \label{tab:poda_oficial}
+\end{table}
+
+\nt{
+    \textbf{Trazabilidad de cálculo de la poda del olivar (Tabla~\ref{tab:poda_oficial}):}
+    \begin{itemize}[leftmargin=*,noitemsep,topsep=2pt]
+        \item $\text{Poda Total (b.s.)} = \text{Poda Total (20\,\% hum.)} \times 0.80$ (materia seca del \SI{80}{\percent}).
+        \item \textbf{Fracción Leñosa bruta} (\SI{75}{\percent} b.s., \textcite{RomeroGarcia2014}): $\num{1555763} \times 0.75 = \num{1166822}\text{ t b.s./año}$.
+        \item \textbf{Madera Mecanizable} (\SI{50}{\percent} de recolección efectiva en campo): $\num{1166822} \times 0.50 = \num{583411}\text{ t b.s./año}$.
+        \item \textbf{Fracción Foliar de poda} (\SI{25}{\percent} b.s., B-2b): tras el factor mecanizable del \SI{50}{\percent}, aporta $\num{1555763} \times 0.25 \times 0.50 = \num{194470}\text{ t b.s./año}$.
+    \end{itemize}
+}
+
+\subsection{Balance Integrado de Disponibilidad Multibiomasa (Tabla~\ref{tab:resumen_multibiomasa})}
+Los valores de balance provincial sintetizados en la Tabla~\ref{tab:resumen_multibiomasa} se obtienen a partir de las siguientes relaciones aplicadas sobre los datos primarios de molturación (Tabla~\ref{tab:aica_molturacion}) y podas (Tabla~\ref{tab:poda_oficial}):
+\begin{enumerate}
+    \item \textbf{Hueso de aceituna (B-1):} Calculado como el \SI{9.5}{\percent} comercial de la aceituna molturada provincial, con una materia seca del \SI{92.0}{\percent} (humedad del \SI{8.0}{\percent}, \textcite{RomeroGarcia2022}):
+    \begin{equation}
+    \text{Hueso (t b.s.)} = \text{Aceituna Molturada (t)} \times 0.095 \times 0.92 = \text{Aceituna Molturada (t)} \times 0.0874
+    \label{eq:balance_hueso}
+    \end{equation}
+    \item \textbf{Hoja limpia de almazara (B-2a):} Estimada con el factor conservador del \SI{5.0}{\percent} sobre la aceituna molturada separada en la línea de limpieza \autocite{RomeroGarcia2014, Manzanares2017}, con un \SI{60.0}{\percent} de materia seca (humedad del \SI{40.0}{\percent}):
+    \begin{equation}
+    \text{Hoja Almazara (t b.s.)} = \text{Aceituna Molturada (t)} \times 0.05 \times 0.60 = \text{Aceituna Molturada (t)} \times 0.0300
+    \label{eq:balance_hoja_alm}
+    \end{equation}
+    \item \textbf{Hoja de poda mecanizable (B-2b):} Fracción foliar del \SI{25}{\percent} de la poda bruta seca (\textcite{RomeroGarcia2014}), afectada por el factor de recogida mecanizable del \SI{50}{\percent}:
+    \begin{equation}
+    \text{Hoja Poda (t b.s.)} = \text{Poda Total (t b.s.)} \times 0.25 \times 0.50 = \text{Poda Total (t b.s.)} \times 0.125
+    \label{eq:balance_hoja_poda}
+    \end{equation}
+    \item \textbf{Madera leñosa de poda mecanizable (B-4):} Fracción leñosa del \SI{75}{\percent} de la poda bruta seca (\textcite{RomeroGarcia2014}), afectada por el factor de recolección mecanizable del \SI{50}{\percent}:
+    \begin{equation}
+    \text{Madera Leñosa (t b.s.)} = \text{Poda Total (t b.s.)} \times 0.75 \times 0.50 = \text{Poda Total (t b.s.)} \times 0.375
+    \label{eq:balance_madera_poda}
+    \end{equation}
+\end{enumerate}
+
+\begin{table}[H]
+    \centering
+    \caption{Síntesis provincial de disponibilidad neta en base seca (t b.s./año) de las tres materias primas seleccionadas frente a la demanda nominal anual de la biorrefinería (\SI{120000}{\tonne\text{~b.s.}/a\text{\~{n}}o}). Fuente: Elaboración propia a partir de balances de AICA \autocite{AICA2026} y podas agrarias \autocite{CAP2008}.}
+    \adjustbox{max width=\textwidth}{%
+        \renewcommand{\arraystretch}{1.32}
+        \normalsize
+        \begin{tabular}{l c c c c c}
+            \toprule
+            \textbf{Fracción Biomásica}                  & \textbf{Córdoba} & \textbf{Granada} & \textbf{Jaén}   & \textbf{\shortstack{Total Eje\\(t b.s./año)}} & \textbf{\shortstack{Demanda Planta\\(\% Capacidad)}}    \\
+            \midrule
+            \textbf{Hueso de aceituna (B-1)}             & \num{125627}     & \num{44383}      & \num{169592}    & \num{339602}                    & \num{15000}~t b.s. (\textbf{4.42\,\%})    \\
+            \textbf{Hoja limpia de almazara (B-2a)}      & \num{43121}      & \num{15234}      & \num{58212}     & \num{116568}                    & \multirow{2}{*}{\shortstack{\num{40000}~t b.s.\\(\textbf{34.31\,\%} alm. / \textbf{12.86\,\%} tot.)}} \\
+            \textbf{Hoja de poda mecanizable (B-2b)}     & \num{63712}      & \num{30649}      & \num{100109}    & \num{194470}                    &                                           \\
+            \textbf{Madera leñosa poda mec. (B-4)}       & \num{191136}     & \num{91948}      & \num{300327}    & \num{583411}                    & \num{65000}~t b.s. (\textbf{11.14\,\%})   \\
+            \midrule
+            \textbf{TOTAL DISPONIBLE NETO (B-1+B-2+B-4)} & \textbf{\num{423596}} & \textbf{\num{182214}} & \textbf{\num{628240}} & \textbf{\num{1234051}} & \textbf{\num{120000}~t b.s. (9.72\,\%)}   \\
+            \bottomrule
+        \end{tabular}%
+    }
+    \label{tab:resumen_multibiomasa}
+\end{table}
+
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+            ybar,
+            bar width=13pt,
+            width=0.92\textwidth,
+            height=7.2cm,
+            ylabel={ Biomasa disponible neta ($\text{kt b.s./año}$) },
+            symbolic x coords={Córdoba, Granada, Jaén, Demanda Planta},
+            xtick=data,
+            ymin=0, ymax=350,
+            ymajorgrids=true,
+            grid style={dashed, gray!35},
+            legend style={at={(0.5,1.03)}, anchor=south, legend columns=3, font=\footnotesize, draw=gray!40},
+            nodes near coords,
+            nodes near coords style={font=\scriptsize, /pgf/number format/fixed, /pgf/number format/precision=1},
+            tick label style={font=\small},
+            label style={font=\small\bfseries}
+        ]
+            \addplot[fill=stoneb!80, draw=stoneb!95!black] coordinates {(Córdoba,125.6) (Granada,44.4) (Jaén,169.6) (Demanda Planta,15.0)};
+            \addplot[fill=oliveg!75, draw=oliveg!95!black] coordinates {(Córdoba,106.8) (Granada,45.9) (Jaén,158.3) (Demanda Planta,40.0)};
+            \addplot[fill=woodc!75, draw=woodc!95!black]   coordinates {(Córdoba,191.1) (Granada,91.9) (Jaén,300.3) (Demanda Planta,65.0)};
+            \legend{Hueso de aceituna (B-1), Hoja disponible total (B-2), Madera de poda mec. (B-4)}
+        \end{axis}
+    \end{tikzpicture}
+    \caption{Disponibilidad provincial neta en base seca ($\text{kt b.s./año}$) de las tres fracciones lignocelulósicas en el eje Córdoba--Granada--Jaén frente a los requerimientos anuales de la biorrefinería (\SI{120}{\kilo\tonne\text{ b.s.}/a\text{\~{n}}o}). Ilustración de elaboración propia.}
+    \label{fig:potencial_provincial_3mp}
+\end{figure}
+
+\section{Estacionalidad Agronómica, Calendario Mensual y Planificación de Acopio}
+
+\subsection{Fuentes Verificables sobre las Ventanas Estacionales de Recolección}
+Un aspecto crítico para la ingeniería de proceso y el dimensionamiento de equipos en una biorrefinería oleícola es el \textbf{desfase estacional} entre la generación de cada materia prima y su diferente estabilidad durante el almacenamiento:
+\begin{enumerate}
+    \item \textbf{Campaña de molturación: Hoja de almazara y Hueso primario (Octubre--Abril, pico Noviembre--Febrero):} El registro mensual oficial del sistema SIMO publicado por la \textcite{AICA2026} permite conocer con exactitud tonelada a tonelada la distribución temporal de la cosecha en Córdoba, Granada y Jaén (Tabla~\ref{tab:aica_mensual}). Como se observa, a nivel de Andalucía el cuatrimestre \textbf{noviembre--febrero concentra el \SI{88.42}{\percent}} de la molturación (noviembre \SI{19.36}{\percent}, diciembre \SI{32.05}{\percent}, enero \SI{24.88}{\percent} y febrero \SI{12.13}{\percent}), porcentaje que alcanza el \textbf{\SI{89.09}{\percent}} en el triángulo Córdoba--Granada--Jaén con su pico en diciembre (\SI{32.29}{\percent}) y enero (\SI{27.25}{\percent}), decayendo al \SI{7.85}{\percent} en marzo y cesando entre junio y septiembre. Tal como destacan \textcite[Sección~2.1.1]{Jafari-Gohargan2026} y \textcite{Manzanares2017}, la \textbf{hoja de lavado de almazara} se genera de forma estrictamente síncrona con esta curva otoñal-invernal y presenta una humedad elevada ($\sim \SI{40}{\percent}$) que induce fermentación aerobia y degradación de carbohidratos si se ensila húmeda a largo plazo; por ello, \textbf{debe procesarse prioritariamente en campaña de invierno (noviembre--febrero)}.
+    \item \textbf{Desestacionalización natural del Hueso de aceituna (Noviembre--Agosto / Enlace de campaña):} A diferencia de la hoja fresca, el hueso se recupera tanto de forma primaria en almazara (noviembre--marzo) como de forma diferida en las extractoras de aceite de orujo \autocite{ElFessikh2025, AICA2026}. En estas últimas, las balsas y silos de orujo graso húmedo mantienen existencias acumuladas que se van procesando y deshuesando progresivamente a lo largo de la primavera y el verano, lo que permite un suministro continuo y escalonado en el mercado. Además, su bajísima humedad de equilibrio (\SI{8}{\percent}, \textcite{RomeroGarcia2022}) y elevada densidad a granel ($\sim \SI{680}{\kilo\gram/\cubic\meter}$) permiten almacenarlo en silos cerrados sin pérdida de azúcares durante todo el año, actuando como \textbf{sustrato estratégico de reserva y enlace} en los meses estivales tardíos (agosto) y en el arranque otoñal post-parada (octubre--noviembre).
+    \item \textbf{Campaña de poda del olivar: Madera y ramas de la poda (Enero/Febrero--Abril/Mayo):} De acuerdo con las directrices agronómicas oficiales del Instituto de Investigación y Formación Agraria y Pesquera de la Junta de Andalucía \autocite{PerezMohedano2020} y las revisiones de \textcite{RomeroGarcia2014} y \textcite[Sección~2.1.1]{Jafari-Gohargan2026}, la poda de producción y renovación del olivar se ejecuta \textbf{inmediatamente después de concluir la recolección del fruto y antes de la brotación vegetativa primaveral}, concentrándose en Andalucía durante los meses de \textbf{febrero, marzo y abril} (iniciándose a finales de enero en comarcas tempranas de campiña y retrasándose a marzo--abril en zonas frías como Granada y Sierra Sur para prevenir daños por heladas tardías en los cortes, \textcite{PerezMohedano2020}). Tras un oreo natural en hilera en campo hasta alcanzar el \SI{20}{\percent} de humedad \autocite[Sección~5.5]{CAP2008}, la madera astillada ingresa en planta entre finales de enero y mayo, abasteciendo de manera continua los reactores desde febrero hasta agosto.
+\end{enumerate}
+
+\begin{table}[H]
+    \centering
+    \caption{Distribución mensual oficial de la aceituna molturada en Córdoba, Granada y Jaén (Campaña 2025/2026) y generación síncrona de hueso total y hoja limpia de almazara en base seca. Fuente: Elaboración propia a partir de datos oficiales de molturación de AICA \autocite{AICA2026}.}
+    \adjustbox{max width=\textwidth}{%
+        \renewcommand{\arraystretch}{1.24}
+        \setlength{\tabcolsep}{4pt}
+        \small
+        \begin{tabular}{l r r r r c r r}
+            \toprule
+            \textbf{Mes}       & \textbf{\shortstack{Córdoba\\(t)}} & \textbf{\shortstack{Granada\\(t)}} & \textbf{\shortstack{Jaén\\(t)}} & \textbf{\shortstack{Total Eje\\(t)}} & \textbf{\shortstack{Cuota\\(\%)}} & \textbf{\shortstack{Hueso Gen.\\(t b.s.)}} & \textbf{\shortstack{Hoja Alm.\\(t b.s.)}} \\
+            \midrule
+            Octubre            & \num{34249.0}        & \num{3097.6}         & \num{39237.6}     & \num{76584.2}          & \SI{1.97}{\percent}    & \num{6693.5}                 & \num{2297.5}                    \\
+            Noviembre          & \num{295031.7}       & \num{76503.4}        & \num{237545.1}    & \num{609080.2}         & \SI{15.68}{\percent}   & \num{53233.6}                & \num{18272.4}                   \\
+            Diciembre          & \num{447694.4}       & \num{168682.9}       & \num{638144.6}    & \num{1254521.9}        & \SI{32.29}{\percent}   & \num{109645.2}               & \num{37635.7}                   \\
+            Enero              & \num{328868.7}       & \num{136080.7}       & \num{593812.0}    & \num{1058761.4}        & \SI{27.25}{\percent}   & \num{92535.7}                & \num{31762.8}                   \\
+            Febrero            & \num{171687.9}       & \num{60338.2}        & \num{307414.6}    & \num{539440.7}         & \SI{13.88}{\percent}   & \num{47147.1}                & \num{16183.2}                   \\
+            Marzo              & \num{133274.3}       & \num{49951.2}        & \num{121811.2}    & \num{305036.7}         & \SI{7.85}{\percent}    & \num{26660.2}                & \num{9151.1}                    \\
+            Abril              & \num{24350.4}        & \num{11782.2}        & \num{2221.6}      & \num{38354.2}          & \SI{0.99}{\percent}    & \num{3352.2}                 & \num{1150.6}                    \\
+            Mayo               & \num{2225.2}         & \num{1375.4}         & \num{225.4}       & \num{3826.0}           & \SI{0.10}{\percent}    & \num{334.4}                  & \num{114.8}                     \\
+            Junio -- Septiembre& \num{0.0}            & \num{0.0}            & \num{0.0}         & \num{0.0}              & \SI{0.00}{\percent}    & \num{0.0}                    & \num{0.0}                       \\
+            \midrule
+            \textbf{TOTAL AÑO} & \textbf{\num{1437381.6}} & \textbf{\num{507811.6}} & \textbf{\num{1940412.1}} & \textbf{\num{3885605.3}} & \textbf{100.00\,\%} & \textbf{\num{339601.9}} & \textbf{\num{116568.2}} \\
+            \bottomrule
+        \end{tabular}%
+    }
+    \label{tab:aica_mensual}
+\end{table}
+
+\subsection{Planificación Mensual de Operación (8\,000 h/año) e Inventarios para Diseño}
+Sobre el horizonte operativo estándar de \textbf{\SI{8000}{\hour/a\text{\~{n}}o}} (\SI{91.32}{\percent} de disponibilidad sobre las \SI{8760}{\hour} anuales, \textcite[Tabla~6]{Jafari-Gohargan2026}), la instalación dispone de \textbf{\num{760} horas anuales de paradas técnicas y festivos}. El calendario concilia con realismo ingenieril la estacionalidad agronómica con el marco laboral (turnos de vacaciones) y el mantenimiento preventivo:
+\begin{itemize}
+    \item \textbf{Mes de agosto (540~h de operación, 204~h de parada):} Agosto cuenta con 31 días (744~h naturales). Al concentrarse el grueso de las vacaciones del personal de planta según el Convenio de la Industria Química, se suprime uno de los turnos de operación y se programa una parada técnica estival de 8.5 días naturales (204~h), resultando exactamente 540~horas operativas.
+    \item \textbf{Mes de diciembre (600~h de operación, 144~h de parada):} Con 31 días (744~h), diciembre acumula los festivos oficiales del puente de la Constitución (6 y 8 de diciembre), Nochebuena, Navidad y Nochevieja, sumando 6 días completos de parada programada (144~h), aprovechados simultáneamente para la desincrustación de intercambiadores y limpieza de filtros (600~horas operativas).
+    \item \textbf{Mes de noviembre (500~h de operación, 220~h de transición):} Con 30 días (720~h), noviembre es el mes clave de cambio de campaña. Durante la primera mitad se procesa el hueso y se detiene la planta durante 9.1 días (220~h) para el vaciado, lavado químico profundo y puesta a punto de tolvas y reactores para admitir la hoja fresca de almazara (500~horas operativas).
+    \item \textbf{Mes de septiembre (680~h de operación, 40~h de parada técnica anual):} Con 30 días (720~h), a final de campaña se reservan 40 horas (1.7 días) para la inspección mayor reglamentaria de calderas y recipientes a presión previa al nuevo ciclo de cosecha (680~horas operativas).
+    \item \textbf{Resto de meses a régimen pleno (octubre, enero--julio, 660--740~h/mes):} Octubre (700~h, 44~h de parada por festivo del Pilar y calibración), enero (740~h, 4~h por Reyes), febrero (660~h, al tener 28 días y 12~h de mantenimiento), marzo (700~h, 44~h de transición hoja-madera) y abril a julio (720~h/mes en régimen 24/7). La suma anual reproduce exactamente las \textbf{\SI{8000}{\hour/a\text{\~{n}}o}}.
+\end{itemize}
+
+Durante cada periodo operativo, la planta se alimenta a un \textbf{caudal nominal constante en base seca de \SI{15.00}{\tonne\text{~b.s.}/\hour}} (\SI{360.0}{\tonne\text{~b.s.}/d\text{\'\i}a}; \SI{120000}{\tonne\text{~b.s.}/a\text{\~{n}}o}), \textbf{procesando en cada instante un único tipo de materia prima} sin mezclas complejas en reactor:
+\begin{enumerate}
+    \item \textbf{Campaña de Hueso de aceituna (15\,000 t b.s., 1\,000 h):} Se procesa íntegramente en octubre (\num{700}~h $\rightarrow \num{10500}$~t b.s.) y en la primera quincena de noviembre (\num{300}~h $\rightarrow \num{4500}$~t b.s.), aprovechando el stock seco de enlace almacenado en silos.
+    \item \textbf{Campaña de Hoja de olivo de almazara (40\,000 t b.s., 2\,666.7 h):} Se inicia en la segunda mitad de noviembre (\num{200}~h $\rightarrow \num{3000}$~t b.s.), continúa en diciembre (\num{600}~h $\rightarrow \num{9000}$~t b.s.), enero (\num{740}~h $\rightarrow \num{11100}$~t b.s.), febrero (\num{660}~h $\rightarrow \num{9900}$~t b.s.) y concluye a comienzos de marzo (\num{466.7}~h $\rightarrow \num{7000}$~t b.s.), procesándola fresca sin degradación.
+    \item \textbf{Campaña de Madera de poda (65\,000 t b.s., 4\,333.3 h):} Arranca en marzo tras agotar la hoja (\num{233.3}~h $\rightarrow \num{3500}$~t b.s.) y cubre de forma continuada abril (\num{720}~h $\rightarrow \num{10800}$~t), mayo (\num{720}~h $\rightarrow \num{10800}$~t), junio (\num{720}~h $\rightarrow \num{10800}$~t), julio (\num{720}~h $\rightarrow \num{10800}$~t), agosto (\num{540}~h $\rightarrow \num{8100}$~t) y septiembre (\num{680}~h $\rightarrow \num{10200}$~t), antes del inicio de la siguiente campaña.
+\end{enumerate}
+
+La Tabla~\ref{tab:planificacion_mensual} y la Figura~\ref{fig:calendario_estacional} detallan el balance mensual de acopio, alimentación consecutiva e inventario pulmón acumulado en régimen cíclico estacionario:
+\begin{itemize}
+    \item \textbf{Silos cerrados de Hueso de aceituna:} $I_{\text{máx, hueso}} = \textbf{\num{11500}~t b.s.}$ en marzo--septiembre (volumen requerido $\approx \SI{18380}{\cubic\meter}$ a $\rho_{\text{ap}} = \SI{680}{\kilo\gram/\cubic\meter}$), garantizando el enlace interanual completo para arrancar en octubre.
+    \item \textbf{Nave pulmón ventilada de Hoja de olivo:} $I_{\text{máx, hoja}} = \textbf{\num{10900}~t b.s.}$ a cierre de enero (máxima generación en almazaras), quedando el stock estrictamente a cero a mediados de marzo.
+    \item \textbf{Parque logístico cubierto de astilla de Madera de poda:} $I_{\text{máx, madera}} = \textbf{\num{43700}~t b.s.}$ a final de abril (\num{54625}~t al \SI{20}{\percent} hum.), agotándose por completo en septiembre antes de reiniciar con hueso.
+\end{itemize}
+
+\begin{table}[H]
+    \centering
+    \caption{Calendario mensual de recepción (acopio), alimentación a reactores (\SI{15.00}{\tonne\text{~b.s.}/\hour}) e inventario de almacenamiento a fin de mes en base seca (t b.s.) para \SI{8000}{\hour/a\text{\~{n}}o} con régimen secuencial de recurso único y paradas en agosto, noviembre y diciembre. Fuente: Elaboración propia.}
+    \adjustbox{max width=\textwidth}{%
+        \renewcommand{\arraystretch}{1.22}
+        \setlength{\tabcolsep}{2.8pt}
+        \footnotesize
+        \begin{tabular}{l c | r r r | r r r r | r r r r}
+            \toprule
+            \multirow{2}{*}{\textbf{Mes}} & \multirow{2}{*}{\textbf{Horas}} & \multicolumn{3}{c|}{\textbf{Acopio (t b.s.)}} & \multicolumn{4}{c|}{\textbf{Alimentación Consecutiva (t b.s.)}} & \multicolumn{4}{c}{\textbf{Inventario Fin de Mes (t b.s.)}} \\
+                                          &                                 & Hueso    & Hoja     & Madera   & Hueso    & Hoja     & Madera   & \textbf{Total}   & Hueso    & Hoja     & Madera   & \textbf{Total} \\
+            \midrule
+            Octubre                       & \num{700}                       & \num{500}& \num{0}  & \num{0}  & \num{10500}& \num{0}& \num{0}  & \textbf{\num{10500}} & \num{1500}  & \num{0}    & \num{0}     & \num{1500}  \\
+            Noviembre (Ajustes)           & \num{500}                       & \num{3000}& \num{6000}& \num{0}& \num{4500}& \num{3000}& \num{0}& \textbf{\num{7500}}  & \num{0}     & \num{3000} & \num{0}     & \num{3000}  \\
+            Diciembre (Navidad)           & \num{600}                       & \num{4500}& \num{15000}& \num{0}& \num{0}  & \num{9000}& \num{0}& \textbf{\num{9000}}  & \num{4500}  & \num{9000} & \num{0}     & \num{13500} \\
+            Enero                         & \num{740}                       & \num{4000}& \num{13000}& \num{0}& \num{0}  & \num{11100}& \num{0}& \textbf{\num{11100}} & \num{8500}  & \num{10900}& \num{0}     & \num{19400} \\
+            Febrero                       & \num{660}                       & \num{2000}& \num{6000}& \num{14000}& \num{0}& \num{9900}& \num{0}& \textbf{\num{9900}}  & \num{10500} & \num{7000} & \num{14000} & \num{31500} \\
+            Marzo                         & \num{700}                       & \num{1000}& \num{0}  & \num{26000}& \num{0} & \num{7000}& \num{3500}& \textbf{\num{10500}} & \num{11500} & \num{0}    & \num{36500} & \num{48000} \\
+            Abril                         & \num{720}                       & \num{0}   & \num{0}  & \num{18000}& \num{0} & \num{0}   & \num{10800}& \textbf{\num{10800}} & \num{11500} & \num{0}    & \num{43700} & \textbf{\num{55200}} \\
+            Mayo                          & \num{720}                       & \num{0}   & \num{0}  & \num{7000} & \num{0} & \num{0}   & \num{10800}& \textbf{\num{10800}} & \num{11500} & \num{0}    & \num{39900} & \num{51400} \\
+            Junio                         & \num{720}                       & \num{0}   & \num{0}  & \num{0}    & \num{0} & \num{0}   & \num{10800}& \textbf{\num{10800}} & \num{11500} & \num{0}    & \num{29100} & \num{40600} \\
+            Julio                         & \num{720}                       & \num{0}   & \num{0}  & \num{0}    & \num{0} & \num{0}   & \num{10800}& \textbf{\num{10800}} & \num{11500} & \num{0}    & \num{18300} & \num{29800} \\
+            Agosto (Vacaciones)           & \num{540}                       & \num{0}   & \num{0}  & \num{0}    & \num{0} & \num{0}   & \num{8100} & \textbf{\num{8100}}  & \num{11500} & \num{0}    & \num{10200} & \num{21700} \\
+            Septiembre (Enlace)           & \num{680}                       & \num{0}   & \num{0}  & \num{0}    & \num{0} & \num{0}   & \num{10200}& \textbf{\num{10200}} & \num{11500} & \num{0}    & \num{0}     & \num{11500} \\
+            \midrule
+            \textbf{TOTAL / MÁXIMO}       & \textbf{\num{8000}}             & \textbf{\num{15000}} & \textbf{\num{40000}} & \textbf{\num{65000}} & \textbf{\num{15000}} & \textbf{\num{40000}} & \textbf{\num{65000}} & \textbf{\num{120000}} & \textbf{$I_{\text{máx}}$=\num{11500}} & \textbf{\num{10900}} & \textbf{\num{43700}} & \textbf{\num{55200}} \\
+            \bottomrule
+        \end{tabular}%
+    }
+    \label{tab:planificacion_mensual}
+\end{table}
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{0.96\textwidth}
+        \centering
+        \begin{tikzpicture}
+            \begin{axis}[
+                width=0.95\textwidth,
+                height=5.6cm,
+                ylabel={ Recepción en planta ($\text{kt b.s./mes}$) },
+                symbolic x coords={Oct,Nov,Dic,Ene,Feb,Mar,Abr,May,Jun,Jul,Ago,Sep},
+                xtick=data,
+                ymin=0, ymax=30,
+                ymajorgrids=true,
+                grid style={dashed, gray!35},
+                legend style={at={(0.5,1.03)}, anchor=south, legend columns=3, font=\footnotesize, draw=gray!40},
+                tick label style={font=\footnotesize},
+                label style={font=\footnotesize\bfseries}
+            ]
+                \addplot[color=stoneb, line width=1.5pt, mark=square*, mark size=2pt] coordinates {
+                    (Oct,0.5) (Nov,3.0) (Dic,4.5) (Ene,4.0) (Feb,2.0) (Mar,1.0) (Abr,0.0) (May,0.0) (Jun,0.0) (Jul,0.0) (Ago,0.0) (Sep,0.0)
+                };
+                \addplot[color=oliveg, line width=1.5pt, mark=*, mark size=2pt] coordinates {
+                    (Oct,0.0) (Nov,6.0) (Dic,15.0) (Ene,13.0) (Feb,6.0) (Mar,0.0) (Abr,0.0) (May,0.0) (Jun,0.0) (Jul,0.0) (Ago,0.0) (Sep,0.0)
+                };
+                \addplot[color=woodc, line width=1.5pt, mark=triangle*, mark size=2.3pt] coordinates {
+                    (Oct,0.0) (Nov,0.0) (Dic,0.0) (Ene,0.0) (Feb,14.0) (Mar,26.0) (Abr,18.0) (May,7.0) (Jun,0.0) (Jul,0.0) (Ago,0.0) (Sep,0.0)
+                };
+                \legend{Acopio Hueso (AICA/Orujeras), Acopio Hoja Almazara (AICA), Acopio Madera Poda (IFAPA)}
+            \end{axis}
+        \end{tikzpicture}
+        \caption{Ventanas estacionales de entrada de biomasa a planta según calendario oficial de molturación (AICA) y poda (IFAPA).}
+    \end{subfigure}
+    
+    \vspace{0.6em}
+    \begin{subfigure}[b]{0.96\textwidth}
+        \centering
+        \begin{tikzpicture}
+            \begin{axis}[
+                ybar stacked,
+                bar width=14pt,
+                width=0.95\textwidth,
+                height=6.0cm,
+                ylabel={ Alimentación ($\text{kt b.s./mes}$) },
+                symbolic x coords={Oct,Nov,Dic,Ene,Feb,Mar,Abr,May,Jun,Jul,Ago,Sep},
+                xtick=data,
+                ymin=0, ymax=14,
+                ymajorgrids=true,
+                grid style={dashed, gray!35},
+                legend style={at={(0.32,1.03)}, anchor=south, legend columns=3, font=\footnotesize, draw=gray!40},
+                tick label style={font=\footnotesize},
+                label style={font=\footnotesize\bfseries}
+            ]
+                \addplot[fill=stoneb!80, draw=stoneb!95!black] coordinates {
+                    (Oct,10.5) (Nov,4.5) (Dic,0.0) (Ene,0.0) (Feb,0.0) (Mar,0.0) (Abr,0.0) (May,0.0) (Jun,0.0) (Jul,0.0) (Ago,0.0) (Sep,0.0)
+                };
+                \addplot[fill=oliveg!75, draw=oliveg!95!black] coordinates {
+                    (Oct,0.0) (Nov,3.0) (Dic,9.0) (Ene,11.1) (Feb,9.9) (Mar,7.0) (Abr,0.0) (May,0.0) (Jun,0.0) (Jul,0.0) (Ago,0.0) (Sep,0.0)
+                };
+                \addplot[fill=woodc!75, draw=woodc!95!black] coordinates {
+                    (Oct,0.0) (Nov,0.0) (Dic,0.0) (Ene,0.0) (Feb,0.0) (Mar,3.5) (Abr,10.8) (May,10.8) (Jun,10.8) (Jul,10.8) (Ago,8.1) (Sep,10.2)
+                };
+                \legend{Consumo Hueso, Consumo Hoja, Consumo Madera Poda}
+            \end{axis}
+            \begin{axis}[
+                width=0.95\textwidth,
+                height=6.0cm,
+                axis y line*=right,
+                axis x line=none,
+                ylabel={ Stock total en parque/silos ($\text{kt b.s.}$) },
+                symbolic x coords={Oct,Nov,Dic,Ene,Feb,Mar,Abr,May,Jun,Jul,Ago,Sep},
+                ymin=0, ymax=62,
+                legend style={at={(0.85,1.03)}, anchor=south, font=\footnotesize, draw=gray!40},
+                tick label style={font=\footnotesize, text=red!75!black},
+                ylabel style={font=\footnotesize\bfseries, text=red!75!black}
+            ]
+                \addplot[color=red!75!black, line width=1.6pt, dashed, mark=diamond*, mark size=2.3pt] coordinates {
+                    (Oct,1.5) (Nov,3.0) (Dic,13.5) (Ene,19.4) (Feb,31.5) (Mar,48.0) (Abr,55.2) (May,51.4) (Jun,40.6) (Jul,29.8) (Ago,21.7) (Sep,11.5)
+                };
+                \legend{Stock total fin de mes}
+            \end{axis}
+        \end{tikzpicture}
+        \caption{Régimen consecutivo de alimentación con paradas en nov., dic.\ y ago., y curva de inventario pulmón.}
+    \end{subfigure}
+    \caption{Planificación anual integrada de acopio estacional, alimentación multibiomasa e inventario de almacenamiento (\SI{120000}{\tonne\text{~b.s.}/a\text{\~{n}}o}). Ilustración de elaboración propia a partir de la planificación logística y de molturación de AICA \autocite{AICA2026}.}
+    \label{fig:calendario_estacional}
+\end{figure}
+
+%=============================================================================
+\chapter{Estudio de Materias Primas, Productos y Marco Regulatorio}
+
+\section{Composición Fisicoquímica Comparada de las Tres Materias Primas}
+Para fundamentar rigurosamente la simulación y el diseño de las etapas de fraccionamiento ácido-organosolv, hidrólisis enzimática y fermentación, la Tabla~\ref{tab:composicion_comparada} contrasta tanto la composición normalizada sobre base estructural lignocelulósica empleada en el modelo de Aspen Plus de \textcite[Tabla~2]{Jafari-Gohargan2026} como la caracterización analítica global en base seca recopilada por la Universidad de Jaén \autocite[Tabla~1]{MoranAlarcon2026} y el CIEMAT \autocite[Sección~2.1]{RomeroGarcia2022}.
+
+\begin{table}[H]
+    \centering
+    \caption{Caracterización química comparada (\% en masa sobre base seca) de los tres sustratos procesados (B-1, B-2 y B-4) frente al orujo agotado excluido (B-3). Fuente: Elaboración propia a partir de datos de \textcite[Tabla~2]{Jafari-Gohargan2026}, \textcite[Tabla~1]{MoranAlarcon2026} y \textcite[Sección~2.1]{RomeroGarcia2022}.}
+    \adjustbox{max width=0.98\textwidth}{%
+        \renewcommand{\arraystretch}{1.28}
+        \small
+        \begin{tabular}{l c c c | c}
+            \toprule
+            \textbf{Parámetro / Fracción (\% b.s.)}           & \textbf{\shortstack{Hueso Aceituna\\(B-1)}} & \textbf{\shortstack{Hoja de Olivo\\(B-2)}} & \textbf{\shortstack{Madera Poda\\(B-4)}} & \textbf{\shortstack{Orujo Agotado\\(B-3, Excl.)}} \\
+            \midrule
+            \multicolumn{5}{l}{\textit{Base estructural normalizada en simulación de proceso \autocite[Tabla~2]{Jafari-Gohargan2026}:}} \\
+            Glucano (celulosa hidrolizable a C6)              & \SI{38.27}{\percent}          & \textbf{\SI{53.00}{\percent}}& \SI{33.23}{\percent}       & \SI{38.08}{\percent}                \\
+            Galactano (hemicelulosa C6)                       & \SI{9.84}{\percent}           & \SI{20.64}{\percent}         & \textbf{\SI{30.99}{\percent}} & \SI{14.42}{\percent}             \\
+            Xilano (hemicelulosa C5)                          & \textbf{\SI{23.36}{\percent}} & \SI{8.34}{\percent}          & \SI{16.00}{\percent}       & \SI{19.04}{\percent}                \\
+            Lignina estructural                               & \textbf{\SI{28.53}{\percent}} & \SI{18.02}{\percent}         & \SI{19.78}{\percent}       & \SI{28.46}{\percent}                \\
+            \midrule
+            \multicolumn{5}{l}{\textit{Caracterización analítica integral en base seca bruta \autocite[Tabla~1]{MoranAlarcon2026, RomeroGarcia2022}:}} \\
+            Celulosa analítica                                & \SI{20.9}{\percent}           & \SI{11.8}{\percent}          & \SI{21.6}{\percent}        & \SI{10.1}{\percent}--\SI{11.0}{\percent} \\
+            Hemicelulosa analítica                            & \SI{26.0}{\percent}           & \SI{4.5}{\percent}           & \SI{14.5}{\percent}        & \SI{11.3}{\percent}--\SI{24.1}{\percent} \\
+            Lignina Klason / total                            & \SI{35.6}{\percent}           & \SI{19.3}{\percent}          & \SI{17.7}{\percent}        & \SI{21.9}{\percent}--\SI{41.6}{\percent} \\
+            Extractivos orgánicos y polifenoles               & \SI{6.3}{\percent}            & \SI{38.8}{\percent}          & \SI{28.6}{\percent}        & \SI{48.8}{\percent}--\SI{52.9}{\percent} \\
+            Cenizas minerales                                 & \textbf{\SI{0.6}{\percent}}   & \SI{3.7}{\percent}           & \SI{3.9}{\percent}         & \textbf{\SI{3.4}{\percent}--\SI{9.1}{\percent}} \\
+            Humedad típica de recepción                       & \SI{8.0}{\percent}            & \SI{35}{\percent}--\SI{40}{\percent} & \SI{20.0}{\percent} & \SI{12}{\percent}--\SI{65}{\percent} \\
+            \bottomrule
+        \end{tabular}%
+    }
+    \label{tab:composicion_comparada}
+\end{table}
+
+La comparación química evidencia la complementariedad industrial de los tres sustratos seleccionados:
+\begin{itemize}
+    \item El \textbf{hueso de aceituna (B-1)} aporta el máximo contenido en lignina (\SI{28.53}{\percent}--\SI{35.6}{\percent}) y xilano (\SI{23.36}{\percent}) con un contenido mínimo en cenizas (\SI{0.6}{\percent}), maximizando el rendimiento específico en lignina técnica pura (\SI{48}{\percent} de eficiencia de deslignificación en pretratamiento organosolv ácido según \textcite[Sección~3.1]{Jafari-Gohargan2026} y hasta \SI{52.5}{\percent} en \textcite[Tabla~1]{Padilla-Rascon2022}) \autocite{MacArez2025}.
+    \item La \textbf{hoja de olivo (B-2)} aporta una fracción rica en glucano (\SI{53.00}{\percent} de la fracción polimérica) y extractivos biodegradables (\SI{38.8}{\percent}), generando la mayor productividad específica de biogás y $\text{CO}_2$ biogénico en la digestión anaerobia de colas \autocite[Sección~3.1 y Tabla~8]{Jafari-Gohargan2026}.
+    \item La \textbf{madera de poda (B-4)} presenta la suma más alta de hexosas fermentables ($\text{glucano} + \text{galactano} = \SI{64.22}{\percent}$), alcanzando el máximo rendimiento de bioetanol 2G por tonelada procesada (\SI{145.8}{\kilo\gram/\tonne\text{ b.s.}} en B-4 frente a \SI{135.2}{\kilo\gram/\tonne} en B-1 y \SI{104.2}{\kilo\gram/\tonne} en B-2, \textcite[Tabla~8]{Jafari-Gohargan2026}).
+\end{itemize}
+
+\subsection*{Criterio Metodológico de Bases Químicas y Ámbito de Aplicación en el Diseño}
+La discrepancia observada entre los valores de lignina y carbohidratos de la Tabla~\ref{tab:composicion_comparada} responde a la naturaleza analítica de las fuentes y define de manera unívoca el ámbito de aplicación de cada serie de datos a lo largo del proyecto, evitando sobredimensionamientos artificiales o inconsistencias de cálculo:
+\begin{enumerate}
+    \item \textbf{Caracterización Analítica Integral en Base Seca Bruta \autocite{MoranAlarcon2026, RomeroGarcia2022}:}
+    Determina la composición gravimétrica directa del residuo tal como ingresa en factoría, cuantificando la Lignina Klason total (incluyendo la condensación de polifenoles y extractivos como pseudo-lignina) sobre el \SI{100}{\percent} de la masa seca bruta.
+    \begin{itemize}
+        \item \textit{Ámbito de aplicación en el proyecto:} Se utiliza para los balances globales de compra de materia prima, la logística de acopio y el dimensionamiento de las operaciones físicas de \textbf{recepción, almacenamiento y acondicionamiento}, en particular el balance térmico del secador rotatorio en función de las humedades reales de campo y el cribado granulométrico en molinos y tamices.
+    \end{itemize}
+    \item \textbf{Base Estructural Normalizada en Simulación de Proceso \autocite{Jafari-Gohargan2026}:}
+    Descuenta o aísla los extractivos solubles y normaliza exclusivamente la fracción polimérica lignocelulósica que efectivamente reacciona en las etapas biotecnológicas ($\text{glucano} + \text{galactano} + \text{xilano} + \text{lignina estructural} = \SI{100}{\percent}$ reactivo en Aspen Plus). Por este motivo, la lignina estructural del hueso figura como un \SI{28.53}{\percent} frente al \SI{35.6}{\percent} analítico bruto.
+    \begin{itemize}
+        \item \textit{Ámbito de aplicación en el proyecto:} Es la base estricta que gobierna las etapas de \textbf{fraccionamiento organosolv, hidrólisis enzimática PSSF, destilación y digestión anaerobia}. Determina de forma unívoca los consumos estequiométricos de reactivos, las cinéticas de fermentación, la precipitación de lignina técnica pura y los rendimientos unitarios de bioetanol y biogás.
+    \end{itemize}
+\end{enumerate}
+
+\section{Especificaciones Técnicas del Bioetanol 2G y Coproductos}
+\begin{enumerate}
+    \item \textbf{Bioetanol Renovable 2G ($\mathrm{CH_3-CH_2-OH}$):} Alcohol etílico anhidro desnaturalizado para automoción conforme a los métodos y requisitos de la norma europea \textbf{UNE-EN~15376} (pureza simulada tras tamices moleculares del \SI{99.9}{\percent} m/m, \textcite[Sección~2.1.4]{Jafari-Gohargan2026}; contenido de agua $< \SI{0.3}{\percent}$ m/m medido según EN~15489). A efectos arancelarios y de control aduanero comunitario, se clasifica en los códigos \texttt{ex~2207~10~00} y \texttt{ex~2207~20~00} \autocite[Considerando~2 y Anexo]{DOUE2026}. Presenta una densidad normalizada de \SI{789.3}{\kilo\gram/\cubic\meter} a \SI{20}{\celsius} (\SI{793.7}{\kilo\gram/\cubic\meter} a \SI{15}{\celsius}), un poder calorífico inferior (PCI) de \SI{26.8}{\mega\joule/\kilo\gram} (\SI{21.2}{\mega\joule/\liter}) y un número de octano de investigación ($\text{RON}$) en torno a 108.
+    \item \textbf{Lignina Técnica Pura Organosolv:} Biopolímero aromático precipitado en tanque decantador tras el pretratamiento organosolv (\SI{90}{\percent} de pureza y $\sim \SI{10}{\percent}$ de humedad, \textcite[Sección~2.1.5]{Jafari-Gohargan2026}), libre de azufre al no proceder de procesos Kraft o sulfito. Presenta alto poder calorífico para valorización energética directa y un elevado potencial comercial como precursor de fibra de carbono o sustituto renovable del fenol petroquímico en resinas fenol-formaldehído (PF) y adhesivos \autocite[Sección~2.1.5 y Tabla~5]{Jafari-Gohargan2026}.
+    \item \textbf{Dióxido de Carbono Biogénico:} $\text{CO}_2$ generado en la fermentación alcohólica PSSF (recuperado en el \textit{scrubber} con un \SI{97}{\percent} de eficiencia, \textcite[Sección~2.1.4]{Jafari-Gohargan2026}) y en la columna de desorción (\textit{stripping}) del biogás (con pureza $> \SI{90}{\percent}$ en gas bruto, \textcite[Sección~2.1.8]{Jafari-Gohargan2026}). Tras su purificación y licuefacción ($> \SI{98}{\percent}$), constituye una corriente biogénica valorizable para la industria agroalimentaria, invernaderos o síntesis química.
+    \item \textbf{Fracción Sólida Rica en Lignina, Biometano y Biofertilizante:} La fracción sólida no hidrolizada (\textit{rich-lignin}) se valoriza como biocombustible sólido densificado de alto poder calorífico (\SI{42}{\$/\tonne}, \textcite[Tabla~5]{Jafari-Gohargan2026}). El biogás bruto de digestión anaerobia UASB (\SI{25}{d} de tiempo de retención a \SI{37}{\celsius}, \textcite[Sección~2.1.7]{Jafari-Gohargan2026}) se somete a absorción con agua presurizada a \SI{10}{\bar} para obtener biometano con pureza superior al \SI{96}{\percent} en $\text{CH}_4$ (\textcite[Sección~2.1.8]{Jafari-Gohargan2026}), apto para cogeneración de vapor HP. Finalmente, las colas de la columna de recuperación de etanol se neutralizan con amoniaco para formar sulfato amónico utilizado como biofertilizante agrícola (\textcite[Sección~2.2.1]{Jafari-Gohargan2026}).
+\end{enumerate}
+
+\section{Marco Regulatorio y Clasificación de Materias Primas y Productos}
+
+\subsection*{Marco Normativo Comunitario y Nacional}
+\begin{itemize}
+    \item \textbf{Directivas (UE) 2018/2001 (RED~II) y (UE) 2023/2413 (RED~III):} Exigen para 2030 que cada Estado miembro alcance al menos un \SI{29}{\percent} de energía renovable en el transporte o una reducción del \SI{14.5}{\percent} en la intensidad de emisiones de GEI, junto a un objetivo combinado mínimo del \SI{5.5}{\percent} para biocarburantes avanzados y biogás del Anexo~IX (Parte~A) y combustibles renovables de origen no biológico (RFNBO, con un mínimo de \SI{1}{\percent} en 2030) \autocite{REDII2018, REDIII2023}. Aunque el marco comunitario contempla mecanismos de doble cómputo energético (art.~27), su aplicación efectiva depende de las reglas nacionales de cálculo.
+    \item \textbf{Marco Estatal (RD 376/2022 y RD 611/2026):} El Real Decreto 376/2022 regula en España la verificación de sostenibilidad y reducción de emisiones GEI de biocarburantes y biomasa \autocite{BOE376_2022}. Por su parte, el Real Decreto 611/2026 sustituye las anteriores obligaciones en contenido energético por objetivos de reducción de intensidad de emisiones GEI para 2027--2040 frente a un comparador fósil de \SI{94}{\gram\text{CO}_{2\text{eq}}/\mega\joule}, amplía los sujetos obligados e introduce un subobjetivo específico de \textbf{bioalcoholes avanzados} (\SI{0.5}{\percent} en 2030 y \SI{5.0}{\percent} en 2040) que respalda directamente al bioetanol 2G, precisando en su Anexo~III la no aplicación de los multiplicadores del artículo~27 de RED~II en los subobjetivos nacionales \autocite{BOE2026}.
+    \item \textbf{Reglamento de Ejecución (UE) 2026/2047:} Prorroga hasta el 15 de septiembre de 2029 la vigilancia aduanera retrospectiva sobre las importaciones comunitarias de bioetanol combustible tras su incremento del \SI{55}{\percent} entre 2023 (\num{621954}~t) y 2025 (\num{967354}~t, con un \SI{44}{\percent} procedente de EE.\,UU.), reforzando el seguimiento estadístico ante la creciente competencia exterior \autocite[Considerandos~5--7 y 15, Art.~2]{DOUE2026}.
+\end{itemize}
+
+\subsection*{Encuadre de Materias Primas (Anexo~IX, Parte~A) y Delimitación de Productos}
+La elegibilidad de los sustratos y el régimen regulatorio de las corrientes de salida (pues proceder del Anexo~IX no convierte a todo efluente en biocarburante avanzado) se estructuran en tres niveles:
+\begin{enumerate}
+    \item \textbf{Elegibilidad de materias primas:} El \textbf{hueso de aceituna (B-1)} encaja en la letra~\textit{d} del Anexo~IX, Parte~A (residuos industriales agroalimentarios no aptos para la cadena alimentaria), correspondencia confirmada expresamente en el Anexo~IV del Reglamento de Ejecución (UE) 2022/996 (\textit{olive stones}) \autocite{UE2022_996}. La \textbf{hoja de almazara (B-2)} se adscribe igualmente a la letra~\textit{d} por proceder de la limpieza industrial previa a la molturación (o a la letra~\textit{p} si procede directamente de recolección agrícola), mientras que la \textbf{madera y ramas de poda (B-4)} se encuadran en la letra~\textit{q} (\textit{otros materiales lignocelulósicos} distintos de trozas de aserrío o chapa), previa acreditación de su condición residual agrícola.
+    \item \textbf{Biocarburante avanzado 2G:} Exclusivamente el \textbf{bioetanol anhidro para automoción} (\SI{15672}{\tonne/a\text{\~{n}}o}, cuya calidad física de mezcla regula la norma UNE-EN~15376) destinado a gasolinas o síntesis de ETBE puede certificarse como biocarburante avanzado, sujeto a demostrar mediante análisis de ciclo de vida (ACV, arts.~29 y~31 de RED~II) un ahorro de emisiones GEI $\ge \SI{65}{\percent}$.
+    \item \textbf{Combustibles de biomasa y bioproductos fuera de cuota de transporte:} El \textbf{biogás} (\SI{4544.7}{\cubic\meter/\hour} en régimen de hoja, $\sim \SI{65}{\percent}$ $\text{CH}_4$) abastece la cogeneración interna sin \textit{upgrading} a biometano vehicular, y la fracción \textbf{\textit{rich-lignin}} actúa como combustible sólido industrial; ambos descarbonizan el proceso pero no computan en transporte. Finalmente, la \textbf{lignina técnica pura} (\SI{9847}{\tonne/a\text{\~{n}}o}, potencial sustituto parcial de fenol en resinas PF), el \textbf{biofertilizante} (sujeto a normativa agronómica y al Reglamento UE 2019/1009 si lleva marcado CE) y el \textbf{$\text{CO}_2$ biogénico} ($>\SI{98}{\percent}$) se comercializan como bioproductos químicos o industriales sin cómputo energético bajo RED~III.
+\end{enumerate}
+
+\chapter{Análisis de la Oferta y la Competencia}
+
+\section{Oferta Nacional y Materias Primas Empleadas en España (MITECO 2026)}
+En España, la producción industrial de bioetanol convencional se encuentra concentrada en el grupo Vertex Bioenergy, que opera tres instalaciones principales de bioetanol cerealista (emplazadas en Teixeiro, A~Coruña; Babilafuente, Salamanca; y Escombreras, Murcia), junto con aportaciones minoritarias de destilerías tradicionales de subproductos vinícolas, cuya producción agregada certificada en el ejercicio 2025 ascendió a \textbf{\SI{546979.7}{\cubic\meter}} \autocite{MITECO2026}.
+
+Sin embargo, el desglose oficial de sostenibilidad por tipo de materia prima del \textcite{MITECO2026} demuestra que la oferta comercializada en España corresponde casi íntegramente a primera generación alimentaria (1G):
+\begin{itemize}
+    \item \textbf{Maíz:} \SI{90.37}{\percent} en 2025 (\SI{82.41}{\percent} en 2024).
+    \item \textbf{Caña de azúcar:} \SI{8.82}{\percent} en 2025 (\SI{16.06}{\percent} en 2024).
+    \item \textbf{Otros residuos vitivinícolas y almidoneros:} \SI{0.53}{\percent} subproductos ricos en almidón (S.B.R.), \SI{0.25}{\percent} orujo de uva/lías de vino y \SI{0.03}{\percent} trigo en 2025.
+    \item \textbf{Biomasa del olivar (hueso, hoja o madera de poda):} \textbf{\SI{0.00}{\percent}} (inexistencia absoluta de oferta industrial actual).
+\end{itemize}
+
+\section{Ausencia de Plantas de Bioetanol en Andalucía y Competencia por Biomasa (MIEA 2026)}
+De acuerdo con el \textit{Informe de Infraestructuras Energéticas de Andalucía (MIEA)} a 30 de junio de 2026 publicado por la \textcite[Sección~7 y Anexo~6]{AAE2026}, Andalucía cuenta con 11 plantas de biocarburantes que suman una capacidad instalada de \SI{1329.2}{ktep/a\text{\~{n}}o}:
+\begin{itemize}
+    \item \textbf{7 plantas de biodiésel:} \SI{1223.4}{ktep/a\text{\~{n}}o}.
+    \item \textbf{2 plantas de hidrobiodiésel / HVO:} \SI{73.8}{ktep/a\text{\~{n}}o} (Palos de la Frontera y San Roque).
+    \item \textbf{2 plantas de ETBE:} \SI{32.0}{ktep/a\text{\~{n}}o}, operadas por Moeve en los complejos petroquímicos de San Roque (Cádiz) y Palos de la Frontera (Huelva).
+\end{itemize}
+
+La Nota~4 de la Sección~7 de dicho informe oficial certifica literalmente la situación regional de suministro: \textit{«El ETBE se considera biocarburante bajo la definición de la directiva europea de fomento de los biocarburantes 2003/30, por tanto debe computarse a efectos de producción en Andalucía. Sin embargo, el etanol empleado para su fabricación se ha producido en otras comunidades autónomas»} \autocite[Sección~7, Nota~4]{AAE2026}. En consecuencia, esta biorrefinería multibiomasa constituirá el \textbf{primer productor autóctono de bioetanol en Andalucía}, disponiendo de clientes industriales directos en las refinerías andaluzas para síntesis de ETBE y formulación de gasolinas E5/E10.
+
+Respecto a la competencia por los recursos biomásicos en origen (Tabla~\ref{tab:potencia_termica_miea} y Figura~\ref{fig:competencia_sabi}a):
+\begin{enumerate}
+    \item \textbf{Asimetría provincial en competencia térmica sobre el hueso (MIEA 2026):} Aunque Andalucía registra \num{29957} instalaciones térmicas con \SI{2003.2}{\mega\watt} \autocite[Sección~6.2]{AAE2026}, la demanda agroindustrial exhibe una acusada asimetría territorial (Tabla~\ref{tab:potencia_termica_miea} y Figura~\ref{fig:competencia_sabi}a). Jaén y Córdoba concentran de forma combinada el \SI{64.23}{\percent} de la potencia térmica industrial andaluza (\SI{497.1}{\mega\watt} y \SI{414.1}{\mega\watt}), mientras que \textbf{Granada} registra apenas \textbf{\SI{137.1}{\mega\watt} industriales} (\SI{9.66}{\percent} regional). Esta reducida saturación fabril (más de tres veces inferior a las provincias limítrofes) amortigua la tensión de precios en el aprovisionamiento local de hueso. En paralelo, tanto la hoja de almazara como la madera de poda carecen de una cadena industrial consolidada de alto valor añadido, abriendo una ventana de oportunidad óptima para su valorización en esta biorrefinería \autocite{MoranAlarcon2026}.
+    \item \textbf{Exclusión estratégica del alperujo y orujo desalperujado (APPA 2026):} De acuerdo con los criterios del estudio nacional de \textcite[Sección~4.2.3, Tabla~23]{APPA2026}, la competencia de usos con las orujeras reduce drásticamente la fracción disponible de alperujo y orujo. Al prescindir expresamente de la fracción de orujo agotado (B-3) y centrar la planta en hueso (B-1), hoja (B-2) y madera de poda (B-4), se evita dicha fricción competitiva por la materia prima. Asimismo, dado que el orujo presenta el mayor contenido en cenizas del olivar (\SI{3.4}{\percent}--\SI{9.1}{\percent}, Tabla~\ref{tab:composicion_comparada}), su exclusión previene una mayor frecuencia de paradas por ensuciamiento y mantenimiento abrasivo, simplificando la operación frente a las paradas técnicas ya inherentes a la alternancia secuencial de sustratos.
+\end{enumerate}
+
+\begin{table}[H]
+    \centering
+    \caption{Distribución provincial de potencia térmica de biomasa por sectores en Andalucía a 30 de junio de 2026. Fuente: Elaboración propia a partir de datos oficiales de la Agencia Andaluza de la Energía \autocite[Sección~6.2, pág.~18]{AAE2026}.}
+    \adjustbox{max width=0.96\textwidth}{%
+        \renewcommand{\arraystretch}{1.25}
+        \small
+        \begin{tabular}{l c c c c}
+            \toprule
+            \textbf{Ámbito Provincial} & \textbf{\shortstack{Potencia Industrial\\(\si{\mega\watt})}} & \textbf{\shortstack{\% s/ Sector Ind.\\Andaluz}} & \textbf{\shortstack{Potencia Total\\(\si{\mega\watt})}} & \textbf{\shortstack{\% s/ Potencia\\Total Andaluza}} \\
+            \midrule
+            \textbf{Jaén}                          & \num{497.1}           & \SI{35.04}{\percent}          & \num{650.9}           & \SI{32.49}{\percent}          \\
+            \textbf{Córdoba}                       & \num{414.1}           & \SI{29.19}{\percent}          & \num{493.2}           & \SI{24.62}{\percent}          \\
+            \textbf{Granada}                       & \textbf{\num{137.1}}  & \textbf{\SI{9.66}{\percent}}  & \num{268.6}           & \SI{13.41}{\percent}          \\
+            \midrule
+            \textbf{Subtotal (3 Provincias Clave)} & \textbf{\num{1048.3}} & \textbf{\SI{73.89}{\percent}} & \textbf{\num{1412.7}} & \textbf{\SI{70.52}{\percent}} \\
+            \textbf{Resto de Andalucía (5 Prov.)}  & \num{370.5}           & \SI{26.11}{\percent}          & \num{590.5}           & \SI{29.48}{\percent}          \\
+            \midrule
+            \textbf{Total Comunidad Andaluza}      & \textbf{\num{1418.8}} & \textbf{100.0\,\%}            & \textbf{\num{2003.2}} & \textbf{100.0\,\%}            \\
+            \bottomrule
+        \end{tabular}%
+    }
+    \label{tab:potencia_termica_miea}
+\end{table}
+
+\section{Censo y Facturación de Almazaras en España (Extracción SABI Informa)}
+Para caracterizar la estructura societaria y solvencia de los suministradores primarios de hueso y hoja de limpia, se ha explorado la base de datos mercantil \textbf{SABI} \autocite{SABI2026}, obteniendo los siguientes datos sobre la actividad económica de la explotación de aceite de oliva y almazaras disponibles. Dicha muestra comprende un total de \textbf{\num{202} sociedades mercantiles y cooperativas} con una facturación agregada de \textbf{\num{851.24} millones de euros}, representados en la Tabla~\ref{tab:sabi_almazaras} y en la Figura~\ref{fig:competencia_sabi}b.
+
+\begin{table}[H]
+    \centering
+    \caption{Distribución geográfica e ingresos de explotación del sector almazarero en SABI (\texttt{aceite.xls}). Fuente: Elaboración propia a partir de datos de \textcite{SABI2026}.}
+    \adjustbox{max width=0.92\textwidth}{%
+        \renewcommand{\arraystretch}{1.28}
+        \small
+        \begin{tabular}{l c c r c}
+            \toprule
+            \textbf{Ámbito Geográfico} & \textbf{\shortstack{Empresas\\Registradas}} & \textbf{\shortstack{\% s/ Total\\Muestra}} & \textbf{\shortstack{Ingresos Explotación\\(M€)}} & \textbf{\shortstack{\% Facturación\\Sectorial}} \\
+            \midrule
+            \textbf{Córdoba}           & \num{21}                      & \SI{10.4}{\percent}  & \num{552.72}                       & \SI{64.93}{\percent}    \\
+            \textbf{Ciudad Real}       & \num{7}                       & \SI{3.5}{\percent}   & \num{102.77}                       & \SI{12.07}{\percent}    \\
+            \textbf{Jaén}              & \num{22}                      & \SI{10.9}{\percent}  & \num{72.65}                        & \SI{8.54}{\percent}     \\
+            \textbf{Huelva}            & \num{2}                       & \SI{1.0}{\percent}   & \num{26.61}                        & \SI{3.13}{\percent}     \\
+            \textbf{Granada}           & \num{9}                       & \SI{4.5}{\percent}   & \num{14.56}                        & \SI{1.71}{\percent}     \\
+            \textbf{Otras Provincias}  & \num{141}                     & \SI{69.8}{\percent}  & \num{81.93}                        & \SI{9.62}{\percent}     \\
+            \midrule
+            \textbf{Total Muestra SABI}& \textbf{\num{202}}            & \textbf{100.0\,\%}   & \textbf{\num{851.24}}              & \textbf{100.0\,\%}      \\
+            \bottomrule
+        \end{tabular}%
+    }
+    \label{tab:sabi_almazaras}
+\end{table}
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \begin{tikzpicture}
+            \begin{axis}[
+                ybar,
+                bar width=11pt,
+                width=0.98\textwidth,
+                height=5.8cm,
+                ylabel={ Potencia térmica ($\text{MW}$) },
+                symbolic x coords={Granada,Córdoba,Jaén},
+                xtick=data,
+                ymin=0, ymax=760,
+                ymajorgrids=true,
+                grid style={dashed, gray!35},
+                legend style={at={(0.5,1.03)}, anchor=south, legend columns=2, font=\scriptsize, draw=gray!40},
+                nodes near coords,
+                every node near coord/.append style={font=\scriptsize, rotate=0},
+                tick label style={font=\footnotesize\bfseries},
+                label style={font=\footnotesize\bfseries},
+                enlarge x limits=0.26
+            ]
+                \addplot[fill=myr!75, draw=myr!95!black, every node near coord/.append style={xshift=-6pt}] coordinates {(Granada,137.1) (Córdoba,414.1) (Jaén,497.1)};
+                \addplot[fill=myb!60, draw=myb!90!black, every node near coord/.append style={xshift=6pt}] coordinates {(Granada,268.6) (Córdoba,493.2) (Jaén,650.9)};
+                \legend{Uso Industrial, Total Provincial}
+            \end{axis}
+        \end{tikzpicture}
+        \caption{Potencia térmica con biomasa por provincias. Ilustración de elaboración propia a partir de datos del Informe MIEA a 30 de junio de 2026 \autocite[Sección~6.2]{AAE2026}.}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.49\textwidth}
+        \centering
+        \begin{tikzpicture}
+            \begin{axis}[
+                xbar,
+                bar width=9pt,
+                width=0.96\textwidth,
+                height=5.8cm,
+                xlabel={ Ingresos de explotación ($\text{M€}$) },
+                symbolic y coords={Granada,Huelva,Jaén,Otras Prov.,Ciudad Real,Córdoba},
+                ytick=data,
+                xmin=0, xmax=650,
+                xmajorgrids=true,
+                grid style={dashed, gray!35},
+                nodes near coords,
+                every node near coord/.append style={font=\scriptsize},
+                tick label style={font=\footnotesize},
+                label style={font=\footnotesize\bfseries},
+                enlarge y limits=0.14
+            ]
+                \addplot[fill=oliveg!75, draw=oliveg!95!black] coordinates {
+                    (14.56,Granada) (26.61,Huelva) (72.65,Jaén) (81.93,Otras Prov.) (102.77,Ciudad Real) (552.72,Córdoba)
+                };
+            \end{axis}
+        \end{tikzpicture}
+        \caption{Facturación empresarial almazarera en SABI. Ilustración de elaboración propia a partir de datos mercantiles de SABI Informa \autocite{SABI2026}.}
+    \end{subfigure}
+    \caption{Análisis competitivo regional: (a) menor saturación térmica industrial en Granada y (b) concentración empresarial de proveedores oleícolas en el entorno. Ilustraciones de elaboración propia a partir de fuentes oficiales (\citeauthor{AAE2026}, \citeyear{AAE2026}; \citeauthor{SABI2026}, \citeyear{SABI2026}).}
+    \label{fig:competencia_sabi}
+\end{figure}
+
+Sobresale la concentración del suministro en cooperativas de segundo grado y grandes grupos agroindustriales limítrofes, liderados por \textit{Sdad.\ Coop.\ And.\ Almazaras de la Subbética} (\num{219.86}~M€, Carcabuey, Córdoba, colindante con el Poniente Granadino), \textit{Almazara Adamuz S.L.} (\num{112.46}~M€, Córdoba), \textit{Virgen de las Viñas Bodega y Almazara S.\ Coop.} (\num{95.50}~M€, Ciudad Real) y \textit{Almazara La Loma S.L.} (\num{29.80}~M€, Jaén), lo que permite formalizar contratos plurianuales concentrados de hoja de limpia (\SI{40000}{\tonne\text{ b.s.}/a\text{\~{n}}o}) y hueso (\SI{15000}{\tonne\text{ b.s.}/a\text{\~{n}}o}) con un número reducido de interlocutores.
+
+%=============================================================================
+\chapter{Análisis de la Demanda y Consumo Nacional Aparente}
+
+\section{Balance Histórico del Mercado Español (2017--2025)}
+En la Encuesta Industrial Anual de Productos del Instituto Nacional de Estadística \autocite{INE2025}, el alcohol etílico figura clasificado bajo el código \textbf{PRODCOM 20.14.74.00} (\textit{Alcohol etílico sin desnaturalizar con grado alcohólico volumétrico $\ge \SI{80}{\percent}$}), categoría genérica que comprende tanto el alcohol carburante como otros alcoholes técnicos industriales no desnaturalizados. En las publicaciones oficiales de INEbase dicho epígrafe se encuentra amparado por el \textbf{secreto estadístico} conforme a la Ley~12/1989 de la Función Estadística Pública, salvaguarda aplicada cuando la elevada concentración de la oferta en un número muy reducido de operadores industriales impide difundir cifras agregadas sin comprometer la confidencialidad individual (destacando en España el grupo Vertex Bioenergy, que opera tres plantas de bioetanol cerealista en Teixeiro, Babilafuente y Escombreras).
+
+Por consiguiente, para cuantificar el mercado nacional con rigor institucional, las magnitudes de producción certificada y flujos de comercio exterior se extraen del registro oficial de certificaciones de biocarburantes del \textbf{MITECO} \autocite{MITECO2026}, mientras que las referencias de precios se apoyan en las determinaciones comunitarias del \textbf{Reglamento de Ejecución (UE) 2026/2047} de la Comisión Europea \autocite[Considerandos~8 y~11]{DOUE2026}, distinguiendo el precio medio de importación en la Unión Europea del precio de venta de los productores comunitarios.
+
+A partir de la serie histórica oficial de certificaciones del \textcite{MITECO2026}, se determina el Consumo Nacional Aparente ($\text{CNA} = \text{Producción certificada} + \text{Importaciones} - \text{Exportaciones}$) en volumen (\si{\cubic\meter}) y su equivalencia másica en toneladas mediante la densidad del etanol anhidro a temperatura estándar ($\rho_{\SI{20}{\celsius}} = \SI{0.7893}{\tonne/\cubic\meter}$; señalándose que a la temperatura de referencia petrolera de \SI{15}{\celsius} según la norma EN~15376 la densidad asciende a \SI{0.7937}{\tonne/\cubic\meter}, con una variación menor al \SI{0.55}{\percent}), tal como recogen la Tabla~\ref{tab:cna_historico} y la Figura~\ref{fig:evolucion_cna}. Cabe señalar que el CNA constituye una estimación estadística estándar de la absorción teórica del mercado doméstico y no un consumo final real medido ni un balance físico completo, al no incorporar la variación neta de existencias almacenadas en depósitos e instalaciones logísticas ni otros consumos técnicos no sujetos a certificación.
+
+\begin{table}[H]
+    \centering
+    \caption{Serie histórica de producción certificada, comercio exterior y Consumo Nacional Aparente (CNA) de bioetanol en España (2017--2025). Fuente: Elaboración propia a partir de datos de certificaciones del \textcite{MITECO2026}.}
+    \adjustbox{max width=0.98\textwidth}{%
+        \renewcommand{\arraystretch}{1.28}
+        \small
+        \begin{tabular}{c r r r r r}
+            \toprule
+            \textbf{Año} & \textbf{\shortstack{Producción Certificada\\(\si{\cubic\meter})}} & \textbf{\shortstack{Importación\\(\si{\cubic\meter})}} & \textbf{\shortstack{Exportación\\(\si{\cubic\meter})}} & \textbf{\shortstack{CNA\\(\si{\cubic\meter})}} & \textbf{\shortstack{CNA (\si{\tonne})\\($\rho_{\SI{20}{\celsius}} = \SI{0.7893}{\tonne/\cubic\meter}$)}} \\
+            \midrule
+            2017         & \num{421002.5}                          & \num{48099.1}                            & \num{160781.7}                           & \textbf{\num{308319.9}}          & \textbf{\num{243357}}                       \\
+            2018         & \num{522091.4}                          & \num{42566.3}                            & \num{239154.0}                           & \textbf{\num{325503.8}}          & \textbf{\num{256920}}                       \\
+            2019         & \num{548273.1}                          & \num{6494.0}                             & \num{289251.3}                           & \textbf{\num{265515.8}}          & \textbf{\num{209572}}                       \\
+            2020         & \num{501950.8}                          & \num{0.0}                                & \num{285511.6}                           & \textbf{\num{216439.3}}          & \textbf{\num{170836}}                       \\
+            2021         & \num{554523.6}                          & \num{3747.6}                             & \num{293522.5}                           & \textbf{\num{264748.7}}          & \textbf{\num{208966}}                       \\
+            2022         & \num{498035.3}                          & \num{6362.7}                             & \num{276903.5}                           & \textbf{\num{227494.5}}          & \textbf{\num{179561}}                       \\
+            2023         & \num{547555.1}                          & \num{76513.3}                            & \num{343669.8}                           & \textbf{\num{280398.6}}          & \textbf{\num{221319}}                       \\
+            2024         & \num{554823.4}                          & \num{156258.5}                           & \num{374126.3}                           & \textbf{\num{336955.6}}          & \textbf{\num{265959}}                       \\
+            2025         & \num{546979.7}                          & \num{106216.9}                           & \num{367961.6}                           & \textbf{\num{285235.0}}          & \textbf{\num{225136}}                       \\
+            \bottomrule
+        \end{tabular}%
+    }
+    \label{tab:cna_historico}
+\end{table}
+
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+            width=0.92\textwidth,
+            height=6.6cm,
+            xlabel={ Ejercicio estadístico },
+            ylabel={ Volumen anual ($10^3\text{ m}^3$) },
+            xmin=2016.6, xmax=2025.4,
+            ymin=0, ymax=630,
+            xtick={2017,2018,2019,2020,2021,2022,2023,2024,2025},
+            xticklabel style={/pgf/number format/1000 sep={}},
+            ymajorgrids=true,
+            xmajorgrids=true,
+            grid style={dashed, gray!35},
+            legend style={at={(0.5,1.03)}, anchor=south, legend columns=4, font=\footnotesize, draw=gray!40},
+            tick label style={font=\footnotesize},
+            label style={font=\footnotesize\bfseries}
+        ]
+            \addplot[color=woodc, line width=1.6pt, mark=square*, mark size=2.1pt] coordinates {
+                (2017,421.00) (2018,522.09) (2019,548.27) (2020,501.95) (2021,554.52) (2022,498.04) (2023,547.56) (2024,554.82) (2025,546.98)
+            };
+            \addplot[color=oliveg, line width=1.8pt, mark=*, mark size=2.3pt] coordinates {
+                (2017,308.32) (2018,325.50) (2019,265.52) (2020,216.44) (2021,264.75) (2022,227.49) (2023,280.40) (2024,336.96) (2025,285.24)
+            };
+            \addplot[color=stoneb, line width=1.4pt, dashed, mark=triangle*, mark size=2.2pt] coordinates {
+                (2017,160.78) (2018,239.15) (2019,289.25) (2020,285.51) (2021,293.52) (2022,276.90) (2023,343.67) (2024,374.13) (2025,367.96)
+            };
+            \addplot[color=myr, line width=1.4pt, dotted, mark=diamond*, mark size=2.3pt] coordinates {
+                (2017,48.10) (2018,42.57) (2019,6.49) (2020,0.00) (2021,3.75) (2022,6.36) (2023,76.51) (2024,156.26) (2025,106.22)
+            };
+            \legend{Producción certificada, CNA España, Exportación, Importación}
+        \end{axis}
+    \end{tikzpicture}
+    \caption{Evolución histórica de la producción certificada, comercio exterior y Consumo Nacional Aparente (CNA) de bioetanol en España (2017--2025). Ilustración de elaboración propia a partir de datos oficiales de \textcite{MITECO2026}.}
+    \label{fig:evolucion_cna}
+\end{figure}
+
+Adicionalmente, el seguimiento mensual de la demanda coyuntural publicado en el \textit{Boletín Estadístico de Hidrocarburos n.º~345} por \textcite{CORES2026}, cuyas series estadísticas se reportan en miles de toneladas (\si{\kilo\tonne}), constata una demanda de bioetanol en mezcla con gasolinas que oscila regularmente entre \SI{13}{\kilo\tonne} y \SI{20}{\kilo\tonne/mes} (con un rango efectivo de \num{12.65} a \SI{20.01}{\kilo\tonne/mes} en el periodo disponible). En concreto, en el cuatrimestre septiembre--diciembre de 2025 el consumo mensual en gasolinas sumó \SI{65.80}{\kilo\tonne} ($\sim \SI{66}{\kilo\tonne}$), lo que proyecta un consumo anualizado superior a \SI{200}{\kilo\tonne/a\text{\~{n}}o}, en estrecha concordancia con las \SI{225.14}{\kilo\tonne} obtenidas como CNA a partir del balance del MITECO. Por su parte, en el acumulado de 2026 (enero a agosto inclusive) las entregas contabilizan ya \SI{129.19}{\kilo\tonne} ($\sim \SI{129}{\kilo\tonne}$), ratificando la estabilidad de la demanda del parque de automoción. En paralelo, las estadísticas constatan una intensificación de los flujos de importación exterior desde 2023, alcanzando en 2025 un volumen de \SI{83.8}{\kilo\tonne} (\SI{106216.9}{\cubic\meter}). Si bien este incremento de importaciones no presupone de forma automática una demanda estructural insatisfecha ni garantiza que dicho volumen sea íntegramente sustituible por etanol avanzado nacional (al responder a contratos de refino y arbitrajes comerciales de bioetanol convencional), sí confirma la existencia de un flujo regular de aprovisionamiento que define un mercado potencial accesible para la producción autóctona certificada.
+
+\section{Contexto de la Demanda en la Unión Europea (DOUE 2026)}
+A escala comunitaria, la \textcite[Considerandos~5, 9 y~10; Cuadro~1 y Nota~7]{DOUE2026} recoge y documenta para el cierre de 2025:
+\begin{itemize}
+    \item \textbf{Consumo de la Unión Europea:} \textbf{\num{4987906}~toneladas/año} ($\sim \SI{5.0}{\mega\tonne/a\text{\~{n}}o}$).
+    \item \textbf{Producción interna de la Unión Europea:} \textbf{\num{4498816}~toneladas/año} (sobre una capacidad instalada de \num{5319898}~t/año).
+    \item \textbf{Importaciones extracomunitarias en la UE:} Experimentaron un repunte del \SI{55}{\percent} entre 2023 y 2025, pasando de \num{621954}~t en 2023 a \num{967354}~t en 2025 (ante una capacidad productiva excedentaria sobre su consumo interno de \SI{12.5}{\mega\tonne} en EE.\,UU. y \SI{16.0}{\mega\tonne} en Brasil disponible para la exportación).
+\end{itemize}
+
+Bajo el escenario multibiomasa seleccionado (\SI{120000}{\tonne\text{ b.s.}/a\text{\~{n}}o}), la producción anual de bioetanol 2G de esta biorrefinería proyectada asciende a \textbf{\SI{15672}{\tonne/a\text{\~{n}}o}} (\SI{19855.6}{\cubic\meter/a\text{\~{n}}o} a \SI{20}{\celsius} según $\rho = \SI{0.7893}{\tonne/\cubic\meter}$; \SI{19745.5}{\cubic\meter/a\text{\~{n}}o} a la temperatura de referencia de \SI{15}{\celsius} de la norma EN~15376), lo que representa el \textbf{\SI{6.96}{\percent}} del CNA estimado en España para 2025 (\num{225136}~t) y apenas el \textbf{\SI{0.314}{\percent}} del consumo total de la Unión Europea. La viabilidad de absorción comercial de dicho volumen no se fundamenta únicamente en su reducida escala macroeconómica relativa, sino en su condición de biocarburante avanzado de segunda generación (materias primas del Anexo~IX, Parte~A), el cual se beneficia de la demanda regulatoria impulsada por la Directiva (UE) 2023/2413 (RED~III) y el subobjetivo específico y obligatorio de bioalcoholes avanzados fijado por el Real Decreto 611/2026, facilitando su colocación prioritaria en las refinerías andaluzas para formulación de gasolinas y síntesis de ETBE sin depender de la competencia directa en precios del bioetanol convencional de importación.
+
+%=============================================================================
+\chapter{Estimación de Demanda, Ventas y Precios (Modelos OGP)}
+
+\section{Modelo de Jackson-Black sobre Serie Larga Oficial (2017--2025)}
+Conforme a la metodología cuantitativa de estudios de mercado de la asignatura OGP, la evolución acumulada del consumo aparente responde a la ley potencial de \textbf{Jackson-Black}:
+\begin{equation}
+    \sum Q = Q_0 \cdot t^j \quad \Longleftrightarrow \quad \log_{10}\left(\sum Q\right) = \log_{10} Q_0 + j \cdot \log_{10} t
+    \label{eq:jackson_black}
+\end{equation}
+
+Aplicando la regresión lineal doblemente logarítmica sobre la serie histórica completa de 9 años del MITECO (2017--2025, expresada en $10^3\text{ m}^3$), se obtienen los valores de la Tabla~\ref{tab:jackson_black_9y} y la representación gráfica de ajuste de la Figura~\ref{fig:jackson_black_plot}.
+
+\begin{table}[H]
+    \centering
+    \caption{Ajuste econométrico de Jackson-Black para el CNA acumulado en España (2017--2025). Fuente: Elaboración propia a partir de datos oficiales de \textcite{MITECO2026}.}
+    \adjustbox{max width=0.88\textwidth}{%
+        \renewcommand{\arraystretch}{1.22}
+        \begin{tabular}{c c r r c c}
+            \toprule
+            \textbf{Año} & \textbf{Periodo ($t$)} & \textbf{$Q$ ($10^3\text{ m}^3$)} & \textbf{$\sum Q$ ($10^3\text{ m}^3$)} & \textbf{$\log_{10} t$} & \textbf{$\log_{10}(\sum Q)$} \\
+            \midrule
+            2017         & 1                      & \num{308.32}                     & \num{308.32}                          & \num{0.0000}           & \num{2.4890}                 \\
+            2018         & 2                      & \num{325.50}                     & \num{633.82}                          & \num{0.3010}           & \num{2.8020}                 \\
+            2019         & 3                      & \num{265.52}                     & \num{899.34}                          & \num{0.4771}           & \num{2.9539}                 \\
+            2020         & 4                      & \num{216.44}                     & \num{1115.78}                         & \num{0.6021}           & \num{3.0476}                 \\
+            2021         & 5                      & \num{264.75}                     & \num{1380.53}                         & \num{0.6990}           & \num{3.1400}                 \\
+            2022         & 6                      & \num{227.49}                     & \num{1608.02}                         & \num{0.7782}           & \num{3.2063}                 \\
+            2023         & 7                      & \num{280.40}                     & \num{1888.42}                         & \num{0.8451}           & \num{3.2761}                 \\
+            2024         & 8                      & \num{336.96}                     & \num{2225.38}                         & \num{0.9031}           & \num{3.3474}                 \\
+            2025         & 9                      & \num{285.24}                     & \num{2510.61}                         & \num{0.9542}           & \num{3.3998}                 \\
+            \bottomrule
+        \end{tabular}%
+    }
+    \label{tab:jackson_black_9y}
+\end{table}
+
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+            width=0.82\textwidth,
+            height=6.2cm,
+            xlabel={ $\log_{10} t$ (con $t = 1, 2, \dots, 9$ para 2017--2025) },
+            ylabel={ $\log_{10}\left(\sum Q\right)$ [$\sum Q$ en $10^3\text{ m}^3$] },
+            xmin=-0.05, xmax=1.05,
+            ymin=2.42, ymax=3.52,
+            ymajorgrids=true,
+            xmajorgrids=true,
+            grid style={dashed, gray!35},
+            legend style={at={(0.03,0.96)}, anchor=north west, font=\footnotesize, draw=gray!45, fill=white},
+            tick label style={font=\footnotesize},
+            label style={font=\footnotesize\bfseries}
+        ]
+            \addplot[only marks, color=woodc, mark=*, mark size=2.6pt] coordinates {
+                (0.0000,2.4890) (0.3010,2.8020) (0.4771,2.9539) (0.6021,3.0476)
+                (0.6990,3.1400) (0.7782,3.2063) (0.8451,3.2761) (0.9031,3.3474) (0.9542,3.3998)
+            };
+            \addplot[color=myr, line width=1.5pt, domain=-0.02:1.00] {0.9288*x + 2.4998};
+            \legend{Datos históricos MITECO (2017--2025), Ajuste lineal: $y = 0{,}9288\,x + 2{,}4998$}
+            \node[anchor=south east, draw=gray!50, fill=gray!8, rounded corners=2pt, inner sep=5pt, font=\footnotesize, align=left] at (axis cs:1.01,2.47) {
+                \textbf{Parámetros Jackson-Black:}\\
+                Pendiente: $j = \num{0.9288} \approx 1$\\
+                Ordenada: $\log_{10} Q_0 = \num{2.4998}$\\
+                Coef.\ determinación: $\mathbf{R^2 = \num{0.9977}}$
+            };
+        \end{axis}
+    \end{tikzpicture}
+    \caption{Representación log-log y recta de regresión del modelo de Jackson-Black para el consumo aparente acumulado de bioetanol en España (2017--2025). Ilustración de elaboración propia a partir de datos del \textcite{MITECO2026}.}
+    \label{fig:jackson_black_plot}
+\end{figure}
+
+El ajuste por mínimos cuadrados ordinarios arroja una correlación excelente ($R^2 = \num{0.9977}$), con exponente $j = \num{0.9288}$ ($j \approx 1$, característico de un mercado energético maduro y consolidado), ordenada $\log_{10} Q_0 = \num{2.4998}$ ($Q_0 = \num{316.09} \times 10^3\text{ m}^3$) y demanda teórica proyectada en volumen de $Q_{2026} = \widehat{\sum Q}_{10} - \widehat{\sum Q}_{9} = \num{2682.80} - \num{2432.70} = \num{250.09} \times 10^3\text{ m}^3$ (\SI{197.40}{\kilo\tonne}) y $Q_{2027} = \num{248.31} \times 10^3\text{ m}^3$ (\SI{195.99}{\kilo\tonne}).
+
+\section{Modelos Emparejados Jackson-Black y Massey-Black con Precios Oficiales DOUE (2023--2025)}
+Para aplicar el modelo monetario acumulativo de \textbf{Massey-Black} ($\sum V = V_0 \cdot t^m$) sin introducir ninguna estimación arbitraria de precios, se emplea la ventana trienal 2023--2025 ($t = 1, 2, 3$), periodo para el cual la \textcite[Considerandos~8 y~11]{DOUE2026} publica precios auditados por la Comisión Europea:
+\begin{enumerate}
+    \item \textbf{Serie A (Precios de referencia de importación, \cite{DOUE2026}, Considerando~8):} Precio medio de importación en la UE de \num{1014.0}~€/t en 2023 y \num{816.0}~€/t en 2025, con referencia de importación estadounidense en 2024 de \num{932.0}~€/t.
+    \item \textbf{Serie B (Precio de venta de la industria interna de la Unión Europea, \cite{DOUE2026}, Considerandos~8 y~11):} El Considerando~(8) certifica que el precio de importación desde EE.\,UU. (\num{932}~€/t en 2024 y \num{752}~€/t en 2025) \textit{«se mantuvo en torno a un \SI{16}{\percent} por debajo del precio de venta de la Unión»}, de donde se deduce exactamente $P_{\text{UE},2025} = 752 / (1 - 0.16) = \num{895.24}$~€/t y $P_{\text{UE},2024} = 932 / (1 - 0.16) = \num{1109.52}$~€/t. Asimismo, el Considerando~(11) documenta una \textit{«disminución de los precios de venta de la Unión del \SI{21}{\percent} entre 2023 y 2025»}, resultando $P_{\text{UE},2023} = 895.24 / (1 - 0.21) = \num{1133.21}$~€/t.
+\end{enumerate}
+
+Cruzando ambas series oficiales con el CNA másico español del MITECO ($Q_{2023} = \SI{221.32}{\kilo\tonne}$, $Q_{2024} = \SI{265.96}{\kilo\tonne}$ y $Q_{2025} = \SI{225.14}{\kilo\tonne}$), se construyen los modelos emparejados de la Tabla~\ref{tab:massey_black_trienio} y la Figura~\ref{fig:massey_black_precios}.
+
+\begin{table}[H]
+    \centering
+    \caption{Modelos emparejados de Jackson-Black ($Q$ en kt) y Massey-Black ($V$ en M€) en el trienio 2023--2025 y proyección de precios unitarios hasta 2030. Fuente: Elaboración propia a partir de datos de \textcite{DOUE2026} y \textcite{MITECO2026}.}
+    \adjustbox{max width=\textwidth}{%
+        \setlength{\tabcolsep}{3.2pt}
+        \small
+        \renewcommand{\arraystretch}{1.24}
+        \begin{tabular}{c c | c c | c c c | c c c}
+            \toprule
+            \multirow{2}{*}{\textbf{Año}} & \multirow{2}{*}{\textbf{$t$}} & \multicolumn{2}{c|}{\textbf{Jackson-Black (kt)}} & \multicolumn{3}{c|}{\textbf{Massey-Black A (Import.)}} & \multicolumn{3}{c}{\textbf{Massey-Black B (Venta UE)}} \\
+                                          &                               & $Q$ (kt)      & $\sum Q$ (kt)                    & $P_{\text{imp}}$ (€/t) & $V_A$ (M€) & $\sum V_A$ (M€)        & $P_{\text{UE}}$ (€/t) & $V_B$ (M€) & $\sum V_B$ (M€)         \\
+            \midrule
+            2023                          & 1                             & \num{221.32}  & \num{221.32}                     & \num{1014.00}          & \num{224.42}& \num{224.42}          & \num{1133.21}         & \num{250.80}& \num{250.80}           \\
+            2024                          & 2                             & \num{265.96}  & \num{487.28}                     & \num{932.00}           & \num{247.87}& \num{472.29}          & \num{1109.52}         & \num{295.09}& \num{545.89}           \\
+            2025                          & 3                             & \num{225.14}  & \num{712.41}                     & \num{816.00}           & \num{183.71}& \num{656.00}          & \num{895.24}          & \num{201.55}& \num{747.44}           \\
+            \midrule
+            \multicolumn{2}{l|}{\textbf{Parámetros regresión}}            & \multicolumn{2}{c|}{$j = \num{1.0721},\; Q_0 = \num{224.08}$} & \multicolumn{3}{c|}{$m_A = \num{0.9868},\; V_{0,A} = \num{228.08}$} & \multicolumn{3}{c}{$m_B = \num{1.0078},\; V_{0,B} = \num{256.22}$} \\
+            \multicolumn{2}{l|}{\textbf{Determinación ($R^2$)}}           & \multicolumn{2}{c|}{$R^2 = \num{0.9976}$}        & \multicolumn{3}{c|}{$R^2 = \num{0.9951}$}                    & \multicolumn{3}{c}{$R^2 = \num{0.9919}$}                     \\
+            \midrule
+            \textbf{Proy.\ 2026}          & 4                             & \textbf{\num{262.92}} & \num{990.62}             & \textbf{\num{842.12}}  & \num{221.41}& \num{895.82}          & \textbf{\num{991.66}} & \num{260.72}& \num{1035.96}          \\
+            \textbf{Proy.\ 2027}          & 5                             & \textbf{\num{267.75}} & \num{1258.37}            & \textbf{\num{824.16}}  & \num{220.67}& \num{1116.49}         & \textbf{\num{975.67}} & \num{261.24}& \num{1297.19}          \\
+            \bottomrule
+        \end{tabular}%
+    }
+    \label{tab:massey_black_trienio}
+\end{table}
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \begin{tikzpicture}
+            \begin{axis}[
+                width=0.98\textwidth,
+                height=5.0cm,
+                xlabel={ $\log_{10} t$ ($t=1,2,3$) },
+                ylabel={ $\log_{10}\left(\sum V\right)$ [$\sum V$ en $\text{M€}$] },
+                xmin=-0.04, xmax=0.53,
+                ymin=2.30, ymax=2.96,
+                ymajorgrids=true,
+                xmajorgrids=true,
+                grid style={dashed, gray!35},
+                legend style={at={(0.5,1.16)}, anchor=south, legend columns=1, font=\scriptsize, draw=gray!40, fill=white},
+                tick label style={font=\footnotesize},
+                label style={font=\footnotesize\bfseries}
+            ]
+                \addplot[only marks, color=stoneb, mark=square*, mark size=2.4pt] coordinates {(0.0000,2.3511) (0.3010,2.6742) (0.4771,2.8169)};
+                \addplot[color=stoneb, line width=1.4pt, dashed, domain=-0.02:0.50] {0.9868*x + 2.3581};
+                \addplot[only marks, color=woodc, mark=*, mark size=2.5pt] coordinates {(0.0000,2.3993) (0.3010,2.7371) (0.4771,2.8736)};
+                \addplot[color=woodc, line width=1.5pt, domain=-0.02:0.50] {1.0078*x + 2.4086};
+                \legend{Serie A Imp.: $y_A = 0{,}987x + 2{,}358$ ($R^2{=}0{,}995$), Serie B UE: $y_B = 1{,}008x + 2{,}409$ ($R^2{=}0{,}992$)}
+            \end{axis}
+        \end{tikzpicture}
+        \caption{Rectas log-log del modelo de Massey-Black (2023--2025).}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.49\textwidth}
+        \centering
+        \begin{tikzpicture}
+            \begin{axis}[
+                width=0.98\textwidth,
+                height=5.0cm,
+                xlabel={ Año },
+                ylabel={ Precio unitario ($\text{€/t}$) },
+                xmin=2022.7, xmax=2027.3,
+                ymin=750, ymax=1250,
+                xtick={2023,2024,2025,2026,2027},
+                xticklabel style={/pgf/number format/1000 sep={}},
+                ymajorgrids=true,
+                xmajorgrids=true,
+                grid style={dashed, gray!35},
+                legend style={at={(0.5,1.16)}, anchor=south, legend columns=2, font=\scriptsize, draw=gray!40, fill=white},
+                tick label style={font=\footnotesize},
+                label style={font=\footnotesize\bfseries}
+            ]
+                \addplot[color=woodc, line width=1.6pt, mark=*, mark size=2.3pt] coordinates {
+                    (2023,1133.21) (2024,1109.52) (2025,895.24) (2026,991.66) (2027,975.67)
+                };
+                \addplot[color=stoneb, line width=1.4pt, dashed, mark=square*, mark size=2.2pt] coordinates {
+                    (2023,1014.00) (2024,932.00) (2025,816.00) (2026,842.12) (2027,824.16)
+                };
+                \addplot[color=oliveg, line width=1.6pt, dashdotted, domain=2022.8:2027.2] {1100.92};
+                \legend{Precio Venta UE 1G, Precio Import.\ UE, Diseño 2G RED III ($\sim 1101\text{ €/t}$)}
+            \end{axis}
+        \end{tikzpicture}
+        \caption{Histórico DOUE y precios proyectados ($P_t = V_t / Q_t$).}
+    \end{subfigure}
+    \caption{Ajuste econométrico de Massey-Black y validación de la banda de precios del bioetanol 2G frente al mercado europeo. Ilustraciones de elaboración propia a partir de datos de \textcite{MITECO2026} y \textcite{DOUE2026}.}
+    \label{fig:massey_black_precios}
+\end{figure}
+
+El cociente econométrico entre facturación proyectada y demanda proyectada ($P_{2026} = V_{2026} / Q_{2026}$) determina un suelo de importación de \textbf{\num{842.12}~€/t} (\num{0.665}~€/L) y un precio medio de venta del productor europeo convencional (1G) de \textbf{\num{991.66}~€/t} (\num{0.783}~€/L).
+
+\nt{
+    \textbf{Validación del precio de venta del bioetanol 2G adoptado en el proyecto:}\\[3pt]
+    El precio proyectado por los modelos emparejados de Massey-Black y Jackson-Black para el etanol renovable convencional (1G) comercializado por la industria europea se sitúa en \textbf{\num{991.66}~€/t} ($\sim \num{992}$~€/t). Dado que el bioetanol lignocelulósico proyectado se obtiene exclusivamente a partir de residuos incluidos en el Anexo~IX, Parte~A (hueso de aceituna, hoja de olivo y madera de poda), computa por el doble de su contenido energético bajo la Directiva RED~III y el RD~611/2026 \autocite{DOUE2026, BOE2026}.
+
+    En la evaluación tecnoeconómica de referencia de \textcite[Tabla~5]{Jafari-Gohargan2026}, el precio internacional de venta del bioetanol 2G se establece en \textbf{\num{1200}~\$/t} (equivalente a \textbf{$\sim \num{1100.9}$~€/t} ó \num{0.869}~€/L a un tipo de cambio de \num{1.09}~\$/€), lo que supone una prima verde moderada de apenas un \textbf{$+\SI{11.0}{\percent}$} ($\sim \num{109}$~€/t) sobre el etanol 1G europeo proyectado (\num{991.66}~€/t), confirmando una hipótesis de ingresos conservadora y plenamente respaldada por el mercado.
+}
+
+%=============================================================================
+\chapter{Estudio de Capacidad y Bases de Dimensionamiento Industrial}
+
+\section{Escenarios de Capacidad y Justificación del Escenario Multibiomasa B-5 Adaptado}
+Tomando como base de ingeniería la biorrefinería integral de subproductos del olivar simulada en Aspen Plus por \textcite[Tablas~6, 8, 12 y~13]{Jafari-Gohargan2026} para un régimen operativo de \textbf{\SI{8000}{\hour/a\text{\~{n}}o}}, la Tabla~\ref{tab:escenarios_jafari} presenta el desglose completo de los cinco escenarios de la literatura junto con el \textbf{Escenario de Proyecto B-5 adaptado ($\text{B-5}^* = \text{B-1} + \text{B-2} + \text{B-4} = \SI{120000}{\tonne\text{ b.s.}/a\text{\~{n}}o}$)}.
+
+\begin{table}[H]
+    \centering
+    \caption{Comparativa de flujos anuales en base seca entre los escenarios B-1 a B-5 de \textcite[Tabla~8 y Tabla~13]{Jafari-Gohargan2026} y el escenario seleccionado de proyecto $\text{B-5}^*$. Fuente: Elaboración propia a partir de datos de \textcite{Jafari-Gohargan2026}.}
+    \adjustbox{max width=\textwidth}{%
+        \renewcommand{\arraystretch}{1.24}
+        \setlength{\tabcolsep}{3.5pt}
+        \small
+        \begin{tabular}{l r r r r r r r c}
+            \toprule
+            \textbf{Escenario}                    & \textbf{\shortstack{Biomasa\\(t/a)}} & \textbf{\shortstack{Etanol\\(t/a)}} & \textbf{\shortstack{Lignina P.\\(t/a)}} & \textbf{\shortstack{Rich-Lig.\\(t/a)}} & \textbf{\shortstack{$\text{CO}_2$\\(t/a)}} & \textbf{\shortstack{Biogás\\($\text{m}^3$/a)}} & \textbf{\shortstack{Fertiliz.\\(t/a)}} & \textbf{\shortstack{$C_{\text{mín}}$\\Viable}} \\
+            \midrule
+            B-1 (Hueso aceituna)                  & \num{15000}            & \num{2028}            & \num{2093}                  & \num{9503}                 & \num{5904}                   & \num{3912361}                    & \num{650}                & \SI{30000}{t/a}                  \\
+            B-2 (Hoja de olivo)                   & \num{40000}            & \num{4166}            & \num{2489}                  & \num{20843}                & \num{20459}                  & \num{12119149}                   & \num{1700}               & \SI{32000}{t/a}                  \\
+            B-3 (Orujo agotado, \textit{excl.})   & \num{40000}            & \num{5696}            & \num{3741}                  & \num{41119}                & \num{13672}                  & \num{10347642}                   & \num{1703}               & \SI{40000}{t/a}                  \\
+            B-4 (Madera de poda)                  & \num{65000}            & \num{9478}            & \num{5265}                  & \num{57401}                & \num{24850}                  & \num{19118558}                   & \num{2823}               & \SI{45500}{t/a}                  \\
+            B-5 Teórico (B-1+B-2+B-3+B-4)         & \num{160000}           & \num{23444}           & \num{14197}                 & \num{117501}               & \num{66134}                  & \num{22460957}                   & \num{6871}               & \SI{88000}{t/a}                  \\
+            \midrule
+            \textbf{Proyecto $\text{B-5}^*$ (B-1+B-2+B-4)} & \textbf{\num{120000}} & \textbf{\num{15672}} & \textbf{\num{9847}}         & \textbf{\num{87747}}       & \textbf{\num{51213}}         & \textbf{\num{35150068}}          & \textbf{\num{5173}}      & $> \SI{88000}{t/a}$ (\textbf{Cumple}) \\
+            \bottomrule
+        \end{tabular}%
+    }
+    \label{tab:escenarios_jafari}
+\end{table}
+
+La elección técnica y económica de la capacidad nominal de \textbf{\SI{120000}{\tonne\text{ b.s.}/a\text{\~{n}}o}} (\SI{15.00}{\tonne\text{ b.s.}/\hour}) bajo configuración $\text{B-5}^*$ se fundamenta en tres criterios objetivos:
+\begin{enumerate}
+    \item \textbf{Superación holgada de la capacidad mínima económica ($C_{\text{mín}}$):} De acuerdo con el análisis de sensibilidad e índices de rentabilidad de \textcite[Tablas~12 y~13]{Jafari-Gohargan2026}, las escalas pequeñas resultan deficitarias (por ejemplo, B-1 a \SI{15000}{t/a\text{\~{n}}o} presenta $\text{PI} = \num{0.80}$ y $\text{NRR} = -\SI{19.98}{\percent}$), fijándose el umbral mínimo de viabilidad ($\text{PI} = 1.0$) de una biorrefinería multibiomasa integrada en \textbf{$C_{\text{mín, B-5}} = \SI{88000}{\tonne/a\text{\~{n}}o}$} \autocite[Tabla~13]{Jafari-Gohargan2026}. Esta planta de \SI{120000}{\tonne\text{ b.s.}/a\text{\~{n}}o} supera dicho umbral crítico en un \textbf{$+\SI{36.36}{\percent}$}, capturando plenamente las economías de escala del tren único de reactores, destilación y cogeneración.
+    \item \textbf{Justificación ingenieril de la exclusión del orujo desalperujado (B-3):} Prescindir de las \SI{40000}{\tonne/a\text{\~{n}}o} de orujo agotado permite contener el tamaño geométrico y el CAPEX de los equipos de pretratamiento y separación sólido-líquido dentro de un único tren industrial estándar (\SI{15.00}{\tonne\text{ b.s.}/\hour} frente a \SI{20.00}{\tonne\text{ b.s.}/\hour}), elimina la fracción con mayor contenido abrasivo e incrustante de cenizas (\SI{3.4}{\percent}--\SI{9.1}{\percent}, Tabla~\ref{tab:composicion_comparada}), evita el consumo anómalo de vapor de baja presión documentado para B-3 en la recuperación de etanol (\SI{491.5}{\mega\tonne/a\text{\~{n}}o} en \textcite[Tabla~8]{Jafari-Gohargan2026} frente a \SI{0.58}{\mega\tonne/a\text{\~{n}}o} en B-1 y \SI{2.43}{\mega\tonne/a\text{\~{n}}o} en B-4) y suprime la competencia directa con el complejo orujero andaluz \autocite[Sección~4.2.3]{APPA2026}.
+    \item \textbf{Radio logístico óptimo en Andalucía ($< \SI{65}{\kilo\meter}$):} El modelo logístico regional de biorrefinerías oleícolas en Andalucía desarrollado por \textcite[Sección~2.5, Sección~3.4, Tabla~3 y Fig.~11]{Ronda2027} establece un coste unitario de transporte pesado de \num{1.3079}~€/km y demuestra que al superar los \SI{65}{\kilo\meter} (paso a Zona~III) se dispara la penalización logística, situando el radio óptimo en \SI{50}{\kilo\meter}--\SI{75}{\kilo\meter}. Captando apenas el \SI{4.42}{\percent} del hueso, el \SI{12.86}{\percent} de la hoja y el \SI{11.14}{\percent} de la madera de poda del eje Córdoba--Granada--Jaén (Tabla~\ref{tab:resumen_multibiomasa}), el suministro íntegro de \SI{120000}{\tonne\text{ b.s.}/a\text{\~{n}}o} queda cubierto dentro de una isócrona inferior a \SI{60}{\kilo\meter}.
+\end{enumerate}
+
+\section{Balance Anual de Productos, Reactivos e Ingresos Brutos a 120\,000 t b.s./año}
+Integrando los caudales anuales verificados de las tres campañas secuenciales ($\text{B-1} + \text{B-2} + \text{B-4}$, \textcite[Tabla~8]{Jafari-Gohargan2026}) y aplicando el vector de precios internacionales de referencia de \textcite[Tabla~5]{Jafari-Gohargan2026}, se obtiene una facturación bruta anual estimada de \textbf{\$\num{30664756.50}/año}, equivalente a \textbf{\num{28.13}~M€/año} a un tipo de cambio de \num{1.09}~\$/€ (Tabla~\ref{tab:ingresos_b5_adaptado}). En el posterior estudio económico-financiero, el coste de referencia internacional de biomasa de la Tabla~5 de \textcite{Jafari-Gohargan2026} (\num{17}~\$/t) se desglosará y ajustará a los precios reales de contratación en origen en Andalucía para cada fracción (hueso en almazara/extractora, hoja de limpia y astilla de poda).
+
+\begin{table}[H]
+    \centering
+    \caption{Balance anual agregado de producción e ingresos brutos para el escenario de proyecto $\text{B-5}^*$ (\SI{120000}{\tonne\text{ b.s.}/a\text{\~{n}}o}). Fuente: Elaboración propia a partir de rendimientos de \textcite{Jafari-Gohargan2026}.}
+    \adjustbox{max width=0.98\textwidth}{%
+        \renewcommand{\arraystretch}{1.24}
+        \begin{tabular}{l r r r c r r}
+            \toprule
+            \textbf{Producto / Coproducto Comercial} & \textbf{Ap.\ Hueso} & \textbf{Ap.\ Hoja} & \textbf{Ap.\ Madera} & \textbf{Total Anual $\text{B-5}^*$} & \textbf{Precio Ref.} & \textbf{Ingresos Anuales (\$/año)} \\
+            \midrule
+            Bioetanol Renovable 2G                   & \num{2028}~t        & \num{4166}~t       & \num{9478}~t         & \textbf{\SI{15672}{\tonne/a\text{\~{n}}o}} & \num{1200}~\$/t      & \$\num{18806400.00}                \\
+            Lignina Técnica Pura Organosolv          & \num{2093}~t        & \num{2489}~t       & \num{5265}~t         & \textbf{\SI{9847}{\tonne/a\text{\~{n}}o}}  & \num{630}~\$/t       & \$\num{6203610.00}                 \\
+            Fracción Sólida Rica en Lignina          & \num{9503}~t        & \num{20843}~t      & \num{57401}~t        & \textbf{\SI{87747}{\tonne/a\text{\~{n}}o}} & \num{42}~\$/t        & \$\num{3685374.00}                 \\
+            Dióxido de Carbono Biogénico             & \num{5904}~t        & \num{20459}~t      & \num{24850}~t        & \textbf{\SI{51213}{\tonne/a\text{\~{n}}o}} & \num{38}~\$/t        & \$\num{1946094.00}                 \\
+            Biofertilizante Agrícola                 & \num{650}~t         & \num{1700}~t       & \num{2823}~t         & \textbf{\SI{5173}{\tonne/a\text{\~{n}}o}}  & \num{4.5}~\$/t       & \$\num{23278.50}                   \\
+            Biogás Depurado ($> \SI{96}{\percent}\;\text{CH}_4$) & \num{3.91}~$\text{Mm}^3$ & \num{12.12}~$\text{Mm}^3$ & \num{19.12}~$\text{Mm}^3$ & \textbf{\SI{35150068}{\cubic\meter/a\text{\~{n}}o}} & Autoconsumo & Cogeneración vapor/secado \\
+            \midrule
+            \multicolumn{6}{l}{\textbf{TOTAL INGRESOS BRUTOS ESTIMADOS (\num{1.09}~\$/€ $\approx \mathbf{28{,}13\text{ M€/año}}$)}} & \textbf{\$\num{30664756.50}/año} \\
+            \bottomrule
+        \end{tabular}%
+    }
+    \label{tab:ingresos_b5_adaptado}
+\end{table}
+
+\begin{tcolorbox}[colback=blue!5!white,colframe=blue!75!black,title=\textbf{Consumos Anuales Agregados de Insumos Químicos y Enzimáticos ($\text{B-5}^* = \SI{120000}{\tonne\text{ b.s.}/a\text{\~{n}}o}$)}]
+    Sumando exactamente los requerimientos anuales de las tres campañas de proceso \autocite[Tabla~5 y Tabla~8]{Jafari-Gohargan2026}:
+    \begin{itemize}
+        \item \textbf{Complejo enzimático celulásico (Cellic CTec2):} $70 + 155 + 343 = \textbf{\SI{568.0}{\kilo\gram/a\text{\~{n}}o}}$ (precio ref.: \num{1000}~\$/kg $\rightarrow \$\num{568000.00}/\text{año}$).
+        \item \textbf{Ácido sulfúrico ($\mathrm{H_2SO_4}$, catalizador organosolv):} $137 + 368 + 602 = \textbf{\SI{1107.0}{\tonne/a\text{\~{n}}o}}$ (precio ref.: \num{262}~\$/t $\rightarrow \$\num{290034.00}/\text{año}$).
+        \item \textbf{Amoniaco anhidro ($\mathrm{NH_3}$, neutralización y nutrientes):} $48 + 132 + 212 = \textbf{\SI{392.0}{\tonne/a\text{\~{n}}o}}$ (precio ref.: \num{300}~\$/t $\rightarrow \$\num{117600.00}/\text{año}$).
+        \item \textbf{Coste total anual de reactivos y enzimas:} \textbf{\$\num{975634.00}/año} ($\sim \num{0.90}$~M€/año).
+    \end{itemize}
+\end{tcolorbox}
+
+\section{Caudales Horarios por Régimen Estacional y Bases para el Dimensionamiento de Equipos}
+Dado que la composición química del sustrato cambia según la época del año (Tabla~\ref{tab:composicion_comparada}) mientras el caudal másico seco alimentado al reactor organosolv se mantiene constante en \textbf{\SI{15000}{\kilo\gram\text{ b.s.}/\hour}} (\SI{15.00}{\tonne\text{ b.s.}/\hour}), cada sección aguas abajo alcanza su carga hidráulica o térmica punta en una campaña distinta:
+\begin{itemize}
+    \item \textbf{Régimen 1 (Campaña de Hueso de Aceituna, $\SI{1000.0}{\hour/a\text{\~{n}}o}$ equivalentes: oct., nov.\ parcial y ago.\ parcial):} Procesa \SI{15000}{\tonne\text{ b.s.}} en $\num{15000} / 15 = \SI{1000.0}{\hour}$. Debido a su riqueza excepcional en lignina (\SI{28.53}{\percent}--\SI{35.6}{\percent}), gobierna el caudal máximo de diseño del tren de precipitación, filtración y secado de lignina pura (\textbf{$Q_{\text{máx, lignina}} = \SI{2093}{\kilo\gram/\hour}$}).
+    \item \textbf{Régimen 2 (Campaña de Hoja de Olivo, $\SI{2666.7}{\hour/a\text{\~{n}}o}$ equivalentes: nov.--feb.):} Procesa \SI{40000}{\tonne\text{ b.s.}} en $\num{40000} / 15 = \SI{2666.7}{\hour}$. Por su alta humedad de recepción en almazara (\SI{40}{\percent}) y su elevada fracción soluble/extractiva, fija el caudal máximo de diseño del secador rotatorio (\textbf{\SI{25000}{\kilo\gram/\hour} húmedos}; \SI{8696}{\kilo\gram/\hour} de agua evaporada hasta el \SI{8}{\percent} hum.), de la captura/licuefacción de $\text{CO}_2$ (\textbf{$Q_{\text{máx, CO}_2} = \SI{7672}{\kilo\gram/\hour}$}) y del digestor anaerobio \texttt{DA-01} con \textit{upgrading} de biogás (\textbf{$Q_{\text{máx, biogás}} = \SI{4544.7}{\cubic\meter/\hour}$}).
+    \item \textbf{Régimen 3 (Campaña de Madera de Poda, $\SI{4333.3}{\hour/a\text{\~{n}}o}$ equivalentes: feb.--ago.):} Procesa \SI{65000}{\tonne\text{ b.s.}} en $\num{65000} / 15 = \SI{4333.3}{\hour}$. Al poseer el mayor contenido conjunto de polisacáridos C6 ($\text{glucano} + \text{galactano} = \SI{64.22}{\percent}$), determina el caudal máximo de diseño de dosificación enzimática (\textbf{\SI{79.2}{\gram/\hour}}), fermentación PSSF (\texttt{BF-02}), columnas de destilación y deshidratación de bioetanol (\textbf{$Q_{\text{máx, etanol}} = \SI{2187}{\kilo\gram/\hour} = \SI{2771}{\liter/\hour}$}) y peletizado de fracción rica en lignina (\textbf{\SI{13246}{\kilo\gram/\hour}}).
+\end{itemize}
+
+En ingeniería de procesos, ningún equipo puede dimensionarse sobre la media anual simple (\SI{8000}{\hour}), pues entraría en cuello de botella durante su campaña pico; todos los equipos principales deberán dimensionarse adoptando la columna de \textbf{Caudal Envolvente de Diseño ($Q_{\text{máx}}$)} de la Tabla~\ref{tab:caudales_horarios_dimensionamiento} (ilustrada en la Figura~\ref{fig:caudales_horarios_equipos}), aplicando sobre ella el sobredimensionamiento mecánico reglamentario ($+\SI{10}{\percent}$ a $+\SI{20}{\percent}$).
+
+\begin{table}[H]
+    \centering
+    \caption{Caudales horarios nominales por campaña estacional (alimentación fija de \SI{15000}{\kilo\gram\text{ b.s.}/\hour}) y caudal envolvente máximo ($Q_{\text{máx}}$) para el dimensionamiento de equipos. Fuente: Elaboración propia a partir de rendimientos de \textcite{Jafari-Gohargan2026}.}
+    \adjustbox{max width=\textwidth}{%
+        \renewcommand{\arraystretch}{1.24}
+        \setlength{\tabcolsep}{3.8pt}
+        \small
+        \begin{tabular}{l r r r r | r l}
+            \toprule
+            \textbf{Corriente / Variable de Diseño}     & \textbf{\shortstack{Camp.\\Hueso}} & \textbf{\shortstack{Camp.\\Hoja}} & \textbf{\shortstack{Camp.\\Madera}} & \textbf{\shortstack{Media\\Anual}} & \textbf{\shortstack{Envolvente\\$Q_{\text{máx}}$}} & \textbf{Equipo Crítico Gobernado} \\
+            \textit{Duración efectiva en \SI{8000}{\hour/a}} & (\SI{1000}{\hour})  & (\SI{2667}{\hour}) & (\SI{4333}{\hour})   & (\SI{8000}{\hour}) & \textit{(Base diseño)}               &                                   \\
+            \midrule
+            Biomasa seca a reactor (\si{\kilo\gram\text{ b.s.}/\hour}) & \num{15000} & \num{15000}        & \num{15000}            & \num{15000}          & \textbf{\num{15000}}                 & Reactor Organosolv (\texttt{R-02}) \\
+            Biomasa húmeda recibida (\si{\kilo\gram/\hour}) & \num{16304}           & \textbf{\num{25000}} & \num{18750}            & \num{20527}          & \textbf{\num{25000}}                 & Cintas (\texttt{CT-01}) y Tolvas  \\
+            Agua evaporada en secado (\si{\kilo\gram/\hour}) & \num{0}               & \textbf{\num{8696}}  & \num{2446}             & \num{4224}           & \textbf{\num{8696}}                  & Secador Rotatorio \\
+            Ácido sulfúrico $\mathrm{H_2SO_4}$ (\si{\kilo\gram/\hour}) & \num{137.0} & \num{138.0}        & \textbf{\num{138.9}}   & \num{138.4}          & \textbf{\num{138.9}}                 & Dosificación ácida (\texttt{R-01/02}) \\
+            Amoniaco $\mathrm{NH_3}$ (\si{\kilo\gram/\hour}) & \num{48.0}            & \textbf{\num{49.5}}  & \num{48.9}             & \num{49.0}           & \textbf{\num{49.5}}                  & Neutralización mosto              \\
+            Enzima Cellic CTec2 (\si{\gram/\hour})      & \num{70.0}            & \num{58.1}           & \textbf{\num{79.2}}    & \num{71.0}           & \textbf{\num{79.2}}                  & Hidrólisis / PSSF (\texttt{R-03}) \\
+            \midrule
+            \textbf{Bioetanol 2G anhidro (\si{\kilo\gram/\hour})} & \num{2028}        & \num{1562}           & \textbf{\num{2187}}    & \num{1959}           & \textbf{\num{2187}}                  & Fermentación (\texttt{BF-02}) y Destil.\ (\texttt{Z-01}) \\
+            \textbf{Lignina técnica pura (\si{\kilo\gram/\hour})} & \textbf{\num{2093}} & \num{933}          & \num{1215}             & \num{1231}           & \textbf{\num{2093}}                  & Precipitación, Filtro (\texttt{F-02}) y Secado \\
+            \textbf{Fracción rica en lignina (\si{\kilo\gram/\hour})} & \num{9503}    & \num{7816}           & \textbf{\num{13246}}   & \num{10968}          & \textbf{\num{13246}}                 & Prensa y Peletizadora             \\
+            \textbf{$\text{CO}_2$ biogénico (\si{\kilo\gram/\hour})} & \num{5904}     & \textbf{\num{7672}}  & \num{5735}             & \num{6402}           & \textbf{\num{7672}}                  & Lavador gases y Licuefacción      \\
+            \textbf{Biofertilizante sólido (\si{\kilo\gram/\hour})} & \num{650}       & \num{638}            & \textbf{\num{651}}     & \num{647}            & \textbf{\num{651}}                   & Centrífuga de lodos               \\
+            \textbf{Biogás depurado (\si{\cubic\meter/\hour})} & \num{3912.4}         & \textbf{\num{4544.7}}& \num{4412.0}           & \num{4393.8}         & \textbf{\num{4544.7}}                & Digestor UASB (\texttt{DA-01}) y \textit{Upgrading} \\
+            Vapor alta presión HP (\si{\tonne/\hour})   & \textbf{\num{103.55}} & \num{102.69}         & \num{103.46}           & \num{103.22}         & \textbf{\num{103.55}}                & Caldera cogeneración (\texttt{Q-01}) \\
+            \bottomrule
+        \end{tabular}%
+    }
+    \label{tab:caudales_horarios_dimensionamiento}
+\end{table}
+
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+            ybar,
+            bar width=8.5pt,
+            width=0.96\textwidth,
+            height=6.4cm,
+            ylabel={ Caudal horario de proceso ($\text{t/h}$ ó $10^3\text{ m}^3\text{/h}$) },
+            symbolic x coords={Bioetanol,Lignina,CO2,Biogas,AguaSecado,RichLignin},
+            xtick=data,
+            xticklabels={Bioetanol 2G,Lignina Pura,{$\text{CO}_2$ Biog.},Biogás ($10^3\text{ m}^3\text{/h}$),Agua Secado,Rich-Lignin},
+            ymin=0, ymax=15.5,
+            ymajorgrids=true,
+            grid style={dashed, gray!35},
+            legend style={at={(0.5,1.03)}, anchor=south, legend columns=4, font=\footnotesize, draw=gray!40},
+            tick label style={font=\scriptsize\bfseries, align=center},
+            label style={font=\footnotesize\bfseries},
+            enlarge x limits=0.11
+        ]
+            \addplot[fill=stoneb!80, draw=stoneb!95!black] coordinates {
+                (Bioetanol,2.028) (Lignina,2.093) (CO2,5.904) (Biogas,3.912) (AguaSecado,0.000) (RichLignin,9.503)
+            };
+            \addplot[fill=oliveg!75, draw=oliveg!95!black] coordinates {
+                (Bioetanol,1.562) (Lignina,0.933) (CO2,7.672) (Biogas,4.545) (AguaSecado,8.696) (RichLignin,7.816)
+            };
+            \addplot[fill=woodc!75, draw=woodc!95!black] coordinates {
+                (Bioetanol,2.187) (Lignina,1.215) (CO2,5.735) (Biogas,4.412) (AguaSecado,2.446) (RichLignin,13.246)
+            };
+            \addplot[fill=myr!80, draw=myr!95!black] coordinates {
+                (Bioetanol,2.187) (Lignina,2.093) (CO2,7.672) (Biogas,4.545) (AguaSecado,8.696) (RichLignin,13.246)
+            };
+            \legend{Campaña Hueso (B-1), Campaña Hoja (B-2), Campaña Madera (B-4), Envolvente Diseño ($Q_{\text{máx}}$)}
+        \end{axis}
+    \end{tikzpicture}
+    \caption{Comparación de los caudales horarios de salida y carga evaporativa en las tres campañas estacionales frente a la envolvente máxima de diseño ($Q_{\text{máx}}$) para el dimensionamiento de equipos. Ilustración de elaboración propia.}
+    \label{fig:caudales_horarios_equipos}
+\end{figure}
+
+% NOTA: El Estudio de Macrolocalización y Microlocalización (Selección de la Comarca de Loja / Poniente Granadino, Polígono Industrial del Manzanil II y matriz multicriterio ponderada) se desarrollará de forma independiente en el Documento nº 2 del TFG («Estudio de Localización y Emplazamiento»).
+
+%=============================================================================
+\chapter{Esquema General de Procesos e Integración}
+
+\section{Diagrama de Bloques y Flujo del Proceso Multibiomasa}
+La arquitectura tecnológica integra la recepción estacional diferenciada (silos de hueso, nave ventilada de hoja y parque de astilla de poda), el acondicionamiento físico unificado a \SI{15.00}{\tonne\text{ b.s.}/\hour}, el fraccionamiento organosolv catalizado por $\mathrm{H_2SO_4}$ diluido \autocite[Fig.~1]{Jafari-Gohargan2026, Padilla-Rascon2022}, la presacarificación y fermentación simultánea (PSSF) junto con la valorización de hemicelulosas \autocite{RomeroGarcia2022}, la recuperación de lignina de alta pureza y la digestión anaerobia UASB de vinazas para cogeneración energética interna (Figura~\ref{fig:diagrama_bloques_proceso}).
+
+\begin{figure}[H]
+    \centering
+    \adjustbox{max width=0.99\textwidth}{%
+    \begin{tikzpicture}[
+        node distance=1.3cm and 1.6cm,
+        block/.style={rectangle, draw=doc!85!black, fill=mypropbg, line width=0.9pt, text width=3.3cm, align=center, rounded corners=3pt, minimum height=1.25cm, font=\footnotesize\bfseries},
+        feed/.style={rectangle, draw=oliveg!85!black, fill=oliveg!10, line width=0.85pt, text width=3.1cm, align=center, rounded corners=2pt, minimum height=0.85cm, font=\scriptsize\bfseries},
+        prod/.style={rectangle, draw=myg!85!black, fill=myg!12, line width=0.9pt, text width=3.4cm, align=center, rounded corners=3pt, minimum height=1.10cm, font=\scriptsize\bfseries},
+        line/.style={draw=doc!85!black, line width=0.9pt, -{Latex[length=2.3mm, width=1.7mm]}},
+        eline/.style={draw=myr!85!black, dashed, line width=0.9pt, -{Latex[length=2.3mm, width=1.7mm]}},
+        lbl/.style={font=\scriptsize, fill=white, inner sep=1.5pt}
+    ]
+        % Feedstocks column
+        \node[feed] (f1) {Hueso Aceituna (B-1)\\$\num{15000}\text{ t b.s./a}$ (Oct--Nov)};
+        \node[feed, below=0.45cm of f1] (f2) {Hoja de Olivo (B-2)\\$\num{40000}\text{ t b.s./a}$ (Nov--Mar)};
+        \node[feed, below=0.45cm of f2] (f3) {Madera de Poda (B-4)\\$\num{65000}\text{ t b.s./a}$ (Mar--Sep)};
+
+        % Main process blocks Row 1
+        \node[block, right=1.5cm of f2] (acond) {Acondicionamiento\\Secado, Molienda\\y Tamizado};
+        \node[block, right=1.8cm of acond] (pret) {Fraccionamiento\\Ácido-Organosolv\\(\texttt{R-01 / R-02}, EtOH/$\mathrm{H_2O}$)};
+        \node[block, right=1.8cm of pret] (pssf) {Hidrólisis Enzimática\\y Fermentación PSSF\\(\texttt{R-03 / BF-01 / BF-02})};
+
+        % Row 2
+        \node[block, below=1.65cm of pret] (lig) {Precipitación, Lavado\\y Secado de Lignina\\(\texttt{V-101 / F-02})};
+        \node[block, below=1.65cm of pssf] (dest) {Destilación y Tamices\\Moleculares (\texttt{Z-01})\\Reciclo Disolvente};
+        \node[block, below=1.65cm of acond] (uasb) {Digestión Anaerobia\\UASB (\texttt{DA-01}) y\\Cogeneración (\texttt{Q-01})};
+
+        % Products Row 3 (strictly equal height and vertical alignment)
+        \node[prod, below=1.55cm of dest] (etoh) {Bioetanol 2G EN 15376\\$\num{15672}\text{ t/a}$ ($\text{CO}_2$: $\num{51213}\text{ t/a}$)};
+        \node[prod, below=1.55cm of lig] (ligp) {Lignina Pura ($\num{9847}\text{ t/a}$)\\Rich-Lignin ($\num{87747}\text{ t/a}$)};
+        \node[prod, below=1.55cm of uasb] (fert) {Biofertilizante ($\num{5173}\text{ t/a}$)\\Biogás ($\num{35.15}\text{ Mm}^3\text{/a}$)};
+
+        % Connections (strictly outer borders, zero overlaps)
+        \draw[line] (f1.east) -- ++(0.55,0) |- ([yshift=3mm]acond.west);
+        \draw[line] (f2.east) -- node[lbl, above, yshift=1pt] {$15{,}0\text{ t b.s./h}$} (acond.west);
+        \draw[line] (f3.east) -- ++(0.55,0) |- ([yshift=-3mm]acond.west);
+
+        \draw[line] (acond.east) -- node[lbl, above=3pt] {\shortstack{Sólido\\$\le \SI{3.35}{\milli\meter}$}} (pret.west);
+        \draw[line] (pret.east) -- node[lbl, above=3pt] {\shortstack{Pulpa\\celulósica}} (pssf.west);
+        \draw[line] (pret.south) -- node[lbl, right] {Licor negro} (lig.north);
+        \draw[line] (pssf.south) -- node[lbl, right] {Mosto + $\text{CO}_2$} (dest.north);
+
+        \draw[line] (dest.west) -- node[lbl, above] {EtOH reciclo} (lig.east);
+        \draw[line] (lig.west) -- node[lbl, above] {Aguas madres} (uasb.east);
+        
+        % Vinazas de cola: routed under lig and entering the right side of uasb neatly
+        \draw[line] ([yshift=-4mm]dest.west) -- ++(-0.6,0) -- ++(0,-0.85) -| ([xshift=10mm]uasb.south);
+        \node[lbl] at ([xshift=14mm, yshift=-7mm]lig.south) {Vinazas de cola};
+
+        \draw[line] (dest.south) -- (etoh.north);
+        \draw[line] (lig.south) -- (ligp.north);
+        \draw[line] ([xshift=-6mm]uasb.south) -- ([xshift=-6mm]fert.north);
+
+        % Thermal integration feedback
+        \draw[eline] (uasb.north) -- node[lbl, right] {Vapor HP / Calor secado} (acond.south);
+    \end{tikzpicture}%
+    }
+    \caption{Diagrama de bloques general multibiomasa ($\text{B-5}^* = \SI{120000}{\tonne\text{ b.s.}/a\text{\~{n}}o}$) e integración energética interna de la biorrefinería. Ilustración de elaboración propia.}
+    \label{fig:diagrama_bloques_proceso}
+\end{figure}
+
+\section{Síntesis de Equipos Principales e Identificación en Planos}
+En correspondencia directa con los diagramas de ingeniería del proyecto (\texttt{D-bloques.pdf} y \texttt{D-flujo.pdf}) y los caudales envolventes $Q_{\text{máx}}$ de la Tabla~\ref{tab:caudales_horarios_dimensionamiento}:
+\begin{itemize}
+    \item \textbf{Recepción Estacional y Acondicionamiento:} Silos cerrados de hueso ($I_{\text{máx}} = \SI{12900}{\tonne\text{ b.s.}}$), nave ventilada de hoja ($I_{\text{máx}} = \SI{3400}{\tonne\text{ b.s.}}$), parque cubierto de astilla de poda ($I_{\text{máx}} = \SI{34000}{\tonne\text{ b.s.}}$), cinta de alimentación (\texttt{CT-01}, $Q_{\text{máx}} = \SI{25.0}{\tonne/\hour}$), secador rotatorio (capacidad evaporativa máxima de \SI{8696}{\kilo\gram/\hour} de agua), cinta (\texttt{CT-02}), molino triturador de martillos y tamiz rotativo (\texttt{TR-01}).
+    \item \textbf{Fraccionamiento Ácido-Organosolv y Línea C5:} Reactor de hidrólisis ácida (\texttt{R-01}), filtro prensa (\texttt{F-01}), adsorción en carbón activo (\texttt{A-01}), biorreactor de pentosas (\texttt{BF-01}) y reactor presurizado organosolv (\texttt{R-02}, \SI{15.0}{\tonne\text{ b.s.}/\hour}).
+    \item \textbf{Línea de Hexosas, Fermentación PSSF y Lignina:} Cámara \textit{flash} (\texttt{V-101}), filtro de banda de lignina (\texttt{F-02}, $Q_{\text{máx}} = \SI{2093}{\kilo\gram/\hour}$ en campaña de hueso), reactor de presacarificación enzimática (\texttt{R-03}), biorreactores PSSF (\texttt{BF-02}) y unidad de captura/licuefacción de $\text{CO}_2$ ($Q_{\text{máx}} = \SI{7672}{\kilo\gram/\hour}$ en campaña de hoja).
+    \item \textbf{Destilación, Deshidratación y Cogeneración:} Tren de columnas de destilación y tamices moleculares (\texttt{Z-01}, $Q_{\text{máx}} = \SI{2187}{\kilo\gram/\hour}$ de etanol en campaña de madera de poda), divisor de reflujo (\texttt{D-01}), mezclador hidroalcohólico (\texttt{M-01}), digestor anaerobio UASB (\texttt{DA-01}, $Q_{\text{máx}} = \SI{4544.7}{\cubic\meter/\hour}$ de biogás en campaña de hoja) y caldera de vapor de cogeneración (\texttt{Q-01}, \SI{103.55}{\tonne/\hour} de vapor HP).
+\end{itemize}
+
+%=============================================================================
+\chapter{Conclusiones del Estudio de Mercado}
+
+\begin{enumerate}
+    \item \textbf{Disponibilidad Multibiomasa Plenamente Verificada:} En el eje Córdoba--Granada--Jaén (\num{1169577}~ha productivas en 2025 y \num{3885605.3}~t de aceituna molturada en 620 almazaras, \textcite{MAPA2025, AICA2026}), la disponibilidad neta movilizable asciende a \textbf{\num{339602}~t b.s./año de hueso}, \textbf{\num{311038}~t b.s./año de hoja} y \textbf{\num{583411}~t b.s./año de madera de poda mecanizable}. Esta biorrefinería de \textbf{\SI{120000}{\tonne\text{ b.s.}/a\text{\~{n}}o}} ($\text{B-5}^* = \num{15000}$~t hueso + \num{40000}~t hoja + \num{65000}~t madera, excluyendo el orujo desalperujado B-3) requiere tan solo el \textbf{\SI{9.72}{\percent}} del recurso regional conjunto dentro de un radio logístico óptimo $< \SI{60}{\kilo\meter}$ \autocite{Ronda2027}.
+    \item \textbf{Operación Continua Desestacionalizada (\SI{8000}{\hour/a\text{\~{n}}o}):} La combinación secuencial del calendario oficial de molturación AICA (hoja fresca en noviembre--febrero) y el calendario agronómico IFAPA de poda invernal (madera astillada de febrero a agosto), respaldada por la estabilidad anual del hueso seco (\SI{8}{\percent} hum.) en octubre--noviembre y agosto, permite operar a un régimen nominal constante de \textbf{\SI{15.00}{\tonne\text{ b.s.}/\hour}} con parada programada en septiembre y volúmenes máximos de almacenamiento acotados ($I_{\text{máx, hueso}} = \num{12900}$~t b.s., $I_{\text{máx, hoja}} = \num{3400}$~t b.s. e $I_{\text{máx, madera}} = \num{34000}$~t b.s.).
+    \item \textbf{Primera Biorrefinería de Bioetanol en Andalucía:} El informe oficial MIEA certifica que Andalucía alberga 11 plantas de biocarburantes pero \textbf{cero fábricas de bioetanol}, debiendo importar la totalidad del etanol consumido por sus dos plantas de ETBE en San Roque y Palos de la Frontera \autocite[Sección~7, Nota~4]{AAE2026}, mientras que el \SI{99.19}{\percent} del bioetanol español actual procede de cultivos alimentarios 1G (maíz y caña, \textcite[Hoja~\texttt{Sost\_Tipo MP\_Bioet}]{MITECO2026}).
+    \item \textbf{Demanda y Precios Validados con Modelos OGP Oficiales:} La producción anual de bioetanol 2G (\textbf{\SI{15672}{\tonne/a\text{\~{n}}o}} ó \SI{19856}{\cubic\meter/a\text{\~{n}}o}) representa únicamente el \textbf{\SI{6.96}{\percent}} del CNA español de 2025 (\num{225136}~t) y el \textbf{\SI{0.314}{\percent}} de la demanda europea (\num{4.99}~Mt). Los modelos de Jackson-Black ($R^2 = \num{0.9977}$) y Massey-Black con precios auditados del Reglamento (UE)~2026/2047 ($R^2 = \num{0.9919}$) proyectan un precio europeo del etanol convencional de \textbf{\num{991.66}~€/t}, validando el precio de diseño de \textbf{\num{1200}~\$/t} ($\sim \num{1101}$~€/t) para el bioetanol avanzado 2G proyectado, acogido a los subobjetivos de RED~III y del RD~611/2026 y unos ingresos brutos conjuntos de \textbf{\$\num{30.66}~M/año} (\textbf{$\sim \num{28.13}$~M€/año}).
+    \item \textbf{Bases Cerradas para el Dimensionamiento de Equipos:} Se dejan determinados los caudales horarios envolventes de diseño ($Q_{\text{máx}}$, Tabla~\ref{tab:caudales_horarios_dimensionamiento}) que gobiernan cada unidad del proceso: secador rotatorio en campaña de hoja (\SI{8696}{\kilo\gram/\hour} agua evaporada), recuperación de lignina en campaña de hueso (\SI{2093}{\kilo\gram/\hour}), fermentación/destilación de etanol en campaña de madera de poda (\SI{2187}{\kilo\gram/\hour}) y digestión anaerobia/captura de $\text{CO}_2$ en campaña de hoja (\SI{4544.7}{\cubic\meter/\hour} de biogás y \SI{7672}{\kilo\gram/\hour} de $\text{CO}_2$).
+\end{enumerate}
+
+\newpage
+\chapter*{Declaración sobre el Uso de Inteligencia Artificial Generativa}
+\addcontentsline{toc}{chapter}{Declaración sobre el Uso de Inteligencia Artificial Generativa}
+
+En cumplimiento de las buenas prácticas académicas y las directrices institucionales adaptadas a la norma APA (7.ª edición) para la citación de herramientas de Inteligencia Artificial Generativa (IAG), se declara formalmente la asistencia tecnológica empleada en la elaboración del presente documento.
+
+\section*{Herramientas y Modelos Empleados}
+Para la preparación, estructuración, depuración de código LaTeX, auditoría de cálculos y verificación de este trabajo se ha contado con la asistencia de los siguientes modelos de lenguaje de gran escala (LLM):
+\begin{itemize}
+    \item \textbf{Google Gemini 3.8 Flash (Low y Medium) y Google Gemini Argon (Medium)} (\cite{google_gemini_2026})
+    \item \textbf{Anthropic Claude Opus 5.5 (Medium)} (\cite{anthropic_claude_2026})
+\end{itemize}
+
+\section*{Naturaleza y Alcance de la Asistencia}
+El autor declara que la Inteligencia Artificial Generativa ha sido utilizada exclusivamente como herramienta auxiliar de asistencia en la búsqueda bibliográfica, la revisión de estilo, la composición documental en LaTeX y la comprobación cruzada de datos estadísticos oficiales. Todo el contenido teórico, fórmulas matemáticas, balances de materia y energía, decisiones de diseño, redacción final y conclusiones han sido íntegramente revisados, contrastados con las fuentes oficiales primarias (AICA, MAPA, MITECO, DOUE y literatura científica indexada) y asumidos bajo la exclusiva responsabilidad del autor.
+
+\vspace{1.5em}
+\noindent\textbf{Declaración Final del Estudiante:}
+\begin{itemize}
+    \item[$\square$] Declaro explícitamente que no se ha utilizado Inteligencia Artificial Generativa en la elaboración de este trabajo.
+    \item[$\boxtimes$] \textbf{Declaro explícitamente que el contenido registrado en la presente declaración es fidedigno y abarca la totalidad del uso de IAG realizado para este trabajo.}
+\end{itemize}
+
+\vspace{2.5em}
+\noindent\begin{tabular}{l p{7cm} l}
+\textbf{Firma del Estudiante:} & & \textbf{Fecha:} 01/11/2026 \\
+\end{tabular}
+
+\newpage
+\printbibliography[heading=bibintoc, title={Referencias Bibliográficas}]
+
+\end{document}

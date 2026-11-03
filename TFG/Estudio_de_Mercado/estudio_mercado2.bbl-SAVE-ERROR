@@ -1,0 +1,2486 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{apa/apasortcite//global/global/global}
+    \entry{AAE2026}{report}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=2dbbc8f6c14a6ec0c3244d1e58ad360d}{%
+           family={{Agencia Andaluza de la Energía (AAE)}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Junta de Andalucía}%
+      }
+      \strng{namehash}{2dbbc8f6c14a6ec0c3244d1e58ad360d}
+      \strng{fullhash}{2dbbc8f6c14a6ec0c3244d1e58ad360d}
+      \strng{fullhashraw}{2dbbc8f6c14a6ec0c3244d1e58ad360d}
+      \strng{bibnamehash}{2dbbc8f6c14a6ec0c3244d1e58ad360d}
+      \strng{authorbibnamehash}{2dbbc8f6c14a6ec0c3244d1e58ad360d}
+      \strng{authornamehash}{2dbbc8f6c14a6ec0c3244d1e58ad360d}
+      \strng{authorfullhash}{2dbbc8f6c14a6ec0c3244d1e58ad360d}
+      \strng{authorfullhashraw}{2dbbc8f6c14a6ec0c3244d1e58ad360d}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Fichero local: \texttt{Informe\_ANDALUZ\_MIEA.pdf}}
+      \field{title}{Informe de Infraestructuras Energéticas de Andalucía (MIEA) a 30 de junio de 2026}
+      \field{year}{2026}
+      \verb{urlraw}
+      \verb https://www.agenciaandaluzadelaenergia.es
+      \endverb
+      \verb{url}
+      \verb https://www.agenciaandaluzadelaenergia.es
+      \endverb
+    \endentry
+    \entry{AICA2026}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=e53c4a3171145895cd0c239d54fe56a8}{%
+           family={{Agencia de Información y Control Alimentarios (AICA)}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Ministerio de Agricultura, Pesca y Alimentación (MAPA)}%
+      }
+      \strng{namehash}{e53c4a3171145895cd0c239d54fe56a8}
+      \strng{fullhash}{e53c4a3171145895cd0c239d54fe56a8}
+      \strng{fullhashraw}{e53c4a3171145895cd0c239d54fe56a8}
+      \strng{bibnamehash}{e53c4a3171145895cd0c239d54fe56a8}
+      \strng{authorbibnamehash}{e53c4a3171145895cd0c239d54fe56a8}
+      \strng{authornamehash}{e53c4a3171145895cd0c239d54fe56a8}
+      \strng{authorfullhash}{e53c4a3171145895cd0c239d54fe56a8}
+      \strng{authorfullhashraw}{e53c4a3171145895cd0c239d54fe56a8}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Fichero local: \texttt{INFORME MENSUAL de la Situación de Mercado...Septiembre 2026-Excel.xlsx}}
+      \field{title}{Informe Mensual de la Situación de Mercado del Sector del Aceite de Oliva y la Aceituna de Mesa: Campaña 2025/2026 (Datos a Septiembre de 2026)}
+      \field{year}{2026}
+      \verb{urlraw}
+      \verb https://www.mapa.gob.es
+      \endverb
+      \verb{url}
+      \verb https://www.mapa.gob.es
+      \endverb
+    \endentry
+    \entry{anthropic_claude_2026}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f431db65cea024a5f19eab835afefee2}{%
+           family={{Anthropic}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{f431db65cea024a5f19eab835afefee2}
+      \strng{fullhash}{f431db65cea024a5f19eab835afefee2}
+      \strng{fullhashraw}{f431db65cea024a5f19eab835afefee2}
+      \strng{bibnamehash}{f431db65cea024a5f19eab835afefee2}
+      \strng{authorbibnamehash}{f431db65cea024a5f19eab835afefee2}
+      \strng{authornamehash}{f431db65cea024a5f19eab835afefee2}
+      \strng{authorfullhash}{f431db65cea024a5f19eab835afefee2}
+      \strng{authorfullhashraw}{f431db65cea024a5f19eab835afefee2}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{[Modelo de lenguaje de gran escala / Asistente de IA]}
+      \field{title}{Claude Opus 5.5 (Medium)}
+      \field{year}{2026}
+      \verb{urlraw}
+      \verb https://claude.ai
+      \endverb
+      \verb{url}
+      \verb https://claude.ai
+      \endverb
+    \endentry
+    \entry{APPA2026}{report}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=d87ede84246818510a260b280ff371e1}{%
+           family={{APPA Biogás}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Asociación de Empresas de Energías Renovables (APPA)}%
+      }
+      \strng{namehash}{d87ede84246818510a260b280ff371e1}
+      \strng{fullhash}{d87ede84246818510a260b280ff371e1}
+      \strng{fullhashraw}{d87ede84246818510a260b280ff371e1}
+      \strng{bibnamehash}{d87ede84246818510a260b280ff371e1}
+      \strng{authorbibnamehash}{d87ede84246818510a260b280ff371e1}
+      \strng{authornamehash}{d87ede84246818510a260b280ff371e1}
+      \strng{authorfullhash}{d87ede84246818510a260b280ff371e1}
+      \strng{authorfullhashraw}{d87ede84246818510a260b280ff371e1}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Fichero local: \texttt{Informe-Potencial-Biometano-2026.pdf}}
+      \field{title}{Potencial de biometano en España: Evaluación del potencial movilizable 2026}
+      \field{year}{2026}
+    \endentry
+    \entry{UE2022_996}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=51964341e4da002e0362675417e1ad23}{%
+           family={{Comisión Europea}},
+           familyi={C\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Diario Oficial de la Unión Europea (DO L 168 de 27.6.2022, p. 1)}%
+      }
+      \strng{namehash}{51964341e4da002e0362675417e1ad23}
+      \strng{fullhash}{51964341e4da002e0362675417e1ad23}
+      \strng{fullhashraw}{51964341e4da002e0362675417e1ad23}
+      \strng{bibnamehash}{51964341e4da002e0362675417e1ad23}
+      \strng{authorbibnamehash}{51964341e4da002e0362675417e1ad23}
+      \strng{authornamehash}{51964341e4da002e0362675417e1ad23}
+      \strng{authorfullhash}{51964341e4da002e0362675417e1ad23}
+      \strng{authorfullhashraw}{51964341e4da002e0362675417e1ad23}
+      \field{extraname}{1}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Reglamento de Ejecución (UE) 2022/996 de la Comisión, de 14 de junio de 2022, relativo a las normas para verificar los criterios de sostenibilidad y de reducción de las emisiones de gases de efecto invernadero y los criterios de bajo riesgo de cambio indirecto del uso de la tierra}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb http://data.europa.eu/eli/reg_impl/2022/996/oj
+      \endverb
+      \verb{url}
+      \verb http://data.europa.eu/eli/reg_impl/2022/996/oj
+      \endverb
+    \endentry
+    \entry{DOUE2026}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=51964341e4da002e0362675417e1ad23}{%
+           family={{Comisión Europea}},
+           familyi={C\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Diario Oficial de la Unión Europea (DO L 2026/2047, 15.9.2026)}%
+      }
+      \strng{namehash}{51964341e4da002e0362675417e1ad23}
+      \strng{fullhash}{51964341e4da002e0362675417e1ad23}
+      \strng{fullhashraw}{51964341e4da002e0362675417e1ad23}
+      \strng{bibnamehash}{51964341e4da002e0362675417e1ad23}
+      \strng{authorbibnamehash}{51964341e4da002e0362675417e1ad23}
+      \strng{authornamehash}{51964341e4da002e0362675417e1ad23}
+      \strng{authorfullhash}{51964341e4da002e0362675417e1ad23}
+      \strng{authorfullhashraw}{51964341e4da002e0362675417e1ad23}
+      \field{extraname}{2}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Fichero local: \texttt{L00001-00004.pdf}}
+      \field{title}{Reglamento de Ejecución (UE) 2026/2047 de la Comisión, de 14 de septiembre de 2026, por el que se amplía la vigilancia retrospectiva de la Unión en lo referente a las importaciones de etanol renovable para combustible}
+      \field{year}{2026}
+      \verb{urlraw}
+      \verb http://data.europa.eu/eli/reg_impl/2026/2047/oj
+      \endverb
+      \verb{url}
+      \verb http://data.europa.eu/eli/reg_impl/2026/2047/oj
+      \endverb
+    \endentry
+    \entry{SIAE2025}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=73070fcf752e3af641235724598f3684}{%
+           family={{Consejería de Agricultura, Pesca, Agua y Desarrollo Rural}},
+           familyi={C\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Junta de Andalucía}%
+      }
+      \strng{namehash}{73070fcf752e3af641235724598f3684}
+      \strng{fullhash}{73070fcf752e3af641235724598f3684}
+      \strng{fullhashraw}{73070fcf752e3af641235724598f3684}
+      \strng{bibnamehash}{73070fcf752e3af641235724598f3684}
+      \strng{authorbibnamehash}{73070fcf752e3af641235724598f3684}
+      \strng{authornamehash}{73070fcf752e3af641235724598f3684}
+      \strng{authorfullhash}{73070fcf752e3af641235724598f3684}
+      \strng{authorfullhashraw}{73070fcf752e3af641235724598f3684}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Sistema de Información Agroalimentaria y Pesquera de Andalucía (SIAP/SIAE)}
+      \field{year}{2025}
+    \endentry
+    \entry{CAP2008}{report}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=ff6a3561ad5c315c0bbafff71aead1d1}{%
+           family={{Consejería de Agricultura y Pesca}},
+           familyi={C\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Junta de Andalucía. Secretaría General de Agricultura, Ganadería y Desarrollo Rural}%
+      }
+      \strng{namehash}{ff6a3561ad5c315c0bbafff71aead1d1}
+      \strng{fullhash}{ff6a3561ad5c315c0bbafff71aead1d1}
+      \strng{fullhashraw}{ff6a3561ad5c315c0bbafff71aead1d1}
+      \strng{bibnamehash}{ff6a3561ad5c315c0bbafff71aead1d1}
+      \strng{authorbibnamehash}{ff6a3561ad5c315c0bbafff71aead1d1}
+      \strng{authornamehash}{ff6a3561ad5c315c0bbafff71aead1d1}
+      \strng{authorfullhash}{ff6a3561ad5c315c0bbafff71aead1d1}
+      \strng{authorfullhashraw}{ff6a3561ad5c315c0bbafff71aead1d1}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Depósito Legal SE-3339-2008. Fichero local: \texttt{Potencial energetico de la biomasa.pdf}}
+      \field{title}{Potencial energético de la biomasa residual agrícola y ganadera en Andalucía}
+      \field{year}{2008}
+    \endentry
+    \entry{CORES2026}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=152533897013da79567388bc622ef5a8}{%
+           family={{Corporación de Reservas Estratégicas de Productos Petrolíferos (CORES)}},
+           familyi={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{152533897013da79567388bc622ef5a8}
+      \strng{fullhash}{152533897013da79567388bc622ef5a8}
+      \strng{fullhashraw}{152533897013da79567388bc622ef5a8}
+      \strng{bibnamehash}{152533897013da79567388bc622ef5a8}
+      \strng{authorbibnamehash}{152533897013da79567388bc622ef5a8}
+      \strng{authornamehash}{152533897013da79567388bc622ef5a8}
+      \strng{authorfullhash}{152533897013da79567388bc622ef5a8}
+      \strng{authorfullhashraw}{152533897013da79567388bc622ef5a8}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Fichero local: \texttt{tablas-boletin-est-hidrocarburos-345-agosto-2026.xlsx}}
+      \field{title}{Boletín Estadístico de Hidrocarburos n{º} 345 (Agosto de 2026)}
+      \field{year}{2026}
+      \verb{urlraw}
+      \verb https://www.cores.es
+      \endverb
+      \verb{url}
+      \verb https://www.cores.es
+      \endverb
+    \endentry
+    \entry{ElFessikh2025}{article}{}{}
+      \name{author}{7}{}{%
+        {{un=0,uniquepart=base,hash=e3cde2c6ae04388cba026025278d2365}{%
+           family={El\bibnamedelima Fessikh},
+           familyi={E\bibinitperiod\bibinitdelim F\bibinitperiod},
+           given={Meriem},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9c3d44cc51046796512d314faee2a26b}{%
+           family={Elhrech},
+           familyi={E\bibinitperiod},
+           given={Hamza},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3f528313223a6a47e969fe176b1f971a}{%
+           family={El\bibnamedelima Yahyaoui\bibnamedelimb El\bibnamedelima Idrissi},
+           familyi={E\bibinitperiod\bibinitdelim Y\bibinitperiod\bibinitdelim E\bibinitperiod\bibinitdelim I\bibinitperiod},
+           given={Amina},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=dd82983e5c78c523993ef6128e9a0787}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Learn-Han},
+           giveni={L\bibinithyphendelim H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=17c54d368d452b76999a84778aa9f086}{%
+           family={Al\bibnamedelima Abdulmonem},
+           familyi={A\bibinitperiod\bibinitdelim A\bibinitperiod},
+           given={Waleed},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=92234672a6676e030b0502f9d381a4a0}{%
+           family={El\bibnamedelima Omari},
+           familyi={E\bibinitperiod\bibinitdelim O\bibinitperiod},
+           given={Nasreddine},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a9e9f163681072dfe63693775f515979}{%
+           family={Bouyahya},
+           familyi={B\bibinitperiod},
+           given={Abdelhakim},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{cb5f8acd67a6cfc51d75b1bf93f35af5}
+      \strng{fullhash}{f6a79bae948891886b6177c9200b4379}
+      \strng{fullhashraw}{f6a79bae948891886b6177c9200b4379}
+      \strng{bibnamehash}{f6a79bae948891886b6177c9200b4379}
+      \strng{authorbibnamehash}{f6a79bae948891886b6177c9200b4379}
+      \strng{authornamehash}{cb5f8acd67a6cfc51d75b1bf93f35af5}
+      \strng{authorfullhash}{f6a79bae948891886b6177c9200b4379}
+      \strng{authorfullhashraw}{f6a79bae948891886b6177c9200b4379}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Food Composition and Analysis}
+      \field{title}{Sustainable valorization of olive stone by-products: Opportunities and challenges}
+      \field{volume}{142}
+      \field{year}{2025}
+      \field{pages}{107495}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1016/j.jfca.2025.107495
+      \endverb
+    \endentry
+    \entry{google_gemini_2026}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=8b36e9207c24c76e6719268e49201d94}{%
+           family={{Google}},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{fullhash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{fullhashraw}{8b36e9207c24c76e6719268e49201d94}
+      \strng{bibnamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorbibnamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authornamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorfullhash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorfullhashraw}{8b36e9207c24c76e6719268e49201d94}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{[Modelo de lenguaje de gran escala / Asistente de IA]}
+      \field{title}{Gemini 3.8 Flash (Low y Medium) y Gemini Argon (Medium)}
+      \field{year}{2026}
+      \verb{urlraw}
+      \verb https://gemini.google.com
+      \endverb
+      \verb{url}
+      \verb https://gemini.google.com
+      \endverb
+    \endentry
+    \entry{SABI2026}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=4619b03525991f0745d533109272dd07}{%
+           family={{Informa D\&B y Bureau van Dijk}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{4619b03525991f0745d533109272dd07}
+      \strng{fullhash}{4619b03525991f0745d533109272dd07}
+      \strng{fullhashraw}{4619b03525991f0745d533109272dd07}
+      \strng{bibnamehash}{4619b03525991f0745d533109272dd07}
+      \strng{authorbibnamehash}{4619b03525991f0745d533109272dd07}
+      \strng{authornamehash}{4619b03525991f0745d533109272dd07}
+      \strng{authorfullhash}{4619b03525991f0745d533109272dd07}
+      \strng{authorfullhashraw}{4619b03525991f0745d533109272dd07}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Sistema de Análisis de Balances Ibéricos (SABI): Empresas con CNAE 1043, 1039 y 2014}
+      \field{year}{2026}
+      \verb{urlraw}
+      \verb https://sabi.informa.es
+      \endverb
+      \verb{url}
+      \verb https://sabi.informa.es
+      \endverb
+    \endentry
+    \entry{INE2025}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=562958e6bd37bbb48e1e1a29fb75cce8}{%
+           family={{Instituto Nacional de Estadística (INE)}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{562958e6bd37bbb48e1e1a29fb75cce8}
+      \strng{fullhash}{562958e6bd37bbb48e1e1a29fb75cce8}
+      \strng{fullhashraw}{562958e6bd37bbb48e1e1a29fb75cce8}
+      \strng{bibnamehash}{562958e6bd37bbb48e1e1a29fb75cce8}
+      \strng{authorbibnamehash}{562958e6bd37bbb48e1e1a29fb75cce8}
+      \strng{authornamehash}{562958e6bd37bbb48e1e1a29fb75cce8}
+      \strng{authorfullhash}{562958e6bd37bbb48e1e1a29fb75cce8}
+      \strng{authorfullhashraw}{562958e6bd37bbb48e1e1a29fb75cce8}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Encuesta Industrial Anual de Productos (PRODCOM): Epígrafe 20.14.74.00}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://www.ine.es
+      \endverb
+      \verb{url}
+      \verb https://www.ine.es
+      \endverb
+    \endentry
+    \entry{Jafari-Gohargan2026}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=39eb785fc9d56425eb8389fbcb251d72}{%
+           family={Jafari-Gohargan},
+           familyi={J\bibinithyphendelim G\bibinitperiod},
+           given={Maryam},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=28b7b01f0450ca84411d5ff976a28ea9}{%
+           family={Mohammadi},
+           familyi={M\bibinitperiod},
+           given={Mohsen},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1eeafb8967632839f7e99b3ce023332f}{%
+           family={Mehrabani-Zeinabad},
+           familyi={M\bibinithyphendelim Z\bibinitperiod},
+           given={Arjomand},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=728146cec9b7f3dceb8d66480850cdfd}{%
+           family={Karimi},
+           familyi={K\bibinitperiod},
+           given={Keikhosro},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{521ed6f1ae0bdeb705c12004e3ef5ec0}
+      \strng{fullhash}{d380e04f133c29ca6e37f4dea0d48ada}
+      \strng{fullhashraw}{d380e04f133c29ca6e37f4dea0d48ada}
+      \strng{bibnamehash}{d380e04f133c29ca6e37f4dea0d48ada}
+      \strng{authorbibnamehash}{d380e04f133c29ca6e37f4dea0d48ada}
+      \strng{authornamehash}{521ed6f1ae0bdeb705c12004e3ef5ec0}
+      \strng{authorfullhash}{d380e04f133c29ca6e37f4dea0d48ada}
+      \strng{authorfullhashraw}{d380e04f133c29ca6e37f4dea0d48ada}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Fuel}
+      \field{title}{Techno-economic analysis of sustainable biofuel production from whole olive waste}
+      \field{volume}{407}
+      \field{year}{2026}
+      \field{pages}{137530}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1016/j.fuel.2025.137530
+      \endverb
+    \endentry
+    \entry{MacArez2025}{article}{}{}
+      \name{author}{7}{}{%
+        {{un=0,uniquepart=base,hash=0874c60d4de3786a42274706184dd6cf}{%
+           family={Macarez},
+           familyi={M\bibinitperiod},
+           given={Anne-Constance},
+           giveni={A\bibinithyphendelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=69dceea8b77b8f2f2b4cf4eb174d41c0}{%
+           family={Maalej},
+           familyi={M\bibinitperiod},
+           given={Hana},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5cb4fe7f089f1e079ae5a0ca5c9f3f82}{%
+           family={Drobek},
+           familyi={D\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6f782fdef8639e63175943f1630d8967}{%
+           family={Pochat-Bohatier},
+           familyi={P\bibinithyphendelim B\bibinitperiod},
+           given={Céline},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=579c90b6dc717ec3f3d90d5dab5cc052}{%
+           family={Maalej},
+           familyi={M\bibinitperiod},
+           given={Amina},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c69dc638d380c82d5d4264e08168c38a}{%
+           family={Chamkha},
+           familyi={C\bibinitperiod},
+           given={Mohamed},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c8aa8f6219ef2041555452759bdfefbd}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Suming},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{be7b8f42cec04f1686a558d8a7ed8b1c}
+      \strng{fullhash}{700d0943888006b50d228b0f810b82cb}
+      \strng{fullhashraw}{700d0943888006b50d228b0f810b82cb}
+      \strng{bibnamehash}{700d0943888006b50d228b0f810b82cb}
+      \strng{authorbibnamehash}{700d0943888006b50d228b0f810b82cb}
+      \strng{authornamehash}{be7b8f42cec04f1686a558d8a7ed8b1c}
+      \strng{authorfullhash}{700d0943888006b50d228b0f810b82cb}
+      \strng{authorfullhashraw}{700d0943888006b50d228b0f810b82cb}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Environmental Chemical Engineering}
+      \field{title}{From olive stones waste to valuable resource: Exploring various techniques for cellulose extraction}
+      \field{volume}{13}
+      \field{year}{2025}
+      \field{pages}{118204}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1016/j.jece.2025.118204
+      \endverb
+    \endentry
+    \entry{Manzanares2017}{article}{}{}
+      \name{author}{7}{}{%
+        {{un=0,uniquepart=base,hash=881740736f87cfa150bc58543724bd23}{%
+           family={Manzanares},
+           familyi={M\bibinitperiod},
+           given={Paloma},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e8ff39404ed36a06128b10029e88316b}{%
+           family={Ruiz},
+           familyi={R\bibinitperiod},
+           given={Encarnación},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=cab32733c38bf89b3f27952cd4dce45b}{%
+           family={Ballesteros},
+           familyi={B\bibinitperiod},
+           given={Mercedes},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4e5423dee1091cccdc108bb0d57bdedc}{%
+           family={Negro},
+           familyi={N\bibinitperiod},
+           given={María\bibnamedelima J.},
+           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3423017a7be0e683164cea48174a8293}{%
+           family={Gallego},
+           familyi={G\bibinitperiod},
+           given={Francisco\bibnamedelima J.},
+           giveni={F\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=264ea3f5607f8c7f090eb988fb4daa76}{%
+           family={López-Linares},
+           familyi={L\bibinithyphendelim L\bibinitperiod},
+           given={Juan\bibnamedelima C.},
+           giveni={J\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=016b498433589d2580c7538d14062a2e}{%
+           family={Castro},
+           familyi={C\bibinitperiod},
+           given={Eulogio},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{38835fd8e434dac08a1e64ba274bb6b6}
+      \strng{fullhash}{adcb115300c84b55a2b3d5eed273d564}
+      \strng{fullhashraw}{adcb115300c84b55a2b3d5eed273d564}
+      \strng{bibnamehash}{adcb115300c84b55a2b3d5eed273d564}
+      \strng{authorbibnamehash}{adcb115300c84b55a2b3d5eed273d564}
+      \strng{authornamehash}{38835fd8e434dac08a1e64ba274bb6b6}
+      \strng{authorfullhash}{adcb115300c84b55a2b3d5eed273d564}
+      \strng{authorfullhashraw}{adcb115300c84b55a2b3d5eed273d564}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Spanish Journal of Agricultural Research}
+      \field{number}{3}
+      \field{title}{Residual biomass potential in olive tree cultivation and olive oil industry in Spain: Valorization proposal in a biorefinery context}
+      \field{volume}{15}
+      \field{year}{2017}
+      \field{pages}{e0206}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.5424/sjar/2017153-10868
+      \endverb
+    \endentry
+    \entry{MAPA2025}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=90a1c3af9dcf2c48330159daa9609e9a}{%
+           family={{Ministerio de Agricultura, Pesca y Alimentación (MAPA)}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{90a1c3af9dcf2c48330159daa9609e9a}
+      \strng{fullhash}{90a1c3af9dcf2c48330159daa9609e9a}
+      \strng{fullhashraw}{90a1c3af9dcf2c48330159daa9609e9a}
+      \strng{bibnamehash}{90a1c3af9dcf2c48330159daa9609e9a}
+      \strng{authorbibnamehash}{90a1c3af9dcf2c48330159daa9609e9a}
+      \strng{authornamehash}{90a1c3af9dcf2c48330159daa9609e9a}
+      \strng{authorfullhash}{90a1c3af9dcf2c48330159daa9609e9a}
+      \strng{authorfullhashraw}{90a1c3af9dcf2c48330159daa9609e9a}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Fichero local: \texttt{OLIVAR CAMPAÑA 2025.xlsx}}
+      \field{title}{Anuario de Estadística Agraria: Avance y Tablas Globales de Olivar Campaña 2025}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://www.mapa.gob.es
+      \endverb
+      \verb{url}
+      \verb https://www.mapa.gob.es
+      \endverb
+    \endentry
+    \entry{BOE376_2022}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=04a7f847f7bcbfe6912fd8c46024b312}{%
+           family={{Ministerio para la Transición Ecológica y el Reto Demográfico}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \name{shortauthor}{1}{}{%
+        {{un=0,uniquepart=base,hash=ef6a4a247aba772d57a922d5f0d80d53}{%
+           family={{MITECO}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Boletín Oficial del Estado (BOE núm. 118, de 18 de mayo de 2022)}%
+      }
+      \strng{namehash}{ef6a4a247aba772d57a922d5f0d80d53}
+      \strng{fullhash}{04a7f847f7bcbfe6912fd8c46024b312}
+      \strng{fullhashraw}{04a7f847f7bcbfe6912fd8c46024b312}
+      \strng{bibnamehash}{ef6a4a247aba772d57a922d5f0d80d53}
+      \strng{authorbibnamehash}{04a7f847f7bcbfe6912fd8c46024b312}
+      \strng{authornamehash}{04a7f847f7bcbfe6912fd8c46024b312}
+      \strng{authorfullhash}{04a7f847f7bcbfe6912fd8c46024b312}
+      \strng{authorfullhashraw}{04a7f847f7bcbfe6912fd8c46024b312}
+      \strng{shortauthorbibnamehash}{ef6a4a247aba772d57a922d5f0d80d53}
+      \strng{shortauthornamehash}{ef6a4a247aba772d57a922d5f0d80d53}
+      \strng{shortauthorfullhash}{ef6a4a247aba772d57a922d5f0d80d53}
+      \strng{shortauthorfullhashraw}{ef6a4a247aba772d57a922d5f0d80d53}
+      \field{extraname}{1}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{shortauthor}
+      \field{labeltitlesource}{title}
+      \field{title}{Real Decreto 376/2022, de 17 de mayo, por el que se regulan los criterios de sostenibilidad y de reducción de las emisiones de gases de efecto invernadero de los biocarburantes, biolíquidos y combustibles de biomasa, así como el sistema de garantías de origen de los gases renovables}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://www.boe.es/eli/es/rd/2022/05/17/376
+      \endverb
+      \verb{url}
+      \verb https://www.boe.es/eli/es/rd/2022/05/17/376
+      \endverb
+    \endentry
+    \entry{BOE2026}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=04a7f847f7bcbfe6912fd8c46024b312}{%
+           family={{Ministerio para la Transición Ecológica y el Reto Demográfico}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \name{shortauthor}{1}{}{%
+        {{un=0,uniquepart=base,hash=ef6a4a247aba772d57a922d5f0d80d53}{%
+           family={{MITECO}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Boletín Oficial del Estado}%
+      }
+      \strng{namehash}{ef6a4a247aba772d57a922d5f0d80d53}
+      \strng{fullhash}{04a7f847f7bcbfe6912fd8c46024b312}
+      \strng{fullhashraw}{04a7f847f7bcbfe6912fd8c46024b312}
+      \strng{bibnamehash}{ef6a4a247aba772d57a922d5f0d80d53}
+      \strng{authorbibnamehash}{04a7f847f7bcbfe6912fd8c46024b312}
+      \strng{authornamehash}{04a7f847f7bcbfe6912fd8c46024b312}
+      \strng{authorfullhash}{04a7f847f7bcbfe6912fd8c46024b312}
+      \strng{authorfullhashraw}{04a7f847f7bcbfe6912fd8c46024b312}
+      \strng{shortauthorbibnamehash}{ef6a4a247aba772d57a922d5f0d80d53}
+      \strng{shortauthornamehash}{ef6a4a247aba772d57a922d5f0d80d53}
+      \strng{shortauthorfullhash}{ef6a4a247aba772d57a922d5f0d80d53}
+      \strng{shortauthorfullhashraw}{ef6a4a247aba772d57a922d5f0d80d53}
+      \field{extraname}{2}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{shortauthor}
+      \field{labeltitlesource}{title}
+      \field{note}{Fichero local: \texttt{BOE-A-2026-19051.pdf}}
+      \field{title}{Real Decreto 611/2026, de 22 de julio, de impulso a la descarbonización del sector del transporte y fomento de los combustibles renovables, y Corrección de errores (BOE-A-2026-19051)}
+      \field{year}{2026}
+      \verb{urlraw}
+      \verb https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-19051
+      \endverb
+      \verb{url}
+      \verb https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-19051
+      \endverb
+    \endentry
+    \entry{MITECO2026}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=116efb60b65e868fc5279098a59a27a5}{%
+           family={{Ministerio para la Transición Ecológica y el Reto Demográfico (MITECO)}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{116efb60b65e868fc5279098a59a27a5}
+      \strng{fullhash}{116efb60b65e868fc5279098a59a27a5}
+      \strng{fullhashraw}{116efb60b65e868fc5279098a59a27a5}
+      \strng{bibnamehash}{116efb60b65e868fc5279098a59a27a5}
+      \strng{authorbibnamehash}{116efb60b65e868fc5279098a59a27a5}
+      \strng{authornamehash}{116efb60b65e868fc5279098a59a27a5}
+      \strng{authorfullhash}{116efb60b65e868fc5279098a59a27a5}
+      \strng{authorfullhashraw}{116efb60b65e868fc5279098a59a27a5}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Fichero local: \texttt{202610\_ESTADISTICAS-BIOS CERT DEFINITIVAS 2025.xlsx}}
+      \field{title}{Estadísticas Definitivas de Biocarburantes Certificables: Ejercicio 2025 (Octubre 2026)}
+      \field{year}{2026}
+      \verb{urlraw}
+      \verb https://www.miteco.gob.es
+      \endverb
+      \verb{url}
+      \verb https://www.miteco.gob.es
+      \endverb
+    \endentry
+    \entry{MoranAlarcon2026}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=f598ff9292871083224271315251b562}{%
+           family={Morán-Alarcón},
+           familyi={M\bibinithyphendelim A\bibinitperiod},
+           given={Luis\bibnamedelima Carlos},
+           giveni={L\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c545d77c6b92491382162f7ce884f18d}{%
+           family={Galán-Martín},
+           familyi={G\bibinithyphendelim M\bibinitperiod},
+           given={Ángel},
+           giveni={Á\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=34c3308f50c258659b3c902494d39053}{%
+           family={Contreras},
+           familyi={C\bibinitperiod},
+           given={María\bibnamedelimb del\bibnamedelima Mar},
+           giveni={M\bibinitperiod\bibinitdelim d\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=016b498433589d2580c7538d14062a2e}{%
+           family={Castro},
+           familyi={C\bibinitperiod},
+           given={Eulogio},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{c598213e91185815937e851d998cdf03}
+      \strng{fullhash}{978b824fae7f4a4b538c9ab5e0728270}
+      \strng{fullhashraw}{978b824fae7f4a4b538c9ab5e0728270}
+      \strng{bibnamehash}{978b824fae7f4a4b538c9ab5e0728270}
+      \strng{authorbibnamehash}{978b824fae7f4a4b538c9ab5e0728270}
+      \strng{authornamehash}{c598213e91185815937e851d998cdf03}
+      \strng{authorfullhash}{978b824fae7f4a4b538c9ab5e0728270}
+      \strng{authorfullhashraw}{978b824fae7f4a4b538c9ab5e0728270}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Renewable and Sustainable Energy Reviews}
+      \field{title}{Recent advances and future perspectives in the valorization of olive biomass for sustainable biorefinery applications}
+      \field{volume}{226}
+      \field{year}{2026}
+      \field{pages}{116438}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1016/j.rser.2025.116438
+      \endverb
+    \endentry
+    \entry{Padilla-Rascon2022}{article}{}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=77468ca7de40dc1ee18ec3ca815987c9}{%
+           family={Padilla-Rascón},
+           familyi={P\bibinithyphendelim R\bibinitperiod},
+           given={Carmen},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=93cb6ae5e4192d08b521182feee430fb}{%
+           family={Carvalheiro},
+           familyi={C\bibinitperiod},
+           given={Florbela},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=882b92eed0722d50477b94017a9b19c8}{%
+           family={Duarte},
+           familyi={D\bibinitperiod},
+           given={Luís\bibnamedelima C.},
+           giveni={L\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c3ce371aed2e261b84b9fd5654808d83}{%
+           family={Roseiro},
+           familyi={R\bibinitperiod},
+           given={Luísa\bibnamedelima B.},
+           giveni={L\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e8ff39404ed36a06128b10029e88316b}{%
+           family={Ruiz},
+           familyi={R\bibinitperiod},
+           given={Encarnación},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=016b498433589d2580c7538d14062a2e}{%
+           family={Castro},
+           familyi={C\bibinitperiod},
+           given={Eulogio},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{9e10efdf771e45db7c752ee57eb73749}
+      \strng{fullhash}{da3796214e4aa9790868891ca5ae6a72}
+      \strng{fullhashraw}{da3796214e4aa9790868891ca5ae6a72}
+      \strng{bibnamehash}{da3796214e4aa9790868891ca5ae6a72}
+      \strng{authorbibnamehash}{da3796214e4aa9790868891ca5ae6a72}
+      \strng{authornamehash}{9e10efdf771e45db7c752ee57eb73749}
+      \strng{authorfullhash}{da3796214e4aa9790868891ca5ae6a72}
+      \strng{authorfullhashraw}{da3796214e4aa9790868891ca5ae6a72}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Industrial Crops and Products}
+      \field{title}{An integrated olive stone biorefinery based on a two-step fractionation strategy}
+      \field{volume}{187}
+      \field{year}{2022}
+      \field{pages}{115157}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1016/j.indcrop.2022.115157
+      \endverb
+    \endentry
+    \entry{PerezMohedano2020}{report}{}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=d01748a6cfea155d840e1f8255cfc7c6}{%
+           family={Pérez\bibnamedelima Mohedano},
+           familyi={P\bibinitperiod\bibinitdelim M\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=43b2baff023d161856ce512dbd399f96}{%
+           family={Hidalgo\bibnamedelima Moya},
+           familyi={H\bibinitperiod\bibinitdelim M\bibinitperiod},
+           given={Juan\bibnamedelima Carlos},
+           giveni={J\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0ce4c36b663a1b75deb09333a5fc2cf5}{%
+           family={Hidalgo\bibnamedelima Moya},
+           familyi={H\bibinitperiod\bibinitdelim M\bibinitperiod},
+           given={Javier\bibnamedelima Jesús},
+           giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1a9f0ff88dcb58b07906daf0925c9aec}{%
+           family={Vega\bibnamedelima Macías},
+           familyi={V\bibinitperiod\bibinitdelim M\bibinitperiod},
+           given={Victorino\bibnamedelima Antonio},
+           giveni={V\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=46c25faa8417edba5be976799c81c1aa}{%
+           family={Leyva\bibnamedelima Bollero},
+           familyi={L\bibinitperiod\bibinitdelim B\bibinitperiod},
+           given={Ana},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {Instituto de Investigación y Formación Agraria y Pesquera (IFAPA). Consejería de Agricultura, Ganadería, Pesca y Desarrollo Sostenible, Junta de Andalucía}%
+      }
+      \strng{namehash}{7d2df729a5534688b9e3d7b15815d4f9}
+      \strng{fullhash}{4e357a91a18b6f9e7eb761a2389a0183}
+      \strng{fullhashraw}{4e357a91a18b6f9e7eb761a2389a0183}
+      \strng{bibnamehash}{4e357a91a18b6f9e7eb761a2389a0183}
+      \strng{authorbibnamehash}{4e357a91a18b6f9e7eb761a2389a0183}
+      \strng{authornamehash}{7d2df729a5534688b9e3d7b15815d4f9}
+      \strng{authorfullhash}{4e357a91a18b6f9e7eb761a2389a0183}
+      \strng{authorfullhashraw}{4e357a91a18b6f9e7eb761a2389a0183}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Manual Formativo: Poda del Olivar}
+      \field{year}{2020}
+      \verb{urlraw}
+      \verb https://www.juntadeandalucia.es/agriculturaypesca/ifapa/servifapa/
+      \endverb
+      \verb{url}
+      \verb https://www.juntadeandalucia.es/agriculturaypesca/ifapa/servifapa/
+      \endverb
+    \endentry
+    \entry{RomeroGarcia2014}{article}{}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=007d01a5d5a35dedb9e1deadec9e30b9}{%
+           family={Romero-García},
+           familyi={R\bibinithyphendelim G\bibinitperiod},
+           given={J.\bibnamedelimi M.},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=535c61cd68bf49e796cb05800b3332c3}{%
+           family={Niño},
+           familyi={N\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=33fd40014e8d4ecc00c5aca43274b955}{%
+           family={Martínez-Patiño},
+           familyi={M\bibinithyphendelim P\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f964de39a63fcd772124eef41a6d4040}{%
+           family={Álvarez},
+           familyi={Á\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=698e85174735cbc69b104630dd908555}{%
+           family={Castro},
+           familyi={C\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5def431f3e192b2ac6b939488bbc27e8}{%
+           family={Negro},
+           familyi={N\bibinitperiod},
+           given={M.\bibnamedelimi J.},
+           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{627a1a425b02ab02aff48cee5302af7e}
+      \strng{fullhash}{60de81008f0f1cbdd4a4402ca269dcec}
+      \strng{fullhashraw}{60de81008f0f1cbdd4a4402ca269dcec}
+      \strng{bibnamehash}{60de81008f0f1cbdd4a4402ca269dcec}
+      \strng{authorbibnamehash}{60de81008f0f1cbdd4a4402ca269dcec}
+      \strng{authornamehash}{627a1a425b02ab02aff48cee5302af7e}
+      \strng{authorfullhash}{60de81008f0f1cbdd4a4402ca269dcec}
+      \strng{authorfullhashraw}{60de81008f0f1cbdd4a4402ca269dcec}
+      \field{extraname}{1}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Bioresource Technology}
+      \field{title}{Biorefinery based on olive biomass. State of the art and future trends}
+      \field{volume}{159}
+      \field{year}{2014}
+      \field{pages}{421\bibrangedash 432}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1016/j.biortech.2014.03.062
+      \endverb
+    \endentry
+    \entry{RomeroGarcia2022}{article}{}{}
+      \name{author}{7}{}{%
+        {{un=0,uniquepart=base,hash=007d01a5d5a35dedb9e1deadec9e30b9}{%
+           family={Romero-García},
+           familyi={R\bibinithyphendelim G\bibinitperiod},
+           given={J.\bibnamedelimi M.},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=76edddb3a758a924ad28b007fea1244c}{%
+           family={Susmozas},
+           familyi={S\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c34a0c5fef08b390e537d1c28aadf719}{%
+           family={Padilla-Rascón},
+           familyi={P\bibinithyphendelim R\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=318fe63b042f59a658e5a740e7e99944}{%
+           family={Manzanares},
+           familyi={M\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=698e85174735cbc69b104630dd908555}{%
+           family={Castro},
+           familyi={C\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0601a32a2863d76d56385d7b99473e6a}{%
+           family={Oliva},
+           familyi={O\bibinitperiod},
+           given={J.\bibnamedelimi M.},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=dffe98a62d5700ea8f06c3b6305d6e4e}{%
+           family={Romero},
+           familyi={R\bibinitperiod},
+           given={I.},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{627a1a425b02ab02aff48cee5302af7e}
+      \strng{fullhash}{4336be850ee66327a9d074d85b055ff8}
+      \strng{fullhashraw}{4336be850ee66327a9d074d85b055ff8}
+      \strng{bibnamehash}{4336be850ee66327a9d074d85b055ff8}
+      \strng{authorbibnamehash}{4336be850ee66327a9d074d85b055ff8}
+      \strng{authornamehash}{627a1a425b02ab02aff48cee5302af7e}
+      \strng{authorfullhash}{4336be850ee66327a9d074d85b055ff8}
+      \strng{authorfullhashraw}{4336be850ee66327a9d074d85b055ff8}
+      \field{extraname}{2}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Renewable Energy}
+      \field{title}{Ethanol production from olive stones using different process strategies}
+      \field{volume}{194}
+      \field{year}{2022}
+      \field{pages}{1174\bibrangedash 1183}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1016/j.renene.2022.06.022
+      \endverb
+    \endentry
+    \entry{Ronda2027}{article}{}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=8adca879b630eace23ae2201139628b3}{%
+           family={Ronda},
+           familyi={R\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9d9c591936ade3eb481278372e4811ed}{%
+           family={Moreno},
+           familyi={M\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d2adff8af5100e7342d6d3e0abd172ba}{%
+           family={Blázquez},
+           familyi={B\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7357e9c4f562329d721f305521b34217}{%
+           family={Moliner},
+           familyi={M\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8997b0ed0f90daf853ca9fad4255e2fb}{%
+           family={Aratto},
+           familyi={A\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1cb52b32b3bb91d3d50a88d8da1c5add}{%
+           family={Haro},
+           familyi={H\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{b80699ebecfb5d7ad9edf2bbb7093d53}
+      \strng{fullhash}{761b496a47e0ae690b9142c93a176a1c}
+      \strng{fullhashraw}{761b496a47e0ae690b9142c93a176a1c}
+      \strng{bibnamehash}{761b496a47e0ae690b9142c93a176a1c}
+      \strng{authorbibnamehash}{761b496a47e0ae690b9142c93a176a1c}
+      \strng{authornamehash}{b80699ebecfb5d7ad9edf2bbb7093d53}
+      \strng{authorfullhash}{761b496a47e0ae690b9142c93a176a1c}
+      \strng{authorfullhashraw}{761b496a47e0ae690b9142c93a176a1c}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Biomass and Bioenergy}
+      \field{title}{A multi-scale approach to hydrothermal liquefaction of two-phase olive mill waste: From laboratory test to regional biorefinery in Andalusia}
+      \field{volume}{217}
+      \field{year}{2027}
+      \field{pages}{109793}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1016/j.biombioe.2026.109793
+      \endverb
+    \endentry
+    \entry{REDII2018}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=6df64dab21ea48c1eb2bfb0352897155}{%
+           family={{Unión Europea}},
+           familyi={U\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Diario Oficial de la Unión Europea (DO L 328 de 21.12.2018, p. 82)}%
+      }
+      \strng{namehash}{6df64dab21ea48c1eb2bfb0352897155}
+      \strng{fullhash}{6df64dab21ea48c1eb2bfb0352897155}
+      \strng{fullhashraw}{6df64dab21ea48c1eb2bfb0352897155}
+      \strng{bibnamehash}{6df64dab21ea48c1eb2bfb0352897155}
+      \strng{authorbibnamehash}{6df64dab21ea48c1eb2bfb0352897155}
+      \strng{authornamehash}{6df64dab21ea48c1eb2bfb0352897155}
+      \strng{authorfullhash}{6df64dab21ea48c1eb2bfb0352897155}
+      \strng{authorfullhashraw}{6df64dab21ea48c1eb2bfb0352897155}
+      \field{extraname}{1}
+      \field{sortinit}{U}
+      \field{sortinithash}{6901a00e45705986ee5e7ca9fd39adca}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Directiva (UE) 2018/2001 del Parlamento Europeo y del Consejo, de 11 de diciembre de 2018, relativa al fomento del uso de energía procedente de fuentes renovables (RED II)}
+      \field{year}{2018}
+      \verb{urlraw}
+      \verb http://data.europa.eu/eli/dir/2018/2001/oj
+      \endverb
+      \verb{url}
+      \verb http://data.europa.eu/eli/dir/2018/2001/oj
+      \endverb
+    \endentry
+    \entry{REDIII2023}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=6df64dab21ea48c1eb2bfb0352897155}{%
+           family={{Unión Europea}},
+           familyi={U\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Diario Oficial de la Unión Europea (DO L 2023/2413, 31.10.2023)}%
+      }
+      \strng{namehash}{6df64dab21ea48c1eb2bfb0352897155}
+      \strng{fullhash}{6df64dab21ea48c1eb2bfb0352897155}
+      \strng{fullhashraw}{6df64dab21ea48c1eb2bfb0352897155}
+      \strng{bibnamehash}{6df64dab21ea48c1eb2bfb0352897155}
+      \strng{authorbibnamehash}{6df64dab21ea48c1eb2bfb0352897155}
+      \strng{authornamehash}{6df64dab21ea48c1eb2bfb0352897155}
+      \strng{authorfullhash}{6df64dab21ea48c1eb2bfb0352897155}
+      \strng{authorfullhashraw}{6df64dab21ea48c1eb2bfb0352897155}
+      \field{extraname}{2}
+      \field{sortinit}{U}
+      \field{sortinithash}{6901a00e45705986ee5e7ca9fd39adca}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Directiva (UE) 2023/2413 del Parlamento Europeo y del Consejo, de 18 de octubre de 2023, por la que se modifican la Directiva (UE) 2018/2001, el Reglamento (UE) 2018/1999 y la Directiva 98/70/CE en lo que respecta a la promoción de la energía procedente de fuentes renovables (RED III)}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb http://data.europa.eu/eli/dir/2023/2413/oj
+      \endverb
+      \verb{url}
+      \verb http://data.europa.eu/eli/dir/2023/2413/oj
+      \endverb
+    \endentry
+  \enddatalist
+  \datalist[entry]{apa/global//global/global/global}
+    \entry{AAE2026}{report}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=2dbbc8f6c14a6ec0c3244d1e58ad360d}{%
+           family={{Agencia Andaluza de la Energía (AAE)}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Junta de Andalucía}%
+      }
+      \strng{namehash}{2dbbc8f6c14a6ec0c3244d1e58ad360d}
+      \strng{fullhash}{2dbbc8f6c14a6ec0c3244d1e58ad360d}
+      \strng{fullhashraw}{2dbbc8f6c14a6ec0c3244d1e58ad360d}
+      \strng{bibnamehash}{2dbbc8f6c14a6ec0c3244d1e58ad360d}
+      \strng{authorbibnamehash}{2dbbc8f6c14a6ec0c3244d1e58ad360d}
+      \strng{authornamehash}{2dbbc8f6c14a6ec0c3244d1e58ad360d}
+      \strng{authorfullhash}{2dbbc8f6c14a6ec0c3244d1e58ad360d}
+      \strng{authorfullhashraw}{2dbbc8f6c14a6ec0c3244d1e58ad360d}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Fichero local: \texttt{Informe\_ANDALUZ\_MIEA.pdf}}
+      \field{title}{Informe de Infraestructuras Energéticas de Andalucía (MIEA) a 30 de junio de 2026}
+      \field{year}{2026}
+      \verb{urlraw}
+      \verb https://www.agenciaandaluzadelaenergia.es
+      \endverb
+      \verb{url}
+      \verb https://www.agenciaandaluzadelaenergia.es
+      \endverb
+    \endentry
+    \entry{AICA2026}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=e53c4a3171145895cd0c239d54fe56a8}{%
+           family={{Agencia de Información y Control Alimentarios (AICA)}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Ministerio de Agricultura, Pesca y Alimentación (MAPA)}%
+      }
+      \strng{namehash}{e53c4a3171145895cd0c239d54fe56a8}
+      \strng{fullhash}{e53c4a3171145895cd0c239d54fe56a8}
+      \strng{fullhashraw}{e53c4a3171145895cd0c239d54fe56a8}
+      \strng{bibnamehash}{e53c4a3171145895cd0c239d54fe56a8}
+      \strng{authorbibnamehash}{e53c4a3171145895cd0c239d54fe56a8}
+      \strng{authornamehash}{e53c4a3171145895cd0c239d54fe56a8}
+      \strng{authorfullhash}{e53c4a3171145895cd0c239d54fe56a8}
+      \strng{authorfullhashraw}{e53c4a3171145895cd0c239d54fe56a8}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Fichero local: \texttt{INFORME MENSUAL de la Situación de Mercado...Septiembre 2026-Excel.xlsx}}
+      \field{title}{Informe Mensual de la Situación de Mercado del Sector del Aceite de Oliva y la Aceituna de Mesa: Campaña 2025/2026 (Datos a Septiembre de 2026)}
+      \field{year}{2026}
+      \verb{urlraw}
+      \verb https://www.mapa.gob.es
+      \endverb
+      \verb{url}
+      \verb https://www.mapa.gob.es
+      \endverb
+    \endentry
+    \entry{anthropic_claude_2026}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f431db65cea024a5f19eab835afefee2}{%
+           family={{Anthropic}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{f431db65cea024a5f19eab835afefee2}
+      \strng{fullhash}{f431db65cea024a5f19eab835afefee2}
+      \strng{fullhashraw}{f431db65cea024a5f19eab835afefee2}
+      \strng{bibnamehash}{f431db65cea024a5f19eab835afefee2}
+      \strng{authorbibnamehash}{f431db65cea024a5f19eab835afefee2}
+      \strng{authornamehash}{f431db65cea024a5f19eab835afefee2}
+      \strng{authorfullhash}{f431db65cea024a5f19eab835afefee2}
+      \strng{authorfullhashraw}{f431db65cea024a5f19eab835afefee2}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{[Modelo de lenguaje de gran escala / Asistente de IA]}
+      \field{title}{Claude Opus 5.5 (Medium)}
+      \field{year}{2026}
+      \verb{urlraw}
+      \verb https://claude.ai
+      \endverb
+      \verb{url}
+      \verb https://claude.ai
+      \endverb
+    \endentry
+    \entry{APPA2026}{report}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=d87ede84246818510a260b280ff371e1}{%
+           family={{APPA Biogás}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Asociación de Empresas de Energías Renovables (APPA)}%
+      }
+      \strng{namehash}{d87ede84246818510a260b280ff371e1}
+      \strng{fullhash}{d87ede84246818510a260b280ff371e1}
+      \strng{fullhashraw}{d87ede84246818510a260b280ff371e1}
+      \strng{bibnamehash}{d87ede84246818510a260b280ff371e1}
+      \strng{authorbibnamehash}{d87ede84246818510a260b280ff371e1}
+      \strng{authornamehash}{d87ede84246818510a260b280ff371e1}
+      \strng{authorfullhash}{d87ede84246818510a260b280ff371e1}
+      \strng{authorfullhashraw}{d87ede84246818510a260b280ff371e1}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Fichero local: \texttt{Informe-Potencial-Biometano-2026.pdf}}
+      \field{title}{Potencial de biometano en España: Evaluación del potencial movilizable 2026}
+      \field{year}{2026}
+    \endentry
+    \entry{UE2022_996}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=51964341e4da002e0362675417e1ad23}{%
+           family={{Comisión Europea}},
+           familyi={C\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Diario Oficial de la Unión Europea (DO L 168 de 27.6.2022, p. 1)}%
+      }
+      \strng{namehash}{51964341e4da002e0362675417e1ad23}
+      \strng{fullhash}{51964341e4da002e0362675417e1ad23}
+      \strng{fullhashraw}{51964341e4da002e0362675417e1ad23}
+      \strng{bibnamehash}{51964341e4da002e0362675417e1ad23}
+      \strng{authorbibnamehash}{51964341e4da002e0362675417e1ad23}
+      \strng{authornamehash}{51964341e4da002e0362675417e1ad23}
+      \strng{authorfullhash}{51964341e4da002e0362675417e1ad23}
+      \strng{authorfullhashraw}{51964341e4da002e0362675417e1ad23}
+      \field{extraname}{1}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Reglamento de Ejecución (UE) 2022/996 de la Comisión, de 14 de junio de 2022, relativo a las normas para verificar los criterios de sostenibilidad y de reducción de las emisiones de gases de efecto invernadero y los criterios de bajo riesgo de cambio indirecto del uso de la tierra}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb http://data.europa.eu/eli/reg_impl/2022/996/oj
+      \endverb
+      \verb{url}
+      \verb http://data.europa.eu/eli/reg_impl/2022/996/oj
+      \endverb
+    \endentry
+    \entry{DOUE2026}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=51964341e4da002e0362675417e1ad23}{%
+           family={{Comisión Europea}},
+           familyi={C\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Diario Oficial de la Unión Europea (DO L 2026/2047, 15.9.2026)}%
+      }
+      \strng{namehash}{51964341e4da002e0362675417e1ad23}
+      \strng{fullhash}{51964341e4da002e0362675417e1ad23}
+      \strng{fullhashraw}{51964341e4da002e0362675417e1ad23}
+      \strng{bibnamehash}{51964341e4da002e0362675417e1ad23}
+      \strng{authorbibnamehash}{51964341e4da002e0362675417e1ad23}
+      \strng{authornamehash}{51964341e4da002e0362675417e1ad23}
+      \strng{authorfullhash}{51964341e4da002e0362675417e1ad23}
+      \strng{authorfullhashraw}{51964341e4da002e0362675417e1ad23}
+      \field{extraname}{2}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Fichero local: \texttt{L00001-00004.pdf}}
+      \field{title}{Reglamento de Ejecución (UE) 2026/2047 de la Comisión, de 14 de septiembre de 2026, por el que se amplía la vigilancia retrospectiva de la Unión en lo referente a las importaciones de etanol renovable para combustible}
+      \field{year}{2026}
+      \verb{urlraw}
+      \verb http://data.europa.eu/eli/reg_impl/2026/2047/oj
+      \endverb
+      \verb{url}
+      \verb http://data.europa.eu/eli/reg_impl/2026/2047/oj
+      \endverb
+    \endentry
+    \entry{SIAE2025}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=73070fcf752e3af641235724598f3684}{%
+           family={{Consejería de Agricultura, Pesca, Agua y Desarrollo Rural}},
+           familyi={C\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Junta de Andalucía}%
+      }
+      \strng{namehash}{73070fcf752e3af641235724598f3684}
+      \strng{fullhash}{73070fcf752e3af641235724598f3684}
+      \strng{fullhashraw}{73070fcf752e3af641235724598f3684}
+      \strng{bibnamehash}{73070fcf752e3af641235724598f3684}
+      \strng{authorbibnamehash}{73070fcf752e3af641235724598f3684}
+      \strng{authornamehash}{73070fcf752e3af641235724598f3684}
+      \strng{authorfullhash}{73070fcf752e3af641235724598f3684}
+      \strng{authorfullhashraw}{73070fcf752e3af641235724598f3684}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Sistema de Información Agroalimentaria y Pesquera de Andalucía (SIAP/SIAE)}
+      \field{year}{2025}
+    \endentry
+    \entry{CAP2008}{report}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=ff6a3561ad5c315c0bbafff71aead1d1}{%
+           family={{Consejería de Agricultura y Pesca}},
+           familyi={C\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Junta de Andalucía. Secretaría General de Agricultura, Ganadería y Desarrollo Rural}%
+      }
+      \strng{namehash}{ff6a3561ad5c315c0bbafff71aead1d1}
+      \strng{fullhash}{ff6a3561ad5c315c0bbafff71aead1d1}
+      \strng{fullhashraw}{ff6a3561ad5c315c0bbafff71aead1d1}
+      \strng{bibnamehash}{ff6a3561ad5c315c0bbafff71aead1d1}
+      \strng{authorbibnamehash}{ff6a3561ad5c315c0bbafff71aead1d1}
+      \strng{authornamehash}{ff6a3561ad5c315c0bbafff71aead1d1}
+      \strng{authorfullhash}{ff6a3561ad5c315c0bbafff71aead1d1}
+      \strng{authorfullhashraw}{ff6a3561ad5c315c0bbafff71aead1d1}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Depósito Legal SE-3339-2008. Fichero local: \texttt{Potencial energetico de la biomasa.pdf}}
+      \field{title}{Potencial energético de la biomasa residual agrícola y ganadera en Andalucía}
+      \field{year}{2008}
+    \endentry
+    \entry{CORES2026}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=152533897013da79567388bc622ef5a8}{%
+           family={{Corporación de Reservas Estratégicas de Productos Petrolíferos (CORES)}},
+           familyi={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{152533897013da79567388bc622ef5a8}
+      \strng{fullhash}{152533897013da79567388bc622ef5a8}
+      \strng{fullhashraw}{152533897013da79567388bc622ef5a8}
+      \strng{bibnamehash}{152533897013da79567388bc622ef5a8}
+      \strng{authorbibnamehash}{152533897013da79567388bc622ef5a8}
+      \strng{authornamehash}{152533897013da79567388bc622ef5a8}
+      \strng{authorfullhash}{152533897013da79567388bc622ef5a8}
+      \strng{authorfullhashraw}{152533897013da79567388bc622ef5a8}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Fichero local: \texttt{tablas-boletin-est-hidrocarburos-345-agosto-2026.xlsx}}
+      \field{title}{Boletín Estadístico de Hidrocarburos n{º} 345 (Agosto de 2026)}
+      \field{year}{2026}
+      \verb{urlraw}
+      \verb https://www.cores.es
+      \endverb
+      \verb{url}
+      \verb https://www.cores.es
+      \endverb
+    \endentry
+    \entry{ElFessikh2025}{article}{}{}
+      \name{author}{7}{}{%
+        {{un=0,uniquepart=base,hash=e3cde2c6ae04388cba026025278d2365}{%
+           family={El\bibnamedelima Fessikh},
+           familyi={E\bibinitperiod\bibinitdelim F\bibinitperiod},
+           given={Meriem},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9c3d44cc51046796512d314faee2a26b}{%
+           family={Elhrech},
+           familyi={E\bibinitperiod},
+           given={Hamza},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3f528313223a6a47e969fe176b1f971a}{%
+           family={El\bibnamedelima Yahyaoui\bibnamedelimb El\bibnamedelima Idrissi},
+           familyi={E\bibinitperiod\bibinitdelim Y\bibinitperiod\bibinitdelim E\bibinitperiod\bibinitdelim I\bibinitperiod},
+           given={Amina},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=dd82983e5c78c523993ef6128e9a0787}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Learn-Han},
+           giveni={L\bibinithyphendelim H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=17c54d368d452b76999a84778aa9f086}{%
+           family={Al\bibnamedelima Abdulmonem},
+           familyi={A\bibinitperiod\bibinitdelim A\bibinitperiod},
+           given={Waleed},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=92234672a6676e030b0502f9d381a4a0}{%
+           family={El\bibnamedelima Omari},
+           familyi={E\bibinitperiod\bibinitdelim O\bibinitperiod},
+           given={Nasreddine},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a9e9f163681072dfe63693775f515979}{%
+           family={Bouyahya},
+           familyi={B\bibinitperiod},
+           given={Abdelhakim},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{cb5f8acd67a6cfc51d75b1bf93f35af5}
+      \strng{fullhash}{f6a79bae948891886b6177c9200b4379}
+      \strng{fullhashraw}{f6a79bae948891886b6177c9200b4379}
+      \strng{bibnamehash}{f6a79bae948891886b6177c9200b4379}
+      \strng{authorbibnamehash}{f6a79bae948891886b6177c9200b4379}
+      \strng{authornamehash}{cb5f8acd67a6cfc51d75b1bf93f35af5}
+      \strng{authorfullhash}{f6a79bae948891886b6177c9200b4379}
+      \strng{authorfullhashraw}{f6a79bae948891886b6177c9200b4379}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Food Composition and Analysis}
+      \field{title}{Sustainable valorization of olive stone by-products: Opportunities and challenges}
+      \field{volume}{142}
+      \field{year}{2025}
+      \field{pages}{107495}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1016/j.jfca.2025.107495
+      \endverb
+    \endentry
+    \entry{google_gemini_2026}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=8b36e9207c24c76e6719268e49201d94}{%
+           family={{Google}},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{fullhash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{fullhashraw}{8b36e9207c24c76e6719268e49201d94}
+      \strng{bibnamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorbibnamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authornamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorfullhash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorfullhashraw}{8b36e9207c24c76e6719268e49201d94}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{[Modelo de lenguaje de gran escala / Asistente de IA]}
+      \field{title}{Gemini 3.8 Flash (Low y Medium) y Gemini Argon (Medium)}
+      \field{year}{2026}
+      \verb{urlraw}
+      \verb https://gemini.google.com
+      \endverb
+      \verb{url}
+      \verb https://gemini.google.com
+      \endverb
+    \endentry
+    \entry{SABI2026}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=4619b03525991f0745d533109272dd07}{%
+           family={{Informa D\&B y Bureau van Dijk}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{4619b03525991f0745d533109272dd07}
+      \strng{fullhash}{4619b03525991f0745d533109272dd07}
+      \strng{fullhashraw}{4619b03525991f0745d533109272dd07}
+      \strng{bibnamehash}{4619b03525991f0745d533109272dd07}
+      \strng{authorbibnamehash}{4619b03525991f0745d533109272dd07}
+      \strng{authornamehash}{4619b03525991f0745d533109272dd07}
+      \strng{authorfullhash}{4619b03525991f0745d533109272dd07}
+      \strng{authorfullhashraw}{4619b03525991f0745d533109272dd07}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Sistema de Análisis de Balances Ibéricos (SABI): Empresas con CNAE 1043, 1039 y 2014}
+      \field{year}{2026}
+      \verb{urlraw}
+      \verb https://sabi.informa.es
+      \endverb
+      \verb{url}
+      \verb https://sabi.informa.es
+      \endverb
+    \endentry
+    \entry{INE2025}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=562958e6bd37bbb48e1e1a29fb75cce8}{%
+           family={{Instituto Nacional de Estadística (INE)}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{562958e6bd37bbb48e1e1a29fb75cce8}
+      \strng{fullhash}{562958e6bd37bbb48e1e1a29fb75cce8}
+      \strng{fullhashraw}{562958e6bd37bbb48e1e1a29fb75cce8}
+      \strng{bibnamehash}{562958e6bd37bbb48e1e1a29fb75cce8}
+      \strng{authorbibnamehash}{562958e6bd37bbb48e1e1a29fb75cce8}
+      \strng{authornamehash}{562958e6bd37bbb48e1e1a29fb75cce8}
+      \strng{authorfullhash}{562958e6bd37bbb48e1e1a29fb75cce8}
+      \strng{authorfullhashraw}{562958e6bd37bbb48e1e1a29fb75cce8}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Encuesta Industrial Anual de Productos (PRODCOM): Epígrafe 20.14.74.00}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://www.ine.es
+      \endverb
+      \verb{url}
+      \verb https://www.ine.es
+      \endverb
+    \endentry
+    \entry{Jafari-Gohargan2026}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=39eb785fc9d56425eb8389fbcb251d72}{%
+           family={Jafari-Gohargan},
+           familyi={J\bibinithyphendelim G\bibinitperiod},
+           given={Maryam},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=28b7b01f0450ca84411d5ff976a28ea9}{%
+           family={Mohammadi},
+           familyi={M\bibinitperiod},
+           given={Mohsen},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1eeafb8967632839f7e99b3ce023332f}{%
+           family={Mehrabani-Zeinabad},
+           familyi={M\bibinithyphendelim Z\bibinitperiod},
+           given={Arjomand},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=728146cec9b7f3dceb8d66480850cdfd}{%
+           family={Karimi},
+           familyi={K\bibinitperiod},
+           given={Keikhosro},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{521ed6f1ae0bdeb705c12004e3ef5ec0}
+      \strng{fullhash}{d380e04f133c29ca6e37f4dea0d48ada}
+      \strng{fullhashraw}{d380e04f133c29ca6e37f4dea0d48ada}
+      \strng{bibnamehash}{d380e04f133c29ca6e37f4dea0d48ada}
+      \strng{authorbibnamehash}{d380e04f133c29ca6e37f4dea0d48ada}
+      \strng{authornamehash}{521ed6f1ae0bdeb705c12004e3ef5ec0}
+      \strng{authorfullhash}{d380e04f133c29ca6e37f4dea0d48ada}
+      \strng{authorfullhashraw}{d380e04f133c29ca6e37f4dea0d48ada}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Fuel}
+      \field{title}{Techno-economic analysis of sustainable biofuel production from whole olive waste}
+      \field{volume}{407}
+      \field{year}{2026}
+      \field{pages}{137530}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1016/j.fuel.2025.137530
+      \endverb
+    \endentry
+    \entry{MacArez2025}{article}{}{}
+      \name{author}{7}{}{%
+        {{un=0,uniquepart=base,hash=0874c60d4de3786a42274706184dd6cf}{%
+           family={Macarez},
+           familyi={M\bibinitperiod},
+           given={Anne-Constance},
+           giveni={A\bibinithyphendelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=69dceea8b77b8f2f2b4cf4eb174d41c0}{%
+           family={Maalej},
+           familyi={M\bibinitperiod},
+           given={Hana},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5cb4fe7f089f1e079ae5a0ca5c9f3f82}{%
+           family={Drobek},
+           familyi={D\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6f782fdef8639e63175943f1630d8967}{%
+           family={Pochat-Bohatier},
+           familyi={P\bibinithyphendelim B\bibinitperiod},
+           given={Céline},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=579c90b6dc717ec3f3d90d5dab5cc052}{%
+           family={Maalej},
+           familyi={M\bibinitperiod},
+           given={Amina},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c69dc638d380c82d5d4264e08168c38a}{%
+           family={Chamkha},
+           familyi={C\bibinitperiod},
+           given={Mohamed},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c8aa8f6219ef2041555452759bdfefbd}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Suming},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{be7b8f42cec04f1686a558d8a7ed8b1c}
+      \strng{fullhash}{700d0943888006b50d228b0f810b82cb}
+      \strng{fullhashraw}{700d0943888006b50d228b0f810b82cb}
+      \strng{bibnamehash}{700d0943888006b50d228b0f810b82cb}
+      \strng{authorbibnamehash}{700d0943888006b50d228b0f810b82cb}
+      \strng{authornamehash}{be7b8f42cec04f1686a558d8a7ed8b1c}
+      \strng{authorfullhash}{700d0943888006b50d228b0f810b82cb}
+      \strng{authorfullhashraw}{700d0943888006b50d228b0f810b82cb}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Environmental Chemical Engineering}
+      \field{title}{From olive stones waste to valuable resource: Exploring various techniques for cellulose extraction}
+      \field{volume}{13}
+      \field{year}{2025}
+      \field{pages}{118204}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1016/j.jece.2025.118204
+      \endverb
+    \endentry
+    \entry{Manzanares2017}{article}{}{}
+      \name{author}{7}{}{%
+        {{un=0,uniquepart=base,hash=881740736f87cfa150bc58543724bd23}{%
+           family={Manzanares},
+           familyi={M\bibinitperiod},
+           given={Paloma},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e8ff39404ed36a06128b10029e88316b}{%
+           family={Ruiz},
+           familyi={R\bibinitperiod},
+           given={Encarnación},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=cab32733c38bf89b3f27952cd4dce45b}{%
+           family={Ballesteros},
+           familyi={B\bibinitperiod},
+           given={Mercedes},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4e5423dee1091cccdc108bb0d57bdedc}{%
+           family={Negro},
+           familyi={N\bibinitperiod},
+           given={María\bibnamedelima J.},
+           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3423017a7be0e683164cea48174a8293}{%
+           family={Gallego},
+           familyi={G\bibinitperiod},
+           given={Francisco\bibnamedelima J.},
+           giveni={F\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=264ea3f5607f8c7f090eb988fb4daa76}{%
+           family={López-Linares},
+           familyi={L\bibinithyphendelim L\bibinitperiod},
+           given={Juan\bibnamedelima C.},
+           giveni={J\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=016b498433589d2580c7538d14062a2e}{%
+           family={Castro},
+           familyi={C\bibinitperiod},
+           given={Eulogio},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{38835fd8e434dac08a1e64ba274bb6b6}
+      \strng{fullhash}{adcb115300c84b55a2b3d5eed273d564}
+      \strng{fullhashraw}{adcb115300c84b55a2b3d5eed273d564}
+      \strng{bibnamehash}{adcb115300c84b55a2b3d5eed273d564}
+      \strng{authorbibnamehash}{adcb115300c84b55a2b3d5eed273d564}
+      \strng{authornamehash}{38835fd8e434dac08a1e64ba274bb6b6}
+      \strng{authorfullhash}{adcb115300c84b55a2b3d5eed273d564}
+      \strng{authorfullhashraw}{adcb115300c84b55a2b3d5eed273d564}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Spanish Journal of Agricultural Research}
+      \field{number}{3}
+      \field{title}{Residual biomass potential in olive tree cultivation and olive oil industry in Spain: Valorization proposal in a biorefinery context}
+      \field{volume}{15}
+      \field{year}{2017}
+      \field{pages}{e0206}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.5424/sjar/2017153-10868
+      \endverb
+    \endentry
+    \entry{MAPA2025}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=90a1c3af9dcf2c48330159daa9609e9a}{%
+           family={{Ministerio de Agricultura, Pesca y Alimentación (MAPA)}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{90a1c3af9dcf2c48330159daa9609e9a}
+      \strng{fullhash}{90a1c3af9dcf2c48330159daa9609e9a}
+      \strng{fullhashraw}{90a1c3af9dcf2c48330159daa9609e9a}
+      \strng{bibnamehash}{90a1c3af9dcf2c48330159daa9609e9a}
+      \strng{authorbibnamehash}{90a1c3af9dcf2c48330159daa9609e9a}
+      \strng{authornamehash}{90a1c3af9dcf2c48330159daa9609e9a}
+      \strng{authorfullhash}{90a1c3af9dcf2c48330159daa9609e9a}
+      \strng{authorfullhashraw}{90a1c3af9dcf2c48330159daa9609e9a}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Fichero local: \texttt{OLIVAR CAMPAÑA 2025.xlsx}}
+      \field{title}{Anuario de Estadística Agraria: Avance y Tablas Globales de Olivar Campaña 2025}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://www.mapa.gob.es
+      \endverb
+      \verb{url}
+      \verb https://www.mapa.gob.es
+      \endverb
+    \endentry
+    \entry{BOE376_2022}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=04a7f847f7bcbfe6912fd8c46024b312}{%
+           family={{Ministerio para la Transición Ecológica y el Reto Demográfico}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \name{shortauthor}{1}{}{%
+        {{un=0,uniquepart=base,hash=ef6a4a247aba772d57a922d5f0d80d53}{%
+           family={{MITECO}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Boletín Oficial del Estado (BOE núm. 118, de 18 de mayo de 2022)}%
+      }
+      \strng{namehash}{ef6a4a247aba772d57a922d5f0d80d53}
+      \strng{fullhash}{04a7f847f7bcbfe6912fd8c46024b312}
+      \strng{fullhashraw}{04a7f847f7bcbfe6912fd8c46024b312}
+      \strng{bibnamehash}{ef6a4a247aba772d57a922d5f0d80d53}
+      \strng{authorbibnamehash}{04a7f847f7bcbfe6912fd8c46024b312}
+      \strng{authornamehash}{04a7f847f7bcbfe6912fd8c46024b312}
+      \strng{authorfullhash}{04a7f847f7bcbfe6912fd8c46024b312}
+      \strng{authorfullhashraw}{04a7f847f7bcbfe6912fd8c46024b312}
+      \strng{shortauthorbibnamehash}{ef6a4a247aba772d57a922d5f0d80d53}
+      \strng{shortauthornamehash}{ef6a4a247aba772d57a922d5f0d80d53}
+      \strng{shortauthorfullhash}{ef6a4a247aba772d57a922d5f0d80d53}
+      \strng{shortauthorfullhashraw}{ef6a4a247aba772d57a922d5f0d80d53}
+      \field{extraname}{1}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{shortauthor}
+      \field{labeltitlesource}{title}
+      \field{title}{Real Decreto 376/2022, de 17 de mayo, por el que se regulan los criterios de sostenibilidad y de reducción de las emisiones de gases de efecto invernadero de los biocarburantes, biolíquidos y combustibles de biomasa, así como el sistema de garantías de origen de los gases renovables}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://www.boe.es/eli/es/rd/2022/05/17/376
+      \endverb
+      \verb{url}
+      \verb https://www.boe.es/eli/es/rd/2022/05/17/376
+      \endverb
+    \endentry
+    \entry{BOE2026}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=04a7f847f7bcbfe6912fd8c46024b312}{%
+           family={{Ministerio para la Transición Ecológica y el Reto Demográfico}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \name{shortauthor}{1}{}{%
+        {{un=0,uniquepart=base,hash=ef6a4a247aba772d57a922d5f0d80d53}{%
+           family={{MITECO}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Boletín Oficial del Estado}%
+      }
+      \strng{namehash}{ef6a4a247aba772d57a922d5f0d80d53}
+      \strng{fullhash}{04a7f847f7bcbfe6912fd8c46024b312}
+      \strng{fullhashraw}{04a7f847f7bcbfe6912fd8c46024b312}
+      \strng{bibnamehash}{ef6a4a247aba772d57a922d5f0d80d53}
+      \strng{authorbibnamehash}{04a7f847f7bcbfe6912fd8c46024b312}
+      \strng{authornamehash}{04a7f847f7bcbfe6912fd8c46024b312}
+      \strng{authorfullhash}{04a7f847f7bcbfe6912fd8c46024b312}
+      \strng{authorfullhashraw}{04a7f847f7bcbfe6912fd8c46024b312}
+      \strng{shortauthorbibnamehash}{ef6a4a247aba772d57a922d5f0d80d53}
+      \strng{shortauthornamehash}{ef6a4a247aba772d57a922d5f0d80d53}
+      \strng{shortauthorfullhash}{ef6a4a247aba772d57a922d5f0d80d53}
+      \strng{shortauthorfullhashraw}{ef6a4a247aba772d57a922d5f0d80d53}
+      \field{extraname}{2}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{shortauthor}
+      \field{labeltitlesource}{title}
+      \field{note}{Fichero local: \texttt{BOE-A-2026-19051.pdf}}
+      \field{title}{Real Decreto 611/2026, de 22 de julio, de impulso a la descarbonización del sector del transporte y fomento de los combustibles renovables, y Corrección de errores (BOE-A-2026-19051)}
+      \field{year}{2026}
+      \verb{urlraw}
+      \verb https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-19051
+      \endverb
+      \verb{url}
+      \verb https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-19051
+      \endverb
+    \endentry
+    \entry{MITECO2026}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=116efb60b65e868fc5279098a59a27a5}{%
+           family={{Ministerio para la Transición Ecológica y el Reto Demográfico (MITECO)}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{116efb60b65e868fc5279098a59a27a5}
+      \strng{fullhash}{116efb60b65e868fc5279098a59a27a5}
+      \strng{fullhashraw}{116efb60b65e868fc5279098a59a27a5}
+      \strng{bibnamehash}{116efb60b65e868fc5279098a59a27a5}
+      \strng{authorbibnamehash}{116efb60b65e868fc5279098a59a27a5}
+      \strng{authornamehash}{116efb60b65e868fc5279098a59a27a5}
+      \strng{authorfullhash}{116efb60b65e868fc5279098a59a27a5}
+      \strng{authorfullhashraw}{116efb60b65e868fc5279098a59a27a5}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Fichero local: \texttt{202610\_ESTADISTICAS-BIOS CERT DEFINITIVAS 2025.xlsx}}
+      \field{title}{Estadísticas Definitivas de Biocarburantes Certificables: Ejercicio 2025 (Octubre 2026)}
+      \field{year}{2026}
+      \verb{urlraw}
+      \verb https://www.miteco.gob.es
+      \endverb
+      \verb{url}
+      \verb https://www.miteco.gob.es
+      \endverb
+    \endentry
+    \entry{MoranAlarcon2026}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=f598ff9292871083224271315251b562}{%
+           family={Morán-Alarcón},
+           familyi={M\bibinithyphendelim A\bibinitperiod},
+           given={Luis\bibnamedelima Carlos},
+           giveni={L\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c545d77c6b92491382162f7ce884f18d}{%
+           family={Galán-Martín},
+           familyi={G\bibinithyphendelim M\bibinitperiod},
+           given={Ángel},
+           giveni={Á\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=34c3308f50c258659b3c902494d39053}{%
+           family={Contreras},
+           familyi={C\bibinitperiod},
+           given={María\bibnamedelimb del\bibnamedelima Mar},
+           giveni={M\bibinitperiod\bibinitdelim d\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=016b498433589d2580c7538d14062a2e}{%
+           family={Castro},
+           familyi={C\bibinitperiod},
+           given={Eulogio},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{c598213e91185815937e851d998cdf03}
+      \strng{fullhash}{978b824fae7f4a4b538c9ab5e0728270}
+      \strng{fullhashraw}{978b824fae7f4a4b538c9ab5e0728270}
+      \strng{bibnamehash}{978b824fae7f4a4b538c9ab5e0728270}
+      \strng{authorbibnamehash}{978b824fae7f4a4b538c9ab5e0728270}
+      \strng{authornamehash}{c598213e91185815937e851d998cdf03}
+      \strng{authorfullhash}{978b824fae7f4a4b538c9ab5e0728270}
+      \strng{authorfullhashraw}{978b824fae7f4a4b538c9ab5e0728270}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Renewable and Sustainable Energy Reviews}
+      \field{title}{Recent advances and future perspectives in the valorization of olive biomass for sustainable biorefinery applications}
+      \field{volume}{226}
+      \field{year}{2026}
+      \field{pages}{116438}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1016/j.rser.2025.116438
+      \endverb
+    \endentry
+    \entry{Padilla-Rascon2022}{article}{}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=77468ca7de40dc1ee18ec3ca815987c9}{%
+           family={Padilla-Rascón},
+           familyi={P\bibinithyphendelim R\bibinitperiod},
+           given={Carmen},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=93cb6ae5e4192d08b521182feee430fb}{%
+           family={Carvalheiro},
+           familyi={C\bibinitperiod},
+           given={Florbela},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=882b92eed0722d50477b94017a9b19c8}{%
+           family={Duarte},
+           familyi={D\bibinitperiod},
+           given={Luís\bibnamedelima C.},
+           giveni={L\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c3ce371aed2e261b84b9fd5654808d83}{%
+           family={Roseiro},
+           familyi={R\bibinitperiod},
+           given={Luísa\bibnamedelima B.},
+           giveni={L\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e8ff39404ed36a06128b10029e88316b}{%
+           family={Ruiz},
+           familyi={R\bibinitperiod},
+           given={Encarnación},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=016b498433589d2580c7538d14062a2e}{%
+           family={Castro},
+           familyi={C\bibinitperiod},
+           given={Eulogio},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{9e10efdf771e45db7c752ee57eb73749}
+      \strng{fullhash}{da3796214e4aa9790868891ca5ae6a72}
+      \strng{fullhashraw}{da3796214e4aa9790868891ca5ae6a72}
+      \strng{bibnamehash}{da3796214e4aa9790868891ca5ae6a72}
+      \strng{authorbibnamehash}{da3796214e4aa9790868891ca5ae6a72}
+      \strng{authornamehash}{9e10efdf771e45db7c752ee57eb73749}
+      \strng{authorfullhash}{da3796214e4aa9790868891ca5ae6a72}
+      \strng{authorfullhashraw}{da3796214e4aa9790868891ca5ae6a72}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Industrial Crops and Products}
+      \field{title}{An integrated olive stone biorefinery based on a two-step fractionation strategy}
+      \field{volume}{187}
+      \field{year}{2022}
+      \field{pages}{115157}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1016/j.indcrop.2022.115157
+      \endverb
+    \endentry
+    \entry{PerezMohedano2020}{report}{}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=d01748a6cfea155d840e1f8255cfc7c6}{%
+           family={Pérez\bibnamedelima Mohedano},
+           familyi={P\bibinitperiod\bibinitdelim M\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=43b2baff023d161856ce512dbd399f96}{%
+           family={Hidalgo\bibnamedelima Moya},
+           familyi={H\bibinitperiod\bibinitdelim M\bibinitperiod},
+           given={Juan\bibnamedelima Carlos},
+           giveni={J\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0ce4c36b663a1b75deb09333a5fc2cf5}{%
+           family={Hidalgo\bibnamedelima Moya},
+           familyi={H\bibinitperiod\bibinitdelim M\bibinitperiod},
+           given={Javier\bibnamedelima Jesús},
+           giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1a9f0ff88dcb58b07906daf0925c9aec}{%
+           family={Vega\bibnamedelima Macías},
+           familyi={V\bibinitperiod\bibinitdelim M\bibinitperiod},
+           given={Victorino\bibnamedelima Antonio},
+           giveni={V\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=46c25faa8417edba5be976799c81c1aa}{%
+           family={Leyva\bibnamedelima Bollero},
+           familyi={L\bibinitperiod\bibinitdelim B\bibinitperiod},
+           given={Ana},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {Instituto de Investigación y Formación Agraria y Pesquera (IFAPA). Consejería de Agricultura, Ganadería, Pesca y Desarrollo Sostenible, Junta de Andalucía}%
+      }
+      \strng{namehash}{7d2df729a5534688b9e3d7b15815d4f9}
+      \strng{fullhash}{4e357a91a18b6f9e7eb761a2389a0183}
+      \strng{fullhashraw}{4e357a91a18b6f9e7eb761a2389a0183}
+      \strng{bibnamehash}{4e357a91a18b6f9e7eb761a2389a0183}
+      \strng{authorbibnamehash}{4e357a91a18b6f9e7eb761a2389a0183}
+      \strng{authornamehash}{7d2df729a5534688b9e3d7b15815d4f9}
+      \strng{authorfullhash}{4e357a91a18b6f9e7eb761a2389a0183}
+      \strng{authorfullhashraw}{4e357a91a18b6f9e7eb761a2389a0183}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Manual Formativo: Poda del Olivar}
+      \field{year}{2020}
+      \verb{urlraw}
+      \verb https://www.juntadeandalucia.es/agriculturaypesca/ifapa/servifapa/
+      \endverb
+      \verb{url}
+      \verb https://www.juntadeandalucia.es/agriculturaypesca/ifapa/servifapa/
+      \endverb
+    \endentry
+    \entry{RomeroGarcia2014}{article}{}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=007d01a5d5a35dedb9e1deadec9e30b9}{%
+           family={Romero-García},
+           familyi={R\bibinithyphendelim G\bibinitperiod},
+           given={J.\bibnamedelimi M.},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=535c61cd68bf49e796cb05800b3332c3}{%
+           family={Niño},
+           familyi={N\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=33fd40014e8d4ecc00c5aca43274b955}{%
+           family={Martínez-Patiño},
+           familyi={M\bibinithyphendelim P\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f964de39a63fcd772124eef41a6d4040}{%
+           family={Álvarez},
+           familyi={Á\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=698e85174735cbc69b104630dd908555}{%
+           family={Castro},
+           familyi={C\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5def431f3e192b2ac6b939488bbc27e8}{%
+           family={Negro},
+           familyi={N\bibinitperiod},
+           given={M.\bibnamedelimi J.},
+           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{627a1a425b02ab02aff48cee5302af7e}
+      \strng{fullhash}{60de81008f0f1cbdd4a4402ca269dcec}
+      \strng{fullhashraw}{60de81008f0f1cbdd4a4402ca269dcec}
+      \strng{bibnamehash}{60de81008f0f1cbdd4a4402ca269dcec}
+      \strng{authorbibnamehash}{60de81008f0f1cbdd4a4402ca269dcec}
+      \strng{authornamehash}{627a1a425b02ab02aff48cee5302af7e}
+      \strng{authorfullhash}{60de81008f0f1cbdd4a4402ca269dcec}
+      \strng{authorfullhashraw}{60de81008f0f1cbdd4a4402ca269dcec}
+      \field{extraname}{1}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Bioresource Technology}
+      \field{title}{Biorefinery based on olive biomass. State of the art and future trends}
+      \field{volume}{159}
+      \field{year}{2014}
+      \field{pages}{421\bibrangedash 432}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1016/j.biortech.2014.03.062
+      \endverb
+    \endentry
+    \entry{RomeroGarcia2022}{article}{}{}
+      \name{author}{7}{}{%
+        {{un=0,uniquepart=base,hash=007d01a5d5a35dedb9e1deadec9e30b9}{%
+           family={Romero-García},
+           familyi={R\bibinithyphendelim G\bibinitperiod},
+           given={J.\bibnamedelimi M.},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=76edddb3a758a924ad28b007fea1244c}{%
+           family={Susmozas},
+           familyi={S\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c34a0c5fef08b390e537d1c28aadf719}{%
+           family={Padilla-Rascón},
+           familyi={P\bibinithyphendelim R\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=318fe63b042f59a658e5a740e7e99944}{%
+           family={Manzanares},
+           familyi={M\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=698e85174735cbc69b104630dd908555}{%
+           family={Castro},
+           familyi={C\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0601a32a2863d76d56385d7b99473e6a}{%
+           family={Oliva},
+           familyi={O\bibinitperiod},
+           given={J.\bibnamedelimi M.},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=dffe98a62d5700ea8f06c3b6305d6e4e}{%
+           family={Romero},
+           familyi={R\bibinitperiod},
+           given={I.},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{627a1a425b02ab02aff48cee5302af7e}
+      \strng{fullhash}{4336be850ee66327a9d074d85b055ff8}
+      \strng{fullhashraw}{4336be850ee66327a9d074d85b055ff8}
+      \strng{bibnamehash}{4336be850ee66327a9d074d85b055ff8}
+      \strng{authorbibnamehash}{4336be850ee66327a9d074d85b055ff8}
+      \strng{authornamehash}{627a1a425b02ab02aff48cee5302af7e}
+      \strng{authorfullhash}{4336be850ee66327a9d074d85b055ff8}
+      \strng{authorfullhashraw}{4336be850ee66327a9d074d85b055ff8}
+      \field{extraname}{2}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Renewable Energy}
+      \field{title}{Ethanol production from olive stones using different process strategies}
+      \field{volume}{194}
+      \field{year}{2022}
+      \field{pages}{1174\bibrangedash 1183}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1016/j.renene.2022.06.022
+      \endverb
+    \endentry
+    \entry{Ronda2027}{article}{}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=8adca879b630eace23ae2201139628b3}{%
+           family={Ronda},
+           familyi={R\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9d9c591936ade3eb481278372e4811ed}{%
+           family={Moreno},
+           familyi={M\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d2adff8af5100e7342d6d3e0abd172ba}{%
+           family={Blázquez},
+           familyi={B\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7357e9c4f562329d721f305521b34217}{%
+           family={Moliner},
+           familyi={M\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8997b0ed0f90daf853ca9fad4255e2fb}{%
+           family={Aratto},
+           familyi={A\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1cb52b32b3bb91d3d50a88d8da1c5add}{%
+           family={Haro},
+           familyi={H\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{b80699ebecfb5d7ad9edf2bbb7093d53}
+      \strng{fullhash}{761b496a47e0ae690b9142c93a176a1c}
+      \strng{fullhashraw}{761b496a47e0ae690b9142c93a176a1c}
+      \strng{bibnamehash}{761b496a47e0ae690b9142c93a176a1c}
+      \strng{authorbibnamehash}{761b496a47e0ae690b9142c93a176a1c}
+      \strng{authornamehash}{b80699ebecfb5d7ad9edf2bbb7093d53}
+      \strng{authorfullhash}{761b496a47e0ae690b9142c93a176a1c}
+      \strng{authorfullhashraw}{761b496a47e0ae690b9142c93a176a1c}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Biomass and Bioenergy}
+      \field{title}{A multi-scale approach to hydrothermal liquefaction of two-phase olive mill waste: From laboratory test to regional biorefinery in Andalusia}
+      \field{volume}{217}
+      \field{year}{2027}
+      \field{pages}{109793}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1016/j.biombioe.2026.109793
+      \endverb
+    \endentry
+    \entry{REDII2018}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=6df64dab21ea48c1eb2bfb0352897155}{%
+           family={{Unión Europea}},
+           familyi={U\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Diario Oficial de la Unión Europea (DO L 328 de 21.12.2018, p. 82)}%
+      }
+      \strng{namehash}{6df64dab21ea48c1eb2bfb0352897155}
+      \strng{fullhash}{6df64dab21ea48c1eb2bfb0352897155}
+      \strng{fullhashraw}{6df64dab21ea48c1eb2bfb0352897155}
+      \strng{bibnamehash}{6df64dab21ea48c1eb2bfb0352897155}
+      \strng{authorbibnamehash}{6df64dab21ea48c1eb2bfb0352897155}
+      \strng{authornamehash}{6df64dab21ea48c1eb2bfb0352897155}
+      \strng{authorfullhash}{6df64dab21ea48c1eb2bfb0352897155}
+      \strng{authorfullhashraw}{6df64dab21ea48c1eb2bfb0352897155}
+      \field{extraname}{1}
+      \field{sortinit}{U}
+      \field{sortinithash}{6901a00e45705986ee5e7ca9fd39adca}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Directiva (UE) 2018/2001 del Parlamento Europeo y del Consejo, de 11 de diciembre de 2018, relativa al fomento del uso de energía procedente de fuentes renovables (RED II)}
+      \field{year}{2018}
+      \verb{urlraw}
+      \verb http://data.europa.eu/eli/dir/2018/2001/oj
+      \endverb
+      \verb{url}
+      \verb http://data.europa.eu/eli/dir/2018/2001/oj
+      \endverb
+    \endentry
+    \entry{REDIII2023}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=6df64dab21ea48c1eb2bfb0352897155}{%
+           family={{Unión Europea}},
+           familyi={U\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Diario Oficial de la Unión Europea (DO L 2023/2413, 31.10.2023)}%
+      }
+      \strng{namehash}{6df64dab21ea48c1eb2bfb0352897155}
+      \strng{fullhash}{6df64dab21ea48c1eb2bfb0352897155}
+      \strng{fullhashraw}{6df64dab21ea48c1eb2bfb0352897155}
+      \strng{bibnamehash}{6df64dab21ea48c1eb2bfb0352897155}
+      \strng{authorbibnamehash}{6df64dab21ea48c1eb2bfb0352897155}
+      \strng{authornamehash}{6df64dab21ea48c1eb2bfb0352897155}
+      \strng{authorfullhash}{6df64dab21ea48c1eb2bfb0352897155}
+      \strng{authorfullhashraw}{6df64dab21ea48c1eb2bfb0352897155}
+      \field{extraname}{2}
+      \field{sortinit}{U}
+      \field{sortinithash}{6901a00e45705986ee5e7ca9fd39adca}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Directiva (UE) 2023/2413 del Parlamento Europeo y del Consejo, de 18 de octubre de 2023, por la que se modifican la Directiva (UE) 2018/2001, el Reglamento (UE) 2018/1999 y la Directiva 98/70/CE en lo que respecta a la promoción de la energía procedente de fuentes renovables (RED III)}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb http://data.europa.eu/eli/dir/2023/2413/oj
+      \endverb
+      \verb{url}
+      \verb http://data.europa.eu/eli/dir/2023/2413/oj
+      \endverb
+    \endentry
+  \enddatalist
+  \missing{RomeroGarcia2016}
+\endrefsection
+\endinput
+

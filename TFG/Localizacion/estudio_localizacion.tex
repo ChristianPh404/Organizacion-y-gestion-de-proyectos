@@ -1,0 +1,558 @@
+\documentclass{report}
+
+\input{preamble} % Configuración y paquetes de diseño
+\input{macros}
+\input{letterfonts}
+
+\usepackage{booktabs}
+\usepackage{siunitx}
+\usepackage{adjustbox}
+\usepackage{pdflscape}
+\usepackage[backend=biber, style=apa]{biblatex}
+\usepackage{caption}
+\usepackage{multirow}
+\usepackage{csquotes}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usetikzlibrary{positioning, arrows.meta, calc}
+
+\addto\captionsspanish{
+  \renewcommand{\contentsname}{Índice General}
+}
+
+\graphicspath{ {./Doc/Fotos/} {./figuras/} {./} }
+\addbibresource{Referencias.bib}
+
+\definecolor{darkgreen}{rgb}{0,0.6,0}
+\definecolor{oliveg}{RGB}{72,118,41}
+\definecolor{stoneb}{RGB}{140,86,38}
+\definecolor{woodc}{RGB}{43,92,143}
+
+\title{
+    \includegraphics[width=0.32\textwidth]{escudo.png}\\[1.4cm]
+    {\LARGE\textbf{Biorrefinería Oleícola por Vía Enzimática y Organosolv}}\\[1.1em]
+    {\Large\textbf{Documento nº 2: Estudio de Localización, Implantación y Planos Justificativos}}\\[1.5em]
+    {\large\textit{Asignatura: Organización y Gestión de Proyectos --- Curso Académico 2026/2027}}
+}
+\author{\Large\textbf{Christian Pérez Hita}\\[0.5em] \large Grado en Ingeniería Química \\ \large Escuela Técnica Superior de Ingenierías Informática y de Telecomunicación / Facultad de Ciencias \\ \large Universidad de Granada (UGR)}
+\date{Noviembre 2026}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+El presente documento constituye la memoria técnica del estudio de localización e implantación industrial para la implantación de una planta biorrefinería oleícola multibiomasa de escala comercial (\SI{120000}{\tonne\text{ b.s.}/a\text{\~{n}}o}), diseñada para valorizar secuencialmente hueso de aceituna (\SI{15000}{\tonne\text{ b.s.}/a\text{\~{n}}o}), hoja de olivo (\SI{40000}{\tonne\text{ b.s.}/a\text{\~{n}}o}) y madera procedente de restos de poda del olivar (\SI{65000}{\tonne\text{ b.s.}/a\text{\~{n}}o}) mediante fraccionamiento Organosolv e hidrólisis enzimática.
+
+A partir de los aforos oleícolas oficiales de la Agencia de Información y Control Alimentarios (\textcite{AICA2026}) y la base de datos empresarial SABI (\textcite{SABI2026}), se establece como cuenca de captación óptima el triángulo geográfico Córdoba--Granada--Jaén (\num{620} almazaras activas y \num{3885605.3}~t de aceituna molturada en la campaña 2025/2026). La aplicación del método comarcal del \textit{Ratio SABI de Oportunidad} (ingresos de almazaras frente a competencia de plantas de combustión térmica) y el método cualitativo por factores ponderados a nivel macro determina que la provincia de Granada obtiene la máxima puntuación (\num{8.60}/10), superando a Córdoba (\num{8.10}/10) y Jaén (\num{7.45}/10), al presentar la mayor disponibilidad excedentaria de subproductos con mínima canibalización de precios.
+
+A nivel de microlocalización, se contrastan tres alternativas en suelo industrial consolidado: el Polígono Industrial El Manzanil~II en Loja (Granada), el Polígono Industrial Los Santos en Lucena (Córdoba) y el Polígono Industrial Llano Mazuelos en Alcalá la Real (Jaén). El análisis cuantitativo mediante el método de Brown y Gibson, integrando factores críticos ($FC_i = 1$), costes anuales objetivos ($FO_i$) y factores subjetivos ($FS_i$), confirma a Loja como el emplazamiento idóneo con un índice de preferencia $MPL = \num{0.3592}$ (frente a \num{0.3389} en Lucena y \num{0.3019} en Alcalá la Real para $\alpha = \num{0.70}$). El análisis de sensibilidad paramétrico demuestra que Loja es la alternativa dominante de forma incondicional para cualquier valor del factor de ponderación objetiva $\alpha \in [0, 1]$.
+
+El estudio se complementa con la definición de los planos justificativos de situación territorial (escala normalizada 1:50.000 con enlace directo a la autovía A-92) y de localización en parcela (escala 1:2.000, Parcela I-14/15 con \SI{25000}{\square\metre} de superficie neta), la acreditación del cumplimiento estricto del planeamiento urbanístico del PGOU de Loja, la verificación de mano de obra comarcal según el INE, y la formulación de las bases de implantación y ordenación espacial mediante la metodología SLP (\textit{Systematic Layout Planning}) de Muther.
+\end{abstract}
+
+\tableofcontents
+\newpage
+
+%=============================================================================
+\chapter{Introducción, Objeto y Vinculación con el Estudio de Mercado}
+
+\section{Objeto y Alcance del Estudio}
+La localización de una planta de proceso químico constituye una de las decisiones estratégicas de mayor trascendencia en la ingeniería de proyectos, condicionando de manera irreversible los costes logísticos de aprovisionamiento de materias primas, los gastos de distribución de productos terminados, el régimen fiscal y normativo aplicable, la disponibilidad de mano de obra cualificada y la viabilidad económica global de la inversión a lo largo de sus \num{20} años de vida útil proyectada.
+
+El presente estudio tiene por objeto determinar, justificar documentalmente y representar cartográficamente el emplazamiento óptimo para la construcción de una planta biorrefinería oleícola, siguiendo los requerimientos metodológicos establecidos en el Seminario de Localización de la asignatura \textit{Organización y Gestión de Proyectos} y las directrices técnicas del Trabajo de Fin de Grado en Ingeniería Química por la Universidad de Granada.
+
+\section{Bases de Capacidad Derivadas del Estudio de Mercado}
+Los parámetros de partida dimensionales y cuantitativos se fundamentan estrictamente en los resultados consolidados en el \textit{Estudio de Mercado, Estacionalidad y Capacidad} (Documento nº~1, \textcite{PerezHita2026}):
+\begin{enumerate}
+    \item \textbf{Capacidad nominal de diseño:} Se adopta el escenario multibiomasa B-5 adaptado con una capacidad global de procesamiento de:
+          \begin{equation}
+              C_{\text{nominal}} = \SI{120000}{\tonne\text{ b.s.}/a\text{\~{n}}o}
+          \end{equation}
+          equivalente a un caudal horario de procesamiento continuo de \SI{17.30}{\tonne\text{ b.s.}/h} sobre un régimen de operación industrial de \SI{6936}{h/a\text{\~{n}}o} (\num{289} días hábiles anuales en tres turnos rotativos).
+    \item \textbf{Cesta de materias primas lignocelulósicas:}
+          \begin{itemize}
+              \item \textbf{Hueso de aceituna (\textit{Olive stone}, fracción B-1):} \SI{15000}{\tonne\text{ b.s.}/a\text{\~{n}}o} (\SI{16304}{\tonne/a\text{\~{n}}o} comerciales en base húmeda al \SI{8.0}{\percent}). Materia prima de alta densidad energética y excelente estabilidad de almacenamiento prolongado en silos.
+              \item \textbf{Hoja de olivo de almazara y poda (\textit{Olive tree leaves}, fracción B-2):} \SI{40000}{\tonne\text{ b.s.}/a\text{\~{n}}o} (\SI{50000}{\tonne/a\text{\~{n}}o} húmedas al \SI{20.0}{\percent}). Aporta azúcares fermentables y compuestos polifenólicos de alto valor añadido.
+              \item \textbf{Madera y ramas de poda del olivar (\textit{Olive tree pruning wood}, fracción B-4):} \SI{65000}{\tonne\text{ b.s.}/a\text{\~{n}}o} (\SI{81250}{\tonne/a\text{\~{n}}o} frescas al \SI{20.0}{\percent}). Constituye la corriente leñosa mayoritaria y asegura la continuidad de operación entre marzo y octubre, desacoplada de la estacionalidad de la molienda de la aceituna.
+          \end{itemize}
+    \item \textbf{Cuenca de aprovisionamiento de referencia:} El triángulo provincial \textbf{Córdoba--Granada--Jaén}, que agrupa el \SI{55.48}{\percent} de la aceituna molturada en España (\num{3885605.3}~t en \num{620} almazaras activas en la campaña 2025/2026 según \textcite{AICA2026}), generando \num{339602}~t b.s./año de hueso comercial, \num{311038}~t b.s./año de hoja aprovechable y \num{1555763}~t b.s./año de poda de olivo (\num{583411}~t b.s./año de madera gruesa mecanizable).
+    \item \textbf{Tasa de captación del proyecto:} El consumo de la planta representa únicamente el \textbf{\SI{4.42}{\percent}} del hueso disponible en el triángulo, el \textbf{\SI{12.86}{\percent}} del potencial foliar y el \textbf{\SI{11.14}{\percent}} de la madera de poda gruesa, lo que garantiza la ausencia absoluta de tensionamiento o desabastecimiento en el mercado comarcal.
+\end{enumerate}
+
+\section{Metodología Secuencial de Decisión}
+Conforme a las recomendaciones de la literatura especializada en ingeniería de plantas químicas (\textcite{PetersTimmerhaus2003, Turton2018}) y al temario oficial del seminario, el proceso de selección se articula en tres etapas jerárquicas:
+\begin{enumerate}
+    \item \textbf{Macrolocalización regional:} Selección de la comarca y provincia óptima mediante la triangulación de bases de datos empresariales (\textbf{SABI / Informa}), balances oleícolas oficiales (\textbf{AICA / MAPA}) y la aplicación del \textit{Método Cualitativo por Puntos / Factores Ponderados}.
+    \item \textbf{Microlocalización parcelaria:} Evaluación de tres alternativas concretas de polígonos industriales mediante el algoritmo cuantitativo de \textbf{Brown y Gibson}, integrando factores críticos ($FC_i$), costes anualizados objetivos ($FO_i$) y atributos subjetivos ponderados ($FS_i$).
+    \item \textbf{Planos justificativos y planeamiento urbanístico:} Documentación cartográfica normalizada (Plano de Situación 1:50.000 y Plano de Localización 1:2.000) y justificación de ordenanzas del Plan General de Ordenación Urbana (PGOU).
+\end{enumerate}
+
+%=============================================================================
+\chapter{Macrolocalización Territorial}
+
+\section{Justificación Cuantitativa Comarcal con SABI y AICA}
+Para fundamentar objetivamente la macrolocalización y evitar sesgos cualitativos arbitrarios, se ha llevado a cabo una prospección comarcal en la base de datos empresarial \textbf{SABI (Sistema de Análisis de Balances Ibéricos, Informa D\&B / Bureau van Dijk, \autocite{SABI2026})}, cruzada con los censos agroalimentarios de \textbf{AICA (\autocite{AICA2026})} y el mapa de plantas de aprovechamiento de biomasa de \textbf{AVEBIOM (\autocite{AVEBIOM2026})}:
+\begin{enumerate}
+    \item Se han censado todas las empresas con actividad bajo el código \textbf{CNAE 1043} (\textit{Fabricación de aceite de oliva}) con instalaciones industriales operativas en las provincias de Granada, Córdoba y Jaén.
+    \item Se ha agregado la cifra neta de negocios e ingresos de explotación comarcal ($\sum \text{Ingresos CNAE 1043}$, en millones de euros), como indicador directo de la masa crítica de aceituna molturada y hueso producido en el entorno de proximidad.
+    \item Se ha inventariado el número de instalaciones consumidoras de biomasa existentes en un radio de \SI{50}{\kilo\metre} (orujeras extractoras con secaderos térmicos de orujo graso, plantas de cogeneración y secaderos industriales), las cuales representan la competencia directa que canibaliza la compra de hueso para quema térmica de baja eficiencia.
+    \item Se formula el \textbf{Ratio SABI de Oportunidad}:
+          \begin{equation}
+              \text{Ratio SABI} = \frac{\sum \text{Ingresos de Explotación CNAE 1043 (M€)}}{\text{Número de Plantas Competidoras (Orujeras y Combustión)}}
+          \end{equation}
+\end{enumerate}
+La comarca con el mayor ratio representa la ubicación de mayor equilibrio y rentabilidad para la biorrefinería: máxima disponibilidad agregada de materia prima con la menor presión competitiva sobre los precios de compraventa (Tabla~\ref{tab:sabi_ratio}).
+
+\begin{table}[H]
+    \centering
+    \caption{Análisis cuantitativo de oportunidad y competencia comarcal con SABI y AICA.}
+    \label{tab:sabi_ratio}
+    \adjustbox{max width=\textwidth}{%
+        \renewcommand{\arraystretch}{1.24}
+        \setlength{\tabcolsep}{4.5pt}
+        \small
+        \begin{tabular}{l l c c c c}
+            \toprule
+            \textbf{Comarca Oleícola}                             & \textbf{Provincia} & \textbf{\shortstack{Ingresos CNAE\\1043 (M€)}} & \textbf{\shortstack{Almazaras\\Activas}} & \textbf{\shortstack{Competidores\\Biomasa}} & \textbf{\shortstack{Ratio SABI\\(M€/comp.)}} \\
+            \midrule
+            \textbf{Poniente Granadino (Loja / Montefrío)}        & \textbf{Granada}   & \textbf{385.4 M€}                              & \num{42}                                 & \num{3}                                     & \textbf{128.47 (Ganadora)}                       \\
+            \textbf{Montes de Granada (Iznalloz / Guadahortuna)}  & Granada            & 215.2 M€                                       & \num{28}                                 & \num{2}                                     & 107.60                                           \\
+            \textbf{Subbética Cordobesa (Lucena / Priego / Cabra)} & Córdoba            & 590.8 M€                                       & \num{68}                                 & \num{7}                                     & 84.40                                            \\
+            \textbf{Campiña Sur Cordobesa (Puente Genil / Montilla)} & Córdoba          & 410.5 M€                                       & \num{46}                                 & \num{5}                                     & 82.10                                            \\
+            \textbf{Sierra Sur de Jaén (Alcalá la Real / Martos)} & Jaén               & 695.0 M€                                       & \num{74}                                 & \num{11}                                    & 63.18                                            \\
+            \textbf{Campiña de Jaén (Mengíbar / Andújar / Úbeda)} & Jaén               & 780.2 M€                                       & \num{85}                                 & \num{14}                                    & 55.73                                            \\
+            \bottomrule
+        \end{tabular}%
+    }
+\end{table}
+
+Los resultados evidencian una marcada diferenciación comarcal: si bien la Campiña de Jaén y la Sierra Sur concentran los mayores volúmenes brutos de molturación, la densa concentración de orujeras industriales tradicionales (hasta \num{14} plantas extractoras) provoca una fortísima saturación del mercado del hueso, elevando sus costes de adquisición hasta 240--260~€/t (\textcite{AVEBIOM2026}). Por el contrario, el \textbf{Poniente Granadino} lidera con un ratio de \textbf{128,47~M€/competidor}, ofreciendo una cuenca limpia de abastecimiento con \num{42} almazaras concentradas y escasa competencia industrial.
+
+\section{Macrolocalización: Método Cualitativo por Factores Ponderados}
+A partir del análisis comarcal precedente, se formaliza la evaluación provincial multicriterio comparando las tres provincias que constituyen el triángulo oleícola. De acuerdo con el procedimiento del Seminario 4, se definen los siguientes factores y coeficientes de ponderación ($w_i$, con $\sum w_i = 1.00$):
+\begin{itemize}
+    \item \textbf{Disponibilidad agregada de biomasa ($w_1 = \num{0.25}$):} Cuantía de hueso de aceituna, hoja y leña de poda en un radio económico de transporte ($\le \SI{60}{\kilo\metre}$). Jaén (\num{10.0}), Córdoba (\num{9.0}) y Granada (\num{8.0}), conforme a los aforos de \textcite{MAPA2025, AICA2026}.
+    \item \textbf{Baja competencia térmica / Ratio SABI ($w_2 = \num{0.20}$):} Ausencia de canibalización de materia prima por orujeras extractoras y plantas térmicas. Granada (\num{9.5}) aventaja notablemente a Córdoba (\num{7.0}) y Jaén (\num{4.0}), según la prospección empírica de SABI.
+    \item \textbf{Infraestructura energética y gasista ($w_3 = \num{0.20}$):} Capacidad de acometida eléctrica a la red troncal de transporte en Alta Tensión (Red Eléctrica de España) y cercanía a gasoductos de transporte primario de gas natural (Enagás / Nedgia) para suministro auxiliar de calderas y cogeneración.
+    \item \textbf{Cercanía a clientes de bioetanol y refinerías ($w_4 = \num{0.15}$):} Distancia a centros logísticos de mezcla de carburantes y refinerías de petróleo (\textit{off-takers} de bioetanol avanzado según los mandatos de la directiva RED~III / Real Decreto 376/2022). Se evalúan las rutas hacia Moeve San Roque (Cádiz), CLH Cartagena y refinería de Huelva (\textcite{CORES2026}).
+    \item \textbf{Comunicaciones viarias y red de autovías ($w_5 = \num{0.10}$):} Accesibilidad directa por vías de gran capacidad de doble calzada (ejes A-92, A-44 y A-45), minimizando los tiempos de tránsito y costes de flete de camiones cisterna y bañeras basculantes.
+    \item \textbf{Recursos hídricos y saneamiento industrial ($w_6 = \num{0.10}$):} Concesión de dotación de agua bruta de proceso y capacidad de asimilación de efluentes en depuradoras comarcales adscritas a la cuenca hidrográfica regulada (Confederación Hidrográfica del Guadalquivir).
+\end{itemize}
+
+\begin{table}[H]
+    \centering
+    \caption{Matriz de decisión de Macrolocalización por el Método Cualitativo de Factores Ponderados.}
+    \label{tab:matriz_macrolocalizacion}
+    \adjustbox{max width=\textwidth}{%
+        \renewcommand{\arraystretch}{1.24}
+        \setlength{\tabcolsep}{4.5pt}
+        \small
+        \begin{tabular}{l c cc cc cc}
+            \toprule
+            \multirow{2}{*}{\textbf{Factor de Localización}} & \multirow{2}{*}{\textbf{Peso ($w_i$)}} & \multicolumn{2}{c}{\textbf{Granada}} & \multicolumn{2}{c}{\textbf{Córdoba}} & \multicolumn{2}{c}{\textbf{Jaén}} \\
+            \cmidrule(lr){3-4} \cmidrule(lr){5-6} \cmidrule(lr){7-8}
+                                                             &                                        & Calificación & Ponderada & Calificación & Ponderada & Calificación & Ponderada \\
+            \midrule
+            1. Disponibilidad de materia prima (AICA/MAPA)   & 0.25                                   & 8.0          & 2.00      & 9.0          & 2.25      & 10.0         & 2.50      \\
+            2. Baja competencia térmica / Ratio SABI         & 0.20                                   & 9.5          & 1.90      & 7.0          & 1.40      & 4.0          & 0.80      \\
+            3. Infraestructura energética (AT y Gasoducto)   & 0.20                                   & 9.0          & 1.80      & 8.0          & 1.60      & 8.0          & 1.60      \\
+            4. Cercanía a clientes / Off-takers bioetanol    & 0.15                                   & 8.0          & 1.20      & 9.0          & 1.35      & 7.0          & 1.05      \\
+            5. Comunicaciones y logística viaria (Autovías)  & 0.10                                   & 9.0          & 0.90      & 9.0          & 0.90      & 8.0          & 0.80      \\
+            6. Disponibilidad de agua y vertido (CHG)        & 0.10                                   & 8.0          & 0.80      & 7.0          & 0.70      & 7.0          & 0.70      \\
+            \midrule
+            \textbf{PUNTUACIÓN TOTAL PONDERADA}              & \textbf{1.00}                          & \textbf{--}  & \textbf{8.60 (Ganadora)} & \textbf{--} & \textbf{8.10} & \textbf{--} & \textbf{7.45} \\
+            \bottomrule
+        \end{tabular}%
+    }
+\end{table}
+
+La provincia de \textbf{Granada obtiene la mayor calificación ponderada (\num{8.60}/10)}, impulsada de forma determinante por el excelente desempeño del Poniente Granadino frente a la saturación térmica que penaliza a Jaén y la mayor dispersión logística de Córdoba.
+
+%=============================================================================
+\chapter{Microlocalización y Selección de Parcela Industrial}
+
+\section{Caracterización de las Alternativas Candidatas}
+Habiéndose determinado la comarca del Poniente Granadino y su entorno limítrofe como el ámbito macro territorial preferente, se seleccionan tres áreas industriales concretas que reúnen la condición de suelo industrial consolidado, accesibilidad pesada y disponibilidad de parcelas de gran superficie ($\ge \SI{20000}{\square\metre}$):
+\begin{enumerate}
+    \item \textbf{Alternativa A: Polígono Industrial El Manzanil~II (Término Municipal de Loja, Granada).}
+          \begin{itemize}
+              \item \textit{Localización:} Situado en el P.K. 187 de la Autovía A-92 (Corredor Transversal Andaluz).
+              \item \textit{Ventajas:} Nudo logístico equidistante entre Granada (\SI{52}{\kilo\metre}), Málaga y su puerto comercial (\SI{68}{\kilo\metre}), Antequera (\SI{45}{\kilo\metre}) y Sevilla (\SI{195}{\kilo\metre}). Cuenta con gasoducto secundario MOP 16~bar a pie de polígono, subestación transformadora de 20~kV y abundante dotación hídrica procedente del acuífero regulado de la Sierra de Loja (cuenca del río Genil).
+              \item \textit{Coste del suelo:} Moderado-bajo en parcelas de gran formato (\SI{58}{\text{€}/\metre\squared}).
+          \end{itemize}
+    \item \textbf{Alternativa B: Polígono Industrial Los Santos (Término Municipal de Lucena, Córdoba).}
+          \begin{itemize}
+              \item \textit{Localización:} Enlace directo con la Autovía A-45 (Córdoba--Málaga) y la autovía del Olivar A-318.
+              \item \textit{Ventajas:} Centro geográfico de Andalucía, elevada tradición industrial agroalimentaria y excelente disponibilidad de talleres auxiliares mecánicos.
+              \item \textit{Inconvenientes:} Mayor carestía de suelo industrial (\SI{85}{\text{€}/\metre\squared}) y congestión de tráfico pesado en los accesos al nudo de Lucena.
+          \end{itemize}
+    \item \textbf{Alternativa C: Polígono Industrial Llano Mazuelos (Término Municipal de Alcalá la Real, Jaén).}
+          \begin{itemize}
+              \item \textit{Localización:} Conexión con la carretera nacional N-432 (Badajoz--Granada) y próximo al eje A-44.
+              \item \textit{Ventajas:} Proximidad inmediata a grandes cooperativas oleícolas de la Sierra Sur y bonificaciones fiscales municipales del Ayuntamiento de Alcalá la Real.
+              \item \textit{Inconvenientes:} Comunicaciones en calzada única con tramos sinuosos en la N-432 hacia Granada y Córdoba, mayores costes de transporte de producto terminado hacia refinerías y mayor distancia a la red de gasoducto troncal.
+          \end{itemize}
+\end{enumerate}
+
+\section{Evaluación por el Método Cualitativo por Puntos}
+Conforme a la metodología del Seminario 4 (diapositivas 15--16), se evalúan las tres alternativas asignando pesos ponderados a los factores clave de microlocalización (Tabla~\ref{tab:micro_puntos}).
+
+\begin{table}[H]
+    \centering
+    \caption{Evaluación de Microlocalización mediante el Método Cualitativo por Puntos.}
+    \label{tab:micro_puntos}
+    \adjustbox{max width=\textwidth}{%
+        \renewcommand{\arraystretch}{1.24}
+        \setlength{\tabcolsep}{4.0pt}
+        \small
+        \begin{tabular}{l c cc cc cc}
+            \toprule
+            \multirow{2}{*}{\textbf{Factor de Localización}} & \multirow{2}{*}{\textbf{Peso ($w_i$)}} & \multicolumn{2}{c}{\textbf{Loja (El Manzanil)}} & \multicolumn{2}{c}{\textbf{Lucena (Los Santos)}} & \multicolumn{2}{c}{\textbf{Alcalá (Llano Maz.)}} \\
+            \cmidrule(lr){3-4} \cmidrule(lr){5-6} \cmidrule(lr){7-8}
+                                                             &                                        & Calificación & Ponderada & Calificación & Ponderada & Calificación & Ponderada \\
+            \midrule
+            1. Coste y disponibilidad de suelo industrial    & 0.20                                   & 9.0          & 1.80      & 7.0          & 1.40      & 8.0          & 1.60      \\
+            2. Accesos viarios directos a autovía (A-92/A-45)& 0.20                                   & 9.5          & 1.90      & 8.5          & 1.70      & 6.5          & 1.30      \\
+            3. Acometida eléctrica MT/AT y gas natural       & 0.15                                   & 9.0          & 1.35      & 8.0          & 1.20      & 7.0          & 1.05      \\
+            4. Dotación de agua y saneamiento industrial     & 0.15                                   & 8.5          & 1.28      & 7.5          & 1.13      & 7.5          & 1.13      \\
+            5. Disponibilidad de mano de obra y FP técnica   & 0.15                                   & 8.5          & 1.28      & 9.0          & 1.35      & 7.5          & 1.13      \\
+            6. Incentivos locales y apoyo institucional      & 0.15                                   & 8.0          & 1.20      & 8.0          & 1.20      & 9.0          & 1.35      \\
+            \midrule
+            \textbf{PUNTUACIÓN TOTAL PONDERADA}              & \textbf{1.00}                          & \textbf{--}  & \textbf{8.81 (1º)} & \textbf{--} & \textbf{7.98 (2º)} & \textbf{--} & \textbf{7.56 (3º)} \\
+            \bottomrule
+        \end{tabular}%
+    }
+\end{table}
+
+\section{Evaluación Rigurosa por el Método de Brown y Gibson}
+Para contrastar y validar matemáticamente la elección, se implementa el algoritmo cuantitativo de \textbf{Brown y Gibson} (\textcite{PetersTimmerhaus2003}), el cual combina factores críticos, costes objetivos y factores subjetivos:
+\begin{enumerate}
+    \item \textbf{Factores Críticos ($FC_i$):} Condiciones indispensables de naturaleza binaria ($FC_i \in \{0, 1\}$). Se verifica que los tres emplazamientos satisfacen plenamente los cuatro factores críticos: disponibilidad de agua ($FC_{\text{agua}} = 1$), suministro de energía eléctrica ($FC_{\text{energía}} = 1$), clasificación urbanística industrial consolidada ($FC_{\text{urbanístico}} = 1$) y accesibilidad para transporte pesado ($FC_{\text{accesos}} = 1$):
+          \begin{equation}
+              FC_i = \prod_{j=1}^m FC_{ij} = 1.0, \quad \forall i \in \{\text{Loja, Lucena, Alcalá}\}
+          \end{equation}
+    \item \textbf{Factores Objetivos de Coste ($FO_i$):} Se estiman los costes anuales objetivos ($C_i$) asociados a la explotación en cada polígono:
+          \begin{itemize}
+              \item Amortización anualizada del suelo industrial y obras de urbanización exterior (adquisición de \SI{25000}{\square\metre}).
+              \item Coste anual de flete y transporte de biomasa (aprovisionamiento comarcal) y expedición de bioetanol y lignina.
+              \item Coste de acometidas e infraestructuras energéticas de conexión.
+          \end{itemize}
+          El valor del factor objetivo para cada localización se calcula mediante el inverso de los costes:
+          \begin{equation}
+              FO_i = \frac{\frac{1}{C_i}}{\sum_{j=1}^n \frac{1}{C_j}}
+          \end{equation}
+    \item \textbf{Factores Subjetivos Ponderados ($FS_i$):} Cuantificación agregada de los atributos no monetarios (clima laboral, servicios de emergencia, facilidades administrativas y entorno residencial):
+          \begin{equation}
+              \sum_{i=1}^n FS_i = 1.0000
+          \end{equation}
+    \item \textbf{Medida de Preferencia de Localización ($MPL_i$):}
+          \begin{equation}
+              MPL_i = FC_i \cdot \left[ \alpha \cdot FO_i + (1 - \alpha) \cdot FS_i \right]
+          \end{equation}
+          donde $\alpha \in [0, 1]$ representa el peso otorgado a los factores objetivos de coste frente a los factores subjetivos (adoptándose $\alpha = \num{0.70}$ como caso base de ingeniería de procesos).
+\end{enumerate}
+
+\begin{table}[H]
+    \centering
+    \caption{Resultados del Método de Brown y Gibson para microlocalización ($\alpha = \num{0.70}$).}
+    \label{tab:brown_gibson}
+    \adjustbox{max width=\textwidth}{%
+        \renewcommand{\arraystretch}{1.24}
+        \setlength{\tabcolsep}{5.0pt}
+        \small
+        \begin{tabular}{l c c c c c}
+            \toprule
+            \textbf{Polígono Industrial Candidato}                  & \textbf{$FC_i$} & \textbf{Coste Anual ($C_i$, €)} & \textbf{$FO_i$ (Objetivo)} & \textbf{$FS_i$ (Subjetivo)} & \textbf{$MPL_i$ ($\alpha = \num{0.70}$)} \\
+            \midrule
+            \textbf{El Manzanil II / Loja (Granada)}               & \num{1.0}       & \num{1450000}                       & \num{0.3503}               & \num{0.3800}                & \textbf{0.3592 (1º Ganador)}             \\
+            \textbf{Los Santos / Lucena (Córdoba)}                 & \num{1.0}       & \num{1520000}                       & \num{0.3342}               & \num{0.3500}                & \textbf{0.3389 (2º)}                     \\
+            \textbf{Llano Mazuelos / Alcalá la Real (Jaén)}         & \num{1.0}       & \num{1610000}                       & \num{0.3155}               & \num{0.2700}                & \textbf{0.3019 (3º)}                     \\
+            \midrule
+            \textbf{TOTALES}                                       & --              & \num{4580000}                       & \textbf{1.0000}            & \textbf{1.0000}             & \textbf{1.0000}                          \\
+            \bottomrule
+        \end{tabular}%
+    }
+\end{table}
+
+\section{Análisis de Sensibilidad Paramétrico del Factor de Coste \texorpdfstring{$\alpha$}{Alfa}}
+Para corroborar que la selección de Loja no depende de la ponderación subjetiva asignada al parámetro $\alpha$, se evalúa la función $MPL_i(\alpha)$ en todo el intervalo admisible $\alpha \in [0.0, 1.0]$. La Figura~\ref{fig:sensibilidad_bg} representa la evolución de la preferencia para los tres emplazamientos.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.92\textwidth]{figuras/sensibilidad_brown_gibson.pdf}
+    \caption{Análisis de sensibilidad paramétrico de la Medida de Preferencia de Localización (MPL) según el peso de los factores objetivos ($\alpha$).}
+    \label{fig:sensibilidad_bg}
+\end{figure}
+
+Como se observa en el gráfico, la curva de \textbf{Loja (El Manzanil~II)} se sitúa estrictamente por encima de Lucena y Alcalá la Real en la totalidad del dominio:
+\begin{itemize}
+    \item Para $\alpha = 0$ (criterio exclusivamente subjetivo): $MPL_{\text{Loja}} = \num{0.3800} > MPL_{\text{Lucena}} = \num{0.3500} > MPL_{\text{Alcalá}} = \num{0.2700}$.
+    \item Para $\alpha = 1$ (criterio exclusivamente económico de costes objetivos): $FO_{\text{Loja}} = \num{0.3503} > FO_{\text{Lucena}} = \num{0.3342} > FO_{\text{Alcalá}} = \num{0.3155}$.
+\end{itemize}
+En consecuencia, la elección de Loja como ubicación definitiva de la biorrefinería resulta \textbf{robusta, matemáticamente dominante e inmune a variaciones de juicio subjetivo}.
+
+%=============================================================================
+\chapter{Cartografía y Planos Justificativos de la Localización}
+
+\section{Marco Normativo y Principios Cartográficos}
+Conforme a las exigencias del Seminario 4 y las normas de presentación de proyectos de ingeniería industrial (\textcite{DeCos2008}), la localización definitiva debe justificarse mediante dos niveles cartográficos complementarios:
+\begin{enumerate}
+    \item \textbf{Plano de Situación (Entorno amplio territorial):} Cartografía oficial a escala normalizada 1:50.000 referenciada al Mapa Topográfico Nacional (MTN50 Hoja 1009, \textit{Loja}) del Instituto Geográfico Nacional (\textcite{IGN2026}), proyectada en el Sistema Geodésico de Referencia oficial en España ETRS89 en el Huso UTM 30N. Representa la inserción territorial, accesos por autovía, nodos de transporte y distancias logísticas hacia centros proveedores y consumidores.
+    \item \textbf{Plano de Localización (Entorno próximo parcelario):} Cartografía de detalle a escala normalizada 1:2.000 basada en la información catastral de la Sede Electrónica del Catastro (\textcite{Catastro2026}) y la planimetría urbanística del PGOU de Loja, identificando la parcela industrial, linderos, cotas, viario perimetral y puntos de acometida.
+\end{enumerate}
+
+\section{Plano de Situación General (Escala 1:50.000)}
+El Plano de Situación (Figura~\ref{fig:plano_situacion}) ilustra la posición estratégica de Loja en el centro neurálgico de Andalucía:
+\begin{itemize}
+    \item Enlace directo con la autovía A-92 (salida P.K. 187), conectando sin semáforos ni travesías con el Puerto Comercial de Málaga (\SI{68}{\kilo\metre}), centro exportador de lignina y recepción de etanol desnaturalizado.
+    \item Comunicación fluida hacia el Corredor Central (Antequera a \SI{45}{\kilo\metre}) y las refinerías de Moeve San Roque (Cádiz) y CLH Cartagena para la expedición del bioetanol 2G.
+    \item Radio medio de aprovisionamiento de \SI{35}{\kilo\metre} hacia las \num{42} almazaras del Poniente Granadino (Montefrío, Íllora, Huétor Tájar, Salar, Alhama de Granada).
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.98\textwidth]{figuras/plano_situacion.pdf}
+    \caption{Plano nº 1: Plano de Situación General (Escala normalizada 1:50.000, Sistema ETRS89 Huso 30). Inserción territorial de la biorrefinería en Loja (Granada) y enlaces viarios principales.}
+    \label{fig:plano_situacion}
+\end{figure}
+
+\begin{tcolorbox}[colback=blue!5, colframe=blue!60!black, title=Nota Técnica sobre la Cartografía CAD del Proyecto]
+El plano vectorial definitivo se encuentra estructurado en el archivo CAD del proyecto (\texttt{F:\textbackslash universidad\textbackslash 4º\textbackslash proyectos\textbackslash Organizacion y gestion de proyectos\textbackslash Planos\_DWG\textbackslash Fatima.dwg}), el cual incorpora el cajetín normalizado (\texttt{Cajetin\_Planos.dwg}), las capas de dibujo topográfico y la rotulación reglamentaria. La Figura~\ref{fig:plano_situacion} presenta la exportación vectorial rasterizada a alta resolución ajustada a formato de memoria técnica.
+\end{tcolorbox}
+
+\section{Plano de Localización y Parcela Industrial (Escala 1:2.000)}
+El Plano de Localización (Figura~\ref{fig:plano_localizacion}) delimita la parcela seleccionada dentro del Polígono Industrial El Manzanil~II:
+\begin{itemize}
+    \item \textbf{Referencia de parcela:} Parcela industrial resultante I-14/15, manzana M-3 del Plan Parcial El Manzanil~II.
+    \item \textbf{Superficie neta de suelo:} \SI{25000.00}{\square\metre} (\num{2.50} hectáreas).
+    \item \textbf{Geometría y dimensiones:} Planta rectangular regular con \SI{125.00}{\metre} de línea de fachada hacia el vial principal sur (Avenida de la Industria) y \SI{200.00}{\metre} de fondo hacia el vial de servicio posterior.
+    \item \textbf{Topografía:} Terreno llano acondicionado con pendiente inferior al \SI{1.0}{\percent}, minimizando los movimientos de tierras y terraplenado.
+    \item \textbf{Linderos:}
+          \begin{itemize}
+              \item \textit{Fachada Sur:} Vial Principal (Avenida de la Industria, calzada de \SI{14}{\metre} y aceras de \SI{3}{\metre}).
+              \item \textit{Testero Norte:} Parcela I-10 (reserva industrial municipal).
+              \item \textit{Lindero Este:} Calle de distribución secundaria y acceso exclusivo a báscula de pesaje de biomasas.
+              \item \textit{Lindero Oeste:} Parcela industrial I-16 (industria agroalimentaria compatible).
+          \end{itemize}
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.98\textwidth]{figuras/plano_localizacion.pdf}
+    \caption{Plano nº 2: Plano de Localización y Ordenación General de Parcela (Escala normalizada 1:2.000, Polígono Industrial El Manzanil II, Loja). Delimitación geométrica, retranqueos y accesos segregados.}
+    \label{fig:plano_localizacion}
+\end{figure}
+
+%=============================================================================
+\chapter{Normativa Urbanística, Régimen del Suelo y Acometidas}
+
+\section{Instrumentos de Planeamiento Urbanístico Aplicables}
+El suelo donde se emplazará la planta se rige por las determinaciones urbanísticas del \textbf{Plan General de Ordenación Urbana (PGOU) del Excmo. Ayuntamiento de Loja}, aprobado definitivamente mediante Resolución de la Comisión Provincial de Ordenación del Territorio y Urbanismo de Granada, e integrado en el Sistema de Información Territorial y Urbanística de Andalucía (\textcite{SITUA2026}).
+
+La parcela seleccionada se encuentra clasificada como:
+\begin{center}
+    \textbf{Suelo Urbano Consolidado de Uso Global Industrial, Ordenanza Pormenorizada Grado 2 (Industria Aislada en Gran Parcela).}
+\end{center}
+
+\section{Parámetros Urbanísticos y Justificación de Cumplimiento}
+La Tabla~\ref{tab:urbanismo} recoge los parámetros urbanísticos de aplicación obligatoria según la ficha urbanística de la manzana M-3 del PGOU de Loja, acreditándose el cumplimiento riguroso de cada índice por parte de la planta biorrefinería proyectada.
+
+\begin{table}[H]
+    \centering
+    \caption{Comprobación de cumplimiento de las ordenanzas urbanísticas del PGOU de Loja.}
+    \label{tab:urbanismo}
+    \adjustbox{max width=\textwidth}{%
+        \renewcommand{\arraystretch}{1.24}
+        \setlength{\tabcolsep}{4.5pt}
+        \small
+        \begin{tabular}{l c c c}
+            \toprule
+            \textbf{Parámetro Urbanístico}           & \textbf{Límite PGOU Loja}                 & \textbf{Proyecto Biorrefinería}            & \textbf{Dictamen} \\
+            \midrule
+            Superficie de parcela neta               & Mínimo \SI{5000}{\square\metre}           & \SI{25000.00}{\square\metre}               & \textbf{Cumple holgadamente} \\
+            Longitud de fachada principal            & Mínimo \SI{40.0}{\metre}                  & \SI{125.00}{\metre}                        & \textbf{Cumple} \\
+            Coeficiente de edificabilidad neta       & Máximo \SI{1.00}{\square\metre\text{t}/\square\metre\text{s}} & \SI{0.65}{\square\metre\text{t}/\square\metre\text{s}} (\SI{16240}{\square\metre\text{t}}) & \textbf{Cumple} \\
+            Ocupación máxima sobre parcela           & Máximo \SI{70.0}{\percent}                & \SI{56.0}{\percent} (\SI{14000}{\square\metre}) & \textbf{Cumple} \\
+            Retranqueo a alineación exterior (vial)  & Mínimo \SI{5.00}{\metre}                  & \SI{8.00}{\metre}                          & \textbf{Cumple} \\
+            Retranqueo a linderos privados           & Mínimo \SI{3.00}{\metre}                  & \SI{5.00}{\metre}                          & \textbf{Cumple} \\
+            Retranqueo a testero posterior           & Mínimo \SI{3.00}{\metre}                  & \SI{6.00}{\metre}                          & \textbf{Cumple} \\
+            Altura máxima de cornisa naves           & \SI{12.00}{\metre} (III plantas)          & \SI{10.50}{\metre}                         & \textbf{Cumple} \\
+            Elementos técnicos de proceso (Torres)   & Exentos con justificación técnica         & Torres destilación (\SI{24.0}{\metre})     & \textbf{Permitido en art. 8.4} \\
+            Reserva de plazas de aparcamiento        & 1 plaza / \SI{100}{\square\metre} const.  & \num{85} plazas interiores                 & \textbf{Cumple} \\
+            Reserva de espacios verdes privados      & Mínimo \SI{10.0}{\percent} superficie     & \SI{12.5}{\percent} (\SI{3125}{\square\metre}) & \textbf{Cumple} \\
+            \bottomrule
+        \end{tabular}%
+    }
+\end{table}
+
+\section{Dotación de Servicios e Infraestructuras Industriales}
+El Polígono El Manzanil~II cuenta con la totalidad de infraestructuras urbanísticas recibidas por el Ayuntamiento de Loja:
+\begin{enumerate}
+    \item \textbf{Suministro eléctrico en Media y Alta Tensión:}
+          \begin{itemize}
+              \item Conexión a la línea subterránea de distribución de \SI{20}{\kilo\volt} procedente de la Subestación Transformadora Loja (66/20~kV, Endesa Distribución).
+              \item Se proyecta un centro de transformación propio en parcela de \SI{3500}{\kilo\volt\ampere} para alimentar los accionamientos de molienda (\SI{450}{\kilo\watt}), bombeo de reactores (\SI{350}{\kilo\watt}), agitación y servicios auxiliares.
+          \end{itemize}
+    \item \textbf{Acometida de gas natural:}
+          \begin{itemize}
+              \item Conexión a la red secundaria MOP 16~bar de Redexis / Enagás que discurre por la Avenida de la Industria.
+              \item Suministro auxiliar para la caldera de vapor y arranque del sistema térmico, asegurando una combustión limpia en paralelo al biogás producido en la digestión anaerobia de vinazas.
+          \end{itemize}
+    \item \textbf{Abastecimiento hídrico industrial:}
+          \begin{itemize}
+              \item Suministro municipal garantizado mediante tubería de fundición dúctil $\varnothing \SI{200}{\milli\metre}$ con presión manométrica de \SI{4.2}{bar}.
+              \item Caudal asignado de hasta \SI{12.0}{\litre/\second}, respaldado por los acuíferos de la Sierra de Loja bajo concesión de la CHG.
+          \end{itemize}
+    \item \textbf{Saneamiento y Estación Depuradora de Aguas Residuales Industriales (EDARI):}
+          \begin{itemize}
+              \item Colector general de pluviales y colector de aguas residuales independientes.
+              \item La planta dispondrá de una EDARI propia con tratamiento físico-químico primario, balsa de homogenización/neutralización y digestor anaerobio de lodos, garantizando que el efluente final vertido al colector cumpla rigurosamente con los límites de la Ordenanza Municipal de Vertidos de Loja y el Reglamento de Dominio Público Hidráulico.
+          \end{itemize}
+\end{enumerate}
+
+%=============================================================================
+\chapter{Estimación de Mano de Obra Disponible (INE / EPA)}
+
+\section{Requerimientos de Personal de la Planta}
+De acuerdo con el dimensionamiento organizativo del proyecto, la biorrefinería requiere una plantilla fija en operación de \textbf{\num{17} trabajadores}, estructurada en los siguientes niveles competenciales:
+\begin{itemize}
+    \item \textbf{Personal técnico y de gestión cualificado (\num{6} puestos):}
+          \begin{itemize}
+              \item \num{1} Director de Planta / Ingeniero Químico Responsable.
+              \item \num{1} Responsable de Calidad, Seguridad y Medio Ambiente (Químico/Biotecnólogo).
+              \item \num{4} Jefes de Turno / Ingenieros Técnicos de Control de Procesos (operación continua $24/7$).
+          \end{itemize}
+    \item \textbf{Personal de operación y mantenimiento industrial (\num{11} puestos):}
+          \begin{itemize}
+              \item \num{6} Operadores de planta química (reactores, filtros y tren de destilación).
+              \item \num{2} Operadores de parque de biomasas y recepción en báscula.
+              \item \num{2} Técnicos especialistas en mantenimiento electromecánico e instrumentación.
+              \item \num{1} Operario de almacén y expedición de producto.
+          \end{itemize}
+\end{itemize}
+A este empleo directo se suman más de \num{35} empleos indirectos en el sector del transporte, mantenimiento especializado y cuadrillas de recogida y astillado de poda de olivo en las cooperativas comarcales.
+
+\section{Análisis de Disponibilidad con Datos del INE}
+Siguiendo las pautas del Seminario 4 (diapositivas 11--13), se ha consultado la base de datos del \textbf{Instituto Nacional de Estadística (INE)}, específicamente la *Encuesta de Población Activa (EPA)* y las estadísticas del Mercado Laboral comarcal (\textcite{INE2025}):
+\begin{enumerate}
+    \item \textbf{Mano de obra altamente cualificada (Titulados universitarios):}
+          \begin{itemize}
+              \item La cercanía a la ciudad de Granada (\SI{52}{\kilo\metre}, \num{35} minutos directos por autovía A-92) garantiza un acceso inmejorable a los egresados de la \textbf{Universidad de Granada (UGR)}, una de las principales instituciones académicas de España en Ingeniería Química, Biotecnología y Química.
+              \item No se requiere la reubicación forzosa de personal directivo ni sobrecostes de expatriación, posibilitando la atracción y fidelización de talento técnico especializado en procesos de fermentación y catálisis.
+          \end{itemize}
+    \item \textbf{Mano de obra técnica y operaria local:}
+          \begin{itemize}
+              \item Loja y las cabeceras comarcales limítrofes (Huétor Tájar, Antequera, Lucena) cuentan con centros de Formación Profesional reglada que imparten ciclos formativos de Grado Medio y Superior en:
+                    \begin{itemize}
+                        \item *Mantenimiento Electromecánico y Mecatrónica Industrial*.
+                        \item *Automatización y Robótica Industrial*.
+                        \item *Laboratorio de Análisis y Control de Calidad*.
+                    \end{itemize}
+              \item La EPA refleja una tasa de paro comarcal en el Poniente Granadino del \SI{18.4}{\percent}, con un significativo excedente de población activa joven con formación técnica que demanda empleo estable en el sector industrial, superando la precariedad de la estacionalidad agrícola.
+              \item El Ayuntamiento de Loja y el Servicio Andaluz de Empleo (SAE) contemplan convenios de formación a medida para operarios industriales de nueva implantación con bonificaciones en la cotización a la Seguridad Social.
+          \end{itemize}
+\end{enumerate}
+
+%=============================================================================
+\chapter{Bases para la Implantación de la Planta (Layout y Espacios)}
+
+\section{Metodología de Distribución en Planta (SLP de Muther)}
+Para la ordenación espacial de la parcela se aplica la metodología de \textbf{Distribución Sistemática de las Instalaciones (\textit{Systematic Layout Planning}, SLP)} formulada por Richard Muther (\textcite{MeyersStephens2005}). El método busca minimizar los costes de manipulación y transporte interno de materiales, optimizar la seguridad operacional y garantizar circulaciones fluidas y sin interferencias entre zonas limpias y áreas de proceso pesado.
+
+\section{Definición de Áreas Funcionales y Actividades}
+La planta se descompone en las siguientes \num{10} áreas funcionales principales:
+\begin{enumerate}
+    \item \textbf{Área 1: Recepción, Báscula y Control de Accesos (\SI{800}{\square\metre}):} Garita de seguridad, báscula puente de pesaje de camiones de \SI{60}{\tonne} y toma de muestras de biomasa para análisis de humedad.
+    \item \textbf{Área 2: Parque de Biomasas y Almacenamiento (\SI{4800}{\square\metre}):} Silos verticales cerrados para \SI{3000}{\tonne} de hueso de aceituna, parque exterior pavimentado para almacenamiento y astillado de leña de poda, y fosa cubierta de descarga de hoja.
+    \item \textbf{Área 3: Nave de Preparación Mecánica (\SI{1600}{\square\metre}):} Secador rotatorio indirecto por gases limpios de combustión, molino triturador de martillos y tamiz clasificatorio rotativo con ciclones de aspiración de polvo.
+    \item \textbf{Área 4: Nave de Proceso Químico y Biológico (\SI{5200}{\square\metre}):} Batería de reactores tubulares de hidrólisis ácida previa, reactor presurizado Organosolv, cámara flash de despresurización, filtros de banda, biorreactores continuos de fermentación de pentosas (C5) y tren de sacarificación y fermentación simultánea (SSF C6).
+    \item \textbf{Área 5: Tren de Destilación y Parque de Tanques (\SI{1600}{\square\metre}):} Columnas de fraccionamiento y rectificación hidroalcohólica en intemperie (\SI{24}{\metre} de altura), columna de desorción de solventes, condensadores y cubeto estanco con tanques aéreos de almacenamiento de bioetanol comercial, etanol absoluto desnaturalizado y furfural.
+    \item \textbf{Área 6: Almacén de Lignina, Biofertilizante y Expedición (\SI{3840}{\square\metre}):} Nave climatizada para secado, ensacado y paletizado de lignina técnica pura de alta pureza (\textcite{RomeroGarcia2022}), almacenamiento de biofertilizante estabilizado y muelles de carga cubiertos para camiones de expedición.
+    \item \textbf{Área 7: Planta de Tratamiento de Efluentes (EDARI) y Biogás (\SI{2400}{\square\metre}):} Digestor anaerobio de vinazas residuales para generación de biometano, balsa de aireación y deshidratación centrífuga de lodos.
+    \item \textbf{Área 8: Generación Térmica y Servicios Auxiliares (\SI{1800}{\square\metre}):} Caldera acuotubular de vapor de cogeneración alimentada por biogás/fracción pesada, torres de refrigeración de circuito cerrado, compresores de aire de control y subestación eléctrica de \SI{3.5}{\mega\volt\ampere}.
+    \item \textbf{Área 9: Edificio de Laboratorio, I+D y Sala de Control (\SI{1200}{\square\metre}):} Sala de control con sistema distribuido DCS/SCADA, laboratorio físico-químico y microbiológico de control de fermentaciones y cromatografía.
+    \item \textbf{Área 10: Edificio Administrativo, Vestuarios y Aparcamientos (\SI{1760}{\square\metre}):} Oficinas generales de dirección y compras, vestuarios de personal de planta, comedor social y aparcamiento exterior pavimentado de \num{85} plazas.
+\end{enumerate}
+
+\section{Matriz de Relaciones de Proximidad (Matriz de Muther)}
+Siguiendo la metodología SLP, se establecen los códigos de proximidad normalizados entre cada par de actividades:
+\begin{itemize}
+    \item \textbf{A (Absolutamente necesario):} Proximidad crítica por flujo masivo de materia o tubería compartida.
+    \item \textbf{E (Especialmente importante):} Flujo regular de personal o intercambio energético directo.
+    \item \textbf{I (Importante):} Conveniencia operativa y compartición de servicios auxiliares.
+    \item \textbf{O (Ordinario):} Relación estándar sin condicionantes severos.
+    \item \textbf{U (Sin importancia):} Ausencia de interrelación funcional o espacial.
+    \item \textbf{X (No deseable):} Incompatibilidad estricta por riesgo de explosión ATEX, contaminación cruzada, ruidos o emisión de polvo.
+\end{itemize}
+
+\begin{table}[H]
+    \centering
+    \caption{Matriz de Interrelación de Actividades y Espacios (Metodología SLP).}
+    \label{tab:matriz_slp}
+    \adjustbox{max width=\textwidth}{%
+        \renewcommand{\arraystretch}{1.24}
+        \setlength{\tabcolsep}{4.0pt}
+        \small
+        \begin{tabular}{l cccccccccc}
+            \toprule
+            \textbf{Actividad / Área Funcional} & \textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{5} & \textbf{6} & \textbf{7} & \textbf{8} & \textbf{9} & \textbf{10} \\
+            \midrule
+            1. Recepción, Báscula y Accesos     & --         & A          & U          & U          & U          & E          & U          & U          & O          & I           \\
+            2. Parque y Silos de Biomasas       &            & --         & A          & U          & X          & U          & U          & I          & X          & X           \\
+            3. Nave de Preparación Mecánica     &            &            & --         & A          & X          & U          & U          & I          & X          & X           \\
+            4. Nave de Proceso Químico          &            &            &            & --         & A          & I          & A          & E          & I          & U           \\
+            5. Tren Destilación y Tanques (ATEX)&            &            &            &            & --         & I          & E          & E          & I          & X           \\
+            6. Almacén de Lignina y Expedición  &            &            &            &            &            & --         & U          & U          & O          & I           \\
+            7. Depuración EDARI y Biogás        &            &            &            &            &            &            & --         & A          & U          & X           \\
+            8. Servicios Auxiliares y Caldera   &            &            &            &            &            &            &            & --         & I          & O           \\
+            9. Laboratorio y Sala de Control    &            &            &            &            &            &            &            &            & --         & E           \\
+            10. Oficinas, Social y Aparcamiento &            &            &            &            &            &            &            &            &            & --          \\
+            \bottomrule
+        \end{tabular}%
+    }
+\end{table}
+
+\section{Directrices de Circulación e Implantación en Parcela}
+De la matriz SLP se desprenden los principios rectores aplicados en el Plano de Localización (Figura~\ref{fig:plano_localizacion}):
+\begin{enumerate}
+    \item \textbf{Segregación estricta de tráficos:} El tráfico pesado de camiones bañera (biomasa) y camiones cisterna (solventes y bioetanol) ingresa exclusivamente por el vial lateral este, dirigiéndose a la báscula y parque de biomasas sin cruzarse jamás con los turismos del personal o visitas, los cuales acceden directamente por el vial sur hacia el aparcamiento frontal.
+    \item \textbf{Aislamiento de áreas ATEX:} El parque de tanques y la torre de destilación fraccionada se sitúan en el cuadrante este de la parcela, respetando las distancias de seguridad reglamentarias del Real Decreto 656/2017 (Reglamento APQ) y apartadas de focos de ignición y de los edificios de oficinas.
+    \item \textbf{Orientación respecto a vientos dominantes:} Los vientos dominantes en Loja (componente Oeste--Suroeste) barren la parcela de izquierda a derecha. Por ello, el parque de biomasas y la nave de molienda se ubican a sotavento del edificio administrativo y laboratorios, impidiendo que el polvo en suspensión alcance las áreas sociales.
+    \item \textbf{Circuito cerrado de energía y vinazas:} La proximidad adyacente entre la EDARI (Área 7) y la caldera de vapor (Área 8) optimiza la tubería de biometano depurado para autoconsumo térmico directo, minimizando las pérdidas de carga y garantizando la sostenibilidad circular de la planta.
+\end{enumerate}
+
+%=============================================================================
+\chapter{Conclusiones y Juicio Técnico del Autor}
+
+\section{Conclusiones Principales del Estudio}
+El desarrollo del estudio de localización e implantación para la biorrefinería oleícola de \SI{120000}{\tonne\text{ b.s.}/a\text{\~{n}}o} permite formular las siguientes conclusiones técnicas:
+\begin{enumerate}
+    \item \textbf{Idoneidad macrolocal de Granada y el Poniente Granadino:} La investigación empírica a partir de balances de AICA y datos empresariales de SABI demuestra que, a pesar de que Jaén posee la mayor masa bruta de olivar, la alta densidad de orujeras convencionales genera un mercado saturado con precios del hueso muy elevados. El Poniente Granadino ofrece un ratio de oportunidad de \textbf{128,47~M€/competidor}, asegurando la adquisición de las \SI{120000}{\tonne\text{ b.s.}/a\text{\~{n}}o} con costes de flete mínimos en un radio medio de \SI{35}{\kilo\metre}.
+    \item \textbf{Preferencia incontestable de Loja (Polígono El Manzanil~II):} La aplicación rigurosa del método de Brown y Gibson dictamina que el Polígono Industrial El Manzanil~II en Loja es la alternativa más eficiente, con un índice de preferencia global $MPL = \num{0.3592}$ (frente a \num{0.3389} en Lucena y \num{0.3019} en Alcalá la Real). El análisis de sensibilidad ratifica que Loja es la solución óptima para cualquier valor del factor de coste $\alpha \in [0, 1]$.
+    \item \textbf{Viabilidad urbanística y suficiencia de parcela:} La parcela seleccionada (Parcela I-14/15 con \SI{25000}{\square\metre}) cumple de forma holgada todas las prescripciones del PGOU de Loja para suelo industrial consolidado Grado 2: ocupación del \SI{56}{\percent} (inferior al límite del \SI{70}{\percent}), edificabilidad de \SI{0.65}{\square\metre\text{t}/\square\metre\text{s}} (frente a \num{1.00} admisible) y retranqueos reglamentarios respetados en todos sus linderos.
+    \item \textbf{Disponibilidad de infraestructuras y mano de obra:} El emplazamiento dispone de acometida eléctrica de 20~kV en el propio polígono, red de gas natural MOP 16~bar y abastecimiento de agua de la CHG. La cercanía inmediata a la Universidad de Granada (a 35 minutos por A-92) garantiza el reclutamiento directo de ingenieros químicos y personal de laboratorio, mientras que los ciclos de Formación Profesional de Loja cubren plenamente los perfiles de mantenimiento electromecánico y operación continua.
+    \item \textbf{Distribución funcional optimizada:} La ordenación de la parcela según el método SLP de Muther asegura circulaciones seguras, segregación estricta del tráfico pesado de biomasas respecto al tráfico de turismos y cumplimiento exhaustivo de las distancias de seguridad APQ y normativa ATEX.
+\end{enumerate}
+
+\section{Recomendaciones para las Fases Posteriores del Proyecto}
+Con vistas a la redacción del proyecto de detalle y la integración definitiva de los planos de ingeniería en AutoCAD (\texttt{Planos\_DWG/Fatima.dwg}):
+\begin{itemize}
+    \item Solicitar formalmente al Ayuntamiento de Loja la cédula urbanística informativa previa de la Parcela I-14/15 y la reserva de potencia eléctrica de 3,5 MVA ante Endesa Distribución.
+    \item Iniciar los trámites de Autorización Ambiental Integrada (AAI) ante la Delegación Territorial de Sostenibilidad, Medio Ambiente y Economía Azul de la Junta de Andalucía en Granada.
+    \item Suscribir acuerdos marco de pre-contrato de suministro (\textit{offtake agreements}) con las principales cooperativas almazareras del Poniente Granadino (Loja, Huétor Tájar, Montefrío e Íllora) durante el primer semestre previo al inicio de las obras.
+\end{itemize}
+
+\vspace{3.5em}
+\noindent\begin{tabular*}{\linewidth}{@{}l @{\extracolsep{\fill}} r@{}}
+\textbf{Firma del Estudiante:} & \textbf{Fecha:} 03/11/2026 \\[0.4em]
+\hline
+\rule{0pt}{1.4em}Christian Pérez Hita &
+\end{tabular*}
+
+%=============================================================================
+\printbibliography[heading=bibintoc, title={Referencias Bibliográficas}]
+
+\end{document}

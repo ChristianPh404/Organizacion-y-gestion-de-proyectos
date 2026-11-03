@@ -93,11 +93,11 @@ Este documento contiene la matriz completa de trazabilidad, datos numéricos y f
 
 ## Capítulo 4: Análisis de la Oferta y la Competencia
 
-- [ ] **Plantas de biocarburantes en España y tipos de materias primas (MITECO 2026):**
+- [x] **Plantas de biocarburantes en España y tipos de materias primas (MITECO 2026):**
   - 4 plantas de bioetanol cerealista 1G (Vertex Bioenergy en A Coruña, Salamanca, Ciudad Real y Murcia): capacidad ~500 kt/año.
   - Materias primas bioetanol nacional: 99.19 % cultivos alimentarios (maíz y caña); bioetanol avanzado 2G nacional: 0.00 %.
   - **Fuente:** MITECO (2026), hoja `Sost_Tipo MP_Bioet`.
-- [ ] **Infraestructuras en Andalucía (Informe MIEA 2026 de la AAE):**
+- [x] **Infraestructuras en Andalucía (Informe MIEA 2026 de la AAE):**
   - 11 plantas de biocarburantes en operación (biodiesel y HVO), **cero fábricas de bioetanol**.
   - Plantas de ETBE en San Roque (Cádiz) y Palos de la Frontera (Huelva) importan el 100 % del bioetanol consumido.
   - **Fuente:** AAE (2026), *Informe de Infraestructuras Energéticas de Andalucía (MIEA)*, Secciones 6.2 y 7.

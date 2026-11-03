@@ -94,7 +94,7 @@
 % ==========================================================================
 % CAPITULOS 1 AL 4 COMENTADOS TEMPORALMENTE (PRESERVADOS PARA CONSULTA)
 % ==========================================================================
-\iffalse
+
 \chapter{Introducción y Objetivos del Trabajo}
 
 
@@ -141,125 +141,142 @@ El documento se articula en cuatro secciones principales de ingeniería:
 
 %=============================================================================
 
-\chapter{Captación desde Red Municipal: Requisitos y Trámites}
 
+\chapter{Captación desde Red Municipal: Requisitos, Marco Técnico y Trámites}
+\label{cap:captacion_red_municipal}
 
+\section{Marco General, Competencias y Modelos de Gestión Municipal}
 
-\section{Marco General y Competencias}
+De conformidad con el artículo 25.2 de la \textbf{Ley 7/1985, Reguladora de las Bases del Régimen Local (LRBRL)}, el abastecimiento domiciliario de agua potable a poblaciones y la evacuación y tratamiento de aguas residuales constituyen competencias propias, obligatorias e inexcusables de las entidades locales. Cuando un complejo fabril o planta de proceso biotecnológico y químico se implanta en suelo urbano consolidado o en un polígono industrial sectorizado, la conexión a la red de distribución municipal representa la alternativa técnica prioritaria por razones de seguridad de suministro, control bacteriológico continuo y garantía de caudal de origen.
 
-De acuerdo con el artículo 25.2 de la \textbf{Ley 7/1985, Reguladora de las Bases del Régimen Local (LRBRL)}, el abastecimiento de agua potable a poblaciones y la evacuación y tratamiento de aguas residuales constituyen una competencia propia e inexcusable de los municipios. Cuando una instalación industrial se ubica en un polígono industrial o suelo urbano consolidado, la conexión a la red general municipal gestionada por el Ayuntamiento o por una entidad concesionaria (p. ej., EMASAGRA, Canal de Isabel II, Aguas de Valencia, etc.) suele ser la alternativa técnica prioritaria por fiabilidad, control sanitario y garantía de servicio.
-
-
-
-\section{Requisitos Técnicos de la Acometida Industrial}
-
-La acometida de agua conecta la red de distribución pública con la instalación general del complejo fabril. Los requisitos técnicos indispensables comprenden:
-
-
-
+La prestación del servicio público de distribución de agua y saneamiento puede articularse a través de tres modalidades jurídicas y operativas diferenciadas:
 \begin{enumerate}
-
-    \item \textbf{Presión y Caudal de Garantía:} La entidad suministradora debe certificar mediante un informe técnico previo las presiones manométricas de servicio en el punto de enganche (presión estática en horas de bajo consumo y presión dinámica en horas punta). Según el CTE DB-HS 4:
-
-    \begin{itemize}
-
-        \item Presión mínima exigida en los puntos terminales de consumo ordinario: $100\text{ kPa}$ ($10\text{ m.c.a.}$).
-
-        \item Presión máxima admisible en cualquier punto de la red interna: $500\text{ kPa}$ ($50\text{ m.c.a.}$), debiendo instalar válvulas reductoras de presión si la red municipal suministra presiones superiores.
-
-    \end{itemize}
-
-    \item \textbf{Arqueta de Acometida y Válvula de Toma:} Alojada en el límite de la propiedad pública y privada, compuesta por una llave de corte general de toma sobre la canalización matriz con su correspondiente arqueta de registro y trampilla de fundición homologada.
-
-    \item \textbf{Tubo de Alimentación y Armario de Contador General:} La conducción que enlaza la llave de toma con la arqueta del contador no podrá contar con derivaciones intermedias. El armario de contadores aloja:
-
-    \begin{itemize}
-
-        \item Válvula de corte de entrada con orificio de purga.
-
-        \item Filtro retenedor de partículas en suspensión (malla de acero inoxidable de $100\text{ }\mu\text{m}$).
-
-        \item Contador divisionario o general homologado (tipo electromagnético o de chorro múltiple con telelectura).
-
-        \item Válvula de retención o válvula antirretorno homologada de doble clapeta o desconector de zona de presión reducida (tipo BA), que impida inexorablemente el reflujo de agua contaminada hacia la red pública.
-
-        \item Válvula de corte de salida y grifo de toma de muestras sanitarias para control analítico.
-
-    \end{itemize}
-
-    \item \textbf{Separación y Protecciones Físicas:} Las zanjas exteriores deben asegurar un enterramiento mínimo de $0.80\text{ m}$ respecto a la cota rasante para evitar congelaciones y cargas de tráfico rodado. Debe existir una separación mínima de $0.30\text{ m}$ por encima de canalizaciones de aguas residuales y $0.50\text{ m}$ respecto a cables eléctricos y conducciones de gas.
-
+    \item \textbf{Gestión Directa Municipal:} Prestada por la propia administración local a través de sus servicios centrales o de una empresa pública de capital íntegramente municipal (p. ej., Aguas de Cádiz o EMASESA en determinados consorcios).
+    \item \textbf{Gestión Indirecta por Concesión Administrativa Privada:} Formalizada mediante contrato de concesión demanial y explotación con operadores privados especializados (p. ej., Aqualia, Hidralia o Canal de Isabel II Gestión).
+    \item \textbf{Empresa Mixta Público-Privada:} Modelo ampliamente consolidado en las principales capitales andaluzas, en el cual el capital social y los órganos de administración están compartidos entre la corporación municipal y el socio tecnológico privado. Un ejemplo representativo de esta figura es \textbf{EMASAGRA (Empresa Municipal de Abastecimiento y Saneamiento de Granada, S.A.)}, entidad responsable del ciclo integral del agua en la aglomeración urbana de Granada, participada mayoritariamente por el Excmo. Ayuntamiento de Granada junto al socio operador privado (\cite{EMASAGRA2026}).
 \end{enumerate}
 
+\section{Estimación Previa de Demandas y Consulta Cartográfica de Infraestructuras}
 
+Con carácter preceptivo al inicio formal de cualquier expediente administrativo de enganche, el equipo de ingeniería debe determinar de manera rigurosa las magnitudes hidráulicas que definen la demanda de la planta:
+\begin{itemize}
+    \item \textbf{Caudal Medio Diario ($Q_{\text{md}}$):} Volumen total consumido en la factoría a lo largo de una jornada de trabajo ordinaria dividido por el tiempo efectivo de servicio, expresado en $\text{L/s}$ y $\text{m}^3/\text{día}$, desglosando los consumos propios del proceso químico, las reposiciones térmicas y las dotaciones de personal.
+    \item \textbf{Caudal Punta Instantáneo Simultáneo ($Q_{\text{inst}}$):} Máxima demanda simultánea previsible en la cometida general ($\text{L/s}$), sobre la cual debe verificarse la capacidad portante de la red de distribución general sin que se induzcan depresiones inadmisibles en la malla urbana circundante.
+    \item \textbf{Régimen Horario de Consumos y Factor de Carga:} Distribución de la curva de demanda horaria para evaluar el impacto de los consumos punta sobre la red general en horas de máxima solicitación comunitaria.
+\end{itemize}
 
-\section{Procedimiento Administrativo y Trámites de Enganche}
+Para contrastar la viabilidad física del suministro y localizar los puntos óptimos de entronque, el proyectista dispone de sistemas de información geográfica e inventarios públicos de infraestructuras. En el ámbito territorial de la provincia de Granada, resulta de aplicación obligada la consulta a la plataforma de la \textbf{Encuesta de Infraestructura y Equipamientos Locales (EIEL)}, coordinada y gestionada por la \textbf{Diputación de Granada} (\cite{EIEL_Diputacion_Granada}).
 
-Para obtener la autorización y materializar el suministro de agua industrial, el promotor y el equipo de ingeniería deben seguir el siguiente iter administrativo:
+La plataforma web de la EIEL permite al proyectista realizar la inspección geoespacial de la red de abastecimiento y saneamiento en el entorno de la parcela industrial:
+\begin{enumerate}
+    \item Identificación de las conducciones matrices que discurren por las calles limítrofes, consultando su material constructivo (fundición dúctil, polietileno de alta densidad PE 100 o fibrocemento en redes antiguas).
+    \item Comprobación de diámetros nominales disponibles ($\text{DN }100\text{ mm}$, $\text{DN }150\text{ mm}$ o $\text{DN }200\text{ mm}$) y estado de conservación de la red.
+    \item Localización de nudos de conexión, arquetas de sectorización, válvulas de compuerta y bocas de hidrante públicas adyacentes.
+    \item Análisis de cotas topográficas de rasante y estimación preliminar de las presiones manométricas estáticas y dinámicas en el sector hidráulico correspondiente.
+\end{enumerate}
 
+\section{Requisitos Técnicos de la Acometida Industrial y Afección de Redes}
 
+La acometida física es el conjunto de tuberías, piezas especiales y dispositivos que enlazan la canalización general municipal con la instalación general interior de la parcela. Sus requisitos de diseño se rigen por el \textit{Código Técnico de la Edificación (CTE DB-HS 4)} y las normas técnicas de la entidad gestora:
+
+\begin{enumerate}
+    \item \textbf{Presión de Servicio y Caudal Garantizado:}
+          La empresa suministradora debe certificar mediante informe técnico vinculante las presiones de servicio en el nudo de entronque. De acuerdo con el CTE DB-HS 4:
+          \begin{itemize}
+              \item La presión manométrica estática no superará en ningún caso los $500\text{ kPa}$ ($50\text{ m.c.a.}$) para prevenir ruidos, golpes de ariete y roturas de mecanismos. Si la red municipal suministra una presión superior, se instalará obligatoriamente una válvula reductora de presión en cabecera.
+              \item La presión manométrica dinámica mínima en los puntos terminales más desfavorables de la red interior no será inferior a $100\text{ kPa}$ ($10\text{ m.c.a.}$) para uso sanitario, y entre $200\text{ a }300\text{ kPa}$ ($20\text{ a }30\text{ m.c.a.}$) en tomas de proceso industrial y equipos contra incendios.
+          \end{itemize}
+
+    \item \textbf{Toma sobre Red General y Llave de Acometida:}
+          La toma se realiza perpendicularmente a la canalización matriz mediante collarín de derivación en carga o te de fundición dúctil. En el límite exterior del dominio público se ubica la \textbf{llave de acometida}, alojada en arqueta normalizada con trampilla de fundición, accesible exclusivamente para el personal de la entidad suministradora.
+
+    \item \textbf{Tubo de Alimentación y Armario de Contador General:}
+          El tubo de alimentación enlaza la llave de acometida con la batería o armario general de contadores, discurriendo sin derivación intermedia alguna. El armario o arqueta general de contadores se sitúa en la linde de la parcela, en un paramento vertical accesible directamente desde el exterior, y aloja la siguiente valvulería y elementos de protección:
+          \begin{itemize}
+              \item \textbf{Válvula de corte general de entrada:} Llave de bola o compuerta elástica con orificio de purga manual.
+              \item \textbf{Filtro en Y retenedor de sólidos:} Malla filtrante de acero inoxidable de $100\text{ }\mu\text{m}$ para retener arenas o partículas en suspensión procedentes de la red pública.
+              \item \textbf{Contador general de agua homologado:} Equipo de medición volumétrico o electromagnético con homologación metrológica oficial, emisor de pulsos y módulo de telelectura vía radio.
+              \item \textbf{Dispositivo de protección antirretorno (Desconector hidráulico):} Válvula de doble retención o desconector de zona de presión reducida no controlable (tipo BA, según UNE-EN 1717), que garantiza de forma física e inexorable que bajo ninguna circunstancia de sobrepresión interior o depresión de la red pueda retornar agua de proceso hacia la red pública de abastecimiento.
+              \item \textbf{Válvula de corte de salida y grifo de toma de muestras:} Grifo sanitario dotado de purgador para el muestreo periódico y control analítico de la calidad bromatológica del agua suministrada, según exige el RD 3/2023.
+          \end{itemize}
+
+    \item \textbf{Cruces de Servicios y Distancias Reglamentarias en Zanja:}
+          Las conducciones exteriores enterradas deben instalarse con una profundidad mínima de enterramiento de $0.80\text{ m}$ respecto a la rasante del terreno para amortiguar cargas mecánicas de tráfico pesado y prevenir heladas. En coexistencia con otras redes urbanas:
+          \begin{itemize}
+              \item La canalización de agua potable discurrirá siempre a una cota superior a la red de saneamiento de aguas residuales o pluviales, con una distancia vertical libre mínima de $0.30\text{ m}$ y una distancia horizontal mínima de $1.00\text{ m}$.
+              \item Con respecto a cables eléctricos de baja o media tensión y canalizaciones de gas natural, se mantendrá una separación libre mínima de $0.50\text{ m}$.
+          \end{itemize}
+\end{enumerate}
+
+\section{Procedimiento Administrativo, Modelo de Solicitud y Documentación Anexa}
+
+El procedimiento técnico-administrativo para la obtención de la acometida de agua y saneamiento sigue un protocolo riguroso regulado por el Reglamento del Servicio de la entidad concesionaria y las Ordenanzas Municipales de Urbanismo (Figura~\ref{fig:tramites_red_municipal}).
 
 \begin{figure}[H]
-
     \centering
-
-    \adjustbox{max width=0.95\textwidth}{%
-
-        \begin{tikzpicture}[>=Latex, node distance=1.2cm and 1.8cm, auto]
-
-            \tikzstyle{block} = [rectangle, draw=blue!80!black, fill=blue!8, text width=3.8cm, text centered, rounded corners, minimum height=1.3cm, font=\small\bfseries]
-
+    \adjustbox{max width=0.98\textwidth}{%
+        \begin{tikzpicture}[>=Latex, node distance=1.1cm and 1.5cm, auto]
+            \tikzstyle{block} = [rectangle, draw=blue!80!black, fill=blue!8, text width=4.0cm, text centered, rounded corners, minimum height=1.3cm, font=\small\bfseries]
             \tikzstyle{line} = [draw, -Latex, line width=1.2pt, blue!85!black]
 
-
-
-            \node [block] (step1) {1. Solicitud de Viabilidad de Suministro};
-
-            \node [block, right=of step1] (step2) {2. Redacción del Proyecto de Conexión};
-
-            \node [block, below=of step2] (step3) {3. Licencia Urbanística Municipal};
-
-            \node [block, left=of step3] (step4) {4. Ejecución de Obras e Inspección};
-
-            \node [block, below=of step4] (step5) {5. Boletín de Instalador y Alta Definitiva};
-
-
+            \node [block] (step1) {1. Solicitud de Viabilidad y Consulta Cartográfica (EIEL)};
+            \node [block, right=of step1] (step2) {2. Redacción de Memoria Técnica de Acometida};
+            \node [block, below=of step2] (step3) {3. Licencia de Obras Municipal (ICIO / Tasas)};
+            \node [block, left=of step3] (step4) {4. Ejecución del Entronque e Inspección Técnica};
+            \node [block, below=of step4] (step5) {5. Boletín de Fontanería, Contrato y Suministro};
 
             \path [line] (step1) -- node [above, font=\scriptsize] {Informe concesionaria} (step2);
-
-            \path [line] (step2) -- node [right, font=\scriptsize] {Visado y tasas} (step3);
-
-            \path [line] (step3) -- node [above, font=\scriptsize] {Replanteo calzada} (step4);
-
-            \path [line] (step4) -- node [left, font=\scriptsize] {Pruebas de presión} (step5);
-
+            \path [line] (step2) -- node [right, font=\scriptsize] {Ingeniero Colegiado} (step3);
+            \path [line] (step3) -- node [above, font=\scriptsize] {Apertura de zanjas} (step4);
+            \path [line] (step4) -- node [left, font=\scriptsize] {Pruebas hidrostáticas} (step5);
         \end{tikzpicture}
-
     }
-
-    \caption{Diagrama de flujo del procedimiento de solicitud y autorización de enganche a la red municipal.}
-
+    \caption{Diagrama del iter administrativo para la formalización del suministro industrial municipal.}
     \label{fig:tramites_red_municipal}
-
 \end{figure}
 
+\subsection{Estructura del Formulario de Solicitud de Acometida (Modelo Oficial EMASAGRA)}
 
+La solicitud formal de acometida de abastecimiento y vertido, formulada bajo el modelo oficial de EMASAGRA (\cite{EMASAGRA2026}), exige consignar exhaustivamente los siguientes bloques de datos:
 
 \begin{enumerate}
+    \item \textbf{Localización e Identificación Física de la Parcela:}
+          \begin{itemize}
+              \item Dirección exacta: Calle, número, código postal y término municipal.
+              \item \textbf{Referencia Catastral Obligatoria:} Código alfanumérico de 20 dígitos asignado por la Dirección General del Catastro que individualiza unívocamente la finca rústica o urbana.
+          \end{itemize}
 
-    \item \textbf{Petición de Factibilidad o Viabilidad Técnica:} Solicitud inicial ante la entidad suministradora aportando plano de situación, caudales medios requeridos ($\text{m}^3/\text{día}$), caudal punta instantáneo ($\text{L/s}$) y régimen horario de consumos. La compañía emite un \textit{Informe de Condiciones Técnicas de Suministro} indicando el punto de enlace idóneo, diámetros disponibles y presión de servicio garantizada.
+    \item \textbf{Identificación Jurídica del Solicitante y Representación:}
+          \begin{itemize}
+              \item \textbf{Datos de la Sociedad Promotora:} Razón Social mercantil, Número de Identificación Fiscal (NIF) y domicilio social a efectos de notificaciones.
+              \item \textbf{Representante Legal:} Persona física que ostenta poderes de representación mancomunados o solidarios en nombre de la sociedad, aportando su DNI/NIE y la escritura notarial de apoderamiento.
+              \item \textbf{Delegado Técnico / Ingeniero Proyectista:} Técnico competente que actúa como interlocutor técnico ante los inspectores de la compañía concesionaria, consignando su nombre, titulación académica oficial, número de colegiado y Colegio Profesional correspondiente.
+          \end{itemize}
 
-    \item \textbf{Proyecto de Acometida y Conexión Exterior:} Si el entronque exige obras en vía pública o ampliación de ramales de distribución, el proyectista elabora una memoria técnica y planos conforme a las normas técnicas de la entidad concesionaria.
+    \item \textbf{Características Técnicas del Suministro Solicitado:}
+          \begin{itemize}
+              \item \textbf{Caudal punta simultáneo requerido ($\text{L/s}$):} Cuantificación del caudal máximo en la acometida para verificar la suficiencia hidráulica de la red municipal matriz.
+              \item \textbf{Diámetro y Material de Acometida Propuesto:} Especificación del tubo de enlace exterior (típicamente polietileno PE 100 PN 16 de $\text{DN }63\text{ a }\text{DN }110\text{ mm}$, en función del balance de planta).
+              \item \textbf{Tipología de Uso:} Declaración explícita de las actividades a suministrar (Consumo humano / Proceso industrial químico / Servicios auxiliares / Sistema de protección contra incendios).
+          \end{itemize}
 
-    \item \textbf{Tramitación de Licencia de Obras en Vía Pública y Calicatas:} Pago de las tasas de ocupación de dominio público e impuestos de obras (ICIO) ante la Gerencia Municipal de Urbanismo para la apertura de zanjas y reposición de pavimento.
-
-    \item \textbf{Contrato de Suministro Industrial:} Formalización del contrato mercantil de abastecimiento tras aportar la Licencia Ambiental Integrada (o Calificación Ambiental), acreditación de la red interior ejecutada por instalador autorizado de fontanería, y certificado de no afección con fuentes de agua propias sin homologar.
-
+    \item \textbf{Datos del Vertido y Red de Saneamiento:}
+          \begin{itemize}
+              \item \textbf{Caudal punta de vertido ($\text{L/s}$):} Estimación del efluente máximo vertido tras su depuración en la estación depuradora de aguas residuales industriales (EDARI).
+              \item \textbf{Cota de Acometida al Colector Municipal ($\text{m.s.n.m.}$):} Cota de solera de la tubería de saneamiento en el pozo de conexión público para asegurar la evacuación por gravedad o, en su defecto, justificar la estación de bombeo de efluentes (EBAR) de parcela.
+          \end{itemize}
 \end{enumerate}
 
+\subsection{Relación Preceptiva de Documentación Anexa}
 
-
-%=============================================================================
+La solicitud formal debe acompañarse inexcusablemente de los siguientes documentos técnicos y jurídicos:
+\begin{enumerate}
+    \item \textbf{Licencia Municipal de Obras o Declaración Responsable Urbanística:} Copia autorizada del título habilitante expedido por la Gerencia de Urbanismo del Ayuntamiento correspondiente que autoriza la construcción o implantación de la actividad.
+    \item \textbf{Plano de Situación y Parcela Acotado:} Cartografía georreferenciada a escala $1:500$ o $1:1000$ que sitúe la finca en la trama urbana con reflejo de sus lindes perimetrales y referencia catastral oficial.
+    \item \textbf{Memoria Técnica de Abastecimiento y Saneamiento:} Documento técnico redactado y firmado por Ingeniero Colegiado competente que justifique los consumos diarios, caudales punta de simultaneidad, dimensionamiento de tuberías, cálculo de pérdidas de carga, características de los equipos y medidas de prevención contra la contaminación por reflujo (UNE-EN 1717).
+    \item \textbf{Plano de Trazado de Acometida y Conexión Exterior:} Detalle acotado a escala $1:100$ o $1:200$ del entronque en la calzada, trazado de la tubería de alimentación, ubicación exacta de la llave de toma, arqueta de registro y armario de contador general según la normativa técnica municipal.
+    \item \textbf{Acreditación Notarial de Representación Legal:} Copia de la escritura pública de constitución de la empresa promotora y poder de representación mercantil conferido a favor del solicitante.
+\end{enumerate}
 
 \chapter{Captación Alternativa: Pozos, Ríos y Embalses}
 
@@ -423,288 +440,215 @@ Frente a la creencia tradicional de que la regeneracion del agua es competencia 
 
 
 
+
 \chapter{Evaluación del Caudal Necesario y Dimensionamiento de la Red Interna}
+\label{cap:caudal_dimensionamiento_red}
 
+\section{Evaluación del Caudal Necesario y Balances Hídricos de Planta}
 
+El diseño y dimensionamiento de la red hidráulica interior de una planta industrial de procesos químicos y biotecnológicos exige una evaluación cuantitativa exhaustiva y segregada de los diversos requerimientos de agua. De acuerdo con las buenas prácticas de ingeniería de proyectos y los estándares normativos (\cite{UNE_EN_806_3_2007, UNE_149201_2017}), deben cuantificarse tres tipos esenciales de caudales: el caudal medio diario, el caudal punta instantáneo simultáneo y la demanda de la red contra incendios.
 
-\section{Metodología de Balance Hídrico Industrial}
+\subsection{Caudal Medio Diario ($Q_{\text{md}}$) y Dotaciones de Consumo}
 
-El dimensionamiento técnico de la red hidráulica interna exige la segregación y consolidación de dos tipos fundamentales de demandas: los consumos higiénico-sanitarios y los consumos industriales de proceso.
-
-
-
-\subsection{Caudales Sanitarios de Edificación (CTE DB-HS 4)}
-
-Siguiendo las directrices del \textit{Documento Básico HS 4 del Código Técnico de la Edificación \cite{CTE_DB_HS4}}, se identifican los puntos terminales de consumo higiénico en oficinas, laboratorios, comedores y vestuarios de planta. A cada aparato le corresponde un caudal instantáneo mínimo:
-
-
-
-\begin{table}[H]
-
-    \centering
-
-    \caption{Caudales instantáneos mínimos de aparatos según CTE DB-HS 4}
-
-    \label{tab:caudales_cte}
-
-    \begin{tabular}{@{}lccc@{}}
-
-        \toprule
-
-        \textbf{Tipo de Aparato Sanitario} & \textbf{Caudal Mínimo AF ($\text{L/s}$)} & \textbf{Caudal Mínimo ACS ($\text{L/s}$)} & \textbf{Presión Mínima ($\text{kPa}$)} \\
-
-        \midrule
-
-        Lavabo & $0.10$ & $0.065$ & $100$ \\
-
-        Inodoro con cisterna & $0.10$ & -- & $100$ \\
-
-        Ducha colectiva & $0.20$ & $0.100$ & $100$ \\
-
-        Fregadero de laboratorio / comedor & $0.20$ & $0.100$ & $100$ \\
-
-        Vertedero de limpieza & $0.20$ & -- & $100$ \\
-
-        Grifo de riego exterior ($\phi 20\text{ mm}$) & $0.40$ & -- & $100$ \\
-
-        \bottomrule
-
-    \end{tabular}
-
-\end{table}
-
-
-
-El caudal total instalado $Q_{\text{inst}} = \sum q_i$ no se demanda simultáneamente. El caudal de cálculo de simultaneidad para uso industrial/colectivo se obtiene mediante el coeficiente de simultaneidad $K_{\text{sim}}$:
-
+El caudal medio diario representa el consumo medio distribuido a lo largo del tiempo de operación de la planta:
 \begin{equation}
-
-    K_{\text{sim}} = \frac{1}{\sqrt{n - 1}} \qquad (n > 2)
-
+    Q_{\text{md}} = \frac{V_{\text{diario total}}}{t_{\text{operación}}} \qquad \left[\frac{\text{L}}{\text{s}}\right]
+    \label{eq:caudal_medio_diario}
 \end{equation}
-
-donde $n$ representa el número total de aparatos instalados, resultando el caudal punta de diseño sanitario:
-
-\begin{equation}
-
-    Q_{\text{sanitario}} = K_{\text{sim}} \cdot \sum_{i=1}^{n} q_i
-
-\end{equation}
-
-
-
-\subsection{Caudales Técnicos de Proceso y Servicios Auxiliares}
-
-Siguiendo el modelo aplicado en proyectos industriales de referencia (como el Anexo de Abastecimiento de Fátima Cifuentes ), las necesidades de proceso se calculan equipo a equipo a partir de los balances de materia y energía:
-
-
+donde $V_{\text{diario total}}$ ($\text{m}^3$ o $\text{L}$) engloba la suma ponderada de las tres categorías funcionales de consumo del complejo industrial:
 
 \begin{enumerate}
+    \item \textbf{Consumo de Personal y Servicios Higiénico-Sanitarios:}
+          Las dotaciones per cápita deben asignarse en función de las condiciones laborales y los perfiles de los puestos de trabajo:
+          \begin{itemize}
+              \item \textbf{Personal de oficinas, control y laboratorios (sin duchas):} Dotación reglamentaria de $30\text{ a }50\text{ L/persona}\cdot\text{día}$.
+              \item \textbf{Personal operario de producción, mantenimiento y almacenes (con duchas y vestuarios):} Dotación industrial de $80\text{ a }120\text{ L/persona}\cdot\text{día}$, indispensable para cubrir las duchas de final de turno en ambientes químicos y el cumplimiento de las condiciones de seguridad y salud en el trabajo.
+          \end{itemize}
 
-    \item \textbf{Agua de Refrigeración en Condensadores y Enfriadores:}
+    \item \textbf{Consumo de Proceso Industrial y Servicios Auxiliares Térmicos:}
+          Estimado rigurosamente a partir de los balances de materia y energía de planta en régimen nominal continuo:
+          \begin{itemize}
+              \item \textbf{Circuito de Refrigeración Industrial:} Demanda de reposición hídrica en torres de refrigeración o condensadores barométricos para compensar las pérdidas por evaporación física ($E$), arrastre aerodinámico ($A$) y purgas continuas de salinidad ($P$), típicamente $1.5\text{ a }3.5\text{ L/s}$ para cargas térmicas moderadas ($\sim 300\text{ kW}$).
+              \item \textbf{Generación de Vapor en Calderas Industriales:} Reposición de agua ablandada y desgasificada para compensar las purgas de lodos/sales ($5-10\%$) y las líneas de inyección directa de vapor vivo (esterilización, reactores de arrastre de biomasa o humidificación), con caudales en el rango de $0.20\text{ a }0.50\text{ L/s}$.
+              \item \textbf{Agua de Reacción, Formulación y Extracción:} Agua de alta pureza incorporada directamente a fermentadores, tanques de disolución y síntesis química.
+              \item \textbf{Sistemas de Limpieza CIP (\textit{Cleaning-In-Place}):} Lavado automático de reactores, centrífugas, conducciones y filtros prensa, con régimen discontinuo pero elevado consumo unitario ($1.5\text{ a }3.0\text{ L/s}$).
+          \end{itemize}
 
-          A partir de la carga térmica a retirar $Q_{\text{cond}}$ ($\text{kJ/s}$), fijando una temperatura de entrada del agua de $20^\circ\text{C}$ y una salida de $40^\circ\text{C}$ ($\Delta T = 20^\circ\text{C}$):
-
-          \begin{equation}
-
-              \dot{m}_{\text{agua}} = \frac{Q_{\text{cond}}}{C_p \cdot \Delta T} = \frac{Q_{\text{cond}}}{4.18\text{ kJ/(kg}\cdot^\circ\text{C)} \cdot 20^\circ\text{C}}
-
-          \end{equation}
-
-          Para condensadores industriales de cabezas de destilación o reactores con cargas de $\approx 280\text{ kW}$, el caudal asciende a $\sim 3.30\text{ L/s}$.
-
-    \item \textbf{Generación de Vapor en Caldera y Circuitos Térmicos:}
-
-          La reposición de agua tratada para la caldera de vapor industrial debe cubrir las pérdidas por purgas ($5-10\%$) y las líneas de inyección directa de vapor limpio en esterilización, evaporación al vacío o arrastre de biomasa, típicamente en el rango de $0.15\text{ a }0.50\text{ L/s}$.
-
-    \item \textbf{Equipos de Purificación y Desmineralización (Ósmosis Inversa):}
-
-          El agua desmineralizada de proceso requiere un caudal de entrada un $25-35\%$ superior al permeado obtenido para compensar la corriente de rechazo o salmuera.
-
-    \item \textbf{Limpieza CIP (\textit{Cleaning-In-Place}):}
-
-          Régimen discontinuo pero intensivo en caudal punta para lavado de reactores, filtros prensa y líneas de transferencia ($1.5\text{ a }3.0\text{ L/s}$).
-
+    \item \textbf{Consumos de Servicios Exteriores y Mantenimiento de Parcela:}
+          \begin{itemize}
+              \item \textbf{Riego de zonas verdes y jardinería exterior:} Dotación estándar de $2\text{ a }4\text{ L/m}^2\cdot\text{día}$ durante el periodo estival.
+              \item \textbf{Baldeo periódico de viales y soleras de carga/descarga:} Dotación de $1.5\text{ a }2.5\text{ L/m}^2\cdot\text{día}$ mediante tomas de manguera de alta presión.
+          \end{itemize}
 \end{enumerate}
 
+\subsection{Caudal Punta Instantáneo Simultáneo de Diseño ($Q_{\text{inst}}$)}
 
-
-\section{Dimensionamiento Hidráulico de Conducciones}
-
-
-
-\subsection{Ecuación de Continuidad y Selección de Diámetros}
-
-A partir del caudal punta de cada tramo $Q$ ($\text{m}^3/\text{s}$), el diámetro interior teórico $D_{\text{int}}$ se deduce imponiendo la velocidad de flujo admisible $v$:
-
+El caudal de cálculo simultáneo determina el dimensionamiento de las tuberías generales de distribución, los grupos de sobrepresión y los equipos de pretratamiento. Los puntos de consumo higiénico no operan de forma continuada, por lo que su demanda simultánea se obtiene mediante el coeficiente de simultaneidad $K_s$ establecido en la norma UNE 149201 y en el CTE DB-HS 4 (\cite{CTE_DB_HS4, UNE_149201_2017}):
 \begin{equation}
-
-    Q = v \cdot \Omega = v \cdot \frac{\pi D_{\text{int}}^2}{4} \implies D_{\text{int}} = \sqrt{\frac{4 Q}{\pi \cdot v}}
-
+    K_s = \frac{1}{\sqrt{n - 1}} \qquad (n > 2)
+    \label{eq:coef_simultaneidad}
 \end{equation}
+siendo $n$ el número total de aparatos sanitarios instalados en la factoría (inodoros, lavabos, duchas, urinarios, vertederos).
 
-
-
-\textbf{Criterios normativos de velocidad de flujo (CTE DB-HS 4):}
-
-\begin{itemize}
-
-    \item Tuberías metálicas (cobre, acero inoxidable): $v \in [0.5, 2.0]\text{ m/s}$.
-
-    \item Tuberías termoplásticas (PVC, PE-100, Polipropileno PPR): $v \in [0.5, 1.5]\text{ m/s}$ en derivaciones terminales y hasta $1.8\text{ m/s}$ en colectores principales para limitar ruidos y golpes de ariete.
-
-\end{itemize}
-
-
-
-\subsection{Cálculo de Pérdidas de Carga Continuas y Accidentales}
-
-Las pérdidas de carga lineales por fricción en las conducciones se evalúan mediante la expresión de Darcy-Weisbach:
-
+A partir de los caudales mínimos instantáneos fijados por la normativa para cada aparato (Tabla~\ref{tab:caudales_aparatos_norma}), el caudal simultáneo de diseño de la factoría se formula como:
 \begin{equation}
-
-    h_f = f \cdot \frac{L}{D_{\text{int}}} \cdot \frac{v^2}{2g}
-
+    Q_{\text{inst}} = K_s \cdot \sum_{i=1}^{n} Q_{\text{aparato}, i} + Q_{\text{proceso, simultáneo}}
+    \label{eq:caudal_punta_simultaneo}
 \end{equation}
-
-donde el factor de fricción $f$ se obtiene mediante la ecuación de Colebrook-White o el diagrama de Moody. Para tuberías plásticas lisas, la fórmula práctica de Hazen-Williams o Prandtl-Colebrook arroja gradientes de pérdida unitaria $J = h_f / L$ ($\text{m.c.a./m}$).
-
-
-
-Las pérdidas accidentales producidas por codos, válvulas, tes y reducciones se cuantifican mediante el método de los coeficientes de pérdida local $h_L = \sum K_i \frac{v^2}{2g}$ o mediante la asignación de longitudes equivalentes de tubería ($L_{\text{eq}} \approx 20-30\% \cdot L_{\text{geom}}$).
-
-
-
-\section{Diseño del Grupo de Presión y Depósitos de Acumulación}
-
-Cuando la presión de la red municipal o de la captación propia no garantiza la presión residual mínima en el punto más desfavorable ($100\text{ kPa}$ en grifos y $150\text{ kPa}$ en fluxores y calderas), se proyecta un grupo de presión hidroneumático según el CTE DB-HS 4.
-
-
-
-\subsection{Depósito de Reserva y Alimentación Auxiliar}
-
-Para evitar aspirar directamente de la red pública (práctica estrictamente prohibida para prevenir depresiones en la red municipal), se interpone un depósito de rotura de carga abierto a presión atmosférica. Su volumen útil se dimensiona para garantizar entre $15\text{ y }20\text{ minutos}$ de funcionamiento al caudal punta:
-
-\begin{equation}
-
-    V_{\text{depósito}} = Q_{\text{punta}} \cdot t_{\text{reserva}} \cdot 60 = Q_{\text{punta}}\text{ [L/s]} \cdot (20\text{ min}) \cdot 60\text{ s/min}
-
-\end{equation}
-
-Para una instalación con caudal simultáneo de proceso y servicios de $\sim 5.5\text{ L/s}$, el volumen del depósito auxiliar asciende a:
-
-\begin{equation}
-
-    V = 5.494\text{ L/s} \cdot 20 \cdot 60 = 6592.8\text{ L} \approx \mathbf{6.60\text{ m}^3}
-
-\end{equation}
-
-
-
-\subsection{Cálculo y Selección de las Bombas de Impulsión}
-
-El número de bombas en servicio se establece según el caudal total:
-
-\begin{itemize}
-
-    \item Hasta $10\text{ L/s}$: 2 bombas (1 en servicio + 1 en reserva activa idéntica).
-
-    \item Entre $10\text{ y }30\text{ L/s}$: 3 bombas (2 en servicio al $50\%$ + 1 en reserva).
-
-    \item Más de $30\text{ L/s}$: 4 o más bombas.
-
-\end{itemize}
-
-
-
-La presión mínima de arranque ($P_b$) debe vencer la altura geométrica de aspiración e impulsión ($H_g$), las pérdidas de carga del circuito más desfavorable ($P_c$) y la presión residual requerida en el grifo más elevado ($P_r \ge 10\text{ m.c.a.}$):
-
-\begin{equation}
-
-    P_b = H_a + H_g + P_c + P_r
-
-\end{equation}
-
-
-
-\subsection{Depósito Hidroneumático de Presión}
-
-Para evitar un ciclado excesivo del motor de las bombas que dañaría sus bobinados, se instala un calderín de membrana presurizada con nitrógeno. Fijando una presión máxima de parada $P_{\text{máx}} = P_b + 20\text{ m.c.a.}$ (2 bar sobre el arranque) y un número máximo de arranques $N_c = 25-30\text{ ciclos/h}$, el volumen total del acumulador se calcula como:
-
-\begin{equation}
-
-    V_{\text{acum}} = \frac{27 \cdot Q_{\text{bomba}} \cdot (P_{\text{máx}} + 10) \cdot (P_b + 10)}{(P_{\text{máx}} - P_b) \cdot N_c}
-
-\end{equation}
-
-
-
-%=============================================================================
-
-\section{Trenes de Pretratamiento y Afino de Agua segun Uso en Planta}
-
-El agua bruta procedente de red, pozo o toma fluvial requiere un acondicionamiento fisicoquimico especifico previo a su uso en calderas, reactores o torres de enfriamiento. En el proyecto se proyecta una central de tratamiento modularizada:
-
-
+donde $Q_{\text{proceso, simultáneo}}$ representa la máxima suma simultánea de las demandas de proceso en régimen de punta operativa.
 
 \begin{table}[H]
-
     \centering
-
     \small
-
-    \caption{Tecnologias de acondicionamiento y afino hidrico proyectadas en planta}
-
-    \label{tab:trenes_tratamiento}
-
-    \begin{tabularx}{\textwidth}{@{}lXp{4.2cm}l@{}}
-
+    \renewcommand{\arraystretch}{1.20}
+    \caption{Caudales instantáneos mínimos y presiones de servicio en aparatos (CTE DB-HS 4)}
+    \label{tab:caudales_aparatos_norma}
+    \begin{tabularx}{\textwidth}{@{}X c c c c@{}}
         \toprule
-
-        \textbf{Tecnologia de Tratamiento} & \textbf{Mecanismo de Accion y Funcion} & \textbf{Aplicacion en Planta} & \textbf{Parametro de Salida} \\
-
+        \textbf{Tipo de Aparato Sanitario} & \textbf{Caudal AF (L/s)} & \textbf{Caudal ACS (L/s)} & \textbf{Presión (kPa)} & \textbf{Presión (m.c.a.)} \\
         \midrule
-
-        \textbf{Filtracion Multicapa y Carbon Activo} & Retencion de particulas en suspension ($> 20\,\mu\text{m}$) y decloracion/adsorcion de materia organica. & Pretratamiento general de entrada a osmosis e intercambiadores. & Turbidez $< 0.5\text{ NTU}$, $\text{SDI} < 3$. \\
-
-        \addlinespace
-
-        \textbf{Descalcificacion por Intercambio Ionico} & Sustitucion de cationes $\text{Ca}^{2+}$ y $\text{Mg}^{2+}$ por $\text{Na}^+$ mediante resinas cationicas fuertes regeneradas con $\text{NaCl}$. & Agua caliente sanitaria (ACS), lavanderia y circuito primario calderas. & Dureza total $< 0.5^\circ\text{fH}$ (evita incrustaciones). \\
-
-        \addlinespace
-
-        \textbf{Osmosis Inversa (OI) Doble Etapa} & Separacion por membranas semipermeables de poliamida enrollada en espiral bajo alta presion ($15\text{ a }25\text{ bar}$). & Agua desmineralizada para formulacion, reactores y calderas de vapor. & Conductividad $< 5\,\mu\text{S/cm}$, rechazo sales $> 99\%$. \\
-
-        \addlinespace
-
-        \textbf{Radiacion Ultravioleta (UV)} & Fotoinactivacion de ADN bacteriano y viral a $\lambda = 254\text{ nm}$ sin subproductos de desinfeccion ni trihalometanos. & Afino microbiologico final en puntos terminales de formulacion y envasado. & Dosis $\ge 400\text{ J/m}^2$, $0\text{ UFC/100 mL}$. \\
-
+        Lavabo individual & $0.10$ & $0.065$ & $100$ & $10.0$ \\
+        Inodoro con cisterna común & $0.10$ & -- & $100$ & $10.0$ \\
+        Ducha colectiva de vestuarios & $0.20$ & $0.100$ & $100$ & $10.0$ \\
+        Fregadero de laboratorio / comedor & $0.20$ & $0.100$ & $100$ & $10.0$ \\
+        Vertedero de limpieza técnica & $0.20$ & -- & $100$ & $10.0$ \\
+        Grifo de riego exterior ($\phi 20\text{ mm}$) & $0.40$ & -- & $100$ & $10.0$ \\
+        Boca de baldeo industrial ($\phi 25\text{ mm}$) & $0.80$ & -- & $150$ & $15.0$ \\
         \bottomrule
-
     \end{tabularx}
-
 \end{table}
 
+\subsection{Caudal Específico del Sistema de Protección Contra Incendios (PCI)}
 
+El agua para la red de protección contra incendios (PCI) está estrictamente regulada por el \textit{Reglamento de Seguridad Contra Incendios en Establecimientos Industriales (RSCIEI, RD 2267/2004)}, el \textit{Reglamento de Instalaciones de Protección Contra Incendios (RIPCI, RD 513/2017)}, la norma \textbf{UNE 23500:2021} sobre sistemas de abastecimiento de agua contra incendios y la norma \textbf{UNE-EN 12845:2016} para rociadores automáticos (\cite{RD_513_2017, UNE_23500_2021, UNE_EN_12845_2016}).
 
-\subsection{Digitalizacion, Telemetria y Contabilidad Hidrica (Orden TED/339/2023)}
-
-En cumplimiento de la legislacion moderna y las directrices del PERTE de Digitalizacion del Ciclo del Agua, la red interna incorpora un sistema de telemetria y contabilidad digital centralizado:
-
+El caudal nominal requerido por la red de PCI se formula como:
+\begin{equation}
+    Q_{\text{PCI}} = Q_{\text{rociadores}} + Q_{\text{hidrantes/BIEs}}
+    \label{eq:caudal_pci}
+\end{equation}
+Para un sector de incendio clasificado con nivel de riesgo intrínseco medio en planta química, los estándares de diseño fijan:
 \begin{itemize}
-
-    \item \textbf{Caudalimetros Electromagneticos con Transmision Digital:} Instalacion de caudalimetros electromagneticos (precision clase 1 o 2 conforme a norma UNE-EN ISO 4064) en la acometida principal, cabecera de calderas, torres de refrigeracion, circuito sanitario y vertido a depuradora.
-
-    \item \textbf{Integracion SCADA y Deteccion de Fugas:} Monitorizacion en continuo de caudal ($) y presion ($) mediante transmisores piezoelectricos conectados via bus de campo Modbus-RTU/Industrial Ethernet al sistema de control de planta. Un algoritmo de balance dinamico compara minuto a minuto el caudal introducido frente a la suma de consumos parciales, generando alertas automaticas de rotura o fuga oculta.
-
+    \item Bocas de Incendio Equipadas (BIEs de $\text{DN }25\text{ mm}$ o $\text{DN }45\text{ mm}$): Caudal mínimo de $1.6\text{ a }3.3\text{ L/s}$ por boca con presión residual mínima de $200\text{ kPa}$ ($20\text{ m.c.a.}$), con simultaneidad de funcionamiento de 2 bocas durante 60 minutos ($V_{\text{BIE}} \approx 12 - 24\text{ m}^3$).
+    \item Hidrantes exteriores de columna húmeda ($\text{DN }100\text{ mm}$): Caudal mínimo de $16.6\text{ L/s}$ ($1000\text{ L/min}$) a $200\text{ kPa}$ durante 90 minutos ($V_{\text{hidrante}} \approx 90\text{ m}^3$).
+    \item Rociadores automáticos: Densidad de aplicación entre $7.5\text{ y }12.5\text{ mm/min}$ sobre el área de operación de diseño según norma UNE-EN 12845.
 \end{itemize}
 
+Por mandato imperativo de la norma UNE 23500:2021, el volumen de agua asignado a la protección contra incendios es \textbf{exclusivo e inviolable}, no pudiendo ser compartido ni detraído por los consumos de proceso o sanitarios bajo ninguna condición de explotación.
+
+\section{Diseño y Dimensionamiento de la Red Interna de Distribución}
+
+\subsection{Depósito de Almacenamiento, Autonomía y Cámara de Rotura de Carga}
+
+Para proteger el complejo industrial ante contingencias de desabastecimiento, averías en la red pública o variaciones acusadas de presión, se dispone un depósito de regulación y reserva dimensionado para garantizar una autonomía operativa de $24\text{ a }48\text{ horas}$:
+\begin{equation}
+    V_{\text{útil}} = Q_{\text{md}} \cdot t_{\text{autonomía}} \qquad \left[\text{m}^3\right]
+    \label{eq:volumen_deposito}
+\end{equation}
+
+El diseño constructivo e hidráulico del depósito cumple dos requisitos técnicos fundamentales derivados de la normativa sanitaria y sectorial:
+\begin{enumerate}
+    \item \textbf{Depósito Partido en Dos Compartimentos Independientes:}
+          De acuerdo con los criterios del RD 3/2023 y las pautas higiénico-sanitarias frente a \textit{Legionella} (RD 487/2022) (\cite{RD3_2023, RD487_2022}), el depósito no puede concebirse como un seno único indiviso. Se diseña obligatoriamente dividido en \textbf{dos compartimentos o vasos simétricos hidráulicamente independientes}, enlazados mediante un colector exterior de aspiración con valvulería de seccionamiento en bypass. Esta configuración permite aislar, vaciar, inspeccionar, limpiar y desinfectar periódicamente cualquiera de los vasos sin interrumpir en ningún momento el suministro continuo de agua a la planta.
+    \item \textbf{Desconexión Hidráulica Atmosférica (Air Gap Break Tank):}
+          En cumplimiento estricto de la norma \textbf{UNE-EN 1717} y el CTE DB-HS 4, la acometida municipal no puede conectarse de forma directa y presurizada a las líneas que alimentan los reactores químicos o las torres de enfriamiento. La alimentación municipal descarga en el depósito a través de una \textbf{cámara de aire de rotura de carga (separación atmosférica tipo AA/AB)}, donde la cota de salida de la tubería de llenado se sitúa a una distancia libre mínima superior a dos veces su diámetro por encima del labio superior de rebose del depósito. Esta discontinuidad física hace hidrodinámicamente imposible el retorno de fluidos por contrasifonado hacia la red pública de distribución.
+\end{enumerate}
+
+\subsection{Grupo de Presión (Estación de Sobreelevación) y Curva Resistente}
+
+Dado que la descarga en el depósito se realiza a presión atmosférica, la red interior debe ser presurizada mediante un grupo de sobreelevación electromecánico. La altura manométrica total requerida por la bomba ($H_b$) se deduce a partir del balance energético en el punto hidráulico más desfavorable de la instalación:
+\begin{equation}
+    H_b = H_g + \Delta H + H_{\text{residual}} \qquad [\text{m.c.a.}]
+    \label{eq:altura_manometrica_bomba}
+\end{equation}
+donde:
+\begin{itemize}
+    \item $H_g$ representa la altura geométrica entre la cota mínima de lámina de agua en el depósito y la cota de la toma terminal más elevada de la factoría ($\text{m}$).
+    \item $\Delta H$ simboliza la pérdida de carga total acumulada (continua por fricción más singular por valvulería) a lo largo del tramo crítico hasta dicho punto ($\text{m.c.a.}$).
+    \item $H_{\text{residual}}$ es la presión manométrica residual mínima de servicio exigida en el extremo de la toma:
+          \begin{itemize}
+              \item En aparatos sanitarios y griferías de vestuarios: $H_{\text{residual}} \ge 10 - 15\text{ m.c.a.}$ ($100 - 150\text{ kPa}$).
+              \item En tomas de alimentación a intercambiadores, reactores y BIEs: $H_{\text{residual}} \ge 20 - 30\text{ m.c.a.}$ ($200 - 300\text{ kPa}$).
+          \end{itemize}
+\end{itemize}
+
+El grupo de impulsión se estructura bajo una configuración \textbf{multi-bomba en paralelo ($2+1$ o $1+1$)} constituida por bombas centrífugas multietapa verticales de acero inoxidable AISI 316. La regulación de caudal se realiza mediante \textbf{variadores electrónicos de frecuencia (VFD)} integrados, los cuales adaptan la velocidad de giro de los rodetes a la demanda instantánea exacta de la planta, manteniendo una consigna de presión constante de $3.5\text{ a }4.0\text{ bar}$ en colector, con arranque progresivo sin picos de corriente y dotando al sistema de una bomba de reserva activa al $100\%$ de capacidad ante fallos mecánicos.
+
+\subsection{Dimensionamiento Hidráulico de Tuberías y Criterios de Velocidad}
+
+El cálculo del diámetro interior de cada tramo se efectúa aplicando la ecuación de continuidad a partir del caudal punta simultáneo transportado:
+\begin{equation}
+    Q = v \cdot \Omega = v \cdot \frac{\pi D_i^2}{4} \implies D_i = \sqrt{\frac{4 Q}{\pi \cdot v}}
+    \label{eq:continuidad_diametro}
+\end{equation}
+
+El dimensionamiento impone límites de velocidad rigurosos para compatibilizar la amortiguación acústica, la prevención de la cavitación y la limitación de la sedimentación de biopelículas (\cite{SorianoRull2012}):
+\begin{itemize}
+    \item \textbf{Velocidad mínima autolimpiante ($v_{\text{mín}} = 0.5\text{ m/s}$):} Impuesta en toda la red de proceso y distribución general para evitar el estancamiento de fluidos, la sedimentación de partículas coloidales y la colonización microbiana.
+    \item \textbf{Tuberías generales y colectores principales de planta:} Velocidad de flujo admisible de $v = 1.5\text{ a }2.0\text{ m/s}$.
+    \item \textbf{Ramales de distribución secundaria y locales húmedos sanitarios:} Velocidad de flujo limitada a $v = 1.0\text{ a }1.2\text{ m/s}$ para prevenir ruidos molestos por fricción y fenómenos de corrosión-erosión en accesorios.
+    \item \textbf{Red transitoria de protección contra incendios (PCI):} En situación excepcional de emergencia por siniestro, la velocidad puede elevarse hasta $v = 3.0\text{ a }4.0\text{ m/s}$ según norma UNE 23500.
+\end{itemize}
+
+Las pérdidas de carga continuas se cuantifican mediante la formulación fundamental de \textbf{Darcy-Weisbach}:
+\begin{equation}
+    h_f = f \cdot \frac{L}{D_i} \cdot \frac{v^2}{2g} \qquad [\text{m.c.a.}]
+    \label{eq:darcy_weisbach}
+\end{equation}
+donde el factor de fricción adimensional $f$ se calcula con la ecuación universal de \textbf{Colebrook-White} para régimen turbulento en función de la rugosidad absoluta del material $\varepsilon$:
+\begin{equation}
+    \frac{1}{\sqrt{f}} = -2 \cdot \log_{10} \left( \frac{\varepsilon}{3.71 \cdot D_i} + \frac{2.51}{\text{Re} \cdot \sqrt{f}} \right)
+    \label{eq:colebrook_white}
+\end{equation}
+
+Las pérdidas de carga localizadas o singulares generadas por codos, válvulas, tes y reducciones se evalúan mediante el método de los coeficientes de resistencia $K$:
+\begin{equation}
+    h_s = \sum_{j=1}^{m} K_j \cdot \frac{v^2}{2g} \qquad [\text{m.c.a.}]
+    \label{eq:perdidas_singulares}
+\end{equation}
+o, de forma simplificada en fases de ingeniería básica, estimando una longitud equivalente acumulada del $20\text{ al }30\%$ de la longitud geométrica real del trazado ($L_{\text{eq}} = 1.20 - 1.30 L$).
+
+\subsection{Selección Técnica de Materiales según Áreas Operativas}
+
+La especificación de materiales debe responder a las exigencias de agresividad físico-química del suelo, presiones de trabajo, compatibilidad con agua de consumo humano según RD 3/2023 y resistencia térmica frente a desinfecciones:
+
+\begin{enumerate}
+    \item \textbf{Red Exterior Enterrada (Acometida y Distribución Perimetral):}
+          Se prescribe \textbf{Polietileno de Alta Densidad (PE 100, clase PN 10 / PN 16, según UNE-EN 12201)}. Ofrece absoluta inmunidad frente a la corrosión galvánica y biológica de los suelos, elevada flexibilidad para admitir asentamientos diferenciales y ausencia de juntas mecánicas mediante uniones termosoldadas a tope o por manguito electrosoldable.
+    \item \textbf{Red Interior de Edificación, Oficinas y Locales Húmedos (AFCH y ACS):}
+          Se selecciona \textbf{Polipropileno Copolímero Random (PP-R, tipo 3, UNE-EN ISO 15874)} o tubería \textbf{multicapa (PE-RT/Al/PE-RT)}. Presentan nula rugosidad interna ($\varepsilon = 0.007\text{ mm}$), perfecta inercia bromatológica certificada en listas positivas para agua potable, baja conductividad térmica y resistencia certificada a desinfecciones térmicas periódicas a $70^\circ\text{C}$ frente a \textit{Legionella}.
+    \item \textbf{Salas Técnicas de Proceso y Colectores Vistos de Planta:}
+          Se prescribe \textbf{Acero Inoxidable Austenítico (AISI 304 o AISI 316L, UNE-EN 10217-7)}. Proporciona alta resistencia estructural a presiones elevadas, choques térmicos, vapor limpio y agentes desinfectantes oxidantes (ozono y dióxido de cloro), permitiendo el montaje modular mediante uniones ranuradas tipo \textit{Victaulic} o soldadura TIG con purga interior de gas inerte.
+    \item \textbf{Red Específica Contra Incendios (PCI):}
+          Tubería de \textbf{acero al carbono galvanizado en caliente (UNE-EN 10255)} sin soldadura o con costura longitudinal ensayada para clase de presión de diseño no inferior a $16\text{ bar}$.
+\end{enumerate}
+
+\subsection{Dispositivos Hidráulicos de Protección, Seguridad y Control}
+
+La red se complementa con dispositivos específicos de control hidráulico:
+\begin{itemize}
+    \item \textbf{Válvulas Reductoras de Presión (PRV):} Instaladas en los ramales interiores siempre que la presión estática o dinámica sobrepase los $500\text{ kPa}$ ($50\text{ m.c.a.}$) para proteger griferías y juntas de estanqueidad.
+    \item \textbf{Vasos de Expansión Hidroneumáticos (Calderines de Membrana):} Depósitos cerrados de acero con membrana de butilo alimentario y colchón de nitrógeno a contrapresión, dimensionados para absorber la onda elástica del \textbf{golpe de ariete} generada por el cierre rápido de electroválvulas de proceso (cálculo de la celeridad $c$ según fórmula de Joukowsky) y reducir la frecuencia horaria de arranque de las bombas principales.
+    \item \textbf{Válvulas de Retención de Doble Disco Guiado:} A la impulsión de cada bomba y en ramales de proceso para impedir inversiones de flujo.
+    \item \textbf{Ventosas Automáticas Trifuncionales:} Ubicadas en los puntos topográficos altos de los colectores para evacuar aire durante el llenado de la red, purgar microburbujas en régimen continuo y admitir aire atmosférico en caso de vaciado súbito para evitar depresiones de colapso.
+    \item \textbf{Válvulas de Purga y Desagüe:} Dispuestas en los puntos bajos de las conducciones con arqueta conectada a la red de vertidos para permitir el vaciado completo de tramos en operaciones de mantenimiento o descontaminación.
+\end{itemize}
+
+\section{Trenes de Pretratamiento y Afino de Agua según Uso en Planta}
+
+El agua captada de la red municipal presenta calidad potable garantizada para consumo humano, pero sus características fisicoquímicas pueden requerir tratamientos complementarios de adecuación para su empleo en procesos industriales específicos:
+\begin{enumerate}
+    \item \textbf{Descalcificación por Intercambio Iónico:} Filtración a través de resinas catiónicas de ciclo sodio para reducir la dureza total del agua a $< 5\text{ mg/L de CaCO}_3$ en la alimentación de calderas y circuitos de condensados, previniendo incrustaciones calcáreas de alta resistencia térmica.
+    \item \textbf{Desmineralización Avanzada por Ósmosis Inversa (RO):} Reducción de la conductividad eléctrica a $< 10\text{ }\mu\text{S/cm}$ mediante membranas poliamídicas semipermeables para la formulación de medios biotecnológicos de fermentación y agua purificada de laboratorio.
+    \item \textbf{Filtración por Carbón Activo Granular (CAG) y Cartuchos:} Retención del cloro residual libre para evitar el envenenamiento de catalizadores o la degradación de membranas poliméricas, completada con cartuchos absolutos de $0.2\text{ }\mu\text{m}$ en líneas estériles.
+    \item \textbf{Dosificación Controlada de Biocida Oxidante Residual:} Mantenimiento de una concentración de cloro libre residual entre $0.2\text{ y }1.0\text{ mg/L}$ o dióxido de cloro en el depósito de acumulación general para garantizar la barrera desinfectante preventiva contra biopelículas en cumplimiento del RD 3/2023.
+\end{enumerate}
+
+\section[Digitalización y Telemetría Hídrica (Orden TED/339/2023)]{Digitalización, Telemetría y Contabilidad Hídrica (Orden TED/339/2023)}
+
+En concordancia con la \textbf{Orden TED/339/2023}, la instalación incorpora un sistema integral de contabilidad hídrica y telemedida digital enlazado al sistema SCADA central de la factoría. Se instalan caudalímetros electromagnéticos divisionarios en la entrada de la acometida, la alimentación a calderas, las torres de refrigeración, las líneas de proceso y los consumos de personal. La monitorización en tiempo real permite detectar precozmente fugas internas, calcular los indicadores de intensidad hídrica por tonelada de producto fabricado y verificar de manera continua el balance hídrico global de la planta.
 
 
-
-
-
-\fi
 
 \chapter{Normativa Sanitaria, Medioambiental y Red de Saneamiento Industrial}
 
@@ -947,20 +891,20 @@ El TRLA consagra en sus artículos 100 a 108 el principio de que todo vertido al
     \end{equation}
     donde:
     \begin{itemize}
-        \item $V_{\text{autorizado}}$ es el volumen anual de vertido fijado en la autorización ($\si{m^3/año}$) y $V_{\text{reutilizado}}$ el volumen efectivamente reutilizado.
+        \item $V_{\text{autorizado}}$ es el volumen anual de vertido fijado en la autorización ($\text{m}^3/\text{año}$) y $V_{\text{reutilizado}}$ el volumen efectivamente reutilizado.
         \item $P_{\text{b}}$ es el precio básico por metro cúbico del art.~113.3 TRLA, actualizable mediante las Leyes de Presupuestos Generales del Estado. Los valores vigentes aplicados por los organismos de cuenca son $0{,}01751$\,€/m$^3$ para agua residual urbana y $0{,}04377$\,€/m$^3$ para \textbf{agua residual industrial}.
         \item $K$ es el coeficiente de mayoración o minoración del \textbf{anexo IV del RDPH}, obtenido como producto de tres factores: la \textit{naturaleza y características} del vertido (urbano o industrial; en el caso industrial, según la clase de actividad y la presencia de sustancias peligrosas), el \textit{grado de contaminación} (según exista o no un tratamiento adecuado) y la \textit{calidad ambiental del medio receptor} (categoría de la zona de vertido). Tras el Real Decreto-ley 4/2023, el coeficiente de mayoración no puede ser superior a 5 (art.~291.3 RDPH), y los nuevos factores del anexo IV fijados por el RD 665/2023 se aplican a los cánones devengados desde el 31 de diciembre de 2025 (disposición transitoria duodécima).
     \end{itemize}
 
     \item \textbf{Valoración de Daños al Dominio Público Hidráulico (Infracciones y Vertidos No Autorizados):} Debe distinguirse el canon tributario ordinario de la fórmula oficial de \textbf{valoración e indemnización por daños al medio hídrico} tipificada en los artículos 325 y siguientes y detallada en el \textbf{Anexo V del RDPH} (modificado por el RD 665/2023), aplicable ante accidentes, derrames o vertidos no autorizados:
     \begin{equation}
-        V_{\text{Daño}} (\text{€}) = \text{CTEC} \cdot V \cdot K_{\text{pv}} \cdot K_{\text{m}} = 0{,}12\text{ €}/\si{m^3} \cdot (Q \cdot t) \cdot K_{\text{pv}} \cdot K_{\text{m}}
+        V_{\text{Daño}} \text{ (€)} = \text{CTEC} \cdot V \cdot K_{\text{pv}} \cdot K_{\text{m}} = 0{,}12\text{ €}/\si{m^3} \cdot (Q \cdot t) \cdot K_{\text{pv}} \cdot K_{\text{m}}
         \label{eq:valoracion_danos}
     \end{equation}
     donde:
     \begin{itemize}
         \item $\text{CTEC} = 0{,}12\text{ €}/\si{m^3}$ es el coste teórico unitario del tratamiento de vertido para evitar la contaminación.
-        \item $V = Q \cdot t$ es el volumen vertido en $\si{m^3}$ ($Q$ caudal en $\si{m^3/día}$ y $t$ duración en días).
+        \item $V = Q \cdot t$ es el volumen vertido en $\si{m^3}$ ($Q$ caudal en $\text{m}^3/\text{día}$ y $t$ duración en días).
         \item $K_{\text{pv}}$ es el coeficiente adimensional de peligrosidad del vertido establecido en el \textbf{Anexo V.A} según la tipología de las sustancias vertidas (DQO, toxicidad, metales pesados, etc.).
         \item $K_{\text{m}}$ es el coeficiente adimensional relativo a la clasificación y sensibilidad ambiental del medio receptor incluido en el \textbf{Anexo V.B} (zonas de protección, estado de las masas de agua y acuíferos).
     \end{itemize}
@@ -1003,46 +947,34 @@ El cumplimiento integrado de esta arquitectura jurídica y técnica impone en la
 % ==========================================================================
 % CAPITULO 6 COMENTADO TEMPORALMENTE (PRESERVADO PARA CONSULTA)
 % ==========================================================================
-\iffalse
+
 \chapter{Conclusiones e Integración Técnica en el Proyecto}
-
-
+\label{cap:conclusiones_integracion}
 
 \section{Síntesis de Decisiones de Ingeniería}
 
-El estudio técnico desarrollado para la gestión de servicios básicos de agua permite formular las siguientes recomendaciones de ingeniería para el diseño del complejo industrial:
-
-
+El estudio técnico desarrollado para la gestión de servicios básicos de abastecimiento y saneamiento en el complejo industrial permite consolidar las siguientes directrices y decisiones de ingeniería:
 
 \begin{enumerate}
-
-    \item \textbf{Estrategia de Suministro Mixta (Híbrida):}
-
+    \item \textbf{Estrategia de Suministro Mixta y Blindaje Hídrico:}
           \begin{itemize}
-
-              \item \textbf{Red Municipal para Agua Sanitaria y de Consumo:} Garantiza la máxima seguridad bromatológica y microbiológica en cumplimiento del RD 3/2023 para el personal y formulaciones sensibles, sin exigir costosas plantas potabilizadoras en parcela.
-
-              \item \textbf{Captación Propia Concesionada para Refrigeración y Procesos Gruesos:} Siempre que exista disponibilidad hidrogeológica, el empleo de pozo de sondeo o toma de canal para las torres de refrigeración y limpieza primaria optimiza drásticamente los costes de explotación ($OPEX$).
-
+              \item \textbf{Red Municipal para Agua Sanitaria y de Consumo:} Garantiza la máxima seguridad bromatológica, microbiológica y toxicológica en estricto cumplimiento del Real Decreto 3/2023 para el personal y formulaciones sensibles, sin exigir la implantación ni el coste operativo de complejas estaciones potabilizadoras en la parcela.
+              \item \textbf{Captación Propia Concesionada para Procesos Gruesos y Refrigeración:} Siempre que exista disponibilidad hidrogeológica validada por la Confederación Hidrográfica, la explotación de un pozo de sondeo profundo para el circuito de refrigeración y limpiezas primarias minimiza de forma decisiva los costes de explotación ($OPEX$).
           \end{itemize}
 
-    \item \textbf{Diseño Hidráulico Robusto:}
+    \item \textbf{Robustez del Diseño Hidráulico Interior:}
+          \begin{itemize}
+              \item La previsión de un \textbf{depósito partido en dos compartimentos simétricos independientes con colector exterior en bypass} garantiza la continuidad operativa ininterrumpida de la factoría durante las tareas de mantenimiento, vaciado y desinfección preventiva contra \textit{Legionella} (RD 487/2022).
+              \item La intercalación obligatoria de una \textbf{desconexión hidráulica atmosférica de rotura de carga (Air Gap Break Tank, UNE-EN 1717)} en la alimentación del depósito elimina de manera absoluta cualquier riesgo de contaminación por reflujo o contrasifonado hacia la red pública.
+              \item La estación de sobreelevación multi-bomba en paralelo ($2+1$) con variadores electrónicos de frecuencia (VFD) asegura una consigna de presión constante de $3.5\text{ a }4.0\text{ bar}$ en los colectores de planta, modulando la potencia eléctrica al consumo instantáneo real y con una bomba de reserva activa al $100\%$.
+          \end{itemize}
 
-          La incorporación de un depósito auxiliar de rotura de carga ($6.6\text{ m}^3$) y un grupo de presión doble con calderín de membrana hidroneumática garantiza una presión de servicio constante de $3.5\text{ a }4.0\text{ bar}$ en los puntos críticos de planta, aislando la red municipal de posibles fluctuaciones o sobrepresiones.
-
-    \item \textbf{Blindaje Normativo y Sanitario:}
-
-          El empleo estricto de materiales plásticos y metálicos homologados en listas positivas, la recirculación continua de ACS a $\ge 50^\circ\text{C}$ con acumulación a $60^\circ\text{C}$ frente a \textit{Legionella} (RD 487/2022) y el tratamiento integral de efluentes en EDARI previo al vertido aseguran la total conformidad técnica ante el Ayuntamiento, la Delegación Territorial de Salud y la Confederación Hidrográfica.
-
+    \item \textbf{Conformidad Sanitaria y Medioambiental Exhaustiva:}
+          \begin{itemize}
+              \item La especificación de materiales homologados en listas positivas (PE 100 PN 16 exterior, PP-R y multicapa en locales húmedos, acero inoxidable AISI 316L en proceso) elimina cualquier fenómeno de migración química, corrosión o incrustación.
+              \item La red de saneamiento separativa y la estación depuradora de aguas residuales industriales (EDARI) garantizan que los efluentes vertidos a la red municipal cumplan rigurosamente los parámetros límite de vertido (DBO$_5$, DQO, sólidos en suspensión y metales pesados), salvaguardando la responsabilidad civil y ambiental del promotor.
+          \end{itemize}
 \end{enumerate}
-
-
-
-\newpage
-
-
-\fi
-
 
 \chapter*{Declaración sobre el Uso de Inteligencia Artificial Generativa}
 \addcontentsline{toc}{chapter}{Declaración sobre el Uso de Inteligencia Artificial Generativa}
@@ -1068,8 +1000,8 @@ El autor declara que la Inteligencia Artificial Generativa ha sido utilizada exc
 
 \vspace{2.5em}
 \noindent\begin{tabularx}{\textwidth}{l X l}
-\textbf{Firma del Estudiante:} & \hspace{4cm} & \textbf{Fecha:} 31/10/2026 \\
-\cline{1-1} \cline{3-3}
+\textbf{Firma del Estudiante:} & & \textbf{Fecha:} 31/10/2026 \\
+\cline{1-3}
 Christian Pérez Hita & & \\
 \end{tabularx}
 
@@ -1077,7 +1009,4 @@ Christian Pérez Hita & & \\
 
 \printbibliography[heading=bibintoc, title={Referencias Bibliográficas y Legislativas}]
 
-
-
 \end{document}
-
