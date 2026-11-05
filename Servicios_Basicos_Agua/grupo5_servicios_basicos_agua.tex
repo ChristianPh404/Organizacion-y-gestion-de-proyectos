@@ -742,46 +742,54 @@ A diferencia de los edificios residenciales, una instalación industrial de proc
 \begin{figure}[htbp]
 \centering
 \begin{tikzpicture}[node distance=1.1cm, auto,
-    unidad/.style={rectangle, draw=blue!80!black, fill=blue!10, rounded corners=2pt, thick, text width=2.9cm, align=center, minimum height=0.9cm, font=\scriptsize},
-    colector/.style={rectangle, draw=orange!90!black, fill=orange!15, thick, text width=2.8cm, align=center, minimum height=0.8cm, font=\scriptsize},
-    trat/.style={rectangle, draw=purple!80!black, fill=purple!10, rounded corners=3pt, thick, text width=3.0cm, align=center, minimum height=0.9cm, font=\scriptsize},
-    destino/.style={rectangle, draw=teal!90!black, fill=teal!20, rounded corners=4pt, line width=1pt, text width=3.2cm, align=center, minimum height=1.0cm, font=\small\bfseries},
-    flecha/.style={draw=gray!80!black, -{Latex[length=2.3mm]}, thick}]
+    % Estilos clasificados por tipo de efluente (concordantes con Tabla 5.1)
+    caja_plu/.style={rectangle, draw=blue!80!black, fill=blue!10, rounded corners=2pt, thick, text width=2.9cm, align=center, minimum height=0.9cm, font=\scriptsize},
+    caja_plc/.style={rectangle, draw=blue!75!cyan, fill=cyan!10, rounded corners=2pt, thick, text width=2.9cm, align=center, minimum height=0.9cm, font=\scriptsize},
+    caja_fec/.style={rectangle, draw=red!80!black, fill=red!10, rounded corners=2pt, thick, text width=2.9cm, align=center, minimum height=0.9cm, font=\scriptsize},
+    caja_ind/.style={rectangle, draw=green!50!black, fill=green!10, rounded corners=2pt, thick, text width=2.9cm, align=center, minimum height=0.9cm, font=\scriptsize},
+    pozo/.style={rectangle, draw=magenta!80!black, fill=magenta!15, thick, rounded corners=3pt, text width=2.8cm, align=center, minimum height=0.9cm, font=\scriptsize},
+    ptm/.style={rectangle, draw=black!85, fill=gray!15, thick, rounded corners=3pt, text width=2.8cm, align=center, minimum height=0.9cm, font=\scriptsize},
+    destino/.style={rectangle, draw=teal!90!black, fill=teal!20, rounded corners=4pt, line width=1.1pt, text width=3.2cm, align=center, minimum height=1.0cm, font=\small\bfseries},
+    flecha_plu/.style={draw=blue!80!black, -{Latex[length=2.3mm]}, thick},
+    flecha_plc/.style={draw=blue!75!cyan, -{Latex[length=2.3mm]}, thick, dashed},
+    flecha_fec/.style={draw=red!80!black, -{Latex[length=2.3mm]}, thick},
+    flecha_ind/.style={draw=green!50!black, -{Latex[length=2.3mm]}, thick},
+    flecha_gen/.style={draw=gray!80!black, -{Latex[length=2.3mm]}, thick}]
     
     % Unidades de origen
-    \node [unidad] (cubiertas) {Cubiertas Naves\\(Pluviales limpias)};
-    \node [unidad, below=0.6cm of cubiertas] (viales) {Zonas Carga / Viales\\(Pluviales contam.)};
-    \node [unidad, below=0.6cm of viales] (edif) {Edificio Servicios\\(Aguas fecales)};
-    \node [unidad, below=0.6cm of edif] (proceso) {Reactores / CIP / Purga\\(Vertido industrial)};
+    \node [caja_plu] (cubiertas) {\textbf{Cubiertas Naves}\\(Pluviales limpias)};
+    \node [caja_plc, below=0.6cm of cubiertas] (viales) {\textbf{Zonas Carga / Viales}\\(Pluviales contam.)};
+    \node [caja_fec, below=0.6cm of viales] (edif) {\textbf{Edificio Servicios}\\(Aguas fecales)};
+    \node [caja_ind, below=0.6cm of edif] (proceso) {\textbf{Reactores / CIP / Purga}\\(Vertido industrial)};
     
-    % Elementos intermedios
-    \node [colector, right=1.2cm of cubiertas] (arc_plu) {Arqueta de Paso\\(R-PLU)};
-    \node [trat, right=1.2cm of viales] (sep_hid) {Separador de\\Hidrocarburos (SH)};
-    \node [colector, right=1.2cm of edif] (arc_sif) {Arqueta Sifónica\\(R-FEC)};
-    \node [trat, right=1.2cm of proceso] (edari) {EDARI Planta\\(Neutraliz. + Fis-Quím)};
+    % Elementos intermedios y tratamiento
+    \node [caja_plu, right=1.2cm of cubiertas] (arc_plu) {Arqueta de Paso\\(\textbf{R-PLU})};
+    \node [caja_plc, right=1.2cm of viales] (sep_hid) {Separador de\\Hidrocarburos (\textbf{SH})};
+    \node [caja_fec, right=1.2cm of edif] (arc_sif) {Arqueta Sifónica\\(\textbf{R-FEC})};
+    \node [caja_ind, right=1.2cm of proceso] (edari) {EDARI Planta\\(\textbf{R-IND}: Neutraliz. + F-Q)};
     
     % Colector general y pozo de control
-    \node [colector, right=1.3cm of sep_hid] (pozo_unif) {Pozo de Registro\\General de Planta};
-    \node [trat, right=1.3cm of edari] (pozo_muestras) {Pozo Homologado\\Toma Muestras Oficial};
+    \node [pozo, right=1.3cm of sep_hid] (pozo_unif) {\textbf{Pozo de Registro (PR)}\\General de Pluviales};
+    \node [ptm, right=1.3cm of edari] (pozo_muestras) {\textbf{Pozo Homologado (PTM)}\\Toma de Muestras Oficial};
     
     % Destino final
     \node [destino, right=1.2cm of pozo_unif, yshift=-1.1cm] (emisor) {Colector Municipal o\\Cauce Receptor (DPH)};
     
-    % Conexiones
-    \path [flecha] (cubiertas) -- (arc_plu);
-    \path [flecha] (viales) -- (sep_hid);
-    \path [flecha] (edif) -- (arc_sif);
-    \path [flecha] (proceso) -- (edari);
+    % Conexiones diferenciadas por efluente
+    \path [flecha_plu] (cubiertas) -- (arc_plu);
+    \path [flecha_plc] (viales) -- (sep_hid);
+    \path [flecha_fec] (edif) -- (arc_sif);
+    \path [flecha_ind] (proceso) -- (edari);
     
-    \path [flecha] (arc_plu) -| (pozo_unif);
-    \path [flecha] (sep_hid) -- (pozo_unif);
-    \path [flecha] (arc_sif) -| (pozo_muestras);
-    \path [flecha] (edari) -- (pozo_muestras);
+    \path [flecha_plu] (arc_plu) -| (pozo_unif);
+    \path [flecha_plc] (sep_hid) -- (pozo_unif);
+    \path [flecha_fec] (arc_sif) -| (pozo_muestras);
+    \path [flecha_ind] (edari) -- (pozo_muestras);
     
-    \path [flecha] (pozo_unif) -- (emisor);
-    \path [flecha] (pozo_muestras) -- (emisor);
+    \path [flecha_plu] (pozo_unif) -- (emisor);
+    \path [flecha_gen] (pozo_muestras) -- (emisor);
 \end{tikzpicture}
-\caption{Diagrama de bloques de la red separativa de saneamiento y tratamiento previo en un complejo de ingeniería química.}
+\caption{Diagrama de bloques de la red separativa de saneamiento y tratamiento previo en un complejo de ingeniería química (código de colores concordante con la simbología de la Tabla~\ref{tab:simbologia_saneamiento}).}
 \label{fig:diagrama_saneamiento_quimico}
 \end{figure}
 
