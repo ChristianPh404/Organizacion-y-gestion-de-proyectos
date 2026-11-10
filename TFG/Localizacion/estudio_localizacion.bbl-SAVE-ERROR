@@ -1,0 +1,1639 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{apa/apasortcite//global/global/global}
+    \entry{AICA2026}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=e53c4a3171145895cd0c239d54fe56a8}{%
+           family={{Agencia de Información y Control Alimentarios (AICA)}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Ministerio de Agricultura, Pesca y Alimentación (MAPA)}%
+      }
+      \strng{namehash}{e53c4a3171145895cd0c239d54fe56a8}
+      \strng{fullhash}{e53c4a3171145895cd0c239d54fe56a8}
+      \strng{fullhashraw}{e53c4a3171145895cd0c239d54fe56a8}
+      \strng{bibnamehash}{e53c4a3171145895cd0c239d54fe56a8}
+      \strng{authorbibnamehash}{e53c4a3171145895cd0c239d54fe56a8}
+      \strng{authornamehash}{e53c4a3171145895cd0c239d54fe56a8}
+      \strng{authorfullhash}{e53c4a3171145895cd0c239d54fe56a8}
+      \strng{authorfullhashraw}{e53c4a3171145895cd0c239d54fe56a8}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Informe Mensual de la Situación de Mercado del Sector del Aceite de Oliva y la Aceituna de Mesa: Campaña 2025/2026 (Datos a Septiembre de 2026)}
+      \field{year}{2026}
+      \verb{urlraw}
+      \verb https://www.mapa.gob.es/es/agricultura/temas/producciones-agricolas/aceite-oliva-y-aceituna-mesa/avances
+      \endverb
+      \verb{url}
+      \verb https://www.mapa.gob.es/es/agricultura/temas/producciones-agricolas/aceite-oliva-y-aceituna-mesa/avances
+      \endverb
+    \endentry
+    \entry{AVEBIOM2026}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=1bb346961ad939c4e3e5c73205f6580d}{%
+           family={{Asociación Española de la Biomasa}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{1bb346961ad939c4e3e5c73205f6580d}
+      \strng{fullhash}{1bb346961ad939c4e3e5c73205f6580d}
+      \strng{fullhashraw}{1bb346961ad939c4e3e5c73205f6580d}
+      \strng{bibnamehash}{1bb346961ad939c4e3e5c73205f6580d}
+      \strng{authorbibnamehash}{1bb346961ad939c4e3e5c73205f6580d}
+      \strng{authornamehash}{1bb346961ad939c4e3e5c73205f6580d}
+      \strng{authorfullhash}{1bb346961ad939c4e3e5c73205f6580d}
+      \strng{authorfullhashraw}{1bb346961ad939c4e3e5c73205f6580d}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Informe Estadístico sobre el Mercado de la Biomasa y Subproductos del Olivar en España}
+      \field{urlday}{3}
+      \field{urlmonth}{11}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.avebiom.org/
+      \endverb
+      \verb{url}
+      \verb https://www.avebiom.org/
+      \endverb
+    \endentry
+    \entry{AytoLoja2009_Memoria}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=4995582b36b5d3e01495809572b38900}{%
+           family={{Ayuntamiento de Loja}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{4995582b36b5d3e01495809572b38900}
+      \strng{fullhash}{4995582b36b5d3e01495809572b38900}
+      \strng{fullhashraw}{4995582b36b5d3e01495809572b38900}
+      \strng{bibnamehash}{4995582b36b5d3e01495809572b38900}
+      \strng{authorbibnamehash}{4995582b36b5d3e01495809572b38900}
+      \strng{authornamehash}{4995582b36b5d3e01495809572b38900}
+      \strng{authorfullhash}{4995582b36b5d3e01495809572b38900}
+      \strng{authorfullhashraw}{4995582b36b5d3e01495809572b38900}
+      \field{extraname}{1}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Aprobación definitiva plenaria}
+      \field{title}{Memoria Justificativa de la Adaptación Parcial a la LOUA de las Normas Subsidiarias Municipales de Loja}
+      \field{year}{2009}
+      \verb{urlraw}
+      \verb http://aytoloja.org/ayuntamiento/MEMORIA/MEM_JUSTIF_ADAPTACION_LOJA.pdf
+      \endverb
+      \verb{url}
+      \verb http://aytoloja.org/ayuntamiento/MEMORIA/MEM_JUSTIF_ADAPTACION_LOJA.pdf
+      \endverb
+    \endentry
+    \entry{AytoLoja_Planos}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=4995582b36b5d3e01495809572b38900}{%
+           family={{Ayuntamiento de Loja}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{4995582b36b5d3e01495809572b38900}
+      \strng{fullhash}{4995582b36b5d3e01495809572b38900}
+      \strng{fullhashraw}{4995582b36b5d3e01495809572b38900}
+      \strng{bibnamehash}{4995582b36b5d3e01495809572b38900}
+      \strng{authorbibnamehash}{4995582b36b5d3e01495809572b38900}
+      \strng{authornamehash}{4995582b36b5d3e01495809572b38900}
+      \strng{authorfullhash}{4995582b36b5d3e01495809572b38900}
+      \strng{authorfullhashraw}{4995582b36b5d3e01495809572b38900}
+      \field{extraname}{2}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Cartografía urbanística oficial}
+      \field{title}{Planeamiento Vigente: Planos de Clasificación del Suelo y Término Municipal (Hojas PV-2.2 y PV-2.3, Escala 1:10.000)}
+      \field{year}{2009}
+      \verb{urlraw}
+      \verb http://www.aytoloja.org/ayuntamiento/PLANOS/1_PV_PLANEAMIENTO%20VIGENTE/PV_2_2.pdf
+      \endverb
+      \verb{url}
+      \verb http://www.aytoloja.org/ayuntamiento/PLANOS/1_PV_PLANEAMIENTO%20VIGENTE/PV_2_2.pdf
+      \endverb
+    \endentry
+    \entry{AytoLoja2025}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=4995582b36b5d3e01495809572b38900}{%
+           family={{Ayuntamiento de Loja}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{4995582b36b5d3e01495809572b38900}
+      \strng{fullhash}{4995582b36b5d3e01495809572b38900}
+      \strng{fullhashraw}{4995582b36b5d3e01495809572b38900}
+      \strng{bibnamehash}{4995582b36b5d3e01495809572b38900}
+      \strng{authorbibnamehash}{4995582b36b5d3e01495809572b38900}
+      \strng{authornamehash}{4995582b36b5d3e01495809572b38900}
+      \strng{authorfullhash}{4995582b36b5d3e01495809572b38900}
+      \strng{authorfullhashraw}{4995582b36b5d3e01495809572b38900}
+      \field{extraname}{3}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Boletn Oficial de la Provincia de Granada y Perfil del Contratante del Ayuntamiento de Loja}
+      \field{title}{Pliego de Condiciones Econmico-Administrativas y Precios de Enajenacin de Parcelas en el Polgono Industrial El Manzanil II}
+      \field{year}{2025}
+    \endentry
+    \entry{CORES2026}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=152533897013da79567388bc622ef5a8}{%
+           family={{Corporación de Reservas Estratégicas de Productos Petrolíferos (CORES)}},
+           familyi={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{152533897013da79567388bc622ef5a8}
+      \strng{fullhash}{152533897013da79567388bc622ef5a8}
+      \strng{fullhashraw}{152533897013da79567388bc622ef5a8}
+      \strng{bibnamehash}{152533897013da79567388bc622ef5a8}
+      \strng{authorbibnamehash}{152533897013da79567388bc622ef5a8}
+      \strng{authornamehash}{152533897013da79567388bc622ef5a8}
+      \strng{authorfullhash}{152533897013da79567388bc622ef5a8}
+      \strng{authorfullhashraw}{152533897013da79567388bc622ef5a8}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Boletín Estadístico de Hidrocarburos n{º} 345 (Agosto de 2026)}
+      \field{year}{2026}
+      \verb{urlraw}
+      \verb https://www.cores.es/es/node/3884
+      \endverb
+      \verb{url}
+      \verb https://www.cores.es/es/node/3884
+      \endverb
+    \endentry
+    \entry{DeCos2008}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f365be2be2bf69945f28aa318801dee8}{%
+           family={De\bibnamedelima Cos\bibnamedelima Castillo},
+           familyi={D\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim C\bibinitperiod},
+           given={Manuel},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Madrid, España}%
+      }
+      \list{publisher}{1}{%
+        {Editorial Síntesis}%
+      }
+      \strng{namehash}{f365be2be2bf69945f28aa318801dee8}
+      \strng{fullhash}{f365be2be2bf69945f28aa318801dee8}
+      \strng{fullhashraw}{f365be2be2bf69945f28aa318801dee8}
+      \strng{bibnamehash}{f365be2be2bf69945f28aa318801dee8}
+      \strng{authorbibnamehash}{f365be2be2bf69945f28aa318801dee8}
+      \strng{authornamehash}{f365be2be2bf69945f28aa318801dee8}
+      \strng{authorfullhash}{f365be2be2bf69945f28aa318801dee8}
+      \strng{authorfullhashraw}{f365be2be2bf69945f28aa318801dee8}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{3ª}
+      \field{title}{Teoría General del Proyecto: Ingeniería de Proyectos}
+      \field{year}{2008}
+    \endentry
+    \entry{AytoLoja2009_BOP}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=005f8f44c5fa2a66859281bd9d8d36b7}{%
+           family={{Diputación de Granada}},
+           familyi={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{005f8f44c5fa2a66859281bd9d8d36b7}
+      \strng{fullhash}{005f8f44c5fa2a66859281bd9d8d36b7}
+      \strng{fullhashraw}{005f8f44c5fa2a66859281bd9d8d36b7}
+      \strng{bibnamehash}{005f8f44c5fa2a66859281bd9d8d36b7}
+      \strng{authorbibnamehash}{005f8f44c5fa2a66859281bd9d8d36b7}
+      \strng{authornamehash}{005f8f44c5fa2a66859281bd9d8d36b7}
+      \strng{authorfullhash}{005f8f44c5fa2a66859281bd9d8d36b7}
+      \strng{authorfullhashraw}{005f8f44c5fa2a66859281bd9d8d36b7}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Boletín Oficial de la Provincia de Granada}
+      \field{month}{11}
+      \field{number}{213}
+      \field{title}{Publicación del acuerdo de aprobación definitiva de la Adaptación Parcial a la LOUA de las Normas Subsidiarias de Loja}
+      \field{year}{2009}
+      \field{pages}{1\bibrangedash 48}
+      \range{pages}{48}
+      \verb{urlraw}
+      \verb https://bop.dipgra.es/export/sites/bop/publica/boletines-anteriores/.galleries/Boletines-Anteriores/20091106-2009213.pdf
+      \endverb
+      \verb{url}
+      \verb https://bop.dipgra.es/export/sites/bop/publica/boletines-anteriores/.galleries/Boletines-Anteriores/20091106-2009213.pdf
+      \endverb
+    \endentry
+    \entry{Catastro2026}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=8d29af597c41ebd628cc196f141c6a7c}{%
+           family={{Dirección General del Catastro}},
+           familyi={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{8d29af597c41ebd628cc196f141c6a7c}
+      \strng{fullhash}{8d29af597c41ebd628cc196f141c6a7c}
+      \strng{fullhashraw}{8d29af597c41ebd628cc196f141c6a7c}
+      \strng{bibnamehash}{8d29af597c41ebd628cc196f141c6a7c}
+      \strng{authorbibnamehash}{8d29af597c41ebd628cc196f141c6a7c}
+      \strng{authornamehash}{8d29af597c41ebd628cc196f141c6a7c}
+      \strng{authorfullhash}{8d29af597c41ebd628cc196f141c6a7c}
+      \strng{authorfullhashraw}{8d29af597c41ebd628cc196f141c6a7c}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Sede Electrónica del Catastro: Cartografía Catastral y Datos Físicos de Parcelas en Polígono Industrial El Manzanil II (Loja)}
+      \field{urlday}{3}
+      \field{urlmonth}{11}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.sedecatastro.gob.es/
+      \endverb
+      \verb{url}
+      \verb https://www.sedecatastro.gob.es/
+      \endverb
+    \endentry
+    \entry{SABI2026}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=4619b03525991f0745d533109272dd07}{%
+           family={{Informa D\&B y Bureau van Dijk}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{4619b03525991f0745d533109272dd07}
+      \strng{fullhash}{4619b03525991f0745d533109272dd07}
+      \strng{fullhashraw}{4619b03525991f0745d533109272dd07}
+      \strng{bibnamehash}{4619b03525991f0745d533109272dd07}
+      \strng{authorbibnamehash}{4619b03525991f0745d533109272dd07}
+      \strng{authornamehash}{4619b03525991f0745d533109272dd07}
+      \strng{authorfullhash}{4619b03525991f0745d533109272dd07}
+      \strng{authorfullhashraw}{4619b03525991f0745d533109272dd07}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Sistema de Análisis de Balances Ibéricos (SABI): Empresas con CNAE 1043, 1039 y 2014}
+      \field{year}{2026}
+      \verb{urlraw}
+      \verb https://sabi.informa.es
+      \endverb
+      \verb{url}
+      \verb https://sabi.informa.es
+      \endverb
+    \endentry
+    \entry{IGN2026}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=842dcda17144d527aa50957867bd7168}{%
+           family={{Instituto Geográfico Nacional}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{842dcda17144d527aa50957867bd7168}
+      \strng{fullhash}{842dcda17144d527aa50957867bd7168}
+      \strng{fullhashraw}{842dcda17144d527aa50957867bd7168}
+      \strng{bibnamehash}{842dcda17144d527aa50957867bd7168}
+      \strng{authorbibnamehash}{842dcda17144d527aa50957867bd7168}
+      \strng{authornamehash}{842dcda17144d527aa50957867bd7168}
+      \strng{authorfullhash}{842dcda17144d527aa50957867bd7168}
+      \strng{authorfullhashraw}{842dcda17144d527aa50957867bd7168}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Mapa Topográfico Nacional MTN50, Hoja 1009 (Loja) y MTN25}
+      \field{urlday}{3}
+      \field{urlmonth}{11}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://centrodedescargas.cnig.es/
+      \endverb
+      \verb{url}
+      \verb https://centrodedescargas.cnig.es/
+      \endverb
+    \endentry
+    \entry{INE_Formacion2025}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=562958e6bd37bbb48e1e1a29fb75cce8}{%
+           family={{Instituto Nacional de Estadística (INE)}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{562958e6bd37bbb48e1e1a29fb75cce8}
+      \strng{fullhash}{562958e6bd37bbb48e1e1a29fb75cce8}
+      \strng{fullhashraw}{562958e6bd37bbb48e1e1a29fb75cce8}
+      \strng{bibnamehash}{562958e6bd37bbb48e1e1a29fb75cce8}
+      \strng{authorbibnamehash}{562958e6bd37bbb48e1e1a29fb75cce8}
+      \strng{authornamehash}{562958e6bd37bbb48e1e1a29fb75cce8}
+      \strng{authorfullhash}{562958e6bd37bbb48e1e1a29fb75cce8}
+      \strng{authorfullhashraw}{562958e6bd37bbb48e1e1a29fb75cce8}
+      \field{extraname}{1}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Competencias y habilidades: Nivel de formación alcanzado por la población adulta por grupo de edad y comunidad autónoma}
+      \field{urlday}{4}
+      \field{urlmonth}{11}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.ine.es/jaxiT3/Tabla.htm?t=69774
+      \endverb
+      \verb{url}
+      \verb https://www.ine.es/jaxiT3/Tabla.htm?t=69774
+      \endverb
+    \endentry
+    \entry{INE_EPA2026}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=562958e6bd37bbb48e1e1a29fb75cce8}{%
+           family={{Instituto Nacional de Estadística (INE)}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{562958e6bd37bbb48e1e1a29fb75cce8}
+      \strng{fullhash}{562958e6bd37bbb48e1e1a29fb75cce8}
+      \strng{fullhashraw}{562958e6bd37bbb48e1e1a29fb75cce8}
+      \strng{bibnamehash}{562958e6bd37bbb48e1e1a29fb75cce8}
+      \strng{authorbibnamehash}{562958e6bd37bbb48e1e1a29fb75cce8}
+      \strng{authornamehash}{562958e6bd37bbb48e1e1a29fb75cce8}
+      \strng{authorfullhash}{562958e6bd37bbb48e1e1a29fb75cce8}
+      \strng{authorfullhashraw}{562958e6bd37bbb48e1e1a29fb75cce8}
+      \field{extraname}{2}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Encuesta de Población Activa (EPA): Tasas de actividad, paro y empleo por provincia y Distribución porcentual de los activos por sector económico}
+      \field{urlday}{4}
+      \field{urlmonth}{11}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.ine.es/jaxiT3/Tabla.htm?t=65349
+      \endverb
+      \verb{url}
+      \verb https://www.ine.es/jaxiT3/Tabla.htm?t=65349
+      \endverb
+    \endentry
+    \entry{SITUA2026}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=536d4877d816374d886998ff5e79a7e0}{%
+           family={{Junta de Andalucía}},
+           familyi={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{536d4877d816374d886998ff5e79a7e0}
+      \strng{fullhash}{536d4877d816374d886998ff5e79a7e0}
+      \strng{fullhashraw}{536d4877d816374d886998ff5e79a7e0}
+      \strng{bibnamehash}{536d4877d816374d886998ff5e79a7e0}
+      \strng{authorbibnamehash}{536d4877d816374d886998ff5e79a7e0}
+      \strng{authornamehash}{536d4877d816374d886998ff5e79a7e0}
+      \strng{authorfullhash}{536d4877d816374d886998ff5e79a7e0}
+      \strng{authorfullhashraw}{536d4877d816374d886998ff5e79a7e0}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Sistema de Información Territorial y Urbanística de Andalucía (SITUA): Plan General de Ordenación Urbana de Loja (Granada)}
+      \field{urlday}{3}
+      \field{urlmonth}{11}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://ws132.juntadeandalucia.es/situadifusion/
+      \endverb
+      \verb{url}
+      \verb https://ws132.juntadeandalucia.es/situadifusion/
+      \endverb
+    \endentry
+    \entry{MeyersStephens2005}{book}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=b0b5998c7b5ba8ae20ed7b0222556ed2}{%
+           family={Meyers},
+           familyi={M\bibinitperiod},
+           given={Fred\bibnamedelima E.},
+           giveni={F\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=aa39aeff08951d771daa6b7bc1615548}{%
+           family={Stephens},
+           familyi={S\bibinitperiod},
+           given={Matthew\bibnamedelima P.},
+           giveni={M\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {México D.F.}%
+      }
+      \list{publisher}{1}{%
+        {Pearson Educación}%
+      }
+      \strng{namehash}{42a59e34c932eacc6c7532e39fda6999}
+      \strng{fullhash}{42a59e34c932eacc6c7532e39fda6999}
+      \strng{fullhashraw}{42a59e34c932eacc6c7532e39fda6999}
+      \strng{bibnamehash}{42a59e34c932eacc6c7532e39fda6999}
+      \strng{authorbibnamehash}{42a59e34c932eacc6c7532e39fda6999}
+      \strng{authornamehash}{42a59e34c932eacc6c7532e39fda6999}
+      \strng{authorfullhash}{42a59e34c932eacc6c7532e39fda6999}
+      \strng{authorfullhashraw}{42a59e34c932eacc6c7532e39fda6999}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{3ª}
+      \field{title}{Diseño de Instalaciones de Manufactura y Manejo de Materiales (Metodología SLP de Muther)}
+      \field{year}{2005}
+    \endentry
+    \entry{MAPA2025}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=90a1c3af9dcf2c48330159daa9609e9a}{%
+           family={{Ministerio de Agricultura, Pesca y Alimentación (MAPA)}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{90a1c3af9dcf2c48330159daa9609e9a}
+      \strng{fullhash}{90a1c3af9dcf2c48330159daa9609e9a}
+      \strng{fullhashraw}{90a1c3af9dcf2c48330159daa9609e9a}
+      \strng{bibnamehash}{90a1c3af9dcf2c48330159daa9609e9a}
+      \strng{authorbibnamehash}{90a1c3af9dcf2c48330159daa9609e9a}
+      \strng{authornamehash}{90a1c3af9dcf2c48330159daa9609e9a}
+      \strng{authorfullhash}{90a1c3af9dcf2c48330159daa9609e9a}
+      \strng{authorfullhashraw}{90a1c3af9dcf2c48330159daa9609e9a}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Anuario de Estadística Agraria: Avance y Tablas Globales de Olivar Campaña 2025}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://www.mapa.gob.es/es/estadistica/temas/estadisticas-agrarias/agricultura/superficies-producciones-anuales-cultivos/
+      \endverb
+      \verb{url}
+      \verb https://www.mapa.gob.es/es/estadistica/temas/estadisticas-agrarias/agricultura/superficies-producciones-anuales-cultivos/
+      \endverb
+    \endentry
+    \entry{MIVAU2026}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=7bb21266b9df20a9e000878fae9d40b7}{%
+           family={{Ministerio de Vivienda y Agenda Urbana}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{7bb21266b9df20a9e000878fae9d40b7}
+      \strng{fullhash}{7bb21266b9df20a9e000878fae9d40b7}
+      \strng{fullhashraw}{7bb21266b9df20a9e000878fae9d40b7}
+      \strng{bibnamehash}{7bb21266b9df20a9e000878fae9d40b7}
+      \strng{authorbibnamehash}{7bb21266b9df20a9e000878fae9d40b7}
+      \strng{authornamehash}{7bb21266b9df20a9e000878fae9d40b7}
+      \strng{authorfullhash}{7bb21266b9df20a9e000878fae9d40b7}
+      \strng{authorfullhashraw}{7bb21266b9df20a9e000878fae9d40b7}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Estadstica de Precios de Suelo: Valor de las Transacciones de Suelo Urbano e Industrial por Provincias y Municipios}
+      \field{urlday}{4}
+      \field{urlmonth}{11}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.mivau.gob.es/
+      \endverb
+      \verb{url}
+      \verb https://www.mivau.gob.es/
+      \endverb
+    \endentry
+    \entry{PerezHita2026}{report}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9caff572b437b7695a7c0fbcb68cff15}{%
+           family={Pérez\bibnamedelima Hita},
+           familyi={P\bibinitperiod\bibinitdelim H\bibinitperiod},
+           given={Christian},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {Universidad de Granada}%
+      }
+      \list{location}{1}{%
+        {Granada, España}%
+      }
+      \strng{namehash}{9caff572b437b7695a7c0fbcb68cff15}
+      \strng{fullhash}{9caff572b437b7695a7c0fbcb68cff15}
+      \strng{fullhashraw}{9caff572b437b7695a7c0fbcb68cff15}
+      \strng{bibnamehash}{9caff572b437b7695a7c0fbcb68cff15}
+      \strng{authorbibnamehash}{9caff572b437b7695a7c0fbcb68cff15}
+      \strng{authornamehash}{9caff572b437b7695a7c0fbcb68cff15}
+      \strng{authorfullhash}{9caff572b437b7695a7c0fbcb68cff15}
+      \strng{authorfullhashraw}{9caff572b437b7695a7c0fbcb68cff15}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Biorrefinería Oleícola por Vía Enzimática y Organosolv. Documento nº 1: Estudio de Mercado, Estacionalidad y Capacidad}
+      \field{type}{Trabajo de Fin de Grado en Ingeniería Química}
+      \field{year}{2026}
+    \endentry
+    \entry{PetersTimmerhaus2003}{book}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=7bd65ea5a472348905a7cfe67b95e526}{%
+           family={Peters},
+           familyi={P\bibinitperiod},
+           given={Max\bibnamedelima S.},
+           giveni={M\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7b5286d4a1838da5ecb73d528fbc8578}{%
+           family={Timmerhaus},
+           familyi={T\bibinitperiod},
+           given={Klaus\bibnamedelima D.},
+           giveni={K\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=44522cb414f9bca84f6d86de4169cf33}{%
+           family={West},
+           familyi={W\bibinitperiod},
+           given={Ronald\bibnamedelima E.},
+           giveni={R\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {New York, NY}%
+      }
+      \list{publisher}{1}{%
+        {McGraw-Hill}%
+      }
+      \strng{namehash}{06ba0e3d9fcead3a816bc3a6228ad972}
+      \strng{fullhash}{1a661a273ca3f09d27e6f67b5ed8fb8e}
+      \strng{fullhashraw}{1a661a273ca3f09d27e6f67b5ed8fb8e}
+      \strng{bibnamehash}{1a661a273ca3f09d27e6f67b5ed8fb8e}
+      \strng{authorbibnamehash}{1a661a273ca3f09d27e6f67b5ed8fb8e}
+      \strng{authornamehash}{06ba0e3d9fcead3a816bc3a6228ad972}
+      \strng{authorfullhash}{1a661a273ca3f09d27e6f67b5ed8fb8e}
+      \strng{authorfullhashraw}{1a661a273ca3f09d27e6f67b5ed8fb8e}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{5th}
+      \field{title}{Plant Design and Economics for Chemical Engineers}
+      \field{year}{2003}
+    \endentry
+    \entry{SueloIndustrial2026}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=cbcf37f3f083cfaddf8f989c4e1caa1b}{%
+           family={{Plataforma de Suelo Industrial de España}},
+           familyi={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{cbcf37f3f083cfaddf8f989c4e1caa1b}
+      \strng{fullhash}{cbcf37f3f083cfaddf8f989c4e1caa1b}
+      \strng{fullhashraw}{cbcf37f3f083cfaddf8f989c4e1caa1b}
+      \strng{bibnamehash}{cbcf37f3f083cfaddf8f989c4e1caa1b}
+      \strng{authorbibnamehash}{cbcf37f3f083cfaddf8f989c4e1caa1b}
+      \strng{authornamehash}{cbcf37f3f083cfaddf8f989c4e1caa1b}
+      \strng{authorfullhash}{cbcf37f3f083cfaddf8f989c4e1caa1b}
+      \strng{authorfullhashraw}{cbcf37f3f083cfaddf8f989c4e1caa1b}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Censo y Precios Medios de Suelo y Parcelas en Polígonos Industriales de Andalucía}
+      \field{urlday}{4}
+      \field{urlmonth}{11}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://sueloindustrial.eu/
+      \endverb
+      \verb{url}
+      \verb https://sueloindustrial.eu/
+      \endverb
+    \endentry
+    \entry{RomeroGarcia2022}{article}{}{}
+      \name{author}{7}{}{%
+        {{un=0,uniquepart=base,hash=007d01a5d5a35dedb9e1deadec9e30b9}{%
+           family={Romero-García},
+           familyi={R\bibinithyphendelim G\bibinitperiod},
+           given={J.\bibnamedelimi M.},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=76edddb3a758a924ad28b007fea1244c}{%
+           family={Susmozas},
+           familyi={S\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c34a0c5fef08b390e537d1c28aadf719}{%
+           family={Padilla-Rascón},
+           familyi={P\bibinithyphendelim R\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=318fe63b042f59a658e5a740e7e99944}{%
+           family={Manzanares},
+           familyi={M\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=698e85174735cbc69b104630dd908555}{%
+           family={Castro},
+           familyi={C\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0601a32a2863d76d56385d7b99473e6a}{%
+           family={Oliva},
+           familyi={O\bibinitperiod},
+           given={J.\bibnamedelimi M.},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=dffe98a62d5700ea8f06c3b6305d6e4e}{%
+           family={Romero},
+           familyi={R\bibinitperiod},
+           given={I.},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{627a1a425b02ab02aff48cee5302af7e}
+      \strng{fullhash}{4336be850ee66327a9d074d85b055ff8}
+      \strng{fullhashraw}{4336be850ee66327a9d074d85b055ff8}
+      \strng{bibnamehash}{4336be850ee66327a9d074d85b055ff8}
+      \strng{authorbibnamehash}{4336be850ee66327a9d074d85b055ff8}
+      \strng{authornamehash}{627a1a425b02ab02aff48cee5302af7e}
+      \strng{authorfullhash}{4336be850ee66327a9d074d85b055ff8}
+      \strng{authorfullhashraw}{4336be850ee66327a9d074d85b055ff8}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Renewable Energy}
+      \field{title}{Ethanol production from olive stones using different process strategies}
+      \field{volume}{194}
+      \field{year}{2022}
+      \field{pages}{1174\bibrangedash 1183}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1016/j.renene.2022.06.022
+      \endverb
+    \endentry
+    \entry{Turton2018}{book}{}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=34f213c657076dfdf4976c38e2a3ce3c}{%
+           family={Turton},
+           familyi={T\bibinitperiod},
+           given={Richard},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4c47cac4912f7e2d31353df8cf78651c}{%
+           family={Bailie},
+           familyi={B\bibinitperiod},
+           given={Richard\bibnamedelima C.},
+           giveni={R\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2ffb42e531878ccdc10fa711bfd94d52}{%
+           family={Whiting},
+           familyi={W\bibinitperiod},
+           given={Wallace\bibnamedelima B.},
+           giveni={W\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e4d47ea1b2ca1eb71b9bb794a90ce4d1}{%
+           family={Shaeiwitz},
+           familyi={S\bibinitperiod},
+           given={Joseph\bibnamedelima A.},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9ac38fa8b7858dcead823c14429eadcd}{%
+           family={Bhattacharyya},
+           familyi={B\bibinitperiod},
+           given={Debangsu},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Boston, MA}%
+      }
+      \list{publisher}{1}{%
+        {Prentice Hall}%
+      }
+      \strng{namehash}{1dd513fea86ae34f62ed3efec6ca3457}
+      \strng{fullhash}{3d47594d9d7ebad2cd9ba6535d744bc4}
+      \strng{fullhashraw}{3d47594d9d7ebad2cd9ba6535d744bc4}
+      \strng{bibnamehash}{3d47594d9d7ebad2cd9ba6535d744bc4}
+      \strng{authorbibnamehash}{3d47594d9d7ebad2cd9ba6535d744bc4}
+      \strng{authornamehash}{1dd513fea86ae34f62ed3efec6ca3457}
+      \strng{authorfullhash}{3d47594d9d7ebad2cd9ba6535d744bc4}
+      \strng{authorfullhashraw}{3d47594d9d7ebad2cd9ba6535d744bc4}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{5th}
+      \field{title}{Analysis, Synthesis, and Design of Chemical Processes}
+      \field{year}{2018}
+    \endentry
+  \enddatalist
+  \datalist[entry]{apa/global//global/global/global}
+    \entry{AICA2026}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=e53c4a3171145895cd0c239d54fe56a8}{%
+           family={{Agencia de Información y Control Alimentarios (AICA)}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Ministerio de Agricultura, Pesca y Alimentación (MAPA)}%
+      }
+      \strng{namehash}{e53c4a3171145895cd0c239d54fe56a8}
+      \strng{fullhash}{e53c4a3171145895cd0c239d54fe56a8}
+      \strng{fullhashraw}{e53c4a3171145895cd0c239d54fe56a8}
+      \strng{bibnamehash}{e53c4a3171145895cd0c239d54fe56a8}
+      \strng{authorbibnamehash}{e53c4a3171145895cd0c239d54fe56a8}
+      \strng{authornamehash}{e53c4a3171145895cd0c239d54fe56a8}
+      \strng{authorfullhash}{e53c4a3171145895cd0c239d54fe56a8}
+      \strng{authorfullhashraw}{e53c4a3171145895cd0c239d54fe56a8}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Informe Mensual de la Situación de Mercado del Sector del Aceite de Oliva y la Aceituna de Mesa: Campaña 2025/2026 (Datos a Septiembre de 2026)}
+      \field{year}{2026}
+      \verb{urlraw}
+      \verb https://www.mapa.gob.es/es/agricultura/temas/producciones-agricolas/aceite-oliva-y-aceituna-mesa/avances
+      \endverb
+      \verb{url}
+      \verb https://www.mapa.gob.es/es/agricultura/temas/producciones-agricolas/aceite-oliva-y-aceituna-mesa/avances
+      \endverb
+    \endentry
+    \entry{AVEBIOM2026}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=1bb346961ad939c4e3e5c73205f6580d}{%
+           family={{Asociación Española de la Biomasa}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{1bb346961ad939c4e3e5c73205f6580d}
+      \strng{fullhash}{1bb346961ad939c4e3e5c73205f6580d}
+      \strng{fullhashraw}{1bb346961ad939c4e3e5c73205f6580d}
+      \strng{bibnamehash}{1bb346961ad939c4e3e5c73205f6580d}
+      \strng{authorbibnamehash}{1bb346961ad939c4e3e5c73205f6580d}
+      \strng{authornamehash}{1bb346961ad939c4e3e5c73205f6580d}
+      \strng{authorfullhash}{1bb346961ad939c4e3e5c73205f6580d}
+      \strng{authorfullhashraw}{1bb346961ad939c4e3e5c73205f6580d}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Informe Estadístico sobre el Mercado de la Biomasa y Subproductos del Olivar en España}
+      \field{urlday}{3}
+      \field{urlmonth}{11}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.avebiom.org/
+      \endverb
+      \verb{url}
+      \verb https://www.avebiom.org/
+      \endverb
+    \endentry
+    \entry{AytoLoja2009_Memoria}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=4995582b36b5d3e01495809572b38900}{%
+           family={{Ayuntamiento de Loja}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{4995582b36b5d3e01495809572b38900}
+      \strng{fullhash}{4995582b36b5d3e01495809572b38900}
+      \strng{fullhashraw}{4995582b36b5d3e01495809572b38900}
+      \strng{bibnamehash}{4995582b36b5d3e01495809572b38900}
+      \strng{authorbibnamehash}{4995582b36b5d3e01495809572b38900}
+      \strng{authornamehash}{4995582b36b5d3e01495809572b38900}
+      \strng{authorfullhash}{4995582b36b5d3e01495809572b38900}
+      \strng{authorfullhashraw}{4995582b36b5d3e01495809572b38900}
+      \field{extraname}{1}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Aprobación definitiva plenaria}
+      \field{title}{Memoria Justificativa de la Adaptación Parcial a la LOUA de las Normas Subsidiarias Municipales de Loja}
+      \field{year}{2009}
+      \verb{urlraw}
+      \verb http://aytoloja.org/ayuntamiento/MEMORIA/MEM_JUSTIF_ADAPTACION_LOJA.pdf
+      \endverb
+      \verb{url}
+      \verb http://aytoloja.org/ayuntamiento/MEMORIA/MEM_JUSTIF_ADAPTACION_LOJA.pdf
+      \endverb
+    \endentry
+    \entry{AytoLoja_Planos}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=4995582b36b5d3e01495809572b38900}{%
+           family={{Ayuntamiento de Loja}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{4995582b36b5d3e01495809572b38900}
+      \strng{fullhash}{4995582b36b5d3e01495809572b38900}
+      \strng{fullhashraw}{4995582b36b5d3e01495809572b38900}
+      \strng{bibnamehash}{4995582b36b5d3e01495809572b38900}
+      \strng{authorbibnamehash}{4995582b36b5d3e01495809572b38900}
+      \strng{authornamehash}{4995582b36b5d3e01495809572b38900}
+      \strng{authorfullhash}{4995582b36b5d3e01495809572b38900}
+      \strng{authorfullhashraw}{4995582b36b5d3e01495809572b38900}
+      \field{extraname}{2}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Cartografía urbanística oficial}
+      \field{title}{Planeamiento Vigente: Planos de Clasificación del Suelo y Término Municipal (Hojas PV-2.2 y PV-2.3, Escala 1:10.000)}
+      \field{year}{2009}
+      \verb{urlraw}
+      \verb http://www.aytoloja.org/ayuntamiento/PLANOS/1_PV_PLANEAMIENTO%20VIGENTE/PV_2_2.pdf
+      \endverb
+      \verb{url}
+      \verb http://www.aytoloja.org/ayuntamiento/PLANOS/1_PV_PLANEAMIENTO%20VIGENTE/PV_2_2.pdf
+      \endverb
+    \endentry
+    \entry{AytoLoja2025}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=4995582b36b5d3e01495809572b38900}{%
+           family={{Ayuntamiento de Loja}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{4995582b36b5d3e01495809572b38900}
+      \strng{fullhash}{4995582b36b5d3e01495809572b38900}
+      \strng{fullhashraw}{4995582b36b5d3e01495809572b38900}
+      \strng{bibnamehash}{4995582b36b5d3e01495809572b38900}
+      \strng{authorbibnamehash}{4995582b36b5d3e01495809572b38900}
+      \strng{authornamehash}{4995582b36b5d3e01495809572b38900}
+      \strng{authorfullhash}{4995582b36b5d3e01495809572b38900}
+      \strng{authorfullhashraw}{4995582b36b5d3e01495809572b38900}
+      \field{extraname}{3}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Boletn Oficial de la Provincia de Granada y Perfil del Contratante del Ayuntamiento de Loja}
+      \field{title}{Pliego de Condiciones Econmico-Administrativas y Precios de Enajenacin de Parcelas en el Polgono Industrial El Manzanil II}
+      \field{year}{2025}
+    \endentry
+    \entry{CORES2026}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=152533897013da79567388bc622ef5a8}{%
+           family={{Corporación de Reservas Estratégicas de Productos Petrolíferos (CORES)}},
+           familyi={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{152533897013da79567388bc622ef5a8}
+      \strng{fullhash}{152533897013da79567388bc622ef5a8}
+      \strng{fullhashraw}{152533897013da79567388bc622ef5a8}
+      \strng{bibnamehash}{152533897013da79567388bc622ef5a8}
+      \strng{authorbibnamehash}{152533897013da79567388bc622ef5a8}
+      \strng{authornamehash}{152533897013da79567388bc622ef5a8}
+      \strng{authorfullhash}{152533897013da79567388bc622ef5a8}
+      \strng{authorfullhashraw}{152533897013da79567388bc622ef5a8}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Boletín Estadístico de Hidrocarburos n{º} 345 (Agosto de 2026)}
+      \field{year}{2026}
+      \verb{urlraw}
+      \verb https://www.cores.es/es/node/3884
+      \endverb
+      \verb{url}
+      \verb https://www.cores.es/es/node/3884
+      \endverb
+    \endentry
+    \entry{DeCos2008}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f365be2be2bf69945f28aa318801dee8}{%
+           family={De\bibnamedelima Cos\bibnamedelima Castillo},
+           familyi={D\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim C\bibinitperiod},
+           given={Manuel},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Madrid, España}%
+      }
+      \list{publisher}{1}{%
+        {Editorial Síntesis}%
+      }
+      \strng{namehash}{f365be2be2bf69945f28aa318801dee8}
+      \strng{fullhash}{f365be2be2bf69945f28aa318801dee8}
+      \strng{fullhashraw}{f365be2be2bf69945f28aa318801dee8}
+      \strng{bibnamehash}{f365be2be2bf69945f28aa318801dee8}
+      \strng{authorbibnamehash}{f365be2be2bf69945f28aa318801dee8}
+      \strng{authornamehash}{f365be2be2bf69945f28aa318801dee8}
+      \strng{authorfullhash}{f365be2be2bf69945f28aa318801dee8}
+      \strng{authorfullhashraw}{f365be2be2bf69945f28aa318801dee8}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{3ª}
+      \field{title}{Teoría General del Proyecto: Ingeniería de Proyectos}
+      \field{year}{2008}
+    \endentry
+    \entry{AytoLoja2009_BOP}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=005f8f44c5fa2a66859281bd9d8d36b7}{%
+           family={{Diputación de Granada}},
+           familyi={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{005f8f44c5fa2a66859281bd9d8d36b7}
+      \strng{fullhash}{005f8f44c5fa2a66859281bd9d8d36b7}
+      \strng{fullhashraw}{005f8f44c5fa2a66859281bd9d8d36b7}
+      \strng{bibnamehash}{005f8f44c5fa2a66859281bd9d8d36b7}
+      \strng{authorbibnamehash}{005f8f44c5fa2a66859281bd9d8d36b7}
+      \strng{authornamehash}{005f8f44c5fa2a66859281bd9d8d36b7}
+      \strng{authorfullhash}{005f8f44c5fa2a66859281bd9d8d36b7}
+      \strng{authorfullhashraw}{005f8f44c5fa2a66859281bd9d8d36b7}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Boletín Oficial de la Provincia de Granada}
+      \field{month}{11}
+      \field{number}{213}
+      \field{title}{Publicación del acuerdo de aprobación definitiva de la Adaptación Parcial a la LOUA de las Normas Subsidiarias de Loja}
+      \field{year}{2009}
+      \field{pages}{1\bibrangedash 48}
+      \range{pages}{48}
+      \verb{urlraw}
+      \verb https://bop.dipgra.es/export/sites/bop/publica/boletines-anteriores/.galleries/Boletines-Anteriores/20091106-2009213.pdf
+      \endverb
+      \verb{url}
+      \verb https://bop.dipgra.es/export/sites/bop/publica/boletines-anteriores/.galleries/Boletines-Anteriores/20091106-2009213.pdf
+      \endverb
+    \endentry
+    \entry{Catastro2026}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=8d29af597c41ebd628cc196f141c6a7c}{%
+           family={{Dirección General del Catastro}},
+           familyi={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{8d29af597c41ebd628cc196f141c6a7c}
+      \strng{fullhash}{8d29af597c41ebd628cc196f141c6a7c}
+      \strng{fullhashraw}{8d29af597c41ebd628cc196f141c6a7c}
+      \strng{bibnamehash}{8d29af597c41ebd628cc196f141c6a7c}
+      \strng{authorbibnamehash}{8d29af597c41ebd628cc196f141c6a7c}
+      \strng{authornamehash}{8d29af597c41ebd628cc196f141c6a7c}
+      \strng{authorfullhash}{8d29af597c41ebd628cc196f141c6a7c}
+      \strng{authorfullhashraw}{8d29af597c41ebd628cc196f141c6a7c}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Sede Electrónica del Catastro: Cartografía Catastral y Datos Físicos de Parcelas en Polígono Industrial El Manzanil II (Loja)}
+      \field{urlday}{3}
+      \field{urlmonth}{11}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.sedecatastro.gob.es/
+      \endverb
+      \verb{url}
+      \verb https://www.sedecatastro.gob.es/
+      \endverb
+    \endentry
+    \entry{SABI2026}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=4619b03525991f0745d533109272dd07}{%
+           family={{Informa D\&B y Bureau van Dijk}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{4619b03525991f0745d533109272dd07}
+      \strng{fullhash}{4619b03525991f0745d533109272dd07}
+      \strng{fullhashraw}{4619b03525991f0745d533109272dd07}
+      \strng{bibnamehash}{4619b03525991f0745d533109272dd07}
+      \strng{authorbibnamehash}{4619b03525991f0745d533109272dd07}
+      \strng{authornamehash}{4619b03525991f0745d533109272dd07}
+      \strng{authorfullhash}{4619b03525991f0745d533109272dd07}
+      \strng{authorfullhashraw}{4619b03525991f0745d533109272dd07}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Sistema de Análisis de Balances Ibéricos (SABI): Empresas con CNAE 1043, 1039 y 2014}
+      \field{year}{2026}
+      \verb{urlraw}
+      \verb https://sabi.informa.es
+      \endverb
+      \verb{url}
+      \verb https://sabi.informa.es
+      \endverb
+    \endentry
+    \entry{IGN2026}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=842dcda17144d527aa50957867bd7168}{%
+           family={{Instituto Geográfico Nacional}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{842dcda17144d527aa50957867bd7168}
+      \strng{fullhash}{842dcda17144d527aa50957867bd7168}
+      \strng{fullhashraw}{842dcda17144d527aa50957867bd7168}
+      \strng{bibnamehash}{842dcda17144d527aa50957867bd7168}
+      \strng{authorbibnamehash}{842dcda17144d527aa50957867bd7168}
+      \strng{authornamehash}{842dcda17144d527aa50957867bd7168}
+      \strng{authorfullhash}{842dcda17144d527aa50957867bd7168}
+      \strng{authorfullhashraw}{842dcda17144d527aa50957867bd7168}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Mapa Topográfico Nacional MTN50, Hoja 1009 (Loja) y MTN25}
+      \field{urlday}{3}
+      \field{urlmonth}{11}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://centrodedescargas.cnig.es/
+      \endverb
+      \verb{url}
+      \verb https://centrodedescargas.cnig.es/
+      \endverb
+    \endentry
+    \entry{INE_Formacion2025}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=562958e6bd37bbb48e1e1a29fb75cce8}{%
+           family={{Instituto Nacional de Estadística (INE)}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{562958e6bd37bbb48e1e1a29fb75cce8}
+      \strng{fullhash}{562958e6bd37bbb48e1e1a29fb75cce8}
+      \strng{fullhashraw}{562958e6bd37bbb48e1e1a29fb75cce8}
+      \strng{bibnamehash}{562958e6bd37bbb48e1e1a29fb75cce8}
+      \strng{authorbibnamehash}{562958e6bd37bbb48e1e1a29fb75cce8}
+      \strng{authornamehash}{562958e6bd37bbb48e1e1a29fb75cce8}
+      \strng{authorfullhash}{562958e6bd37bbb48e1e1a29fb75cce8}
+      \strng{authorfullhashraw}{562958e6bd37bbb48e1e1a29fb75cce8}
+      \field{extraname}{1}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Competencias y habilidades: Nivel de formación alcanzado por la población adulta por grupo de edad y comunidad autónoma}
+      \field{urlday}{4}
+      \field{urlmonth}{11}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.ine.es/jaxiT3/Tabla.htm?t=69774
+      \endverb
+      \verb{url}
+      \verb https://www.ine.es/jaxiT3/Tabla.htm?t=69774
+      \endverb
+    \endentry
+    \entry{INE_EPA2026}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=562958e6bd37bbb48e1e1a29fb75cce8}{%
+           family={{Instituto Nacional de Estadística (INE)}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{562958e6bd37bbb48e1e1a29fb75cce8}
+      \strng{fullhash}{562958e6bd37bbb48e1e1a29fb75cce8}
+      \strng{fullhashraw}{562958e6bd37bbb48e1e1a29fb75cce8}
+      \strng{bibnamehash}{562958e6bd37bbb48e1e1a29fb75cce8}
+      \strng{authorbibnamehash}{562958e6bd37bbb48e1e1a29fb75cce8}
+      \strng{authornamehash}{562958e6bd37bbb48e1e1a29fb75cce8}
+      \strng{authorfullhash}{562958e6bd37bbb48e1e1a29fb75cce8}
+      \strng{authorfullhashraw}{562958e6bd37bbb48e1e1a29fb75cce8}
+      \field{extraname}{2}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Encuesta de Población Activa (EPA): Tasas de actividad, paro y empleo por provincia y Distribución porcentual de los activos por sector económico}
+      \field{urlday}{4}
+      \field{urlmonth}{11}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.ine.es/jaxiT3/Tabla.htm?t=65349
+      \endverb
+      \verb{url}
+      \verb https://www.ine.es/jaxiT3/Tabla.htm?t=65349
+      \endverb
+    \endentry
+    \entry{SITUA2026}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=536d4877d816374d886998ff5e79a7e0}{%
+           family={{Junta de Andalucía}},
+           familyi={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{536d4877d816374d886998ff5e79a7e0}
+      \strng{fullhash}{536d4877d816374d886998ff5e79a7e0}
+      \strng{fullhashraw}{536d4877d816374d886998ff5e79a7e0}
+      \strng{bibnamehash}{536d4877d816374d886998ff5e79a7e0}
+      \strng{authorbibnamehash}{536d4877d816374d886998ff5e79a7e0}
+      \strng{authornamehash}{536d4877d816374d886998ff5e79a7e0}
+      \strng{authorfullhash}{536d4877d816374d886998ff5e79a7e0}
+      \strng{authorfullhashraw}{536d4877d816374d886998ff5e79a7e0}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Sistema de Información Territorial y Urbanística de Andalucía (SITUA): Plan General de Ordenación Urbana de Loja (Granada)}
+      \field{urlday}{3}
+      \field{urlmonth}{11}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://ws132.juntadeandalucia.es/situadifusion/
+      \endverb
+      \verb{url}
+      \verb https://ws132.juntadeandalucia.es/situadifusion/
+      \endverb
+    \endentry
+    \entry{MeyersStephens2005}{book}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=b0b5998c7b5ba8ae20ed7b0222556ed2}{%
+           family={Meyers},
+           familyi={M\bibinitperiod},
+           given={Fred\bibnamedelima E.},
+           giveni={F\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=aa39aeff08951d771daa6b7bc1615548}{%
+           family={Stephens},
+           familyi={S\bibinitperiod},
+           given={Matthew\bibnamedelima P.},
+           giveni={M\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {México D.F.}%
+      }
+      \list{publisher}{1}{%
+        {Pearson Educación}%
+      }
+      \strng{namehash}{42a59e34c932eacc6c7532e39fda6999}
+      \strng{fullhash}{42a59e34c932eacc6c7532e39fda6999}
+      \strng{fullhashraw}{42a59e34c932eacc6c7532e39fda6999}
+      \strng{bibnamehash}{42a59e34c932eacc6c7532e39fda6999}
+      \strng{authorbibnamehash}{42a59e34c932eacc6c7532e39fda6999}
+      \strng{authornamehash}{42a59e34c932eacc6c7532e39fda6999}
+      \strng{authorfullhash}{42a59e34c932eacc6c7532e39fda6999}
+      \strng{authorfullhashraw}{42a59e34c932eacc6c7532e39fda6999}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{3ª}
+      \field{title}{Diseño de Instalaciones de Manufactura y Manejo de Materiales (Metodología SLP de Muther)}
+      \field{year}{2005}
+    \endentry
+    \entry{MAPA2025}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=90a1c3af9dcf2c48330159daa9609e9a}{%
+           family={{Ministerio de Agricultura, Pesca y Alimentación (MAPA)}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{90a1c3af9dcf2c48330159daa9609e9a}
+      \strng{fullhash}{90a1c3af9dcf2c48330159daa9609e9a}
+      \strng{fullhashraw}{90a1c3af9dcf2c48330159daa9609e9a}
+      \strng{bibnamehash}{90a1c3af9dcf2c48330159daa9609e9a}
+      \strng{authorbibnamehash}{90a1c3af9dcf2c48330159daa9609e9a}
+      \strng{authornamehash}{90a1c3af9dcf2c48330159daa9609e9a}
+      \strng{authorfullhash}{90a1c3af9dcf2c48330159daa9609e9a}
+      \strng{authorfullhashraw}{90a1c3af9dcf2c48330159daa9609e9a}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Anuario de Estadística Agraria: Avance y Tablas Globales de Olivar Campaña 2025}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://www.mapa.gob.es/es/estadistica/temas/estadisticas-agrarias/agricultura/superficies-producciones-anuales-cultivos/
+      \endverb
+      \verb{url}
+      \verb https://www.mapa.gob.es/es/estadistica/temas/estadisticas-agrarias/agricultura/superficies-producciones-anuales-cultivos/
+      \endverb
+    \endentry
+    \entry{MIVAU2026}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=7bb21266b9df20a9e000878fae9d40b7}{%
+           family={{Ministerio de Vivienda y Agenda Urbana}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{7bb21266b9df20a9e000878fae9d40b7}
+      \strng{fullhash}{7bb21266b9df20a9e000878fae9d40b7}
+      \strng{fullhashraw}{7bb21266b9df20a9e000878fae9d40b7}
+      \strng{bibnamehash}{7bb21266b9df20a9e000878fae9d40b7}
+      \strng{authorbibnamehash}{7bb21266b9df20a9e000878fae9d40b7}
+      \strng{authornamehash}{7bb21266b9df20a9e000878fae9d40b7}
+      \strng{authorfullhash}{7bb21266b9df20a9e000878fae9d40b7}
+      \strng{authorfullhashraw}{7bb21266b9df20a9e000878fae9d40b7}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Estadstica de Precios de Suelo: Valor de las Transacciones de Suelo Urbano e Industrial por Provincias y Municipios}
+      \field{urlday}{4}
+      \field{urlmonth}{11}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.mivau.gob.es/
+      \endverb
+      \verb{url}
+      \verb https://www.mivau.gob.es/
+      \endverb
+    \endentry
+    \entry{PerezHita2026}{report}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9caff572b437b7695a7c0fbcb68cff15}{%
+           family={Pérez\bibnamedelima Hita},
+           familyi={P\bibinitperiod\bibinitdelim H\bibinitperiod},
+           given={Christian},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {Universidad de Granada}%
+      }
+      \list{location}{1}{%
+        {Granada, España}%
+      }
+      \strng{namehash}{9caff572b437b7695a7c0fbcb68cff15}
+      \strng{fullhash}{9caff572b437b7695a7c0fbcb68cff15}
+      \strng{fullhashraw}{9caff572b437b7695a7c0fbcb68cff15}
+      \strng{bibnamehash}{9caff572b437b7695a7c0fbcb68cff15}
+      \strng{authorbibnamehash}{9caff572b437b7695a7c0fbcb68cff15}
+      \strng{authornamehash}{9caff572b437b7695a7c0fbcb68cff15}
+      \strng{authorfullhash}{9caff572b437b7695a7c0fbcb68cff15}
+      \strng{authorfullhashraw}{9caff572b437b7695a7c0fbcb68cff15}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Biorrefinería Oleícola por Vía Enzimática y Organosolv. Documento nº 1: Estudio de Mercado, Estacionalidad y Capacidad}
+      \field{type}{Trabajo de Fin de Grado en Ingeniería Química}
+      \field{year}{2026}
+    \endentry
+    \entry{PetersTimmerhaus2003}{book}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=7bd65ea5a472348905a7cfe67b95e526}{%
+           family={Peters},
+           familyi={P\bibinitperiod},
+           given={Max\bibnamedelima S.},
+           giveni={M\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7b5286d4a1838da5ecb73d528fbc8578}{%
+           family={Timmerhaus},
+           familyi={T\bibinitperiod},
+           given={Klaus\bibnamedelima D.},
+           giveni={K\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=44522cb414f9bca84f6d86de4169cf33}{%
+           family={West},
+           familyi={W\bibinitperiod},
+           given={Ronald\bibnamedelima E.},
+           giveni={R\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {New York, NY}%
+      }
+      \list{publisher}{1}{%
+        {McGraw-Hill}%
+      }
+      \strng{namehash}{06ba0e3d9fcead3a816bc3a6228ad972}
+      \strng{fullhash}{1a661a273ca3f09d27e6f67b5ed8fb8e}
+      \strng{fullhashraw}{1a661a273ca3f09d27e6f67b5ed8fb8e}
+      \strng{bibnamehash}{1a661a273ca3f09d27e6f67b5ed8fb8e}
+      \strng{authorbibnamehash}{1a661a273ca3f09d27e6f67b5ed8fb8e}
+      \strng{authornamehash}{06ba0e3d9fcead3a816bc3a6228ad972}
+      \strng{authorfullhash}{1a661a273ca3f09d27e6f67b5ed8fb8e}
+      \strng{authorfullhashraw}{1a661a273ca3f09d27e6f67b5ed8fb8e}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{5th}
+      \field{title}{Plant Design and Economics for Chemical Engineers}
+      \field{year}{2003}
+    \endentry
+    \entry{SueloIndustrial2026}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=cbcf37f3f083cfaddf8f989c4e1caa1b}{%
+           family={{Plataforma de Suelo Industrial de España}},
+           familyi={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{cbcf37f3f083cfaddf8f989c4e1caa1b}
+      \strng{fullhash}{cbcf37f3f083cfaddf8f989c4e1caa1b}
+      \strng{fullhashraw}{cbcf37f3f083cfaddf8f989c4e1caa1b}
+      \strng{bibnamehash}{cbcf37f3f083cfaddf8f989c4e1caa1b}
+      \strng{authorbibnamehash}{cbcf37f3f083cfaddf8f989c4e1caa1b}
+      \strng{authornamehash}{cbcf37f3f083cfaddf8f989c4e1caa1b}
+      \strng{authorfullhash}{cbcf37f3f083cfaddf8f989c4e1caa1b}
+      \strng{authorfullhashraw}{cbcf37f3f083cfaddf8f989c4e1caa1b}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Censo y Precios Medios de Suelo y Parcelas en Polígonos Industriales de Andalucía}
+      \field{urlday}{4}
+      \field{urlmonth}{11}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://sueloindustrial.eu/
+      \endverb
+      \verb{url}
+      \verb https://sueloindustrial.eu/
+      \endverb
+    \endentry
+    \entry{RomeroGarcia2022}{article}{}{}
+      \name{author}{7}{}{%
+        {{un=0,uniquepart=base,hash=007d01a5d5a35dedb9e1deadec9e30b9}{%
+           family={Romero-García},
+           familyi={R\bibinithyphendelim G\bibinitperiod},
+           given={J.\bibnamedelimi M.},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=76edddb3a758a924ad28b007fea1244c}{%
+           family={Susmozas},
+           familyi={S\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c34a0c5fef08b390e537d1c28aadf719}{%
+           family={Padilla-Rascón},
+           familyi={P\bibinithyphendelim R\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=318fe63b042f59a658e5a740e7e99944}{%
+           family={Manzanares},
+           familyi={M\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=698e85174735cbc69b104630dd908555}{%
+           family={Castro},
+           familyi={C\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0601a32a2863d76d56385d7b99473e6a}{%
+           family={Oliva},
+           familyi={O\bibinitperiod},
+           given={J.\bibnamedelimi M.},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=dffe98a62d5700ea8f06c3b6305d6e4e}{%
+           family={Romero},
+           familyi={R\bibinitperiod},
+           given={I.},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{627a1a425b02ab02aff48cee5302af7e}
+      \strng{fullhash}{4336be850ee66327a9d074d85b055ff8}
+      \strng{fullhashraw}{4336be850ee66327a9d074d85b055ff8}
+      \strng{bibnamehash}{4336be850ee66327a9d074d85b055ff8}
+      \strng{authorbibnamehash}{4336be850ee66327a9d074d85b055ff8}
+      \strng{authornamehash}{627a1a425b02ab02aff48cee5302af7e}
+      \strng{authorfullhash}{4336be850ee66327a9d074d85b055ff8}
+      \strng{authorfullhashraw}{4336be850ee66327a9d074d85b055ff8}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Renewable Energy}
+      \field{title}{Ethanol production from olive stones using different process strategies}
+      \field{volume}{194}
+      \field{year}{2022}
+      \field{pages}{1174\bibrangedash 1183}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1016/j.renene.2022.06.022
+      \endverb
+    \endentry
+    \entry{Turton2018}{book}{}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=34f213c657076dfdf4976c38e2a3ce3c}{%
+           family={Turton},
+           familyi={T\bibinitperiod},
+           given={Richard},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4c47cac4912f7e2d31353df8cf78651c}{%
+           family={Bailie},
+           familyi={B\bibinitperiod},
+           given={Richard\bibnamedelima C.},
+           giveni={R\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2ffb42e531878ccdc10fa711bfd94d52}{%
+           family={Whiting},
+           familyi={W\bibinitperiod},
+           given={Wallace\bibnamedelima B.},
+           giveni={W\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e4d47ea1b2ca1eb71b9bb794a90ce4d1}{%
+           family={Shaeiwitz},
+           familyi={S\bibinitperiod},
+           given={Joseph\bibnamedelima A.},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9ac38fa8b7858dcead823c14429eadcd}{%
+           family={Bhattacharyya},
+           familyi={B\bibinitperiod},
+           given={Debangsu},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Boston, MA}%
+      }
+      \list{publisher}{1}{%
+        {Prentice Hall}%
+      }
+      \strng{namehash}{1dd513fea86ae34f62ed3efec6ca3457}
+      \strng{fullhash}{3d47594d9d7ebad2cd9ba6535d744bc4}
+      \strng{fullhashraw}{3d47594d9d7ebad2cd9ba6535d744bc4}
+      \strng{bibnamehash}{3d47594d9d7ebad2cd9ba6535d744bc4}
+      \strng{authorbibnamehash}{3d47594d9d7ebad2cd9ba6535d744bc4}
+      \strng{authornamehash}{1dd513fea86ae34f62ed3efec6ca3457}
+      \strng{authorfullhash}{3d47594d9d7ebad2cd9ba6535d744bc4}
+      \strng{authorfullhashraw}{3d47594d9d7ebad2cd9ba6535d744bc4}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{5th}
+      \field{title}{Analysis, Synthesis, and Design of Chemical Processes}
+      \field{year}{2018}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
