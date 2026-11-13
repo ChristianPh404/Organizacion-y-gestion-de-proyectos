@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="940" viewBox="0 0 1400 940" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif">
+<defs>
+<marker id="aBlue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0,0 L 10,5 L 0,10 z" fill="#1d4e89"/></marker>
+<marker id="aRust" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0,0 L 10,5 L 0,10 z" fill="#a34a28"/></marker>
+<marker id="aSig" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0,0 L 10,5 L 0,10 z" fill="#50565f"/></marker>
+<marker id="aCyan" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0,0 L 10,5 L 0,10 z" fill="#2a7f8f"/></marker>
+<marker id="aGreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0,0 L 10,5 L 0,10 z" fill="#3f7a4d"/></marker>
+</defs>
+<rect width="1400" height="940" fill="#ffffff"/>
+<rect x="20" y="20" width="1360" height="900" fill="none" stroke="#b8bec7" stroke-width="1"/>
+<text x="45" y="60" font-size="21" font-weight="bold" fill="#111418" text-anchor="start">PLANTA DE BIOETANOL (HUESO DE ACEITUNA) - ÁREA DE REACCIÓN Y DETOXIFICACIÓN</text>
+<text x="45" y="82" font-size="11.5" font-weight="normal" fill="#5a6472" text-anchor="start">DIAGRAMA DE FLUJO DE PROCESO (PFD) / BALANCE Y CONTROL CONCEPTUAL (04-PFD-201 Rev A)</text>
+<rect x="1178" y="42" width="177" height="24" fill="none" stroke="#b02418" stroke-width="1.4"/>
+<text x="1266" y="59" font-size="11" font-weight="bold" fill="#b02418" text-anchor="middle" letter-spacing="0.4">NOT FOR CONSTRUCTION</text>
+<path d="M 205,280 L 305,280 Q 330,280 330,305 L 330,515 Q 330,540 305,540 L 205,540 Q 180,540 180,515 L 180,305 Q 180,280 205,280 Z" fill="#f7f8fa" stroke="#343a46" stroke-width="2.2" stroke-linejoin="miter"/>
+<path d="M 180,470 L 330,470 L 330,515 Q 330,540 305,540 L 205,540 Q 180,540 180,515 Z" fill="#dce8f5"/>
+<line x1="186" y1="470" x2="324" y2="470" stroke="#1d4e89" stroke-width="1.2" stroke-dasharray="7,5"/>
+<text x="320" y="462" font-size="8.5" font-weight="normal" fill="#5a6472" text-anchor="end" letter-spacing="0.3">NIVEL NLL</text>
+<rect x="227" y="236" width="56" height="44" fill="#ffffff" stroke="#343a46" stroke-width="1.6"/>
+<text x="255" y="265" font-size="15" font-weight="bold" fill="#111418" text-anchor="middle">M</text>
+<line x1="255" y1="280" x2="255" y2="490" stroke="#343a46" stroke-width="2"/>
+<path d="M 223,494 L 251,476 L 251,485 L 223,503 Z" fill="#343a46"/>
+<path d="M 287,494 L 259,476 L 259,485 L 287,503 Z" fill="#343a46"/>
+<text x="297" y="262" font-size="10.5" font-weight="bold" fill="#111418" text-anchor="start">AG-101</text>
+<text x="255" y="575" font-size="14" font-weight="bold" fill="#111418" text-anchor="middle">R-101</text>
+<text x="255" y="593" font-size="10" font-weight="normal" fill="#5a6472" text-anchor="middle" letter-spacing="0.4">REACTOR HIDRÓLISIS ÁCIDA</text>
+<text x="255" y="610" font-size="9" font-weight="normal" fill="#5a6472" text-anchor="middle">T = 128 ºC, P = 2.5 bar, t = 60 min</text>
+<path d="M 460,360 L 540,360 Q 550,360 550,370 L 550,490 Q 550,500 540,500 L 460,500 Q 450,500 450,490 L 450,370 Q 450,360 460,360 Z" fill="#f7f8fa" stroke="#343a46" stroke-width="2.2" stroke-linejoin="miter"/>
+<text x="500" y="530" font-size="14" font-weight="bold" fill="#111418" text-anchor="middle">F-101</text>
+<text x="500" y="548" font-size="10" font-weight="normal" fill="#5a6472" text-anchor="middle" letter-spacing="0.4">FILTRO PRENSA (WIS / LÍQUIDO)</text>
+<text x="500" y="565" font-size="9" font-weight="normal" fill="#5a6472" text-anchor="middle">Separación Sólido-Líquido (33% p/v)</text>
+<path d="M 700,260 L 770,260 Q 790,260 790,280 L 790,520 Q 790,540 770,540 L 700,540 Q 680,540 680,520 L 680,280 Q 680,260 700,260 Z" fill="#f7f8fa" stroke="#343a46" stroke-width="2.2" stroke-linejoin="miter"/>
+<text x="735" y="570" font-size="14" font-weight="bold" fill="#111418" text-anchor="middle">D-101</text>
+<text x="735" y="588" font-size="10" font-weight="normal" fill="#5a6472" text-anchor="middle" letter-spacing="0.4">COLUMNA DETOXIFICACIÓN</text>
+<text x="735" y="605" font-size="9" font-weight="normal" fill="#5a6472" text-anchor="middle">Eliminación Furfural >90%, Acético >95%</text>
+<path d="M 990,250 L 1110,250 Q 1140,250 1140,280 L 1140,530 Q 1140,560 1110,560 L 990,560 Q 960,560 960,530 L 960,280 Q 960,250 990,250 Z" fill="#f7f8fa" stroke="#343a46" stroke-width="2.2" stroke-linejoin="miter"/>
+<path d="M 960,490 L 1140,490 L 1140,530 Q 1140,560 1110,560 L 990,560 Q 960,560 960,530 Z" fill="#dce8f5"/>
+<line x1="966" y1="490" x2="1134" y2="490" stroke="#1d4e89" stroke-width="1.2" stroke-dasharray="7,5"/>
+<text x="1130" y="482" font-size="8.5" font-weight="normal" fill="#5a6472" text-anchor="end" letter-spacing="0.3">NIVEL NLL</text>
+<rect x="1022" y="206" width="56" height="44" fill="#ffffff" stroke="#343a46" stroke-width="1.6"/>
+<text x="1050" y="235" font-size="15" font-weight="bold" fill="#111418" text-anchor="middle">M</text>
+<line x1="1050" y1="250" x2="1050" y2="510" stroke="#343a46" stroke-width="2"/>
+<path d="M 1018,514 L 1046,496 L 1046,505 L 1018,523 Z" fill="#343a46"/>
+<path d="M 1082,514 L 1054,496 L 1054,505 L 1082,523 Z" fill="#343a46"/>
+<text x="1092" y="232" font-size="10.5" font-weight="bold" fill="#111418" text-anchor="start">AG-201</text>
+<text x="1050" y="595" font-size="14" font-weight="bold" fill="#111418" text-anchor="middle">R-201</text>
+<text x="1050" y="613" font-size="10" font-weight="normal" fill="#5a6472" text-anchor="middle" letter-spacing="0.4">BIORREACTOR PSSF (HEXOSAS/WIS)</text>
+<text x="1050" y="630" font-size="9" font-weight="normal" fill="#5a6472" text-anchor="middle">Cellic CTec2 + S. cerevisiae (35-50 ºC, 52 h)</text>
+<circle cx="370" cy="510" r="18" fill="white" stroke="#111418" stroke-width="2"/>
+<path d="M 358,500 L 382,510 L 358,520 Z" fill="#111418"/>
+<text x="370" y="542" font-size="10" font-weight="bold" fill="#111418" text-anchor="start">P-101A</text>
+<circle cx="600" cy="460" r="18" fill="white" stroke="#111418" stroke-width="2"/>
+<path d="M 588,450 L 612,460 L 588,470 Z" fill="#111418"/>
+<text x="600" y="492" font-size="10" font-weight="bold" fill="#111418" text-anchor="start">P-102A</text>
+<circle cx="1200" cy="520" r="18" fill="white" stroke="#111418" stroke-width="2"/>
+<path d="M 1188,510 L 1212,520 L 1188,530 Z" fill="#111418"/>
+<text x="1200" y="552" font-size="10" font-weight="bold" fill="#111418" text-anchor="start">P-201A</text>
+<path d="M 60,240 L 220,240 L 220,280" fill="none" stroke="#1d4e89" stroke-width="2.4" stroke-linejoin="round" marker-end="url(#aBlue)"/>
+<text x="140" y="232" font-size="10" font-weight="bold" fill="#111418" text-anchor="start">01: HUESO + H2SO4 (33% p/v)</text>
+<path d="M 60,200 L 240,200 L 240,280" fill="none" stroke="#1d4e89" stroke-width="2.4" stroke-linejoin="round" marker-end="url(#aBlue)"/>
+<text x="140" y="192" font-size="10" font-weight="bold" fill="#111418" text-anchor="start">02: VAPOR VIVO 2.5 bar (128 ºC)</text>
+<path d="M 255,540 L 255,510 L 352,510" fill="none" stroke="#1d4e89" stroke-width="2.4" stroke-linejoin="round" marker-end="url(#aBlue)"/>
+<path d="M 388,510 L 415,510 L 415,420 L 450,420" fill="none" stroke="#1d4e89" stroke-width="2.4" stroke-linejoin="round" marker-end="url(#aBlue)"/>
+<text x="415" y="410" font-size="10" font-weight="bold" fill="#111418" text-anchor="start">03: SLURRY HIDROLIZADO</text>
+<path d="M 500,360 L 500,210 L 990,210 L 990,250" fill="none" stroke="#1d4e89" stroke-width="2.4" stroke-linejoin="round" marker-end="url(#aBlue)"/>
+<text x="745" y="202" font-size="10" font-weight="bold" fill="#111418" text-anchor="start">04: SÓLIDO WIS (CELULOSA / LIGNINA)</text>
+<path d="M 550,460 L 582,460" fill="none" stroke="#1d4e89" stroke-width="2.4" stroke-linejoin="round" marker-end="url(#aBlue)"/>
+<path d="M 618,460 L 645,460 L 645,340 L 680,340" fill="none" stroke="#1d4e89" stroke-width="2.4" stroke-linejoin="round" marker-end="url(#aBlue)"/>
+<text x="662" y="330" font-size="9.5" font-weight="bold" fill="#111418" text-anchor="start">05: PREHIDROLIZADO ÁCIDO</text>
+<path d="M 790,480 L 860,480 L 860,310 L 960,310" fill="none" stroke="#1d4e89" stroke-width="2.4" stroke-linejoin="round" marker-end="url(#aBlue)"/>
+<text x="860" y="300" font-size="9.5" font-weight="bold" fill="#111418" text-anchor="start">06: LÍQUIDO DETOXIFICADO</text>
+<path d="M 860,480 L 860,700 L 1280,700" fill="none" stroke="#1d4e89" stroke-width="2.4" stroke-linejoin="round" marker-end="url(#aBlue)"/>
+<text x="1070" y="690" font-size="10" font-weight="bold" fill="#111418" text-anchor="start">07: A FERMENTADOR DE PENTOSAS (E. coli SL100)</text>
+<path d="M 850,160 L 1050,160 L 1050,250" fill="none" stroke="#1d4e89" stroke-width="2.4" stroke-linejoin="round" marker-end="url(#aBlue)"/>
+<text x="950" y="150" font-size="10" font-weight="bold" fill="#111418" text-anchor="start">08: ENZIMAS CTec2 + TAMPÓN CITRATO</text>
+<path d="M 1050,560 L 1050,520 L 1182,520" fill="none" stroke="#1d4e89" stroke-width="2.4" stroke-linejoin="round" marker-end="url(#aBlue)"/>
+<path d="M 1218,520 L 1280,520" fill="none" stroke="#1d4e89" stroke-width="2.4" stroke-linejoin="round" marker-end="url(#aBlue)"/>
+<text x="1250" y="510" font-size="10" font-weight="bold" fill="#111418" text-anchor="start">09: A DESTILACIÓN (~36 g/L EtOH)</text>
+<circle cx="120" cy="410" r="22" fill="#ffffff" stroke="#343a46" stroke-width="1.4"/>
+<text x="120" y="408" font-size="11.5" font-weight="bold" fill="#111418" text-anchor="middle">TT</text>
+<text x="120" y="422" font-size="10" font-weight="normal" fill="#111418" text-anchor="middle">101</text>
+<circle cx="120" cy="340" r="22" fill="#ffffff" stroke="#343a46" stroke-width="1.4"/>
+<text x="120" y="338" font-size="11.5" font-weight="bold" fill="#111418" text-anchor="middle">TIC</text>
+<text x="120" y="352" font-size="10" font-weight="normal" fill="#111418" text-anchor="middle">101</text>
+<path d="M 180,410 L 142,410" fill="none" stroke="#50565f" stroke-width="1.35" stroke-dasharray="7,5.5" marker-end="url(#aSig)"/>
+<path d="M 120,388 L 120,362" fill="none" stroke="#50565f" stroke-width="1.35" stroke-dasharray="7,5.5" marker-end="url(#aSig)"/>
+<path d="M 132,188 L 132,212 L 150,200 Z" fill="#ffffff" stroke="#343a46" stroke-width="1.6" stroke-linejoin="miter"/>
+<path d="M 168,188 L 168,212 L 150,200 Z" fill="#ffffff" stroke="#343a46" stroke-width="1.6" stroke-linejoin="miter"/>
+<line x1="150" y1="200" x2="150" y2="220" stroke="#343a46" stroke-width="1.4"/>
+<rect x="136" y="226" width="28" height="12" rx="6" fill="#ffffff" stroke="#343a46" stroke-width="1.4"/>
+<text x="150" y="245" font-size="10.5" font-weight="bold" fill="#111418" text-anchor="middle">TCV-101  (FC)</text>
+<path d="M 120,318 L 120,200 L 135,200" fill="none" stroke="#50565f" stroke-width="1.35" stroke-dasharray="7,5.5" marker-end="url(#aSig)"/>
+<circle cx="1220" cy="380" r="22" fill="#ffffff" stroke="#343a46" stroke-width="1.4"/>
+<text x="1220" y="378" font-size="11.5" font-weight="bold" fill="#111418" text-anchor="middle">TT</text>
+<text x="1220" y="392" font-size="10" font-weight="normal" fill="#111418" text-anchor="middle">201</text>
+<circle cx="1220" cy="300" r="22" fill="#ffffff" stroke="#343a46" stroke-width="1.4"/>
+<text x="1220" y="298" font-size="11.5" font-weight="bold" fill="#111418" text-anchor="middle">TIC</text>
+<text x="1220" y="312" font-size="10" font-weight="normal" fill="#111418" text-anchor="middle">201</text>
+<path d="M 1140,380 L 1198,380" fill="none" stroke="#50565f" stroke-width="1.35" stroke-dasharray="7,5.5" marker-end="url(#aSig)"/>
+<path d="M 1220,358 L 1220,322" fill="none" stroke="#50565f" stroke-width="1.35" stroke-dasharray="7,5.5" marker-end="url(#aSig)"/>
+<path d="M 1032,88 L 1032,112 L 1050,100 Z" fill="#ffffff" stroke="#343a46" stroke-width="1.6" stroke-linejoin="miter"/>
+<path d="M 1068,88 L 1068,112 L 1050,100 Z" fill="#ffffff" stroke="#343a46" stroke-width="1.6" stroke-linejoin="miter"/>
+<line x1="1050" y1="100" x2="1050" y2="120" stroke="#343a46" stroke-width="1.4"/>
+<rect x="1036" y="126" width="28" height="12" rx="6" fill="#ffffff" stroke="#343a46" stroke-width="1.4"/>
+<text x="1050" y="145" font-size="10.5" font-weight="bold" fill="#111418" text-anchor="middle">TCV-201  (FO)</text>
+<path d="M 1220,278 L 1220,100 L 1065,100" fill="none" stroke="#50565f" stroke-width="1.35" stroke-dasharray="7,5.5" marker-end="url(#aSig)"/>
+
+    <g transform="translate(60, 680)">
+      <rect x="0" y="0" width="760" height="200" fill="#ffffff" stroke="#111418" stroke-width="1.5" rx="4"/>
+      <rect x="0" y="0" width="760" height="28" fill="#e9ecef" stroke="#111418" stroke-width="1.5"/>
+      <text x="15" y="19" font-family="Arial" font-size="12" font-weight="bold" fill="#111418">TABLA DE CORRIENTES Y BALANCE DE MATERIA DE DISEÑO (Base: 1 000 kg hueso aceituna seco)</text>
+      
+      <text x="15" y="52" font-family="Arial" font-size="10.5" fill="#111418"><b>Corriente 01 (Alimentación):</b> 1 000 kg Hueso seco + 3 000 kg H2O + 105 kg H2SO4 (Relación S/L 33% p/v)</text>
+      <text x="15" y="74" font-family="Arial" font-size="10.5" fill="#111418"><b>Corriente 03 (Slurry R-101):</b> Hidrolizado a 128 ºC (Xilosa libre: ~70 kg, Acético: ~15 kg, Furfural: ~1.8 kg)</text>
+      <text x="15" y="96" font-family="Arial" font-size="10.5" fill="#111418"><b>Corriente 04 (Sólido WIS F-101):</b> ~520 kg de sólido insoluble lavado (Celulosa ~48%, Lignina insoluble ~52%)</text>
+      <text x="15" y="118" font-family="Arial" font-size="10.5" fill="#111418"><b>Corriente 06 (Líquido Detox D-101):</b> Furfural &lt;0.1 g/L (&gt;90% eliminación), Acético &lt;0.5 g/L (&gt;95% eliminación)</text>
+      <text x="15" y="140" font-family="Arial" font-size="10.5" fill="#111418"><b>Corriente 08 (Biocatálisis R-201):</b> Cellic CTec2 (40 FPU/g sustrato) + S. cerevisiae Ethanol Red (1 g/L)</text>
+      <text x="15" y="162" font-family="Arial" font-size="10.5" font-weight="bold" fill="#1d4e89">Corriente 09 (Caldo a Destilación): 86.8 kg Etanol (de hexosas) + 75.5 kg Etanol (de pentosas) = 162.3 kg Bioetanol / t</text>
+    </g>
+    
+</svg>

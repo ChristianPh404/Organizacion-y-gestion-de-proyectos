@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2000" height="1100" viewBox="0 0 2000 1100" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif">
+<defs>
+<marker id="aBlue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0,0 L 10,5 L 0,10 z" fill="#1d4e89"/></marker>
+<marker id="aRust" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0,0 L 10,5 L 0,10 z" fill="#a34a28"/></marker>
+<marker id="aSig" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0,0 L 10,5 L 0,10 z" fill="#50565f"/></marker>
+<marker id="aCyan" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0,0 L 10,5 L 0,10 z" fill="#2a7f8f"/></marker>
+<marker id="aGreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0,0 L 10,5 L 0,10 z" fill="#3f7a4d"/></marker>
+</defs>
+<rect width="2000" height="1100" fill="#ffffff"/>
+<rect x="20" y="20" width="1960" height="1060" fill="none" stroke="#b8bec7" stroke-width="1"/>
+<text x="45" y="60" font-size="21" font-weight="bold" fill="#111418" text-anchor="start">BIORREFINERÍA DE HUESO DE ACEITUNA - PLANTA INTEGRAL DE BIOETANOL Y SUBPRODUCTOS</text>
+<text x="45" y="82" font-size="11.5" font-weight="normal" fill="#5a6472" text-anchor="start">DIAGRAMA DE FLUJO DE PROCESO (PFD) CON BALANCES Y EQUIPOS AUXILIARES (ISO 10628 / ISA-5.1)</text>
+<rect x="1778" y="42" width="177" height="24" fill="none" stroke="#b02418" stroke-width="1.4"/>
+<text x="1866" y="59" font-size="11" font-weight="bold" fill="#b02418" text-anchor="middle" letter-spacing="0.4">NOT FOR CONSTRUCTION</text>
+<path d="M 162,260 L 258,260 Q 280,260 280,282 L 280,478 Q 280,500 258,500 L 162,500 Q 140,500 140,478 L 140,282 Q 140,260 162,260 Z" fill="#f7f8fa" stroke="#343a46" stroke-width="2.2" stroke-linejoin="miter"/>
+<path d="M 140,440 L 280,440 L 280,478 Q 280,500 258,500 L 162,500 Q 140,500 140,478 Z" fill="#dce8f5"/>
+<line x1="146" y1="440" x2="274" y2="440" stroke="#1d4e89" stroke-width="1.2" stroke-dasharray="7,5"/>
+<text x="270" y="432" font-size="8.5" font-weight="normal" fill="#5a6472" text-anchor="end" letter-spacing="0.3">NLL</text>
+<rect x="182" y="216" width="56" height="44" fill="#ffffff" stroke="#343a46" stroke-width="1.6"/>
+<text x="210" y="245" font-size="15" font-weight="bold" fill="#111418" text-anchor="middle">M</text>
+<line x1="210" y1="260" x2="210" y2="460" stroke="#343a46" stroke-width="2"/>
+<path d="M 178,464 L 206,446 L 206,455 L 178,473 Z" fill="#343a46"/>
+<path d="M 242,464 L 214,446 L 214,455 L 242,473 Z" fill="#343a46"/>
+<text x="252" y="242" font-size="10.5" font-weight="bold" fill="#111418" text-anchor="start">AG-01</text>
+<text x="210" y="530" font-size="14" font-weight="bold" fill="#111418" text-anchor="middle">R-01</text>
+<text x="210" y="548" font-size="10" font-weight="normal" fill="#5a6472" text-anchor="middle" letter-spacing="0.4">REACTOR HIDRÓLISIS ÁCIDA</text>
+<text x="210" y="565" font-size="9" font-weight="normal" fill="#5a6472" text-anchor="middle">128 ºC, 2.5 bar, H2SO4 10.5% p/p</text>
+<circle cx="350" cy="420" r="24" fill="white" stroke="#111418" stroke-width="2"/>
+<path d="M 334,420 C 342,408 346,432 354,420 C 360,410 366,420 366,420" fill="none" stroke="#111418" stroke-width="2"/>
+<text x="350" y="470" font-size="14" font-weight="bold" fill="#111418" text-anchor="middle">E-04</text>
+<text x="350" y="488" font-size="10" font-weight="normal" fill="#5a6472" text-anchor="middle" letter-spacing="0.4">ENFRIADOR SLURRY</text>
+<text x="350" y="505" font-size="9" font-weight="normal" fill="#5a6472" text-anchor="middle">128 ºC -> 50 ºC</text>
+<path d="M 450,360 L 520,360 Q 530,360 530,370 L 530,470 Q 530,480 520,480 L 450,480 Q 440,480 440,470 L 440,370 Q 440,360 450,360 Z" fill="#f7f8fa" stroke="#343a46" stroke-width="2.2" stroke-linejoin="miter"/>
+<text x="485" y="510" font-size="14" font-weight="bold" fill="#111418" text-anchor="middle">F-01</text>
+<text x="485" y="528" font-size="10" font-weight="normal" fill="#5a6472" text-anchor="middle" letter-spacing="0.4">FILTRO PRENSA</text>
+<text x="485" y="545" font-size="9" font-weight="normal" fill="#5a6472" text-anchor="middle">Separación WIS / Líquido + Lavado</text>
+<path d="M 618,260 L 672,260 Q 690,260 690,278 L 690,502 Q 690,520 672,520 L 618,520 Q 600,520 600,502 L 600,278 Q 600,260 618,260 Z" fill="#f7f8fa" stroke="#343a46" stroke-width="2.2" stroke-linejoin="miter"/>
+<text x="645" y="550" font-size="14" font-weight="bold" fill="#111418" text-anchor="middle">A-01</text>
+<text x="645" y="568" font-size="10" font-weight="normal" fill="#5a6472" text-anchor="middle" letter-spacing="0.4">COLUMNA DETOXIFICACIÓN</text>
+<text x="645" y="585" font-size="9" font-weight="normal" fill="#5a6472" text-anchor="middle">Eliminación Furfural >90%, Acético >95%</text>
+<path d="M 618,640 L 672,640 Q 690,640 690,658 L 690,782 Q 690,800 672,800 L 618,800 Q 600,800 600,782 L 600,658 Q 600,640 618,640 Z" fill="#f7f8fa" stroke="#343a46" stroke-width="2.2" stroke-linejoin="miter"/>
+<text x="645" y="830" font-size="14" font-weight="bold" fill="#111418" text-anchor="middle">TN-01</text>
+<text x="645" y="848" font-size="10" font-weight="normal" fill="#5a6472" text-anchor="middle" letter-spacing="0.4">TANQUE NEUTRALIZACIÓN</text>
+<text x="645" y="865" font-size="9" font-weight="normal" fill="#5a6472" text-anchor="middle">Neutralización con NH3 anhidro</text>
+<path d="M 762,660 L 828,660 Q 840,660 840,672 L 840,788 Q 840,800 828,800 L 762,800 Q 750,800 750,788 L 750,672 Q 750,660 762,660 Z" fill="#f7f8fa" stroke="#343a46" stroke-width="2.2" stroke-linejoin="miter"/>
+<text x="795" y="830" font-size="14" font-weight="bold" fill="#111418" text-anchor="middle">CR-01</text>
+<text x="795" y="848" font-size="10" font-weight="normal" fill="#5a6472" text-anchor="middle" letter-spacing="0.4">CRISTALIZADOR</text>
+<text x="795" y="865" font-size="9" font-weight="normal" fill="#5a6472" text-anchor="middle">Subproducto: Sulfato de amonio</text>
+<path d="M 825,260 L 925,260 Q 950,260 950,285 L 950,515 Q 950,540 925,540 L 825,540 Q 800,540 800,515 L 800,285 Q 800,260 825,260 Z" fill="#f7f8fa" stroke="#343a46" stroke-width="2.2" stroke-linejoin="miter"/>
+<path d="M 800,480 L 950,480 L 950,515 Q 950,540 925,540 L 825,540 Q 800,540 800,515 Z" fill="#dce8f5"/>
+<line x1="806" y1="480" x2="944" y2="480" stroke="#1d4e89" stroke-width="1.2" stroke-dasharray="7,5"/>
+<text x="940" y="472" font-size="8.5" font-weight="normal" fill="#5a6472" text-anchor="end" letter-spacing="0.3">NLL</text>
+<rect x="847" y="216" width="56" height="44" fill="#ffffff" stroke="#343a46" stroke-width="1.6"/>
+<text x="875" y="245" font-size="15" font-weight="bold" fill="#111418" text-anchor="middle">M</text>
+<line x1="875" y1="260" x2="875" y2="500" stroke="#343a46" stroke-width="2"/>
+<path d="M 843,504 L 871,486 L 871,495 L 843,513 Z" fill="#343a46"/>
+<path d="M 907,504 L 879,486 L 879,495 L 907,513 Z" fill="#343a46"/>
+<text x="917" y="242" font-size="10.5" font-weight="bold" fill="#111418" text-anchor="start">AG-BF01</text>
+<text x="875" y="570" font-size="14" font-weight="bold" fill="#111418" text-anchor="middle">BF-01</text>
+<text x="875" y="588" font-size="10" font-weight="normal" fill="#5a6472" text-anchor="middle" letter-spacing="0.4">FERMENTADOR PENTOSAS</text>
+<text x="875" y="605" font-size="9" font-weight="normal" fill="#5a6472" text-anchor="middle">E. coli SL100 (37 ºC, 96 h, ~75 kg EtOH/t)</text>
+<path d="M 1078,240 L 1192,240 Q 1220,240 1220,268 L 1220,512 Q 1220,540 1192,540 L 1078,540 Q 1050,540 1050,512 L 1050,268 Q 1050,240 1078,240 Z" fill="#f7f8fa" stroke="#343a46" stroke-width="2.2" stroke-linejoin="miter"/>
+<path d="M 1050,470 L 1220,470 L 1220,512 Q 1220,540 1192,540 L 1078,540 Q 1050,540 1050,512 Z" fill="#dce8f5"/>
+<line x1="1056" y1="470" x2="1214" y2="470" stroke="#1d4e89" stroke-width="1.2" stroke-dasharray="7,5"/>
+<text x="1210" y="462" font-size="8.5" font-weight="normal" fill="#5a6472" text-anchor="end" letter-spacing="0.3">NLL</text>
+<rect x="1107" y="196" width="56" height="44" fill="#ffffff" stroke="#343a46" stroke-width="1.6"/>
+<text x="1135" y="225" font-size="15" font-weight="bold" fill="#111418" text-anchor="middle">M</text>
+<line x1="1135" y1="240" x2="1135" y2="500" stroke="#343a46" stroke-width="2"/>
+<path d="M 1103,504 L 1131,486 L 1131,495 L 1103,513 Z" fill="#343a46"/>
+<path d="M 1167,504 L 1139,486 L 1139,495 L 1167,513 Z" fill="#343a46"/>
+<text x="1177" y="222" font-size="10.5" font-weight="bold" fill="#111418" text-anchor="start">AG-BF02</text>
+<text x="1135" y="570" font-size="14" font-weight="bold" fill="#111418" text-anchor="middle">BF-02</text>
+<text x="1135" y="588" font-size="10" font-weight="normal" fill="#5a6472" text-anchor="middle" letter-spacing="0.4">BIORREACTOR PSSF</text>
+<text x="1135" y="605" font-size="9" font-weight="normal" fill="#5a6472" text-anchor="middle">Cellic CTec2 (50 ºC, 4h) -> S. cerevisiae (35 ºC, 48h)</text>
+<path d="M 1310,370 L 1380,370 Q 1390,370 1390,380 L 1390,470 Q 1390,480 1380,480 L 1310,480 Q 1300,480 1300,470 L 1300,380 Q 1300,370 1310,370 Z" fill="#f7f8fa" stroke="#343a46" stroke-width="2.2" stroke-linejoin="miter"/>
+<text x="1345" y="510" font-size="14" font-weight="bold" fill="#111418" text-anchor="middle">CF-01</text>
+<text x="1345" y="528" font-size="10" font-weight="normal" fill="#5a6472" text-anchor="middle" letter-spacing="0.4">DECANTER LIGNINA</text>
+<text x="1345" y="545" font-size="9" font-weight="normal" fill="#5a6472" text-anchor="middle">Retirada de lignina antes de destilar</text>
+<path d="M 1505,180 L 1535,180 Q 1560,180 1560,205 L 1560,675 Q 1560,700 1535,700 L 1505,700 Q 1480,700 1480,675 L 1480,205 Q 1480,180 1505,180 Z" fill="#f7f8fa" stroke="#343a46" stroke-width="2.2" stroke-linejoin="miter"/>
+<text x="1520" y="730" font-size="14" font-weight="bold" fill="#111418" text-anchor="middle">Z-01</text>
+<text x="1520" y="748" font-size="10" font-weight="normal" fill="#5a6472" text-anchor="middle" letter-spacing="0.4">COLUMNA DE DESTILACIÓN</text>
+<text x="1520" y="765" font-size="9" font-weight="normal" fill="#5a6472" text-anchor="middle">Concentración alcohólica azeotrópica (~93% p/p)</text>
+<circle cx="1640" cy="180" r="22" fill="white" stroke="#111418" stroke-width="2"/>
+<text x="1640" y="145" font-size="14" font-weight="bold" fill="#111418" text-anchor="middle">E-01</text>
+<text x="1640" y="163" font-size="10" font-weight="normal" fill="#5a6472" text-anchor="middle" letter-spacing="0.4">CONDENSADOR RECTIFICACIÓN</text>
+<path d="M 1625,230 L 1655,230 Q 1665,230 1665,240 L 1665,290 Q 1665,300 1655,300 L 1625,300 Q 1615,300 1615,290 L 1615,240 Q 1615,230 1625,230 Z" fill="#f7f8fa" stroke="#343a46" stroke-width="2.2" stroke-linejoin="miter"/>
+<text x="1640" y="325" font-size="14" font-weight="bold" fill="#111418" text-anchor="middle">TKR-01</text>
+<text x="1640" y="343" font-size="10" font-weight="normal" fill="#5a6472" text-anchor="middle" letter-spacing="0.4">ACUMULADOR REFLUJO</text>
+<circle cx="1410" cy="660" r="22" fill="white" stroke="#111418" stroke-width="2"/>
+<text x="1410" y="705" font-size="14" font-weight="bold" fill="#111418" text-anchor="middle">E-05</text>
+<text x="1410" y="723" font-size="10" font-weight="normal" fill="#5a6472" text-anchor="middle" letter-spacing="0.4">REBOILER HERVIDOR</text>
+<path d="M 1750,220 L 1780,220 Q 1790,220 1790,230 L 1790,370 Q 1790,380 1780,380 L 1750,380 Q 1740,380 1740,370 L 1740,230 Q 1740,220 1750,220 Z" fill="#f7f8fa" stroke="#343a46" stroke-width="2.2" stroke-linejoin="miter"/>
+<path d="M 1820,220 L 1850,220 Q 1860,220 1860,230 L 1860,370 Q 1860,380 1850,380 L 1820,380 Q 1810,380 1810,370 L 1810,230 Q 1810,220 1820,220 Z" fill="#f7f8fa" stroke="#343a46" stroke-width="2.2" stroke-linejoin="miter"/>
+<text x="1800" y="410" font-size="14" font-weight="bold" fill="#111418" text-anchor="middle">A-03A/B</text>
+<text x="1800" y="428" font-size="10" font-weight="normal" fill="#5a6472" text-anchor="middle" letter-spacing="0.4">TAMICES MOLECULARES (PSA)</text>
+<text x="1800" y="445" font-size="9" font-weight="normal" fill="#5a6472" text-anchor="middle">Bioetanol Anhidro Carburante (>99.5% p/p)</text>
+<path d="M 1475,830 L 1575,830 Q 1600,830 1600,855 L 1600,955 Q 1600,980 1575,980 L 1475,980 Q 1450,980 1450,955 L 1450,855 Q 1450,830 1475,830 Z" fill="#f7f8fa" stroke="#343a46" stroke-width="2.2" stroke-linejoin="miter"/>
+<text x="1525" y="1010" font-size="14" font-weight="bold" fill="#111418" text-anchor="middle">DA-01</text>
+<text x="1525" y="1028" font-size="10" font-weight="normal" fill="#5a6472" text-anchor="middle" letter-spacing="0.4">DIGESTOR ANAEROBIO</text>
+<text x="1525" y="1045" font-size="9" font-weight="normal" fill="#5a6472" text-anchor="middle">Vinazas -> Biogás (CH4 + CO2) y Biofertilizante</text>
+<path d="M 1760,750 L 1860,750 Q 1880,750 1880,770 L 1880,920 Q 1880,940 1860,940 L 1760,940 Q 1740,940 1740,920 L 1740,770 Q 1740,750 1760,750 Z" fill="#f7f8fa" stroke="#343a46" stroke-width="2.2" stroke-linejoin="miter"/>
+<text x="1810" y="970" font-size="14" font-weight="bold" fill="#111418" text-anchor="middle">Q-01</text>
+<text x="1810" y="988" font-size="10" font-weight="normal" fill="#5a6472" text-anchor="middle" letter-spacing="0.4">CALDERA COGENERACIÓN</text>
+<text x="1810" y="1005" font-size="9" font-weight="normal" fill="#5a6472" text-anchor="middle">Combustión Lignina seca + Biogás -> Vapor proceso</text>
+<path d="M 50,300 L 140,300" fill="none" stroke="#1d4e89" stroke-width="2.4" stroke-linejoin="round" marker-end="url(#aBlue)"/>
+<text x="90" y="290" font-size="9" font-weight="bold" fill="#111418" text-anchor="start">01: HUESO + H2SO4</text>
+<path d="M 210,500 L 210,520 L 320,520 L 320,420 L 326,420" fill="none" stroke="#1d4e89" stroke-width="2.4" stroke-linejoin="round" marker-end="url(#aBlue)"/>
+<path d="M 374,420 L 440,420" fill="none" stroke="#1d4e89" stroke-width="2.4" stroke-linejoin="round" marker-end="url(#aBlue)"/>
+<text x="405" y="410" font-size="8.5" font-weight="bold" fill="#111418" text-anchor="start">03: SLURRY 50ºC</text>
+<path d="M 485,360 L 485,200 L 1090,200 L 1090,240" fill="none" stroke="#1d4e89" stroke-width="2.4" stroke-linejoin="round" marker-end="url(#aBlue)"/>
+<text x="780" y="190" font-size="9" font-weight="bold" fill="#111418" text-anchor="start">04: SÓLIDO WIS LAVADO (CELULOSA/LIGNINA)</text>
+<path d="M 530,440 L 600,440" fill="none" stroke="#1d4e89" stroke-width="2.4" stroke-linejoin="round" marker-end="url(#aBlue)"/>
+<text x="565" y="430" font-size="8.5" font-weight="bold" fill="#111418" text-anchor="start">05: PREHIDROLIZADO</text>
+<path d="M 645,260 L 645,220 L 840,220 L 840,260" fill="none" stroke="#1d4e89" stroke-width="2.4" stroke-linejoin="round" marker-end="url(#aBlue)"/>
+<text x="740" y="210" font-size="8.5" font-weight="bold" fill="#111418" text-anchor="start">06: XILOSA PURIFICADA</text>
+<path d="M 875,540 L 875,600 L 1350,600 L 1350,490 L 1480,490" fill="none" stroke="#1d4e89" stroke-width="2.4" stroke-linejoin="round" marker-end="url(#aBlue)"/>
+<path d="M 1135,540 L 1135,510 L 1260,510 L 1260,430 L 1300,430" fill="none" stroke="#1d4e89" stroke-width="2.4" stroke-linejoin="round" marker-end="url(#aBlue)"/>
+<text x="1220" y="420" font-size="8.5" font-weight="bold" fill="#111418" text-anchor="start">08: CALDO PSSF</text>
+<path d="M 1390,430 L 1480,430" fill="none" stroke="#1d4e89" stroke-width="2.4" stroke-linejoin="round" marker-end="url(#aBlue)"/>
+<text x="1435" y="420" font-size="8.5" font-weight="bold" fill="#111418" text-anchor="start">VINO CLARIFICADO</text>
+<path d="M 1345,480 L 1345,860 L 1740,860" fill="none" stroke="#1d4e89" stroke-width="2.4" stroke-linejoin="round" marker-end="url(#aBlue)"/>
+<text x="1400" y="850" font-size="9" font-weight="bold" fill="#111418" text-anchor="start">LIGNINA SÓLIDA A Q-01</text>
+<path d="M 1520,180 L 1520,150 L 1640,150 L 1640,158" fill="none" stroke="#1d4e89" stroke-width="2.4" stroke-linejoin="round" marker-end="url(#aBlue)"/>
+<path d="M 1640,202 L 1640,230" fill="none" stroke="#1d4e89" stroke-width="2.4" stroke-linejoin="round" marker-end="url(#aBlue)"/>
+<path d="M 1640,300 L 1640,350 L 1560,350" fill="none" stroke="#1d4e89" stroke-width="2.4" stroke-linejoin="round" marker-end="url(#aBlue)"/>
+<path d="M 1665,270 L 1740,270" fill="none" stroke="#1d4e89" stroke-width="2.4" stroke-linejoin="round" marker-end="url(#aBlue)"/>
+<path d="M 1790,270 L 1810,270" fill="none" stroke="#1d4e89" stroke-width="2.4" stroke-linejoin="round" marker-end="url(#aBlue)"/>
+<path d="M 1860,270 L 1940,270" fill="none" stroke="#1d4e89" stroke-width="2.4" stroke-linejoin="round" marker-end="url(#aBlue)"/>
+<text x="1900" y="260" font-size="9.5" font-weight="bold" fill="#111418" text-anchor="start">PRODUCTO: BIOETANOL >99.5%</text>
+<path d="M 1500,700 L 1500,740 L 1410,740 L 1410,682" fill="none" stroke="#1d4e89" stroke-width="2.4" stroke-linejoin="round" marker-end="url(#aBlue)"/>
+<path d="M 1410,638 L 1410,600 L 1480,600" fill="none" stroke="#1d4e89" stroke-width="2.4" stroke-linejoin="round" marker-end="url(#aBlue)"/>
+<path d="M 1520,700 L 1520,830" fill="none" stroke="#1d4e89" stroke-width="2.4" stroke-linejoin="round" marker-end="url(#aBlue)"/>
+<text x="1530" y="780" font-size="8.5" font-weight="bold" fill="#111418" text-anchor="start">VINAZAS A DA-01</text>
+<path d="M 1600,900 L 1740,900" fill="none" stroke="#1d4e89" stroke-width="2.4" stroke-linejoin="round" marker-end="url(#aBlue)"/>
+<text x="1670" y="890" font-size="9" font-weight="bold" fill="#111418" text-anchor="start">BIOGÁS (CH4)</text>
+</svg>

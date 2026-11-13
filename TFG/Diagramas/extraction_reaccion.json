@@ -1,0 +1,158 @@
+[
+  {
+    "page": 1,
+    "source": "04-PFD-201",
+    "equipment": [
+      {
+        "tag": "R-101",
+        "type": "Reactor Hidrólisis Ácida",
+        "description": "Reactor CSTR con agitador AG-101 y camisa vapor 2.5 bar",
+        "status": "existing"
+      },
+      {
+        "tag": "F-101",
+        "type": "Filtro Prensa",
+        "description": "Separador sólido-líquido (WIS / Prehidrolizado)",
+        "status": "existing"
+      },
+      {
+        "tag": "D-101",
+        "type": "Columna Detoxificación",
+        "description": "Columna de resina intercambio iónico / carbón activo",
+        "status": "existing"
+      },
+      {
+        "tag": "R-201",
+        "type": "Biorreactor PSSF",
+        "description": "Fermentador simultáneo de hexosas con Cellic CTec2 y S. cerevisiae",
+        "status": "existing"
+      },
+      {
+        "tag": "P-101A",
+        "type": "Bomba Centrífuga",
+        "description": "Impulsión de slurry hidrolizado a filtro prensa",
+        "status": "existing"
+      },
+      {
+        "tag": "P-102A",
+        "type": "Bomba Centrífuga",
+        "description": "Impulsión de prehidrolizado ácido a detoxificación",
+        "status": "existing"
+      },
+      {
+        "tag": "P-201A",
+        "type": "Bomba Centrífuga",
+        "description": "Impulsión de vino fermentado a destilación",
+        "status": "existing"
+      }
+    ],
+    "lines": [
+      {
+        "number": "01",
+        "from": "Batería Límites",
+        "to": "R-101",
+        "fluid": "Hueso aceituna + H2SO4 (33% p/v)"
+      },
+      {
+        "number": "02",
+        "from": "Red Vapor",
+        "to": "R-101",
+        "fluid": "Vapor vivo 2.5 bar"
+      },
+      {
+        "number": "03",
+        "from": "R-101",
+        "to": "F-101",
+        "fluid": "Slurry hidrolizado (128 ºC)"
+      },
+      {
+        "number": "04",
+        "from": "F-101",
+        "to": "R-201",
+        "fluid": "Sólido WIS (Celulosa + Lignina)"
+      },
+      {
+        "number": "05",
+        "from": "F-101",
+        "to": "D-101",
+        "fluid": "Prehidrolizado ácido (Xilosa + Inhibidores)"
+      },
+      {
+        "number": "06",
+        "from": "D-101",
+        "to": "R-201",
+        "fluid": "Líquido detoxificado para PSSF"
+      },
+      {
+        "number": "07",
+        "from": "D-101",
+        "to": "Fermentador Pentosas",
+        "fluid": "Xilosa líquida purificada a E. coli SL100"
+      },
+      {
+        "number": "08",
+        "from": "Dosificación Enzimas",
+        "to": "R-201",
+        "fluid": "Cellic CTec2 (40 FPU/g) + Tampón citrato"
+      },
+      {
+        "number": "09",
+        "from": "R-201",
+        "to": "Destilación",
+        "fluid": "Caldo fermentado (36 g/L Etanol)"
+      }
+    ],
+    "instruments": [
+      {
+        "tag": "TT-101",
+        "loop": "101",
+        "measured_var": "Temperature",
+        "function": "Transmitter"
+      },
+      {
+        "tag": "TIC-101",
+        "loop": "101",
+        "measured_var": "Temperature",
+        "function": "Controller Indicator"
+      },
+      {
+        "tag": "TCV-101",
+        "loop": "101",
+        "measured_var": "Temperature",
+        "function": "Control Valve (Fail Close)"
+      },
+      {
+        "tag": "TT-201",
+        "loop": "201",
+        "measured_var": "Temperature",
+        "function": "Transmitter"
+      },
+      {
+        "tag": "TIC-201",
+        "loop": "201",
+        "measured_var": "Temperature",
+        "function": "Controller Indicator"
+      },
+      {
+        "tag": "TCV-201",
+        "loop": "201",
+        "measured_var": "Temperature",
+        "function": "Control Valve (Fail Open)"
+      }
+    ],
+    "control_loops": [
+      {
+        "loop": "101",
+        "type": "Temperature Control",
+        "controlled_var": "Temperatura reactor R-101 (128 ºC)",
+        "final_element": "TCV-101 (Vapor)"
+      },
+      {
+        "loop": "201",
+        "type": "Temperature Control",
+        "controlled_var": "Temperatura fermentador R-201 (35 ºC)",
+        "final_element": "TCV-201 (Agua fría)"
+      }
+    ]
+  }
+]
